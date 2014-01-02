@@ -1,0 +1,3108 @@
+<?xml version='1.0' encoding='ISO-8859-1' standalone='yes' ?>
+<tagfile>
+  <compound kind="file">
+    <name>BarrierModels.h</name>
+    <path>/home/candide/src/wrk/research-nld-subset/src/libs/measure/</path>
+    <filename>BarrierModels_8h</filename>
+    <class kind="struct">jpw_nld::measure::policy::MarkovOnly</class>
+    <class kind="struct">jpw_nld::measure::policy::BarrierOnly</class>
+    <class kind="struct">jpw_nld::measure::policy::Full</class>
+    <class kind="class">jpw_nld::measure::BarrierModel</class>
+    <namespace>jpw_nld</namespace>
+    <namespace>jpw_nld::measure</namespace>
+    <namespace>jpw_nld::measure::policy</namespace>
+    <member kind="typedef">
+      <type>BarrierModel</type>
+      <name>FullBarrierModel_t</name>
+      <anchorfile>namespacejpw__nld_1_1measure.html</anchorfile>
+      <anchor>ad01b3775bf70aae800e6e2b0e22b5529</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>BarrierModel&lt; policy::MarkovOnly &gt;</type>
+      <name>MarkovOnlyBarrierModel_t</name>
+      <anchorfile>namespacejpw__nld_1_1measure.html</anchorfile>
+      <anchor>aa1beae3e3fc75b29b026e2818d33b49a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>BarrierModel&lt; policy::BarrierOnly &gt;</type>
+      <name>BarrierOnlyBarrierModel_t</name>
+      <anchorfile>namespacejpw__nld_1_1measure.html</anchorfile>
+      <anchor>aa1a2cde576cb0887a4b95bc1ca75ef44</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>ContainerType.h</name>
+    <path>/home/candide/src/wrk/research-nld-subset/src/libs/utils/details/</path>
+    <filename>ContainerType_8h</filename>
+    <class kind="struct">jpw_math::traits::ContainerType</class>
+    <class kind="struct">jpw_math::traits::ContainerType&lt; S * &gt;</class>
+    <namespace>jpw_math</namespace>
+    <namespace>jpw_math::traits</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CustomManips.h</name>
+    <path>/home/candide/src/wrk/research-nld-subset/src/libs/utils/details/</path>
+    <filename>CustomManips_8h</filename>
+    <class kind="class">CustomManips::iosManip</class>
+    <class kind="class">CustomManips::iosManipObj</class>
+    <namespace>CustomManips</namespace>
+    <member kind="function">
+      <type>istream &amp;</type>
+      <name>operator&gt;&gt;</name>
+      <anchorfile>namespaceCustomManips.html</anchorfile>
+      <anchor>ad6b80e2c37e6bbb0e58e70346beb2280</anchor>
+      <arglist>(istream &amp;i, const iosManip&lt; TArg, istream &gt; &amp;m)</arglist>
+    </member>
+    <member kind="function">
+      <type>ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceCustomManips.html</anchorfile>
+      <anchor>a3a1b4a5c4ad5a9855860cb15280bcbb2</anchor>
+      <arglist>(ostream &amp;o, const iosManip&lt; TArg, ostream &gt; &amp;m)</arglist>
+    </member>
+    <member kind="function">
+      <type>istream &amp;</type>
+      <name>operator&gt;&gt;</name>
+      <anchorfile>namespaceCustomManips.html</anchorfile>
+      <anchor>acddc4b933214e67f00c72893e83ff214</anchor>
+      <arglist>(istream &amp;i, const iosManipObj&lt; TObj, istream &gt; &amp;m)</arglist>
+    </member>
+    <member kind="function">
+      <type>ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceCustomManips.html</anchorfile>
+      <anchor>a80de5c5716b375a3298ea9f6679d1652</anchor>
+      <arglist>(ostream &amp;o, const iosManipObj&lt; TObj, ostream &gt; &amp;m)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>FitGA.h</name>
+    <path>/home/candide/src/wrk/research-nld-subset/src/libs/measure/</path>
+    <filename>FitGA_8h</filename>
+    <class kind="class">jpw_nld::optimize::FitGA</class>
+    <class kind="struct">jpw_nld::optimize::FitGA::PopVecFiller</class>
+    <namespace>jpw_nld</namespace>
+    <namespace>jpw_nld::fortlib</namespace>
+    <namespace>jpw_nld::optimize</namespace>
+  </compound>
+  <compound kind="file">
+    <name>FitLM.h</name>
+    <path>/home/candide/src/wrk/research-nld-subset/src/libs/fortlib/</path>
+    <filename>FitLM_8h</filename>
+    <class kind="class">jpw_nld::fortlib::FitLM</class>
+    <namespace>jpw_nld</namespace>
+    <namespace>jpw_nld::fortlib</namespace>
+    <member kind="typedef">
+      <type>FitLM::FitStatus_t</type>
+      <name>FitLMStatus_t</name>
+      <anchorfile>namespacejpw__nld_1_1fortlib.html</anchorfile>
+      <anchor>a3d92aaae3ca4d3e49488f9418918125f</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>FitLM_Adapter.h</name>
+    <path>/home/candide/src/wrk/research-nld-subset/src/libs/fortlib/</path>
+    <filename>FitLM__Adapter_8h</filename>
+    <class kind="class">jpw_nld::fortlib::FitLM_Adapter</class>
+    <namespace>jpw_nld</namespace>
+    <namespace>jpw_nld::fortlib</namespace>
+  </compound>
+  <compound kind="file">
+    <name>FitLM_BarrierAdapter.h</name>
+    <path>/home/candide/src/wrk/research-nld-subset/src/libs/measure/</path>
+    <filename>FitLM__BarrierAdapter_8h</filename>
+    <class kind="class">jpw_nld::measure::FitLM_BarrierAdapter</class>
+    <namespace>jpw_nld</namespace>
+    <namespace>jpw_nld::measure</namespace>
+    <member kind="typedef">
+      <type>FitLM_BarrierAdapter&lt; policy::MarkovOnly &gt;</type>
+      <name>FitLM_MarkovOnly</name>
+      <anchorfile>namespacejpw__nld_1_1measure.html</anchorfile>
+      <anchor>a5b6c0d182f1d114eebf5fbc8c3cd88f7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>FitLM_BarrierAdapter&lt; policy::Full &gt;</type>
+      <name>FitLM_PBarrier</name>
+      <anchorfile>namespacejpw__nld_1_1measure.html</anchorfile>
+      <anchor>aced595ec5853f08804756c31975c3478</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>FORTLib.h</name>
+    <path>/home/candide/src/wrk/research-nld-subset/src/libs/fortlib/</path>
+    <filename>FORTLib_8h</filename>
+    <class kind="struct">jpw_nld::fortlib::sort::SortError</class>
+    <namespace>jpw_nld</namespace>
+    <namespace>jpw_nld::fortlib</namespace>
+    <namespace>jpw_nld::fortlib::square_matrix_inversion</namespace>
+    <namespace>jpw_nld::fortlib::sort</namespace>
+    <member kind="typedef">
+      <type>std::vector&lt; int, std::allocator&lt; int &gt; &gt;</type>
+      <name>ivector_t</name>
+      <anchorfile>namespacejpw__nld_1_1fortlib.html</anchorfile>
+      <anchor>a2f79a8516ace6e181a30e6ab5dc72591</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>sqmInvert_GJE</name>
+      <anchorfile>namespacejpw__nld_1_1fortlib_1_1square__matrix__inversion.html</anchorfile>
+      <anchor>a6fcb885f2e8cc3711e83f5561e3453bd</anchor>
+      <arglist>(const dmatrix_t &amp;dm, dmatrix_t &amp;dm_inv)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>sqmInvert_SVD</name>
+      <anchorfile>namespacejpw__nld_1_1fortlib_1_1square__matrix__inversion.html</anchorfile>
+      <anchor>a32922f48e1cde73d7e17e22cbb1777b3</anchor>
+      <arglist>(const dmatrix_t &amp;dm, dmatrix_t &amp;dm_inv)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>byIndex</name>
+      <anchorfile>namespacejpw__nld_1_1fortlib_1_1sort.html</anchorfile>
+      <anchor>affd37118db8b4bab11fa96a2b8611bc1</anchor>
+      <arglist>(const dvector_t &amp;dlst, ivector_t &amp;idxarr, int dir)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>FORTTypes.h</name>
+    <path>/home/candide/src/wrk/research-nld-subset/src/libs/fortlib/</path>
+    <filename>FORTTypes_8h</filename>
+    <namespace>jpw_nld</namespace>
+    <namespace>jpw_nld::fortlib</namespace>
+    <member kind="typedef">
+      <type>int *</type>
+      <name>fort_ivar_t</name>
+      <anchorfile>namespacejpw__nld_1_1fortlib.html</anchorfile>
+      <anchor>a56901cc4dbebf83731bcfb5d58b8cf7e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>double *</type>
+      <name>fort_dvar_t</name>
+      <anchorfile>namespacejpw__nld_1_1fortlib.html</anchorfile>
+      <anchor>a3c6d579705e496916bda262c485e6b19</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>int *</type>
+      <name>fort_ivec_t</name>
+      <anchorfile>namespacejpw__nld_1_1fortlib.html</anchorfile>
+      <anchor>a12769afd90f833159895dfc94b39dc88</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>double *</type>
+      <name>fort_dvec_t</name>
+      <anchorfile>namespacejpw__nld_1_1fortlib.html</anchorfile>
+      <anchor>ab548b8671e5358ea35e5131e23dfb479</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>double *</type>
+      <name>fort_dmat_t</name>
+      <anchorfile>namespacejpw__nld_1_1fortlib.html</anchorfile>
+      <anchor>a71e1364077d954bc37620f7f5732525b</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>jpw_nld.h</name>
+    <path>/home/candide/src/wrk/research-nld-subset/src/libs/utils/</path>
+    <filename>jpw__nld_8h</filename>
+    <namespace>jpw_nld</namespace>
+    <member kind="typedef">
+      <type>unsigned long</type>
+      <name>tslen_t</name>
+      <anchorfile>namespacejpw__nld.html</anchorfile>
+      <anchor>afd02b1952a0403b0ef53ae24eed8353f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>unsigned long</type>
+      <name>step_t</name>
+      <anchorfile>namespacejpw__nld.html</anchorfile>
+      <anchor>a9956bdf98a910216bdae7da8f0e08359</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>uint8_t</type>
+      <name>dim_t</name>
+      <anchorfile>namespacejpw__nld.html</anchorfile>
+      <anchor>a89b46f89f4f701d1ae9f817307d0e41a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>uint32_t</type>
+      <name>index_t</name>
+      <anchorfile>namespacejpw__nld.html</anchorfile>
+      <anchor>aab1410d3f3644ff465752cab5b56e420</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>Manips.h</name>
+    <path>/home/candide/src/wrk/research-nld-subset/src/libs/utils/</path>
+    <filename>Manips_8h</filename>
+    <namespace>inManips</namespace>
+    <namespace>outManips</namespace>
+    <namespace>outManips::timefmt</namespace>
+    <member kind="function">
+      <type>istream &amp;</type>
+      <name>newln</name>
+      <anchorfile>namespaceinManips.html</anchorfile>
+      <anchor>a112f074eb5f894e68f295708a48a998e</anchor>
+      <arglist>(istream &amp;ist, bool skipSpace)</arglist>
+    </member>
+    <member kind="function">
+      <type>iosManip&lt; bool, istream &gt;</type>
+      <name>newln</name>
+      <anchorfile>namespaceinManips.html</anchorfile>
+      <anchor>a688e142def68baef1e778ce2d3dcef17</anchor>
+      <arglist>(bool skipSpace=false)</arglist>
+    </member>
+    <member kind="function">
+      <type>ostream &amp;</type>
+      <name>now</name>
+      <anchorfile>namespaceoutManips.html</anchorfile>
+      <anchor>a78ed4e460b0f6c56ec1dc388dff127b8</anchor>
+      <arglist>(ostream &amp;ost, const char *fmt)</arglist>
+    </member>
+    <member kind="function">
+      <type>iosManip&lt; const char *, ostream &gt;</type>
+      <name>now</name>
+      <anchorfile>namespaceoutManips.html</anchorfile>
+      <anchor>a3c41eb6032f73df105e976faffc1f6d4</anchor>
+      <arglist>(const char *fmt=timefmt::log)</arglist>
+      <docanchor file="namespaceoutManips">nowM</docanchor>
+    </member>
+    <member kind="function">
+      <type>ostream &amp;</type>
+      <name>general</name>
+      <anchorfile>namespaceoutManips.html</anchorfile>
+      <anchor>a50e5471b40b206067c4012a7a8747bd0</anchor>
+      <arglist>(ostream &amp;ost)</arglist>
+    </member>
+    <member kind="function">
+      <type>ostream &amp;</type>
+      <name>reset</name>
+      <anchorfile>namespaceoutManips.html</anchorfile>
+      <anchor>a1dba9616a64d3a14d4615dfd6e3c7bc0</anchor>
+      <arglist>(ostream &amp;ost)</arglist>
+    </member>
+    <member kind="variable">
+      <type>const char *const</type>
+      <name>log</name>
+      <anchorfile>namespaceoutManips_1_1timefmt.html</anchorfile>
+      <anchor>ac2bd8ab622ffc40b40d49e010b26def3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const char *const</type>
+      <name>timestamp</name>
+      <anchorfile>namespaceoutManips_1_1timefmt.html</anchorfile>
+      <anchor>a544e881c463a20e782acd47c93de4684</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>MathTools.h</name>
+    <path>/home/candide/src/wrk/research-nld-subset/src/libs/utils/</path>
+    <filename>MathTools_8h</filename>
+    <namespace>jpw_math</namespace>
+    <member kind="function" static="yes">
+      <type>static const double</type>
+      <name>DBL_PREC</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>a17d46bd81d15584bebaac89772bb753f</anchor>
+      <arglist>(1.0e-16)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static const double</type>
+      <name>FLT_PREC</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>a868e65cf0d1f9423e9eefd06466d5491</anchor>
+      <arglist>(1.0e-8)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static const double</type>
+      <name>TINY</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>a19e6dad4ab80b26a9096f0aac878aa5a</anchor>
+      <arglist>(1.0e-30)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static const double</type>
+      <name>HUGE</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>a0500d79c5d3db2f79b3aa2e5cea05e87</anchor>
+      <arglist>(1.0e30)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static const double</type>
+      <name>TWOPI</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>a99b6c2402ec46942c32b5622b1594a00</anchor>
+      <arglist>(2.0 *M_PI)</arglist>
+    </member>
+    <member kind="function">
+      <type>T</type>
+      <name>SQR</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>ab7d397f0373bf04cd4c87836b3c56239</anchor>
+      <arglist>(T _a)</arglist>
+    </member>
+    <member kind="function">
+      <type>T</type>
+      <name>CUBE</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>ab6e5307034484534608c8ebfddebbea7</anchor>
+      <arglist>(T _a)</arglist>
+    </member>
+    <member kind="function">
+      <type>T</type>
+      <name>QUAD</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>a150ef7a17fa7c0658645e96d2640e682</anchor>
+      <arglist>(T _a)</arglist>
+    </member>
+    <member kind="function">
+      <type>T</type>
+      <name>MAX</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>a57cca0788c59ae748a5b1745c3abe3f6</anchor>
+      <arglist>(T _a, T _b)</arglist>
+    </member>
+    <member kind="function">
+      <type>T</type>
+      <name>MIN</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>a4b8cf05a2cfafbf259f32c3a5e1315c8</anchor>
+      <arglist>(T _a, T _b)</arglist>
+    </member>
+    <member kind="function">
+      <type>T</type>
+      <name>ABS</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>ac298868a92df9b9b64d61a2c5aa21fa3</anchor>
+      <arglist>(T _x)</arglist>
+    </member>
+    <member kind="function">
+      <type>T</type>
+      <name>MOD_1</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>a46b38ef0db574f68b9d42847fc3714a3</anchor>
+      <arglist>(T _a)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>CHK_ABSMAX</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>a52e3f3d79a95359ea9b2dc8bcbbbeee5</anchor>
+      <arglist>(T _v, T &amp;_max)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>NEAR_ZERO</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>a04c7413d36d0a9f8e0b5bb8cfd266e03</anchor>
+      <arglist>(T _x, T _a, T _b)</arglist>
+    </member>
+    <member kind="function">
+      <type>T</type>
+      <name>ORDEROF</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>a9764abba4c49d705ccb2c3447daf861c</anchor>
+      <arglist>(T _x)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>INQUAD1</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>a0eb740df427d0fd66d1bac4f04f5129f</anchor>
+      <arglist>(T a)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>INQUAD2</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>a6bffcc4366d1f77fb9dd7fe043251608</anchor>
+      <arglist>(T a)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>INQUAD3</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>aea8e2a01a4db0a941bf490f071feec0d</anchor>
+      <arglist>(T a)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>INQUAD4</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>a74e51cc8f45e3dedac17323537e64f34</anchor>
+      <arglist>(T a)</arglist>
+    </member>
+    <member kind="function">
+      <type>C::value_type</type>
+      <name>chiSquared</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>a152e2773ecb5ffe95d340b4ce92a8eaf</anchor>
+      <arglist>(const C &amp;fvec)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>Matrix.h</name>
+    <path>/home/candide/src/wrk/research-nld-subset/src/libs/utils/</path>
+    <filename>Matrix_8h</filename>
+    <class kind="class">jpw_math::Matrix</class>
+    <namespace>jpw_math</namespace>
+    <namespace>jpw_math::details</namespace>
+    <member kind="typedef">
+      <type>std::vector&lt; double &gt;</type>
+      <name>dvector_t</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>ad2abb92a16fb262b3d36c651bd1c1d6f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Matrix&lt; double &gt;</type>
+      <name>dmatrix_t</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>ade8de6f9aed7a3f420600d5c68d9adcb</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>Matrix_fwd.h</name>
+    <path>/home/candide/src/wrk/research-nld-subset/src/libs/utils/</path>
+    <filename>Matrix__fwd_8h</filename>
+    <namespace>jpw_math</namespace>
+  </compound>
+  <compound kind="file">
+    <name>MatrixAdapter.h</name>
+    <path>/home/candide/src/wrk/research-nld-subset/src/libs/utils/</path>
+    <filename>MatrixAdapter_8h</filename>
+    <class kind="class">jpw_math::MatrixAdapter</class>
+    <class kind="struct">jpw_math::MatrixAdapter::RowProxy</class>
+    <namespace>jpw_math</namespace>
+    <namespace>jpw_math::policy</namespace>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>a8a5b1808a852d6b52515e1099f42d707</anchor>
+      <arglist>(std::ostream &amp;ostr, const MatrixAdapter&lt; S, P &gt; &amp;m)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>MatrixRef_Writer.h</name>
+    <path>/home/candide/src/wrk/research-nld-subset/src/libs/utils/details/</path>
+    <filename>MatrixRef__Writer_8h</filename>
+    <class kind="class">jpw_math::details::MatrixRef_Writer</class>
+    <namespace>jpw_math</namespace>
+    <namespace>jpw_math::details</namespace>
+  </compound>
+  <compound kind="file">
+    <name>nld_exceptions.h</name>
+    <path>/home/candide/src/wrk/research-nld-subset/src/libs/utils/</path>
+    <filename>nld__exceptions_8h</filename>
+    <class kind="struct">jpw_nld::FileNotFound</class>
+    <class kind="struct">jpw_nld::InvalidArgError</class>
+    <class kind="struct">jpw_nld::SizeMismatchError</class>
+    <class kind="struct">jpw_nld::FooExcept</class>
+    <namespace>jpw_nld</namespace>
+  </compound>
+  <compound kind="file">
+    <name>PersistenceMap.h</name>
+    <path>/home/candide/src/wrk/research-nld-subset/src/libs/persistence/</path>
+    <filename>PersistenceMap_8h</filename>
+    <class kind="class">jpw_nld::measure::PersistenceMap</class>
+    <namespace>jpw_nld</namespace>
+    <namespace>jpw_nld::measure</namespace>
+  </compound>
+  <compound kind="file">
+    <name>SequenceStorage.h</name>
+    <path>/home/candide/src/wrk/research-nld-subset/src/libs/utils/details/</path>
+    <filename>SequenceStorage_8h</filename>
+    <class kind="struct">jpw_math::policy::SequenceStorage</class>
+    <class kind="struct">jpw_math::policy::SequenceStorage&lt; S * &gt;</class>
+    <namespace>jpw_math</namespace>
+    <namespace>jpw_math::policy</namespace>
+  </compound>
+  <compound kind="file">
+    <name>statistics.h</name>
+    <path>/home/candide/src/wrk/research-nld-subset/src/libs/utils/</path>
+    <filename>statistics_8h</filename>
+    <namespace>jpw_math</namespace>
+    <namespace>jpw_math::statistics</namespace>
+    <member kind="typedef">
+      <type>basic_string&lt; char &gt;</type>
+      <name>string</name>
+      <anchorfile>namespacestd.html</anchorfile>
+      <anchor>aa186fe783a9f35998a8760ac430fa60b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>drand48</name>
+      <anchorfile>statistics_8h.html</anchorfile>
+      <anchor>a0556ac4bd80375e8a98d85ae0f1b4486</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>parseSeed</name>
+      <anchorfile>namespacejpw__math_1_1statistics.html</anchorfile>
+      <anchor>a164a5b147b91604fe7d1cf63bb374623</anchor>
+      <arglist>(std::string &amp;seedStr, unsigned &amp;seedLo, unsigned &amp;seedHi)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>init_rand</name>
+      <anchorfile>namespacejpw__math_1_1statistics.html</anchorfile>
+      <anchor>ac668f99b683f19d30435765f6fdcf5e0</anchor>
+      <arglist>(bool verbose=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>init_rand_firstTimeOnly</name>
+      <anchorfile>namespacejpw__math_1_1statistics.html</anchorfile>
+      <anchor>a51e5cc922fe872c4268e18b84750afb4</anchor>
+      <arglist>(bool verbose=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>init_rand</name>
+      <anchorfile>namespacejpw__math_1_1statistics.html</anchorfile>
+      <anchor>a73116cedd0708dae27087e801f1627f7</anchor>
+      <arglist>(unsigned s1, unsigned s2, bool verbose=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>index_t</type>
+      <name>randidx</name>
+      <anchorfile>namespacejpw__math_1_1statistics.html</anchorfile>
+      <anchor>a5860bee400421cf8808a7eae4194bbc0</anchor>
+      <arglist>(index_t nn)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>range_rand</name>
+      <anchorfile>namespacejpw__math_1_1statistics.html</anchorfile>
+      <anchor>acf9ddef189d66624c10b85a5665959e7</anchor>
+      <arglist>(double del)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>gaussrand</name>
+      <anchorfile>namespacejpw__math_1_1statistics.html</anchorfile>
+      <anchor>a197330264423219195b980acc751a455</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>std_dev</name>
+      <anchorfile>namespacejpw__math_1_1statistics.html</anchorfile>
+      <anchor>a331072eefe09b0beea8f2b876ef5e0b8</anchor>
+      <arglist>(const dvector_t &amp;values)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>std_dev</name>
+      <anchorfile>namespacejpw__math_1_1statistics.html</anchorfile>
+      <anchor>a1a813447b792fe2bab532c96278b3382</anchor>
+      <arglist>(const dmatrix_t &amp;values)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>signif_del_chisq_tg</name>
+      <anchorfile>namespacejpw__math_1_1statistics.html</anchorfile>
+      <anchor>a2eab24163e8dda428858599a02b9523d</anchor>
+      <arglist>(double &amp;siglevel)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>confidence_tg</name>
+      <anchorfile>namespacejpw__math_1_1statistics.html</anchorfile>
+      <anchor>ade1d5d0d8f6732c551895003bca85e8d</anchor>
+      <arglist>(double del_chisq_sig, const dmatrix_t &amp;inv_curv_m, index_t parmidx, bool verbose)</arglist>
+    </member>
+    <member kind="function">
+      <type>long</type>
+      <name>nearest_multiple</name>
+      <anchorfile>namespacejpw__math_1_1statistics.html</anchorfile>
+      <anchor>a5f7648815cf717f184be5510dc1ecb9d</anchor>
+      <arglist>(double val, double nearfac, bool use_larger)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>Vector_fwd.h</name>
+    <path>/home/candide/src/wrk/research-nld-subset/src/libs/utils/</path>
+    <filename>Vector__fwd_8h</filename>
+    <namespace>jpw_math</namespace>
+  </compound>
+  <compound kind="class">
+    <name>boost::noncopyable</name>
+    <filename>classboost_1_1noncopyable.html</filename>
+  </compound>
+  <compound kind="namespace">
+    <name>CustomManips</name>
+    <filename>namespaceCustomManips.html</filename>
+    <class kind="class">CustomManips::iosManip</class>
+    <class kind="class">CustomManips::iosManipObj</class>
+    <member kind="function">
+      <type>istream &amp;</type>
+      <name>operator&gt;&gt;</name>
+      <anchorfile>namespaceCustomManips.html</anchorfile>
+      <anchor>ad6b80e2c37e6bbb0e58e70346beb2280</anchor>
+      <arglist>(istream &amp;i, const iosManip&lt; TArg, istream &gt; &amp;m)</arglist>
+    </member>
+    <member kind="function">
+      <type>ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceCustomManips.html</anchorfile>
+      <anchor>a3a1b4a5c4ad5a9855860cb15280bcbb2</anchor>
+      <arglist>(ostream &amp;o, const iosManip&lt; TArg, ostream &gt; &amp;m)</arglist>
+    </member>
+    <member kind="function">
+      <type>istream &amp;</type>
+      <name>operator&gt;&gt;</name>
+      <anchorfile>namespaceCustomManips.html</anchorfile>
+      <anchor>acddc4b933214e67f00c72893e83ff214</anchor>
+      <arglist>(istream &amp;i, const iosManipObj&lt; TObj, istream &gt; &amp;m)</arglist>
+    </member>
+    <member kind="function">
+      <type>ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceCustomManips.html</anchorfile>
+      <anchor>a80de5c5716b375a3298ea9f6679d1652</anchor>
+      <arglist>(ostream &amp;o, const iosManipObj&lt; TObj, ostream &gt; &amp;m)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>CustomManips::iosManip</name>
+    <filename>classCustomManips_1_1iosManip.html</filename>
+    <templarg>TArg</templarg>
+    <templarg>TSt</templarg>
+    <member kind="function">
+      <type></type>
+      <name>iosManip</name>
+      <anchorfile>classCustomManips_1_1iosManip.html</anchorfile>
+      <anchor>ab6e04ca9feec844ae8f9ef46527cddd0</anchor>
+      <arglist>(TSt &amp;(*f)(TSt &amp;, TArg), TArg a)</arglist>
+    </member>
+    <member kind="friend">
+      <type>friend istream &amp;</type>
+      <name>operator&gt;&gt;</name>
+      <anchorfile>classCustomManips_1_1iosManip.html</anchorfile>
+      <anchor>ae16e15af51af26059472ccbe775cf323</anchor>
+      <arglist>(istream &amp;i, const iosManip&lt; TArg, istream &gt; &amp;m)</arglist>
+    </member>
+    <member kind="friend">
+      <type>friend ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>classCustomManips_1_1iosManip.html</anchorfile>
+      <anchor>a3d9651298e7e81ab1f33879909050408</anchor>
+      <arglist>(ostream &amp;o, const iosManip&lt; TArg, ostream &gt; &amp;m)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>CustomManips::iosManipObj</name>
+    <filename>classCustomManips_1_1iosManipObj.html</filename>
+    <templarg>TObj</templarg>
+    <templarg>TSt</templarg>
+    <member kind="function">
+      <type></type>
+      <name>iosManipObj</name>
+      <anchorfile>classCustomManips_1_1iosManipObj.html</anchorfile>
+      <anchor>ae35da0154b65f037b456d0f596a2278c</anchor>
+      <arglist>(TObj_FuncPtr_t f, const TObj &amp;obj)</arglist>
+    </member>
+    <member kind="friend">
+      <type>friend istream &amp;</type>
+      <name>operator&gt;&gt;</name>
+      <anchorfile>classCustomManips_1_1iosManipObj.html</anchorfile>
+      <anchor>a66c06566025fcc9fb250d17a82749201</anchor>
+      <arglist>(istream &amp;i, const iosManipObj&lt; TObj, istream &gt; &amp;m)</arglist>
+    </member>
+    <member kind="friend">
+      <type>friend ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>classCustomManips_1_1iosManipObj.html</anchorfile>
+      <anchor>a170d2d6f65df43f922010013bbaaa835</anchor>
+      <arglist>(ostream &amp;o, const iosManipObj&lt; TObj, ostream &gt; &amp;m)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>inManips</name>
+    <filename>namespaceinManips.html</filename>
+    <member kind="function">
+      <type>istream &amp;</type>
+      <name>newln</name>
+      <anchorfile>namespaceinManips.html</anchorfile>
+      <anchor>a112f074eb5f894e68f295708a48a998e</anchor>
+      <arglist>(istream &amp;ist, bool skipSpace)</arglist>
+    </member>
+    <member kind="function">
+      <type>iosManip&lt; bool, istream &gt;</type>
+      <name>newln</name>
+      <anchorfile>namespaceinManips.html</anchorfile>
+      <anchor>a688e142def68baef1e778ce2d3dcef17</anchor>
+      <arglist>(bool skipSpace=false)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>jpw_math</name>
+    <filename>namespacejpw__math.html</filename>
+    <namespace>jpw_math::details</namespace>
+    <namespace>jpw_math::policy</namespace>
+    <namespace>jpw_math::statistics</namespace>
+    <namespace>jpw_math::traits</namespace>
+    <class kind="class">jpw_math::Matrix</class>
+    <class kind="class">jpw_math::MatrixAdapter</class>
+    <member kind="typedef">
+      <type>std::vector&lt; double &gt;</type>
+      <name>dvector_t</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>ad2abb92a16fb262b3d36c651bd1c1d6f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Matrix&lt; double &gt;</type>
+      <name>dmatrix_t</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>ade8de6f9aed7a3f420600d5c68d9adcb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static const double</type>
+      <name>DBL_PREC</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>a17d46bd81d15584bebaac89772bb753f</anchor>
+      <arglist>(1.0e-16)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static const double</type>
+      <name>FLT_PREC</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>a868e65cf0d1f9423e9eefd06466d5491</anchor>
+      <arglist>(1.0e-8)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static const double</type>
+      <name>TINY</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>a19e6dad4ab80b26a9096f0aac878aa5a</anchor>
+      <arglist>(1.0e-30)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static const double</type>
+      <name>HUGE</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>a0500d79c5d3db2f79b3aa2e5cea05e87</anchor>
+      <arglist>(1.0e30)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static const double</type>
+      <name>TWOPI</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>a99b6c2402ec46942c32b5622b1594a00</anchor>
+      <arglist>(2.0 *M_PI)</arglist>
+    </member>
+    <member kind="function">
+      <type>T</type>
+      <name>SQR</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>ab7d397f0373bf04cd4c87836b3c56239</anchor>
+      <arglist>(T _a)</arglist>
+    </member>
+    <member kind="function">
+      <type>T</type>
+      <name>CUBE</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>ab6e5307034484534608c8ebfddebbea7</anchor>
+      <arglist>(T _a)</arglist>
+    </member>
+    <member kind="function">
+      <type>T</type>
+      <name>QUAD</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>a150ef7a17fa7c0658645e96d2640e682</anchor>
+      <arglist>(T _a)</arglist>
+    </member>
+    <member kind="function">
+      <type>T</type>
+      <name>MAX</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>a57cca0788c59ae748a5b1745c3abe3f6</anchor>
+      <arglist>(T _a, T _b)</arglist>
+    </member>
+    <member kind="function">
+      <type>T</type>
+      <name>MIN</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>a4b8cf05a2cfafbf259f32c3a5e1315c8</anchor>
+      <arglist>(T _a, T _b)</arglist>
+    </member>
+    <member kind="function">
+      <type>T</type>
+      <name>ABS</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>ac298868a92df9b9b64d61a2c5aa21fa3</anchor>
+      <arglist>(T _x)</arglist>
+    </member>
+    <member kind="function">
+      <type>T</type>
+      <name>MOD_1</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>a46b38ef0db574f68b9d42847fc3714a3</anchor>
+      <arglist>(T _a)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>CHK_ABSMAX</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>a52e3f3d79a95359ea9b2dc8bcbbbeee5</anchor>
+      <arglist>(T _v, T &amp;_max)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>NEAR_ZERO</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>a04c7413d36d0a9f8e0b5bb8cfd266e03</anchor>
+      <arglist>(T _x, T _a, T _b)</arglist>
+    </member>
+    <member kind="function">
+      <type>T</type>
+      <name>ORDEROF</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>a9764abba4c49d705ccb2c3447daf861c</anchor>
+      <arglist>(T _x)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>INQUAD1</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>a0eb740df427d0fd66d1bac4f04f5129f</anchor>
+      <arglist>(T a)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>INQUAD2</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>a6bffcc4366d1f77fb9dd7fe043251608</anchor>
+      <arglist>(T a)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>INQUAD3</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>aea8e2a01a4db0a941bf490f071feec0d</anchor>
+      <arglist>(T a)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>INQUAD4</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>a74e51cc8f45e3dedac17323537e64f34</anchor>
+      <arglist>(T a)</arglist>
+    </member>
+    <member kind="function">
+      <type>C::value_type</type>
+      <name>chiSquared</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>a152e2773ecb5ffe95d340b4ce92a8eaf</anchor>
+      <arglist>(const C &amp;fvec)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespacejpw__math.html</anchorfile>
+      <anchor>a8a5b1808a852d6b52515e1099f42d707</anchor>
+      <arglist>(std::ostream &amp;ostr, const MatrixAdapter&lt; S, P &gt; &amp;m)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>jpw_math::Matrix</name>
+    <filename>classjpw__math_1_1Matrix.html</filename>
+    <templarg></templarg>
+    <base>MatrixAdapter&lt; std::vector&lt; C &gt;, policy::SequenceStorage &gt;</base>
+    <member kind="typedef">
+      <type>std::vector&lt; C &gt;</type>
+      <name>vector_type</name>
+      <anchorfile>classjpw__math_1_1Matrix.html</anchorfile>
+      <anchor>a41239be2a61a115d4b0c9d4575c3b6b6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>C</type>
+      <name>value_type</name>
+      <anchorfile>classjpw__math_1_1Matrix.html</anchorfile>
+      <anchor>a3b83d30e18cef6246d61a0716225cd07</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>vector_type::iterator</type>
+      <name>iterator</name>
+      <anchorfile>classjpw__math_1_1Matrix.html</anchorfile>
+      <anchor>abee1f74ae7382ffbc80dfb81852d30e9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>vector_type::const_iterator</type>
+      <name>const_iterator</name>
+      <anchorfile>classjpw__math_1_1Matrix.html</anchorfile>
+      <anchor>ac0b7f0f6f4197f6b8403481f3667a011</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Base_t::reference</type>
+      <name>reference</name>
+      <anchorfile>classjpw__math_1_1Matrix.html</anchorfile>
+      <anchor>ab7db1c07de82fde8439d9b933d1b3475</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Base_t::const_reference</type>
+      <name>const_reference</name>
+      <anchorfile>classjpw__math_1_1Matrix.html</anchorfile>
+      <anchor>ac7dd6044e0cf7491e868b686eaca056c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::call_traits&lt; vector_type &gt;::const_reference</type>
+      <name>const_vector_type_reference</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>ac2828a239e4da337f8328ecfa7e28c65</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Matrix</name>
+      <anchorfile>classjpw__math_1_1Matrix.html</anchorfile>
+      <anchor>a52b816897f5511763af587ebd4c7c14c</anchor>
+      <arglist>(size_t n_rows, size_t n_columns)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Matrix</name>
+      <anchorfile>classjpw__math_1_1Matrix.html</anchorfile>
+      <anchor>aaafa647de2cabadfa82165e3a09eeec1</anchor>
+      <arglist>(size_t n_rows, size_t n_columns, const value_type &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Matrix</name>
+      <anchorfile>classjpw__math_1_1Matrix.html</anchorfile>
+      <anchor>ab670f92bede50673d3d6083638738e06</anchor>
+      <arglist>(const vector_type &amp;v, size_t n_rows=0, size_t n_columns=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>Matrix &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classjpw__math_1_1Matrix.html</anchorfile>
+      <anchor>ad0cefab13f61a9dfd2733a7da70a264e</anchor>
+      <arglist>(const Matrix &amp;other)</arglist>
+    </member>
+    <member kind="function">
+      <type>size_t</type>
+      <name>max_size</name>
+      <anchorfile>classjpw__math_1_1Matrix.html</anchorfile>
+      <anchor>aed242c90b0178307d3a887e80063378b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>reference</type>
+      <name>at</name>
+      <anchorfile>classjpw__math_1_1Matrix.html</anchorfile>
+      <anchor>ab27084d402855261791aac15bc8f1101</anchor>
+      <arglist>(size_t row_idx, size_t column_idx)</arglist>
+    </member>
+    <member kind="function">
+      <type>const_reference</type>
+      <name>at</name>
+      <anchorfile>classjpw__math_1_1Matrix.html</anchorfile>
+      <anchor>afddfb7671c52a756db1e7a6a63e3c727</anchor>
+      <arglist>(size_t row_idx, size_t column_idx) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>swap</name>
+      <anchorfile>classjpw__math_1_1Matrix.html</anchorfile>
+      <anchor>a263b4acf44142b6b2305218281384fcc</anchor>
+      <arglist>(vector_type &amp;other)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>clear</name>
+      <anchorfile>classjpw__math_1_1Matrix.html</anchorfile>
+      <anchor>a6f31ae5873e63201131df88ea94d8a4a</anchor>
+      <arglist>(size_t n_rows=0, size_t n_columns=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fill</name>
+      <anchorfile>classjpw__math_1_1Matrix.html</anchorfile>
+      <anchor>a770131a7be6800c9d50de59b16c6cb6b</anchor>
+      <arglist>(value_type v, size_t n_rows=0, size_t n_columns=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>wipe</name>
+      <anchorfile>classjpw__math_1_1Matrix.html</anchorfile>
+      <anchor>aa9bb561ecea39474891caf32a1a9863f</anchor>
+      <arglist>(size_t n_rows=0, size_t n_columns=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>equivalent</name>
+      <anchorfile>classjpw__math_1_1Matrix.html</anchorfile>
+      <anchor>a6ab74ae2331cad8e5988bcbaa84ab097</anchor>
+      <arglist>(const Matrix &amp;other, double epsilon=1.0e-16) const </arglist>
+    </member>
+    <member kind="function">
+      <type>size_t</type>
+      <name>nRows</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>abdde07b2d9bddf82b8e3ade955145a3d</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>size_t</type>
+      <name>nColumns</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>a478db41c986e36a2c8608f14df103f0a</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>swap</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>add866b5e55dfa5e6c0d43880dc0e576f</anchor>
+      <arglist>(MatrixAdapter &amp;other)</arglist>
+    </member>
+    <member kind="function">
+      <type>const_vector_type_reference</type>
+      <name>as_1D</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>a42f9c02f59933f1a849ede200dc94bb1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>af80b7f4d30ab90c28af6ba3b53fc1999</anchor>
+      <arglist>(const MatrixAdapter &amp;other) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>a1a7400164d7c3a2d4a940fadf3c43779</anchor>
+      <arglist>(const MatrixAdapter &amp;other) const</arglist>
+    </member>
+    <member kind="function">
+      <type>size_t</type>
+      <name>size</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>aac782da1f912bceb5d8ad00c8dc892ac</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>empty</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>ac6e61de369e994009e36f344f99c15ad</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>RowProxy</type>
+      <name>operator[]</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>a10d5224dbda189ffbe8b01c9e24c8b31</anchor>
+      <arglist>(size_t row_idx)</arglist>
+    </member>
+    <member kind="function">
+      <type>const RowProxy</type>
+      <name>operator[]</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>af0624b5ff3cca6f87b1b4ef403696ee9</anchor>
+      <arglist>(size_t row_idx) const</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>reserve</name>
+      <anchorfile>classjpw__math_1_1Matrix.html</anchorfile>
+      <anchor>a37f30a4bd0b98243fae44747b551159b</anchor>
+      <arglist>(size_t n_rows, size_t n_columns)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>size_t</type>
+      <name>m__nrows</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>ae8f2ed252f2655cabf4141c4af0745cd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>size_t</type>
+      <name>m__ncols</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>abd25cf00047f8416bc1564d75ef1eb92</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>vector_type</type>
+      <name>m__data</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>a9259d9244711b93c58024320cf0fc515</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="friend">
+      <type>friend class</type>
+      <name>jpw_math::details::MatrixRef_Writer&lt; C &gt;</name>
+      <anchorfile>classjpw__math_1_1Matrix.html</anchorfile>
+      <anchor>a9d7d32e1a85c46b863f355401e7562d7</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>jpw_math::MatrixAdapter</name>
+    <filename>classjpw__math_1_1MatrixAdapter.html</filename>
+    <templarg>S</templarg>
+    <templarg>STOR_POL</templarg>
+    <class kind="struct">jpw_math::MatrixAdapter::RowProxy</class>
+    <member kind="typedef">
+      <type>S</type>
+      <name>vector_type</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>afa562ed5d30830ea391d8530067c5663</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>traits::ContainerType&lt; S &gt;::value_type</type>
+      <name>value_type</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>a87f44613d60901352118e131791d3dd2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>traits::ContainerType&lt; S &gt;::reference</type>
+      <name>reference</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>a95a98ae3345af7dd85b05ae9bbbd3d21</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>traits::ContainerType&lt; S &gt;::const_reference</type>
+      <name>const_reference</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>ad68ed03062ada2ee154ac9fcb7124845</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::call_traits&lt; vector_type &gt;::const_reference</type>
+      <name>const_vector_type_reference</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>ac2828a239e4da337f8328ecfa7e28c65</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>MatrixAdapter</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>a6d956932778171bca37a2f2c7355c0e7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~MatrixAdapter</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>a1708ed97d4f07c438bdd8c0d94c8ad7c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>MatrixAdapter</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>ae7879c7f89f34f975c0aba4df85903cb</anchor>
+      <arglist>(const MatrixAdapter &amp;other)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>MatrixAdapter</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>a6aff05e21c83c2dad3d0f47d0887c8b3</anchor>
+      <arglist>(size_t n_rows, size_t n_columns)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>MatrixAdapter</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>a779809cc109a5ea2a66544db2522f448</anchor>
+      <arglist>(INPUT_ITERATOR begin, INPUT_ITERATOR end, size_t n_rows, size_t n_columns)</arglist>
+    </member>
+    <member kind="function">
+      <type>MatrixAdapter &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>a13ee3bd33652872e6b2fca58ed322aec</anchor>
+      <arglist>(const MatrixAdapter &amp;other)</arglist>
+    </member>
+    <member kind="function">
+      <type>size_t</type>
+      <name>nRows</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>abdde07b2d9bddf82b8e3ade955145a3d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>size_t</type>
+      <name>nColumns</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>a478db41c986e36a2c8608f14df103f0a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>swap</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>add866b5e55dfa5e6c0d43880dc0e576f</anchor>
+      <arglist>(MatrixAdapter &amp;other)</arglist>
+    </member>
+    <member kind="function">
+      <type>const_vector_type_reference</type>
+      <name>as_1D</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>a42f9c02f59933f1a849ede200dc94bb1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>af80b7f4d30ab90c28af6ba3b53fc1999</anchor>
+      <arglist>(const MatrixAdapter &amp;other) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>a1a7400164d7c3a2d4a940fadf3c43779</anchor>
+      <arglist>(const MatrixAdapter &amp;other) const </arglist>
+    </member>
+    <member kind="function">
+      <type>size_t</type>
+      <name>size</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>aac782da1f912bceb5d8ad00c8dc892ac</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>empty</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>ac6e61de369e994009e36f344f99c15ad</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>RowProxy</type>
+      <name>operator[]</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>a10d5224dbda189ffbe8b01c9e24c8b31</anchor>
+      <arglist>(size_t row_idx)</arglist>
+    </member>
+    <member kind="function">
+      <type>const RowProxy</type>
+      <name>operator[]</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>af0624b5ff3cca6f87b1b4ef403696ee9</anchor>
+      <arglist>(size_t row_idx) const </arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>size_t</type>
+      <name>m__nrows</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>ae8f2ed252f2655cabf4141c4af0745cd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>size_t</type>
+      <name>m__ncols</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>abd25cf00047f8416bc1564d75ef1eb92</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>vector_type</type>
+      <name>m__data</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>a9259d9244711b93c58024320cf0fc515</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend class</type>
+      <name>RowProxy</name>
+      <anchorfile>classjpw__math_1_1MatrixAdapter.html</anchorfile>
+      <anchor>a844abd4346eb88219b96c0eaa80f796b</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>jpw_math::details</name>
+    <filename>namespacejpw__math_1_1details.html</filename>
+    <class kind="class">jpw_math::details::MatrixRef_Writer</class>
+  </compound>
+  <compound kind="class">
+    <name>jpw_math::details::MatrixRef_Writer</name>
+    <filename>classjpw__math_1_1details_1_1MatrixRef__Writer.html</filename>
+    <templarg></templarg>
+    <base protection="private">boost::noncopyable</base>
+    <member kind="function">
+      <type></type>
+      <name>MatrixRef_Writer</name>
+      <anchorfile>classjpw__math_1_1details_1_1MatrixRef__Writer.html</anchorfile>
+      <anchor>af84c6f09054bf6ed440326c2e85c0817</anchor>
+      <arglist>(matrix_t &amp;m)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~MatrixRef_Writer</name>
+      <anchorfile>classjpw__math_1_1details_1_1MatrixRef__Writer.html</anchorfile>
+      <anchor>ab9d0a7826be8c4cfbaafe015fe620059</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>matrix_t *</type>
+      <name>operator-&gt;</name>
+      <anchorfile>classjpw__math_1_1details_1_1MatrixRef__Writer.html</anchorfile>
+      <anchor>a132a5d5e4923d4b34b660e110459bf30</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const matrix_t *</type>
+      <name>operator-&gt;</name>
+      <anchorfile>classjpw__math_1_1details_1_1MatrixRef__Writer.html</anchorfile>
+      <anchor>a181896c0fe880ed3d5471088d6def2de</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>value_type *</type>
+      <name>c_data</name>
+      <anchorfile>classjpw__math_1_1details_1_1MatrixRef__Writer.html</anchorfile>
+      <anchor>a6a17ca20a9f7e139aacee6b20327c85b</anchor>
+      <arglist>(size_t row_size, size_t column_size)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>jpw_math::policy</name>
+    <filename>namespacejpw__math_1_1policy.html</filename>
+    <class kind="struct">jpw_math::policy::SequenceStorage</class>
+    <class kind="struct">jpw_math::policy::SequenceStorage&lt; S * &gt;</class>
+  </compound>
+  <compound kind="struct">
+    <name>jpw_math::policy::SequenceStorage</name>
+    <filename>structjpw__math_1_1policy_1_1SequenceStorage.html</filename>
+    <templarg></templarg>
+    <member kind="typedef">
+      <type>S</type>
+      <name>vec_t</name>
+      <anchorfile>structjpw__math_1_1policy_1_1SequenceStorage.html</anchorfile>
+      <anchor>aa69c3b8a2fe4905281c08eb2b92102a5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::call_traits&lt; S &gt;::reference</type>
+      <name>ref_vec_t</name>
+      <anchorfile>structjpw__math_1_1policy_1_1SequenceStorage.html</anchorfile>
+      <anchor>abe2e5b6d921f33ca9b209f6ab2258458</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::call_traits&lt; S &gt;::const_reference</type>
+      <name>constref_vec_t</name>
+      <anchorfile>structjpw__math_1_1policy_1_1SequenceStorage.html</anchorfile>
+      <anchor>ae448cc68e481ff4694298c8981310efe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static size_t</type>
+      <name>create</name>
+      <anchorfile>structjpw__math_1_1policy_1_1SequenceStorage.html</anchorfile>
+      <anchor>a9824d52947d55a20358e2e199f381f0c</anchor>
+      <arglist>(size_t size)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>destroy</name>
+      <anchorfile>structjpw__math_1_1policy_1_1SequenceStorage.html</anchorfile>
+      <anchor>ab85c72bfa83a90f7a60ed5a18559c053</anchor>
+      <arglist>(ref_vec_t)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>assign</name>
+      <anchorfile>structjpw__math_1_1policy_1_1SequenceStorage.html</anchorfile>
+      <anchor>a81b57ee0084c6430db242aa220f6b0f6</anchor>
+      <arglist>(ref_vec_t targ, constref_vec_t src, size_t)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static vec_t</type>
+      <name>new_copy_of</name>
+      <anchorfile>structjpw__math_1_1policy_1_1SequenceStorage.html</anchorfile>
+      <anchor>a31dd8b7de1f82ae8e9bbb0fd9acba943</anchor>
+      <arglist>(constref_vec_t other, size_t)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static vec_t</type>
+      <name>new_copy_of</name>
+      <anchorfile>structjpw__math_1_1policy_1_1SequenceStorage.html</anchorfile>
+      <anchor>a95d8ab27542cbde6c63bf52f5d6d089e</anchor>
+      <arglist>(ITER begin, ITER end)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>equivalent</name>
+      <anchorfile>structjpw__math_1_1policy_1_1SequenceStorage.html</anchorfile>
+      <anchor>ac8190e8cbb1ff4212f17df3f66b07355</anchor>
+      <arglist>(constref_vec_t a, constref_vec_t b, size_t)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>swap</name>
+      <anchorfile>structjpw__math_1_1policy_1_1SequenceStorage.html</anchorfile>
+      <anchor>accfc49ddb606f908b698c7822ec91f17</anchor>
+      <arglist>(ref_vec_t a, ref_vec_t b)</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>jpw_math::policy::SequenceStorage&lt; S * &gt;</name>
+    <filename>structjpw__math_1_1policy_1_1SequenceStorage_3_01S_01_5_01_4.html</filename>
+    <templarg></templarg>
+    <member kind="typedef">
+      <type>traits::ContainerType&lt; S * &gt;::value_type</type>
+      <name>val_t</name>
+      <anchorfile>structjpw__math_1_1policy_1_1SequenceStorage_3_01S_01_5_01_4.html</anchorfile>
+      <anchor>a058a0a0cd3987d7149036e0fcb8c81c6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>val_t *</type>
+      <name>vec_t</name>
+      <anchorfile>structjpw__math_1_1policy_1_1SequenceStorage_3_01S_01_5_01_4.html</anchorfile>
+      <anchor>ac29e0315c5aa66ae1a46bb1219f9df8f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::call_traits&lt; vec_t &gt;::reference</type>
+      <name>ref_vec_t</name>
+      <anchorfile>structjpw__math_1_1policy_1_1SequenceStorage_3_01S_01_5_01_4.html</anchorfile>
+      <anchor>a7ee4a16bdc64c273a7b173e9e590d754</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::call_traits&lt; vec_t &gt;::const_reference</type>
+      <name>constref_vec_t</name>
+      <anchorfile>structjpw__math_1_1policy_1_1SequenceStorage_3_01S_01_5_01_4.html</anchorfile>
+      <anchor>a09b4051ccf72dd75ced5d2a9c284c9db</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static vec_t</type>
+      <name>create</name>
+      <anchorfile>structjpw__math_1_1policy_1_1SequenceStorage_3_01S_01_5_01_4.html</anchorfile>
+      <anchor>afa6b39bde71941284a6176866db10c36</anchor>
+      <arglist>(size_t size)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>destroy</name>
+      <anchorfile>structjpw__math_1_1policy_1_1SequenceStorage_3_01S_01_5_01_4.html</anchorfile>
+      <anchor>ae5ce5e2a173f0f85d21af4f3a4679551</anchor>
+      <arglist>(ref_vec_t vec)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static vec_t</type>
+      <name>new_copy_of</name>
+      <anchorfile>structjpw__math_1_1policy_1_1SequenceStorage_3_01S_01_5_01_4.html</anchorfile>
+      <anchor>a080e1f37fb44d9365f905db638baad7f</anchor>
+      <arglist>(const vec_t other, size_t other_size)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static vec_t</type>
+      <name>new_copy_of</name>
+      <anchorfile>structjpw__math_1_1policy_1_1SequenceStorage_3_01S_01_5_01_4.html</anchorfile>
+      <anchor>a95d8ab27542cbde6c63bf52f5d6d089e</anchor>
+      <arglist>(ITER begin, ITER end)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>assign</name>
+      <anchorfile>structjpw__math_1_1policy_1_1SequenceStorage_3_01S_01_5_01_4.html</anchorfile>
+      <anchor>a521ada82d419ff5700c998517130b1ba</anchor>
+      <arglist>(ref_vec_t targ, constref_vec_t src, size_t src_size)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>equivalent</name>
+      <anchorfile>structjpw__math_1_1policy_1_1SequenceStorage_3_01S_01_5_01_4.html</anchorfile>
+      <anchor>a286ec4e2d88949a52b3a421e50eb4575</anchor>
+      <arglist>(constref_vec_t a, constref_vec_t b, size_t size_both)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>swap</name>
+      <anchorfile>structjpw__math_1_1policy_1_1SequenceStorage_3_01S_01_5_01_4.html</anchorfile>
+      <anchor>accfc49ddb606f908b698c7822ec91f17</anchor>
+      <arglist>(ref_vec_t a, ref_vec_t b)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>jpw_math::statistics</name>
+    <filename>namespacejpw__math_1_1statistics.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>parseSeed</name>
+      <anchorfile>namespacejpw__math_1_1statistics.html</anchorfile>
+      <anchor>a164a5b147b91604fe7d1cf63bb374623</anchor>
+      <arglist>(std::string &amp;seedStr, unsigned &amp;seedLo, unsigned &amp;seedHi)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>init_rand</name>
+      <anchorfile>namespacejpw__math_1_1statistics.html</anchorfile>
+      <anchor>ac668f99b683f19d30435765f6fdcf5e0</anchor>
+      <arglist>(bool verbose=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>init_rand_firstTimeOnly</name>
+      <anchorfile>namespacejpw__math_1_1statistics.html</anchorfile>
+      <anchor>a51e5cc922fe872c4268e18b84750afb4</anchor>
+      <arglist>(bool verbose=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>init_rand</name>
+      <anchorfile>namespacejpw__math_1_1statistics.html</anchorfile>
+      <anchor>a73116cedd0708dae27087e801f1627f7</anchor>
+      <arglist>(unsigned s1, unsigned s2, bool verbose=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>index_t</type>
+      <name>randidx</name>
+      <anchorfile>namespacejpw__math_1_1statistics.html</anchorfile>
+      <anchor>a5860bee400421cf8808a7eae4194bbc0</anchor>
+      <arglist>(index_t nn)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>range_rand</name>
+      <anchorfile>namespacejpw__math_1_1statistics.html</anchorfile>
+      <anchor>acf9ddef189d66624c10b85a5665959e7</anchor>
+      <arglist>(double del)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>gaussrand</name>
+      <anchorfile>namespacejpw__math_1_1statistics.html</anchorfile>
+      <anchor>a197330264423219195b980acc751a455</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>std_dev</name>
+      <anchorfile>namespacejpw__math_1_1statistics.html</anchorfile>
+      <anchor>a331072eefe09b0beea8f2b876ef5e0b8</anchor>
+      <arglist>(const dvector_t &amp;values)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>std_dev</name>
+      <anchorfile>namespacejpw__math_1_1statistics.html</anchorfile>
+      <anchor>a1a813447b792fe2bab532c96278b3382</anchor>
+      <arglist>(const dmatrix_t &amp;values)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>signif_del_chisq_tg</name>
+      <anchorfile>namespacejpw__math_1_1statistics.html</anchorfile>
+      <anchor>a2eab24163e8dda428858599a02b9523d</anchor>
+      <arglist>(double &amp;siglevel)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>confidence_tg</name>
+      <anchorfile>namespacejpw__math_1_1statistics.html</anchorfile>
+      <anchor>ade1d5d0d8f6732c551895003bca85e8d</anchor>
+      <arglist>(double del_chisq_sig, const dmatrix_t &amp;inv_curv_m, index_t parmidx, bool verbose)</arglist>
+    </member>
+    <member kind="function">
+      <type>long</type>
+      <name>nearest_multiple</name>
+      <anchorfile>namespacejpw__math_1_1statistics.html</anchorfile>
+      <anchor>a5f7648815cf717f184be5510dc1ecb9d</anchor>
+      <arglist>(double val, double nearfac, bool use_larger)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>jpw_math::traits</name>
+    <filename>namespacejpw__math_1_1traits.html</filename>
+    <class kind="struct">jpw_math::traits::ContainerType</class>
+    <class kind="struct">jpw_math::traits::ContainerType&lt; S * &gt;</class>
+  </compound>
+  <compound kind="struct">
+    <name>jpw_math::traits::ContainerType</name>
+    <filename>structjpw__math_1_1traits_1_1ContainerType.html</filename>
+    <templarg>S</templarg>
+    <member kind="typedef">
+      <type>S::value_type</type>
+      <name>value_type</name>
+      <anchorfile>structjpw__math_1_1traits_1_1ContainerType.html</anchorfile>
+      <anchor>acec15026159cf469320e8a533d2a0bb7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::call_traits&lt; value_type &gt;::reference</type>
+      <name>reference</name>
+      <anchorfile>structjpw__math_1_1traits_1_1ContainerType.html</anchorfile>
+      <anchor>a78f8c6ed12b9bb2343d63518558aa884</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::call_traits&lt; value_type &gt;::const_reference</type>
+      <name>const_reference</name>
+      <anchorfile>structjpw__math_1_1traits_1_1ContainerType.html</anchorfile>
+      <anchor>ab09ab1fbb39c4d968c51c747d6462a5a</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>jpw_math::traits::ContainerType&lt; S * &gt;</name>
+    <filename>structjpw__math_1_1traits_1_1ContainerType_3_01S_01_5_01_4.html</filename>
+    <templarg></templarg>
+    <member kind="typedef">
+      <type>S</type>
+      <name>value_type</name>
+      <anchorfile>structjpw__math_1_1traits_1_1ContainerType_3_01S_01_5_01_4.html</anchorfile>
+      <anchor>a21a701ec983145810c764974e20c8e85</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::call_traits&lt; value_type &gt;::reference</type>
+      <name>reference</name>
+      <anchorfile>structjpw__math_1_1traits_1_1ContainerType_3_01S_01_5_01_4.html</anchorfile>
+      <anchor>a78f8c6ed12b9bb2343d63518558aa884</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::call_traits&lt; value_type &gt;::const_reference</type>
+      <name>const_reference</name>
+      <anchorfile>structjpw__math_1_1traits_1_1ContainerType_3_01S_01_5_01_4.html</anchorfile>
+      <anchor>ab09ab1fbb39c4d968c51c747d6462a5a</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>jpw_nld</name>
+    <filename>namespacejpw__nld.html</filename>
+    <namespace>jpw_nld::fortlib</namespace>
+    <namespace>jpw_nld::measure</namespace>
+    <namespace>jpw_nld::optimize</namespace>
+    <class kind="struct">jpw_nld::FileNotFound</class>
+    <class kind="struct">jpw_nld::InvalidArgError</class>
+    <class kind="struct">jpw_nld::SizeMismatchError</class>
+    <class kind="struct">jpw_nld::FooExcept</class>
+    <member kind="typedef">
+      <type>unsigned long</type>
+      <name>tslen_t</name>
+      <anchorfile>namespacejpw__nld.html</anchorfile>
+      <anchor>afd02b1952a0403b0ef53ae24eed8353f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>unsigned long</type>
+      <name>step_t</name>
+      <anchorfile>namespacejpw__nld.html</anchorfile>
+      <anchor>a9956bdf98a910216bdae7da8f0e08359</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>uint8_t</type>
+      <name>dim_t</name>
+      <anchorfile>namespacejpw__nld.html</anchorfile>
+      <anchor>a89b46f89f4f701d1ae9f817307d0e41a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>uint32_t</type>
+      <name>index_t</name>
+      <anchorfile>namespacejpw__nld.html</anchorfile>
+      <anchor>aab1410d3f3644ff465752cab5b56e420</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>jpw_nld::FileNotFound</name>
+    <filename>structjpw__nld_1_1FileNotFound.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>FileNotFound</name>
+      <anchorfile>structjpw__nld_1_1FileNotFound.html</anchorfile>
+      <anchor>a5a6f8367734ec7a0ef40bce78db2e3b8</anchor>
+      <arglist>(const std::string &amp;errmsg)</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>jpw_nld::InvalidArgError</name>
+    <filename>structjpw__nld_1_1InvalidArgError.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>InvalidArgError</name>
+      <anchorfile>structjpw__nld_1_1InvalidArgError.html</anchorfile>
+      <anchor>ac9dd2e630dd7e02020e8340e69d74faf</anchor>
+      <arglist>(const std::string &amp;errmsg)</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>jpw_nld::SizeMismatchError</name>
+    <filename>structjpw__nld_1_1SizeMismatchError.html</filename>
+    <base>jpw_nld::InvalidArgError</base>
+    <member kind="function">
+      <type></type>
+      <name>SizeMismatchError</name>
+      <anchorfile>structjpw__nld_1_1SizeMismatchError.html</anchorfile>
+      <anchor>a2f5b2ff5211ebeb542bde2cf98a35f16</anchor>
+      <arglist>(const std::string &amp;errmsg)</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>jpw_nld::FooExcept</name>
+    <filename>structjpw__nld_1_1FooExcept.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>FooExcept</name>
+      <anchorfile>structjpw__nld_1_1FooExcept.html</anchorfile>
+      <anchor>af5c14fd350a34b561362a930d59b11af</anchor>
+      <arglist>(const std::string &amp;what)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>jpw_nld::fortlib</name>
+    <filename>namespacejpw__nld_1_1fortlib.html</filename>
+    <namespace>jpw_nld::fortlib::sort</namespace>
+    <namespace>jpw_nld::fortlib::square_matrix_inversion</namespace>
+    <class kind="class">jpw_nld::fortlib::FitLM</class>
+    <class kind="class">jpw_nld::fortlib::FitLM_Adapter</class>
+    <member kind="typedef">
+      <type>FitLM::FitStatus_t</type>
+      <name>FitLMStatus_t</name>
+      <anchorfile>namespacejpw__nld_1_1fortlib.html</anchorfile>
+      <anchor>a3d92aaae3ca4d3e49488f9418918125f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::vector&lt; int, std::allocator&lt; int &gt; &gt;</type>
+      <name>ivector_t</name>
+      <anchorfile>namespacejpw__nld_1_1fortlib.html</anchorfile>
+      <anchor>a2f79a8516ace6e181a30e6ab5dc72591</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>int *</type>
+      <name>fort_ivar_t</name>
+      <anchorfile>namespacejpw__nld_1_1fortlib.html</anchorfile>
+      <anchor>a56901cc4dbebf83731bcfb5d58b8cf7e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>double *</type>
+      <name>fort_dvar_t</name>
+      <anchorfile>namespacejpw__nld_1_1fortlib.html</anchorfile>
+      <anchor>a3c6d579705e496916bda262c485e6b19</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>int *</type>
+      <name>fort_ivec_t</name>
+      <anchorfile>namespacejpw__nld_1_1fortlib.html</anchorfile>
+      <anchor>a12769afd90f833159895dfc94b39dc88</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>double *</type>
+      <name>fort_dvec_t</name>
+      <anchorfile>namespacejpw__nld_1_1fortlib.html</anchorfile>
+      <anchor>ab548b8671e5358ea35e5131e23dfb479</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>double *</type>
+      <name>fort_dmat_t</name>
+      <anchorfile>namespacejpw__nld_1_1fortlib.html</anchorfile>
+      <anchor>a71e1364077d954bc37620f7f5732525b</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>jpw_nld::fortlib::FitLM</name>
+    <filename>classjpw__nld_1_1fortlib_1_1FitLM.html</filename>
+    <base protection="private">boost::noncopyable</base>
+    <member kind="enumeration">
+      <name>FitStatus_t</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>abd17c321c84757dfc2c360f442c84b69</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ModelAbortedIn_fjac</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>abd17c321c84757dfc2c360f442c84b69a5a40e6e0acab57af50339b0116e2bfcc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ModelAbortedIn_fvec</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>abd17c321c84757dfc2c360f442c84b69a2581145a3233276a7c050276e4094a05</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>InputError</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>abd17c321c84757dfc2c360f442c84b69a59cb9290f3a38866f0286d3786a93d31</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>Success_SumSq</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>abd17c321c84757dfc2c360f442c84b69aa0fe700f316023fc4d04b903d0d60a0c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>Success_dParam</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>abd17c321c84757dfc2c360f442c84b69ac0fe107bb27e85a83a34a602fbeca15e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>Success_Both</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>abd17c321c84757dfc2c360f442c84b69a877c47c9556ab02e216c28d5132c5356</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MachinePrec</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>abd17c321c84757dfc2c360f442c84b69aa91d6d0db90a6e75830e8b58ceca7794</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>IterationOverflow</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>abd17c321c84757dfc2c360f442c84b69adaae0c0c74b0d195ce585ab9a7e76c15</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>UnderflowError_SumSq</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>abd17c321c84757dfc2c360f442c84b69abd57fe37a17d3f43dceb3366d2171bb7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>UnderflowError_dParam</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>abd17c321c84757dfc2c360f442c84b69afac40821ed5fa0992b863a393b66bb4b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MachinePrec_LMAlg</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>abd17c321c84757dfc2c360f442c84b69a8eed89dfd22ed6c9a50f4187f2e86212</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>void(*</type>
+      <name>fit_function_ptr_t</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>ade489b47682b536317ea832337debf1b</anchor>
+      <arglist>)(fort_ivar_t, fort_ivar_t, fort_dvec_t, fort_dvec_t, fort_dmat_t, fort_ivar_t, fort_ivar_t)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>FitLM</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>a10381fd4d6bfa4d94d21126f7db705ac</anchor>
+      <arglist>(fit_function_ptr_t ffp, index_t ndata, index_t nparm)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~FitLM</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>a8c4a5e1d40f3c6a735acd2ae01e9aa4b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>FitStatus_t</type>
+      <name>operator()</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>ab9ec7f9ce599a844513a1cc8d940df03</anchor>
+      <arglist>(int mm, dvector_t &amp;xv, double errtol, double ptol, int maxiter, double factor)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>chiSquared</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>a40f646ca74381f91bf851ce166469a5e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const dvector_t &amp;</type>
+      <name>f_vec</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>a7409bc7c7fe43e31ad5b8a143358bc68</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const dmatrix_t &amp;</type>
+      <name>f_jac</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>a8ba51868d28fcabdb4fbf278e0aa86dd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>m__ndata</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>a483e3b8aa9eb204b3d8530cab461de63</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>m__nparams</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>af83c4f38cedef0c6c2601f4943b66a08</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>dvector_t</type>
+      <name>m__f_jac_flat</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>a29af2a58b2580b0cef809166b4f86bc6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>dvector_t</type>
+      <name>m__f_vec</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>aa5ce76a1989ef857b2e8c0b4eba9957b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>dmatrix_t</type>
+      <name>m__f_jac_out</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>a4ea0f66308fe53795e9ced7c7c0d55a3</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>jpw_nld::fortlib::FitLM_Adapter</name>
+    <filename>classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html</filename>
+    <templarg>F</templarg>
+    <templarg>D</templarg>
+    <base protection="protected">jpw_nld::fortlib::FitLM</base>
+    <member kind="function">
+      <type></type>
+      <name>FitLM_Adapter</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html</anchorfile>
+      <anchor>a59822aa80bfe505e814fdda142c7acae</anchor>
+      <arglist>(index_t ndata)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~FitLM_Adapter</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html</anchorfile>
+      <anchor>ad4014cb990aecb549293239401b02e67</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>FitStatus_t</type>
+      <name>operator()</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html</anchorfile>
+      <anchor>a6afd60dbf65e7f2e80a86f59a063233a</anchor>
+      <arglist>(FitFunctor_t &amp;theModel, const Data_t &amp;theData, dvector_t &amp;xv, double errtol, double ptol, int maxiter, double factor)</arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>F</type>
+      <name>FitFunctor_t</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html</anchorfile>
+      <anchor>a3e7bc787aa51c03c4c7ad93d9114e788</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>D</type>
+      <name>Data_t</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html</anchorfile>
+      <anchor>a132750551a38da2b73a2c03653dbf47d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>FitLM_Adapter&lt; F, D &gt;</type>
+      <name>Self_t</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html</anchorfile>
+      <anchor>aebbff9bf8df23637be17d96a7cfd46e4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <name>FitStatus_t</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>abd17c321c84757dfc2c360f442c84b69</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ModelAbortedIn_fjac</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>abd17c321c84757dfc2c360f442c84b69a5a40e6e0acab57af50339b0116e2bfcc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ModelAbortedIn_fvec</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>abd17c321c84757dfc2c360f442c84b69a2581145a3233276a7c050276e4094a05</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>InputError</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>abd17c321c84757dfc2c360f442c84b69a59cb9290f3a38866f0286d3786a93d31</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>Success_SumSq</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>abd17c321c84757dfc2c360f442c84b69aa0fe700f316023fc4d04b903d0d60a0c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>Success_dParam</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>abd17c321c84757dfc2c360f442c84b69ac0fe107bb27e85a83a34a602fbeca15e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>Success_Both</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>abd17c321c84757dfc2c360f442c84b69a877c47c9556ab02e216c28d5132c5356</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MachinePrec</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>abd17c321c84757dfc2c360f442c84b69aa91d6d0db90a6e75830e8b58ceca7794</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>IterationOverflow</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>abd17c321c84757dfc2c360f442c84b69adaae0c0c74b0d195ce585ab9a7e76c15</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>UnderflowError_SumSq</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>abd17c321c84757dfc2c360f442c84b69abd57fe37a17d3f43dceb3366d2171bb7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>UnderflowError_dParam</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>abd17c321c84757dfc2c360f442c84b69afac40821ed5fa0992b863a393b66bb4b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MachinePrec_LMAlg</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>abd17c321c84757dfc2c360f442c84b69a8eed89dfd22ed6c9a50f4187f2e86212</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>void(*</type>
+      <name>fit_function_ptr_t</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>ade489b47682b536317ea832337debf1b</anchor>
+      <arglist>)(fort_ivar_t, fort_ivar_t, fort_dvec_t, fort_dvec_t, fort_dmat_t, fort_ivar_t, fort_ivar_t)</arglist>
+    </member>
+    <member kind="function">
+      <type>FitStatus_t</type>
+      <name>operator()</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>ab9ec7f9ce599a844513a1cc8d940df03</anchor>
+      <arglist>(int mm, dvector_t &amp;xv, double errtol, double ptol, int maxiter, double factor)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>chiSquared</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>a40f646ca74381f91bf851ce166469a5e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const dvector_t &amp;</type>
+      <name>f_vec</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>a7409bc7c7fe43e31ad5b8a143358bc68</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const dmatrix_t &amp;</type>
+      <name>f_jac</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>a8ba51868d28fcabdb4fbf278e0aa86dd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static void</type>
+      <name>fit_function_adapter</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html</anchorfile>
+      <anchor>af19b48bb14dd26cf8c40c5710ab9117d</anchor>
+      <arglist>(fort_ivar_t neq, fort_ivar_t nvar, fort_dvec_t xvec, fort_dvec_t fvec, fort_dmat_t fjac, fort_ivar_t ldfjac, fort_ivar_t iflag)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>m__ndata</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>a483e3b8aa9eb204b3d8530cab461de63</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>m__nparams</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>af83c4f38cedef0c6c2601f4943b66a08</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>dvector_t</type>
+      <name>m__f_jac_flat</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>a29af2a58b2580b0cef809166b4f86bc6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>dvector_t</type>
+      <name>m__f_vec</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>aa5ce76a1989ef857b2e8c0b4eba9957b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>dmatrix_t</type>
+      <name>m__f_jac_out</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>a4ea0f66308fe53795e9ced7c7c0d55a3</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>jpw_nld::fortlib::sort</name>
+    <filename>namespacejpw__nld_1_1fortlib_1_1sort.html</filename>
+    <class kind="struct">jpw_nld::fortlib::sort::SortError</class>
+    <member kind="function">
+      <type>void</type>
+      <name>byIndex</name>
+      <anchorfile>namespacejpw__nld_1_1fortlib_1_1sort.html</anchorfile>
+      <anchor>affd37118db8b4bab11fa96a2b8611bc1</anchor>
+      <arglist>(const dvector_t &amp;dlst, ivector_t &amp;idxarr, int dir)</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>jpw_nld::fortlib::sort::SortError</name>
+    <filename>structjpw__nld_1_1fortlib_1_1sort_1_1SortError.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>SortError</name>
+      <anchorfile>structjpw__nld_1_1fortlib_1_1sort_1_1SortError.html</anchorfile>
+      <anchor>a7ff43469730b58587c5aedaaa495f232</anchor>
+      <arglist>(const string &amp;where, const string &amp;fortFn, int errCode)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>jpw_nld::fortlib::square_matrix_inversion</name>
+    <filename>namespacejpw__nld_1_1fortlib_1_1square__matrix__inversion.html</filename>
+    <member kind="function">
+      <type>int</type>
+      <name>sqmInvert_GJE</name>
+      <anchorfile>namespacejpw__nld_1_1fortlib_1_1square__matrix__inversion.html</anchorfile>
+      <anchor>a6fcb885f2e8cc3711e83f5561e3453bd</anchor>
+      <arglist>(const dmatrix_t &amp;dm, dmatrix_t &amp;dm_inv)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>sqmInvert_SVD</name>
+      <anchorfile>namespacejpw__nld_1_1fortlib_1_1square__matrix__inversion.html</anchorfile>
+      <anchor>a32922f48e1cde73d7e17e22cbb1777b3</anchor>
+      <arglist>(const dmatrix_t &amp;dm, dmatrix_t &amp;dm_inv)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>jpw_nld::measure</name>
+    <filename>namespacejpw__nld_1_1measure.html</filename>
+    <namespace>jpw_nld::measure::policy</namespace>
+    <class kind="class">jpw_nld::measure::BarrierModel</class>
+    <class kind="class">jpw_nld::measure::FitLM_BarrierAdapter</class>
+    <class kind="class">jpw_nld::measure::PersistenceMap</class>
+    <member kind="typedef">
+      <type>BarrierModel</type>
+      <name>FullBarrierModel_t</name>
+      <anchorfile>namespacejpw__nld_1_1measure.html</anchorfile>
+      <anchor>ad01b3775bf70aae800e6e2b0e22b5529</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>BarrierModel&lt; policy::MarkovOnly &gt;</type>
+      <name>MarkovOnlyBarrierModel_t</name>
+      <anchorfile>namespacejpw__nld_1_1measure.html</anchorfile>
+      <anchor>aa1beae3e3fc75b29b026e2818d33b49a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>BarrierModel&lt; policy::BarrierOnly &gt;</type>
+      <name>BarrierOnlyBarrierModel_t</name>
+      <anchorfile>namespacejpw__nld_1_1measure.html</anchorfile>
+      <anchor>aa1a2cde576cb0887a4b95bc1ca75ef44</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>FitLM_BarrierAdapter&lt; policy::MarkovOnly &gt;</type>
+      <name>FitLM_MarkovOnly</name>
+      <anchorfile>namespacejpw__nld_1_1measure.html</anchorfile>
+      <anchor>a5b6c0d182f1d114eebf5fbc8c3cd88f7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>FitLM_BarrierAdapter&lt; policy::Full &gt;</type>
+      <name>FitLM_PBarrier</name>
+      <anchorfile>namespacejpw__nld_1_1measure.html</anchorfile>
+      <anchor>aced595ec5853f08804756c31975c3478</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>jpw_nld::measure::BarrierModel</name>
+    <filename>classjpw__nld_1_1measure_1_1BarrierModel.html</filename>
+    <templarg>MODEL_POLICY</templarg>
+    <base protection="private">boost::noncopyable</base>
+    <member kind="typedef">
+      <type>MODEL_POLICY</type>
+      <name>Policy_t</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1BarrierModel.html</anchorfile>
+      <anchor>a37f1a428bccf592e0ea40ab5c2554fa7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>BarrierModel</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1BarrierModel.html</anchorfile>
+      <anchor>a92bb7f7a64a219c478741c809924734d</anchor>
+      <arglist>(tslen_t nData)</arglist>
+    </member>
+    <member kind="function">
+      <type>tslen_t</type>
+      <name>callcount</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1BarrierModel.html</anchorfile>
+      <anchor>a9f50818d9d9cd8bb1bf246702d1a0e64</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>clearCallcount</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1BarrierModel.html</anchorfile>
+      <anchor>ac8c5a6d25e917f52dac2ee5481ddb55f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>operator()</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1BarrierModel.html</anchorfile>
+      <anchor>a0aa4e13408a7063585bc558edcb8d77e</anchor>
+      <arglist>(const PersistenceMap &amp;theMap, dvector_t &amp;fitParams, dvector_t &amp;fvec)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>chiSquared</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1BarrierModel.html</anchorfile>
+      <anchor>a886594eded13a4463b539dcb941f5fda</anchor>
+      <arglist>(const PersistenceMap &amp;theMap, dvector_t &amp;fitParams)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>operator()</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1BarrierModel.html</anchorfile>
+      <anchor>a084f1b55f411db042af223e0e80a9b93</anchor>
+      <arglist>(int, const PersistenceMap &amp;theMap, int, fortlib::fort_dvec_t fitParams, fortlib::fort_dvec_t fvec, fortlib::fort_dmat_t fjac, int, int iflag)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>randomParams</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1BarrierModel.html</anchorfile>
+      <anchor>ad881762e37c63c17e55a5344cd280885</anchor>
+      <arglist>(dvector_t &amp;params)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>limitParams</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1BarrierModel.html</anchorfile>
+      <anchor>a6912cc1ea4ffe002d822bd62ee030fb3</anchor>
+      <arglist>(dvector_t &amp;params)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static double</type>
+      <name>shape_h</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1BarrierModel.html</anchorfile>
+      <anchor>aab49319e2753dacf69a489704b2973e5</anchor>
+      <arglist>(double x)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static double</type>
+      <name>deriv_h</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1BarrierModel.html</anchorfile>
+      <anchor>a7a845c2c7c000fa7104c11320270efd0</anchor>
+      <arglist>(double x)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static double</type>
+      <name>scale_ampl</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1BarrierModel.html</anchorfile>
+      <anchor>aff93e357fc5539cacb49ab43f02234b4</anchor>
+      <arglist>(double us_ampl)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static double</type>
+      <name>descale_ampl</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1BarrierModel.html</anchorfile>
+      <anchor>a9a461c17b9c58d8498c0d9c1f3dc7137</anchor>
+      <arglist>(double s_ampl)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static double</type>
+      <name>scale_width</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1BarrierModel.html</anchorfile>
+      <anchor>a5e2e23b3a1827b4cfee501ac923480a9</anchor>
+      <arglist>(double us_width)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static double</type>
+      <name>descale_width</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1BarrierModel.html</anchorfile>
+      <anchor>a34e35289a65b1f9e8429e29167c9120f</anchor>
+      <arglist>(double s_width)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static double</type>
+      <name>scale_tau</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1BarrierModel.html</anchorfile>
+      <anchor>a4681aeaee0a2748ad75bc5b4d7a01c0d</anchor>
+      <arglist>(double us_tau)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static double</type>
+      <name>descale_tau</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1BarrierModel.html</anchorfile>
+      <anchor>a576740a8aeb7c2958379af2f76c615cd</anchor>
+      <arglist>(double s_tau)</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const unsigned</type>
+      <name>KAPPA1</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1BarrierModel.html</anchorfile>
+      <anchor>a8448c6f76561a824e54e410e1ebe34f0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const index_t</type>
+      <name>N_PARAMETERS</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1BarrierModel.html</anchorfile>
+      <anchor>a895ddf70d65a1ef437a1d6caed163678</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>calculate</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1BarrierModel.html</anchorfile>
+      <anchor>a65a6375d210752e6c68747943fdc0790</anchor>
+      <arglist>(const PersistenceMap &amp;theMap, VT &amp;fitParams, VT &amp;fvec, VT &amp;fjac, int iflag)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>tslen_t</type>
+      <name>m__callcount</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1BarrierModel.html</anchorfile>
+      <anchor>a1cbc07c6dc50fd397ea1d6ec829cb298</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>dvector_t</type>
+      <name>m__wrkJac</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1BarrierModel.html</anchorfile>
+      <anchor>aae70d50879980e2e9b45dece3340e6db</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>dvector_t</type>
+      <name>m__wrkErrs</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1BarrierModel.html</anchorfile>
+      <anchor>a8152f7d621cada08a0ef5469766845fb</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>jpw_nld::measure::FitLM_BarrierAdapter</name>
+    <filename>classjpw__nld_1_1measure_1_1FitLM__BarrierAdapter.html</filename>
+    <templarg></templarg>
+    <base>FitLM_Adapter&lt; BarrierModel&lt; F_POL_T &gt;, PersistenceMap &gt;</base>
+    <member kind="typedef">
+      <type>BarrierModel&lt; F_POL_T &gt;</type>
+      <name>Model_t</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1FitLM__BarrierAdapter.html</anchorfile>
+      <anchor>a185b35db8671fc25afda8002853e683f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>PersistenceMap</type>
+      <name>Data_t</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1FitLM__BarrierAdapter.html</anchorfile>
+      <anchor>a1ac0482c508b11e73f466740ee5e0a49</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Base_t::FitFunctor_t</type>
+      <name>FitFunctor_t</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1FitLM__BarrierAdapter.html</anchorfile>
+      <anchor>a7c5b262ddcfd6d3141484bfae4049a44</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Base_t::FitStatus_t</type>
+      <name>FitStatus_t</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1FitLM__BarrierAdapter.html</anchorfile>
+      <anchor>ae22725ffc696de099e24932d1f1a23e7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>FitLM_BarrierAdapter</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1FitLM__BarrierAdapter.html</anchorfile>
+      <anchor>a7cdad6a36038e1b4179bf483f45a758e</anchor>
+      <arglist>(tslen_t nData)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~FitLM_BarrierAdapter</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1FitLM__BarrierAdapter.html</anchorfile>
+      <anchor>a4bfad3973df41d5af4f9f718e8450b08</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>FitStatus_t</type>
+      <name>operator()</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1FitLM__BarrierAdapter.html</anchorfile>
+      <anchor>ae0ae9d467e87c07c73d7edbf3c14b329</anchor>
+      <arglist>(dvector_t &amp;fittedParams, const Data_t &amp;theData, double factor)</arglist>
+    </member>
+    <member kind="function">
+      <type>Model_t &amp;</type>
+      <name>theModel</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1FitLM__BarrierAdapter.html</anchorfile>
+      <anchor>a4d2a8d7b5b48cdf88f61e33619534b9b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Model_t &amp;</type>
+      <name>theModel</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1FitLM__BarrierAdapter.html</anchorfile>
+      <anchor>aef5cc8aa258b7c92f2ae7b8919ae21a5</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>FitStatus_t</type>
+      <name>operator()</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html</anchorfile>
+      <anchor>a6afd60dbf65e7f2e80a86f59a063233a</anchor>
+      <arglist>(FitFunctor_t &amp;theModel, const Data_t &amp;theData, dvector_t &amp;xv, double errtol, double ptol, int maxiter, double factor)</arglist>
+    </member>
+    <member kind="function">
+      <type>FitStatus_t</type>
+      <name>operator()</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>ab9ec7f9ce599a844513a1cc8d940df03</anchor>
+      <arglist>(int mm, dvector_t &amp;xv, double errtol, double ptol, int maxiter, double factor)</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const double</type>
+      <name>ERROR_CONVERGESPEC</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1FitLM__BarrierAdapter.html</anchorfile>
+      <anchor>a29dce46836502f83e29c7cb2df76e711</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const double</type>
+      <name>PARAM_CONVERGESPEC</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1FitLM__BarrierAdapter.html</anchorfile>
+      <anchor>a955e62a7718e69ed0996ae5d412d014c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const int</type>
+      <name>MAX_ITERS</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1FitLM__BarrierAdapter.html</anchorfile>
+      <anchor>a70a965e4ada328d6890cb605abd046e5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>FitLM_Adapter&lt; BarrierModel&lt; F_POL_T &gt;, PersistenceMap &gt;</type>
+      <name>Self_t</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html</anchorfile>
+      <anchor>aebbff9bf8df23637be17d96a7cfd46e4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>void(*</type>
+      <name>fit_function_ptr_t</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>ade489b47682b536317ea832337debf1b</anchor>
+      <arglist>)(fort_ivar_t, fort_ivar_t, fort_dvec_t, fort_dvec_t, fort_dmat_t, fort_ivar_t, fort_ivar_t)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>chiSquared</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>a40f646ca74381f91bf851ce166469a5e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const dvector_t &amp;</type>
+      <name>f_vec</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>a7409bc7c7fe43e31ad5b8a143358bc68</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const dmatrix_t &amp;</type>
+      <name>f_jac</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>a8ba51868d28fcabdb4fbf278e0aa86dd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static void</type>
+      <name>fit_function_adapter</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html</anchorfile>
+      <anchor>af19b48bb14dd26cf8c40c5710ab9117d</anchor>
+      <arglist>(fort_ivar_t neq, fort_ivar_t nvar, fort_dvec_t xvec, fort_dvec_t fvec, fort_dmat_t fjac, fort_ivar_t ldfjac, fort_ivar_t iflag)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>m__ndata</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>a483e3b8aa9eb204b3d8530cab461de63</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>m__nparams</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>af83c4f38cedef0c6c2601f4943b66a08</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>dvector_t</type>
+      <name>m__f_jac_flat</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>a29af2a58b2580b0cef809166b4f86bc6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>dvector_t</type>
+      <name>m__f_vec</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>aa5ce76a1989ef857b2e8c0b4eba9957b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>dmatrix_t</type>
+      <name>m__f_jac_out</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>a4ea0f66308fe53795e9ced7c7c0d55a3</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>jpw_nld::measure::PersistenceMap</name>
+    <filename>classjpw__nld_1_1measure_1_1PersistenceMap.html</filename>
+    <member kind="typedef">
+      <type>dmatrix_t::vector_type::size_type</type>
+      <name>size_type</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1PersistenceMap.html</anchorfile>
+      <anchor>af5a874843f7bc3af2cdaf9bf7b85eda8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>const dmatrix_t::vector_type</type>
+      <name>const_vector_type</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1PersistenceMap.html</anchorfile>
+      <anchor>aeff5e64af495d3dde7c74cff7d52918a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>PersistenceMap</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1PersistenceMap.html</anchorfile>
+      <anchor>a2527bcffe1de34f6aaa91b6630b2b185</anchor>
+      <arglist>(size_type n_Rows, size_type n_Columns=0)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>PersistenceMap</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1PersistenceMap.html</anchorfile>
+      <anchor>a23b8c7472d5d33b27af700518a32942f</anchor>
+      <arglist>(const dmatrix_t &amp;otherMap)</arglist>
+    </member>
+    <member kind="function">
+      <type>size_type</type>
+      <name>size</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1PersistenceMap.html</anchorfile>
+      <anchor>a503ab01f6c0142145d3434f6924714e7</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>size_type</type>
+      <name>nColumns</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1PersistenceMap.html</anchorfile>
+      <anchor>aba09af81b4ef2af73c5af96e6021c8ab</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>size_type</type>
+      <name>nRows</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1PersistenceMap.html</anchorfile>
+      <anchor>a36a88a341ccfc86ed055edc7e6c1a854</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fillAxes</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1PersistenceMap.html</anchorfile>
+      <anchor>ad88c6bdfbd450e32bed29dea63908c34</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>swap_map</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1PersistenceMap.html</anchorfile>
+      <anchor>a933340a1b39b3bdbfcfb7f116744bcc9</anchor>
+      <arglist>(dmatrix_t &amp;other)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>computeCSStdDev</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1PersistenceMap.html</anchorfile>
+      <anchor>afcd4c51a907f445500a7c0a98114ff85</anchor>
+      <arglist>(const dmatrix_t &amp;ts_data, bool reset=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>computePersistence</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1PersistenceMap.html</anchorfile>
+      <anchor>acbcf5a1de7a78a54a32b60a63577f5d8</anchor>
+      <arglist>(const dmatrix_t &amp;ts_data, bool reset=false)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>empty</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1PersistenceMap.html</anchorfile>
+      <anchor>ac6e61de369e994009e36f344f99c15ad</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>emptyCSStdDev</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1PersistenceMap.html</anchorfile>
+      <anchor>a19e0ef013e96807da3784ff9f9de41c6</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>wipe</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1PersistenceMap.html</anchorfile>
+      <anchor>aa9bb561ecea39474891caf32a1a9863f</anchor>
+      <arglist>(size_t n_rows=0, size_t n_columns=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>clear</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1PersistenceMap.html</anchorfile>
+      <anchor>affe56badad21009fe7994889b52802e0</anchor>
+      <arglist>(size_t n_rows, size_t n_columns=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>const dmatrix_t &amp;</type>
+      <name>data</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1PersistenceMap.html</anchorfile>
+      <anchor>a608add04b3094986977f72e50f443534</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const dmatrix_t &amp;</type>
+      <name>csAverage</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1PersistenceMap.html</anchorfile>
+      <anchor>ac9fc72b8e80a24e53840e006e6c786cf</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const dmatrix_t &amp;</type>
+      <name>csStdDev</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1PersistenceMap.html</anchorfile>
+      <anchor>a06866e8630996b82547a6cbd7db66981</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const_vector_type</type>
+      <name>as_1D</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1PersistenceMap.html</anchorfile>
+      <anchor>aa4927eb7cec5dfb4953281bc809eb91c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const_vector_type</type>
+      <name>phases_as_1D</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1PersistenceMap.html</anchorfile>
+      <anchor>ae0a286fbb7b781ef27cb4b026d826954</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const_vector_type</type>
+      <name>lags_as_1D</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1PersistenceMap.html</anchorfile>
+      <anchor>ad72efcfc6d969e3ab06ecae2ee8b0873</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>dmatrix_t</type>
+      <name>m__map</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1PersistenceMap.html</anchorfile>
+      <anchor>ad808916af0a6ed61609e3574ce2bdfc0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>dmatrix_t</type>
+      <name>m__phases</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1PersistenceMap.html</anchorfile>
+      <anchor>afbc1a157137991f81976bab5bb75b42d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>dmatrix_t</type>
+      <name>m__lags</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1PersistenceMap.html</anchorfile>
+      <anchor>a8b93dc0b6f28d5f791cb3651c2e71ec3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>dmatrix_t</type>
+      <name>m__cs_avg</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1PersistenceMap.html</anchorfile>
+      <anchor>a662bb77717e0d9f6e5f03dc75987ec2a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>dmatrix_t</type>
+      <name>m__cs_stddev</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1PersistenceMap.html</anchorfile>
+      <anchor>aa8f2cd2a0a7c9d0fbd2d67b1fc7fa0c3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>m__computedCSStats</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1PersistenceMap.html</anchorfile>
+      <anchor>a8bccc02d719211b804c52cfc0003b5f4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>m__computedPersistence</name>
+      <anchorfile>classjpw__nld_1_1measure_1_1PersistenceMap.html</anchorfile>
+      <anchor>a2af0c4860b14e087d8d055334b32f95c</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>jpw_nld::measure::policy</name>
+    <filename>namespacejpw__nld_1_1measure_1_1policy.html</filename>
+    <class kind="struct">jpw_nld::measure::policy::MarkovOnly</class>
+    <class kind="struct">jpw_nld::measure::policy::BarrierOnly</class>
+    <class kind="struct">jpw_nld::measure::policy::Full</class>
+  </compound>
+  <compound kind="struct">
+    <name>jpw_nld::measure::policy::MarkovOnly</name>
+    <filename>structjpw__nld_1_1measure_1_1policy_1_1MarkovOnly.html</filename>
+    <member kind="variable" static="yes">
+      <type>static const index_t</type>
+      <name>N_PARAMETERS</name>
+      <anchorfile>structjpw__nld_1_1measure_1_1policy_1_1MarkovOnly.html</anchorfile>
+      <anchor>a895ddf70d65a1ef437a1d6caed163678</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>jpw_nld::measure::policy::BarrierOnly</name>
+    <filename>structjpw__nld_1_1measure_1_1policy_1_1BarrierOnly.html</filename>
+    <member kind="variable" static="yes">
+      <type>static const index_t</type>
+      <name>N_PARAMETERS</name>
+      <anchorfile>structjpw__nld_1_1measure_1_1policy_1_1BarrierOnly.html</anchorfile>
+      <anchor>a895ddf70d65a1ef437a1d6caed163678</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>jpw_nld::measure::policy::Full</name>
+    <filename>structjpw__nld_1_1measure_1_1policy_1_1Full.html</filename>
+    <member kind="variable" static="yes">
+      <type>static const index_t</type>
+      <name>N_PARAMETERS</name>
+      <anchorfile>structjpw__nld_1_1measure_1_1policy_1_1Full.html</anchorfile>
+      <anchor>a895ddf70d65a1ef437a1d6caed163678</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>jpw_nld::optimize</name>
+    <filename>namespacejpw__nld_1_1optimize.html</filename>
+    <class kind="class">jpw_nld::optimize::FitGA</class>
+  </compound>
+  <compound kind="class">
+    <name>jpw_nld::optimize::FitGA</name>
+    <filename>classjpw__nld_1_1optimize_1_1FitGA.html</filename>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg>POPULATION_SIZE</templarg>
+    <templarg>N_GENERATIONS</templarg>
+    <templarg>N_MUTATE</templarg>
+    <templarg>N_ELITE</templarg>
+    <templarg>WIDE_XOVER_WEIGHT_X_1000</templarg>
+    <base protection="private">boost::noncopyable</base>
+    <class kind="struct">jpw_nld::optimize::FitGA::PopVecFiller</class>
+    <member kind="typedef">
+      <type>FIT_FN</type>
+      <name>Model_t</name>
+      <anchorfile>classjpw__nld_1_1optimize_1_1FitGA.html</anchorfile>
+      <anchor>ac05f65737c37cc71de8fa50907cccf4a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>DATA_T</type>
+      <name>FitData_t</name>
+      <anchorfile>classjpw__nld_1_1optimize_1_1FitGA.html</anchorfile>
+      <anchor>ae489fe97bf9b2eb52c69a49f199cf322</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>vector&lt; dvector_t &gt;</type>
+      <name>popVec_t</name>
+      <anchorfile>classjpw__nld_1_1optimize_1_1FitGA.html</anchorfile>
+      <anchor>adfbc3f96d753e725b9f5dc16c2d5eaa8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>FitGA</name>
+      <anchorfile>classjpw__nld_1_1optimize_1_1FitGA.html</anchorfile>
+      <anchor>aa9d3c949b844d98eaf1cfb650c2e3e06</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~FitGA</name>
+      <anchorfile>classjpw__nld_1_1optimize_1_1FitGA.html</anchorfile>
+      <anchor>a8d4641f019f75c10094935099227a572</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>operator()</name>
+      <anchorfile>classjpw__nld_1_1optimize_1_1FitGA.html</anchorfile>
+      <anchor>a4ca2c32be814affdc5336d2e9bc397de</anchor>
+      <arglist>(dvector_t &amp;param_min, const FitData_t &amp;theData, Model_t &amp;theModel)</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const index_t</type>
+      <name>N_PARAMETERS</name>
+      <anchorfile>classjpw__nld_1_1optimize_1_1FitGA.html</anchorfile>
+      <anchor>a895ddf70d65a1ef437a1d6caed163678</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const unsigned</type>
+      <name>INITIAL_POPULATION_SIZE</name>
+      <anchorfile>classjpw__nld_1_1optimize_1_1FitGA.html</anchorfile>
+      <anchor>a4c398aee9375ebd593a92727e67ba651</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const unsigned</type>
+      <name>N_NONELITE</name>
+      <anchorfile>classjpw__nld_1_1optimize_1_1FitGA.html</anchorfile>
+      <anchor>a68731e7ed7270ea2ffad143a1b36c62e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const unsigned</type>
+      <name>N_BREEDING</name>
+      <anchorfile>classjpw__nld_1_1optimize_1_1FitGA.html</anchorfile>
+      <anchor>a4cc7aff3aed1992ea4b38f25b911ac3a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const double</type>
+      <name>WIDE_XOVER_WEIGHT</name>
+      <anchorfile>classjpw__nld_1_1optimize_1_1FitGA.html</anchorfile>
+      <anchor>a6e9ea84ffc21e719c32a3453e903f359</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>initializePopulation</name>
+      <anchorfile>classjpw__nld_1_1optimize_1_1FitGA.html</anchorfile>
+      <anchor>a618a4bdc56602cfd692910d3284516ef</anchor>
+      <arglist>(popVec_t &amp;ppop, const FitData_t &amp;theData, Model_t &amp;theModel)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>breedAndMutate</name>
+      <anchorfile>classjpw__nld_1_1optimize_1_1FitGA.html</anchorfile>
+      <anchor>a935511b51934744ca01dd9dd37150fb6</anchor>
+      <arglist>(popVec_t &amp;newpop, const popVec_t &amp;oldpop, const dvector_t &amp;ratingv)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>outManips</name>
+    <filename>namespaceoutManips.html</filename>
+    <namespace>outManips::timefmt</namespace>
+    <member kind="function">
+      <type>ostream &amp;</type>
+      <name>now</name>
+      <anchorfile>namespaceoutManips.html</anchorfile>
+      <anchor>a78ed4e460b0f6c56ec1dc388dff127b8</anchor>
+      <arglist>(ostream &amp;ost, const char *fmt)</arglist>
+    </member>
+    <member kind="function">
+      <type>iosManip&lt; const char *, ostream &gt;</type>
+      <name>now</name>
+      <anchorfile>namespaceoutManips.html</anchorfile>
+      <anchor>a3c41eb6032f73df105e976faffc1f6d4</anchor>
+      <arglist>(const char *fmt=timefmt::log)</arglist>
+      <docanchor file="namespaceoutManips">nowM</docanchor>
+    </member>
+    <member kind="function">
+      <type>ostream &amp;</type>
+      <name>general</name>
+      <anchorfile>namespaceoutManips.html</anchorfile>
+      <anchor>a50e5471b40b206067c4012a7a8747bd0</anchor>
+      <arglist>(ostream &amp;ost)</arglist>
+    </member>
+    <member kind="function">
+      <type>ostream &amp;</type>
+      <name>reset</name>
+      <anchorfile>namespaceoutManips.html</anchorfile>
+      <anchor>a1dba9616a64d3a14d4615dfd6e3c7bc0</anchor>
+      <arglist>(ostream &amp;ost)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>outManips::timefmt</name>
+    <filename>namespaceoutManips_1_1timefmt.html</filename>
+    <member kind="variable">
+      <type>const char *const</type>
+      <name>log</name>
+      <anchorfile>namespaceoutManips_1_1timefmt.html</anchorfile>
+      <anchor>ac2bd8ab622ffc40b40d49e010b26def3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const char *const</type>
+      <name>timestamp</name>
+      <anchorfile>namespaceoutManips_1_1timefmt.html</anchorfile>
+      <anchor>a544e881c463a20e782acd47c93de4684</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="dir">
+    <name>src/libs/utils/details/</name>
+    <path>/home/candide/src/wrk/research-nld-subset/src/libs/utils/details/</path>
+    <filename>dir_1a28e55f811c88486fe962c5151cbdcc.html</filename>
+    <file>ContainerType.h</file>
+    <file>CustomManips.h</file>
+    <file>MatrixRef_Writer.h</file>
+    <file>SequenceStorage.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>src/libs/fortlib/</name>
+    <path>/home/candide/src/wrk/research-nld-subset/src/libs/fortlib/</path>
+    <filename>dir_cd5a3a472cc8266f937082f506f5a5b7.html</filename>
+    <file>FitLM.h</file>
+    <file>FitLM_Adapter.h</file>
+    <file>FORTLib.h</file>
+    <file>FORTTypes.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>src/libs/</name>
+    <path>/home/candide/src/wrk/research-nld-subset/src/libs/</path>
+    <filename>dir_1de7c81b5cd45cc051d3770777a78bda.html</filename>
+    <dir>src/libs/fortlib/</dir>
+    <dir>src/libs/measure/</dir>
+    <dir>src/libs/persistence/</dir>
+    <dir>src/libs/utils/</dir>
+  </compound>
+  <compound kind="dir">
+    <name>src/libs/measure/</name>
+    <path>/home/candide/src/wrk/research-nld-subset/src/libs/measure/</path>
+    <filename>dir_5f8f5621b2252f60c714b0de5bc36c90.html</filename>
+    <file>BarrierModels.h</file>
+    <file>FitGA.h</file>
+    <file>FitLM_BarrierAdapter.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>src/libs/persistence/</name>
+    <path>/home/candide/src/wrk/research-nld-subset/src/libs/persistence/</path>
+    <filename>dir_1a5204fba9e81a2ef3257c379394d6d3.html</filename>
+    <file>PersistenceMap.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>src/</name>
+    <path>/home/candide/src/wrk/research-nld-subset/src/</path>
+    <filename>dir_d354036b3fb873d42dacfa3c2434b79c.html</filename>
+    <dir>src/libs/</dir>
+  </compound>
+  <compound kind="dir">
+    <name>src/libs/utils/</name>
+    <path>/home/candide/src/wrk/research-nld-subset/src/libs/utils/</path>
+    <filename>dir_ff251d737b575398ab169e81933c8ba4.html</filename>
+    <dir>src/libs/utils/details/</dir>
+    <file>jpw_nld.h</file>
+    <file>Manips.h</file>
+    <file>MathTools.h</file>
+    <file>Matrix.h</file>
+    <file>Matrix_fwd.h</file>
+    <file>MatrixAdapter.h</file>
+    <file>nld_exceptions.h</file>
+    <file>statistics.h</file>
+    <file>Vector_fwd.h</file>
+  </compound>
+</tagfile>

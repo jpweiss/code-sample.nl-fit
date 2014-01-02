@@ -1,0 +1,11 @@
+@import url(doxygen.css);
+
+
+td code {
+    color: #006F00;
+}
+
+p code {
+    color: #003F00;
+    background-color: #F8FFFF;
+}
