@@ -3,7 +3,7 @@
 # Special GNU-make file of installation rules.
 #
 #
-# Copyright (C) 2007 by John P. Weiss
+# Copyright (C) 2007-2014 by John P. Weiss
 #
 # This package is free software; you can redistribute it and/or modify
 # it under the terms of the Artistic License, included as the file
@@ -36,9 +36,26 @@
 #   TARG_BINS
 
 
+##########
+#
+# Variables
+#
+##########
+
+
+SHELL=/bin/bash
+#D# SHELL=/bin/ksh
+
+#D# The inlined-shell-scripts used by these rules require the ''[[''
+#D# operator.  If your system's ''/bin/sh'' doesn't have this operator,
+#D# you'll need to set the ''SHELL'' variable above.
+
+
+##########
 #
 # The Rules
 #
+##########
 
 
 $(BINDIR):
@@ -64,10 +81,15 @@ install_headers.symlink: $(HEADER_INSTALLABLES)
 	@for targ in $?; do \
 		link=$(INCDIR)/$${targ#/}; \
 		linkPath=`dirname $${link}`; \
-		if [ ! -d $${linkPath} ]; then \
+		if [[ ! -d $${linkPath} ]]; then \
 			mkdir -p $${linkPath} || break; \
 		fi; \
-		if [ ! -L $${link} ]; then \
+		if [[ -L $${link} ]]; then \
+			if [[ ! -r $${link} ]]; then \
+				rm -f $${link} && ln -s $${PWD}/$${targ} $${link} \
+				    || break; \
+			fi; \
+		else \
 			ln -s $${PWD}/$${targ} $${link} || break; \
 		fi; \
 	done

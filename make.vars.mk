@@ -4,7 +4,7 @@
 # locations, installation directories, and the like.
 #
 #
-# Copyright (C) 2004-2012 by John P. Weiss
+# Copyright (C) 2004-2014 by John P. Weiss
 #
 # This package is free software; you can redistribute it and/or modify
 # it under the terms of the Artistic License, included as the file
@@ -63,7 +63,7 @@ endif
 # Commonly-used GNU-make Macros
 #
 
-SCM_DIRS:=-path "*/.svn" -o -path "*/CVS"
+SCM_DIRS:=-path "*/.svn" -o -path "*/.git" -o -path "*/CVS"
 finder = $(shell find $(1) \( $(SCM_DIRS) -prune \) -o \! -type d -print)
 lastword = $(word $(words $(1)),$(1))
 lastdir = $(call lastword,$(subst /, ,$(1)))

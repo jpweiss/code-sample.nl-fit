@@ -1,5 +1,5 @@
 # -*- Makefile -*-
-# Copyright (C) 2004-2009 by John P. Weiss
+# Copyright (C) 2004-2014 by John P. Weiss
 #
 # This package is free software; you can redistribute it and/or modify
 # it under the terms of the Artistic License, included as the file
@@ -79,7 +79,7 @@ all: build_all
 
 relink: clean_targs build_all
 
-build_all: $(TARG_LIB_TYPES)
+build_all: install_headers $(TARG_LIB_TYPES)
 
 # GNU Make:
 # Use a special builtin pattern rule.

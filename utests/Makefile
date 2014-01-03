@@ -1,5 +1,5 @@
 # -*- Makefile -*-
-# Copyright (C) 2006 by John P. Weiss
+# Copyright (C) 2006-2014 by John P. Weiss
 #
 # This package is free software; you can redistribute it and/or modify
 # it under the terms of the Artistic License, included as the file
@@ -21,7 +21,9 @@
 ##########
 
 
-TARG_SUBDIRS:=templ.classes trivial.standalone ini.file file.io
+#[jpw::subsetOnly]TARG_SUBDIRS_INSTALL:=templ.classes trivial.standalone ini.file file.io
+TARG_SUBDIRS_INSTALL:=templ.classes
+TARG_SUBDIRS:=$(TARG_SUBDIRS_INSTALL)
 
 
 ##########
@@ -44,9 +46,14 @@ reinstall: relink install
 
 run: $(TARG_SUBDIRS:%=%.run)
 
-clean: $(TARG_SUBDIRS:%=%.clean)
+clean: clean_gcov $(TARG_SUBDIRS:%=%.clean)
 
-veryclean: $(TARG_SUBDIRS:%=%.veryclean)
+clean_binaries:
+	-rm bin/*
+	-rm lib/lib*.a
+	-rm lib/*.so
+
+veryclean: clean_binaries $(TARG_SUBDIRS:%=%.veryclean)
 
 gcov: $(TARG_SUBDIRS:%=%.gcov)
 
@@ -56,17 +63,17 @@ clean_gcov:
 	-find . \( -name '*.gcov' -o  -name '*.gcda' -o  -name '*.gcno' \) \
 		-exec rm -v '{}' ';'
 
-#T# Remove the "find" line if this isn't the toplevel Makefile.
-distclean: $(TARG_SUBDIRS:%=%.veryclean)
-	find . -name '*.d' -exec rm -v \{\}\;
-	-rm bin/*
-	-rm lib/*.a lib/*.so
+distclean: $(TARG_SUBDIRS:%=%.veryclean) clean_binaries
+	-find . -name '*.d' -exec rm -v '{}' ';'
 
 $(TARG_SUBDIRS:%=%.build_all):
 	cd $(@:%.build_all=%); $(MAKE) build_all
 
-$(TARG_SUBDIRS:%=%.install):
+$(TARG_SUBDIRS_INSTALL:%=%.install):
 	cd $(@:%.install=%); $(MAKE) install
+
+$(TARG_SUBDIRS_INSTALL:%=%.install_headers):
+	cd $(@:%.install_headers=%); $(MAKE) install_headers
 
 $(TARG_SUBDIRS:%=%.run):
 	cd $(@:%.run=%); $(MAKE) run

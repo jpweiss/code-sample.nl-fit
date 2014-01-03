@@ -1,5 +1,5 @@
 # -*- Makefile -*-
-# Copyright (C) 2007 by John P. Weiss
+# Copyright (C) 2007-2014 by John P. Weiss
 #
 # This package is free software; you can redistribute it and/or modify
 # it under the terms of the Artistic License, included as the file
@@ -20,15 +20,9 @@
 ##########
 
 
-# N.B.: "libs" must come first in this list.
-# FIXME:  Change this so that all targ subdirs except "lib" depend on "lib".
-# Or something to that effect.
-#
-# Ideally, the binaries should depend on the libraries that they need, and
-# those lib dependencies should build the appropriate library in "libs".  But
-# use any old workaround in the meantime.
-#[jpw::subsetOnly]TARG_SUBDIRS:=libs dyn.systems persistence-map tools
-TARG_SUBDIRS:=libs
+#[jpw::subsetOnly]TARG_SUBDIRS_INSTALL:=libs dyn.systems persistence-map tools
+TARG_SUBDIRS_INSTALL:=libs
+TARG_SUBDIRS:=$(TARG_SUBDIRS_INSTALL)
 
 
 ##########
@@ -62,8 +56,11 @@ $(TARG_SUBDIRS:%=%.build_all):
 $(TARG_SUBDIRS:%=%.relink_all):
 	cd $(@:%.relink_all=%); $(MAKE) relink
 
-$(TARG_SUBDIRS:%=%.install):
+$(TARG_SUBDIRS_INSTALL:%=%.install):
 	cd $(@:%.install=%); $(MAKE) install
+
+$(TARG_SUBDIRS_INSTALL:%=%.install_headers):
+	cd $(@:%.install_headers=%); $(MAKE) install_headers
 
 $(TARG_SUBDIRS:%=%.clean):
 	cd $(@:%.clean=%); $(MAKE) clean

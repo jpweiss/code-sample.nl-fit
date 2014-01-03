@@ -1,5 +1,5 @@
 # -*- Makefile -*-
-# Copyright (C) 2004-2012 by John P. Weiss
+# Copyright (C) 2004-2014 by John P. Weiss
 #
 # This package is free software; you can redistribute it and/or modify
 # it under the terms of the Artistic License, included as the file
@@ -22,8 +22,7 @@
 
 TARPKG_NAME:=research-nld
 TARG_SUBDIRS_INSTALL:=src
-#[jpw::subset]TARG_SUBDIRS:=$(TARG_SUBDIRS_INSTALL) utests
-TARG_SUBDIRS:=$(TARG_SUBDIRS_INSTALL)
+TARG_SUBDIRS:=$(TARG_SUBDIRS_INSTALL) utests
 
 
 ##########
@@ -41,8 +40,6 @@ build_all: $(TARG_SUBDIRS:%=%.build_all)
 
 build_all_installable: $(TARG_SUBDIRS_INSTALL:%=%.build_all)
 
-#[jpw::subset]utests: utests.build_all
-
 install: $(TARG_SUBDIRS_INSTALL:%=%.install)
 
 reinstall: relink install
@@ -50,7 +47,9 @@ reinstall: relink install
 clean: clean_gcov $(TARG_SUBDIRS:%=%.clean)
 
 clean_binaries:
-	-rm bin/* lib/lib*.a
+	-rm bin/*
+	-rm lib/lib*.a
+	-rm lib/*.so
 
 veryclean: clean_binaries $(TARG_SUBDIRS:%=%.veryclean)
 
@@ -63,15 +62,12 @@ clean_gcov:
 distclean: $(TARG_SUBDIRS:%=%.veryclean) clean_binaries
 	-find . -name '*.d' -exec rm -v '{}' ';'
 
-#T# For binaries & executables
 $(TARG_SUBDIRS:%=%.build_all):
 	cd $(@:%.build_all=%); $(MAKE) build_all
 
-#T# For binaries & executables
 $(TARG_SUBDIRS:%=%.relink_all):
 	cd $(@:%.relink_all=%); $(MAKE) relink
 
-#T# For binaries & executables
 $(TARG_SUBDIRS:%=%.install):
 	cd $(@:%.install=%); $(MAKE) install
 
@@ -83,6 +79,11 @@ $(TARG_SUBDIRS:%=%.veryclean):
 
 $(TARG_SUBDIRS:%=%.gcov):
 	cd $(@:%.gcov=%); make gcov
+
+utests: utests.build_all
+
+utests.run: utests
+	cd utests; $(MAKE) run
 
 clean_tags:
 	-rm -f TAGS
@@ -110,14 +111,22 @@ ebrowse:
 	)
 
 
-# Make sure they are built in the correct order.
-#[jpw::subset]utests.all: src.all
-
-
+#
 # Packaging
 #
+
+
 include make.vars.mk
 include make.tar_n_doc.mk
+
+
+#
+# Subdir Dependencies
+#
+
+
+# Make sure the unit tests are built after the source is built AND installed.
+utests.build_all: src.build_all src.install
 
 
 #################
