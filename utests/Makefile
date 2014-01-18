@@ -21,6 +21,11 @@
 ##########
 
 
+# Common Variables
+#
+include make.vars.mk
+
+
 #[jpw::subsetOnly]TARG_SUBDIRS_INSTALL:=templ.classes trivial.standalone ini.file file.io
 TARG_SUBDIRS_INSTALL:=templ.classes
 TARG_SUBDIRS:=$(TARG_SUBDIRS_INSTALL)
@@ -97,6 +102,12 @@ TAGS:
 		-name '*akefile' -o -name '*.mk' \) -print0 \
 	| xargs -0 etags --declarations -d \
 	)
+
+#
+# Common Rules
+#
+
+include $(BASEDIR)/make.miscrules.mk
 
 
 #################

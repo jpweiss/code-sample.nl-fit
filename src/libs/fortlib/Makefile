@@ -90,7 +90,7 @@ all: build_all
 
 relink: clean_targs build_all
 
-build_all: install_headers $(TARG_LIB_TYPES)
+build_all: $(TARG_LIB_TYPES)
 
 # GNU Make:
 # Use a special builtin pattern rule.
@@ -114,6 +114,11 @@ gcov: $(SRC)
 		$(GCOV) $(GCOV_OPTS) $$f; \
 	done
 
+
+# Common Rules
+#
+
+include $(BASEDIR)/make.miscrules.mk
 
 # Dependencies
 #

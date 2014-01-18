@@ -20,10 +20,16 @@
 ##########
 
 
+# Common Variables
+#
+include make.vars.mk
+
+
 #[jpw::subset]TARG_SUBDIRS_INSTALL:=utils rklib lyapunov fortlib persistence \
 #[jpw::subset]	measure dynSysCommon
 TARG_SUBDIRS_INSTALL:=utils fortlib persistence measure
 TARG_SUBDIRS:=$(TARG_SUBDIRS_INSTALL)
+
 
 ##########
 #
@@ -69,18 +75,23 @@ $(TARG_SUBDIRS:%=%.veryclean):
 $(TARG_SUBDIRS:%=%.gcov):
 	cd $(@:%.gcov=%); make gcov
 
+#
+# Common Rules
+#
+
+include $(BASEDIR)/make.miscrules.mk
+
 
 #
 # Subdir Dependencies
 #
 
 
-fortlib.build_all: utils.install_headers
+fortlib.*: utils.install_headers
 
-persistence.build_all: utils.install_headers fortlib.install_headers
+persistence.*: utils.install_headers fortlib.install_headers
 
-measure.build_all: utils.install_headers fortlib.install_headers \
-	persistence.install_headers
+measure.*: persistence.install_headers
 
 
 #################

@@ -20,6 +20,11 @@
 ##########
 
 
+# Common Variables
+#
+include make.vars.mk
+
+
 #[jpw::subsetOnly]TARG_SUBDIRS_INSTALL:=libs dyn.systems persistence-map tools
 TARG_SUBDIRS_INSTALL:=libs
 TARG_SUBDIRS:=$(TARG_SUBDIRS_INSTALL)
@@ -70,6 +75,12 @@ $(TARG_SUBDIRS:%=%.veryclean):
 
 $(TARG_SUBDIRS:%=%.gcov):
 	cd $(@:%.gcov=%); make gcov
+
+#
+# Common Rules
+#
+
+include $(BASEDIR)/make.miscrules.mk
 
 
 #################
