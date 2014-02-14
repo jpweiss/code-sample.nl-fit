@@ -67,7 +67,7 @@ using namespace jpwTools::random;
 //
 
 
-// For testing purposes:  Instantiate a few Matrix classes:
+// For compilation-testing purposes:  Instantiate a few Matrix classes:
 typedef Matrix<long double> ldMatrix_t;
 typedef Matrix<short> sMatrix_t;
 typedef Matrix<unsigned long long> ullMatrix_t;
@@ -169,8 +169,14 @@ struct iterate_over_types
     typedef typename boost::mpl::empty<tester_typevec_remaining_t>::type
     tester_typevec_is_empty_t;
 
+    // Calling the c'tor for this class runs a unit-test suite using a
+    // specific POD value type.  [Remember, the elements of 'TesterTypeVector'
+    // are a boost::mpl::lambda metafunction combined with a single POD value
+    // type.]
     typename boost::mpl::front<TesterTypeVector>::type m__currentTest;
 
+    // This applies this class to the 'cdr' of TesterTypeVector.  [I like to
+    // think of C++-template-metaprogramming in lisp-terms. ^_^ ]
     iterate_over_types<tester_typevec_remaining_t,
                        tester_typevec_is_empty_t::value>
     m__remainingTests;
@@ -390,6 +396,11 @@ struct testSuite_V : public testSuite_base< typename Matrix<T>::vector_type,
     explicit testSuite_V(RandomDataSrc& l_xi)
         : Base_t(l_xi)
     {
+        // N.B.:  I'm not pulling 'testBasicOps(unsigned,unsigned)' and
+        //        'testAccess(unsigned,unsigned)' into the base-class and
+        //        making them virtual-fns.  Mixing virtual functions and
+        //        templates can be dicey, and is overkill for a simple
+        //        unit-test.
         testBasicOps(Base_t::xi(8)+8, Base_t::xi(8)+8);
         testAccess(Base_t::xi(8)+8, Base_t::xi(8)+8);
     }
@@ -407,9 +418,12 @@ struct testSuite_V : public testSuite_base< typename Matrix<T>::vector_type,
 
     bool testAccess(size_t nRows, size_t nColumns)
     {
+        // N.B.:  See testSuite_POD::testAccess for why these two functions
+        //        look the same, but really aren't.
+
         value_type** raw_data
             = createRawData<value_type>(nRows, nColumns, Base_t::xi);
-        vector_t data_vec(raw_data[0], raw_data[0]+ nRows*nColumns);
+        vector_t data_vec(raw_data[0], raw_data[0] + nRows*nColumns);
         matrix_t test_data(data_vec, nRows, nColumns);
         bool retStat(Base_t::testAccess(nRows, nColumns,
                                         raw_data, test_data));
@@ -428,6 +442,9 @@ template<typename T>
 struct testSuite_POD : public testSuite_base< typename Matrix<T>::vector_type,
                                               Matrix<T> >
 {
+    // FIXME:
+    // This class and testSuite_V
+
     typedef T value_type;
     typedef Matrix<T> matrix_t;
     typedef typename Matrix<T>::vector_type vector_t;
@@ -436,6 +453,11 @@ struct testSuite_POD : public testSuite_base< typename Matrix<T>::vector_type,
     explicit testSuite_POD(RandomDataSrc& l_xi)
         : Base_t(l_xi)
     {
+        // N.B.:  I'm not pulling 'testBasicOps(unsigned,unsigned)' and
+        //        'testAccess(unsigned,unsigned)' into the base-class and
+        //        making them virtual-fns.  Mixing virtual functions and
+        //        templates can be dicey, and is overkill for a simple
+        //        unit-test.
         testBasicOps(Base_t::xi(8)+8, Base_t::xi(8)+8);
         testAccess(Base_t::xi(8)+8, Base_t::xi(8)+8);
     }
@@ -455,9 +477,24 @@ struct testSuite_POD : public testSuite_base< typename Matrix<T>::vector_type,
 
     bool testAccess(size_t nRows, size_t nColumns)
     {
+        // N.B.:  The implementation of this function may look the same as
+        //        testSuite_V::testAccess, but really isn't.
+        //        Here's why:
+        //            'value_type'
+        //            'vector_t'
+        //            'matrix_t'
+        //        These are all member-'typedef's.  They're specific to
+        //        'testSuite_V' and 'testSuite_POD' (and their
+        //        template-instantiations).
+        //
+        //        I /suppose/ I could've created an intermediate-base-class
+        //        above both 'testSuite_V' and 'testSuite_POD', containing
+        //        duplicates of the member-'typedef's and this implementation,
+        //        but that strikes me as overkill.
+
         value_type** raw_data
             = createRawData<value_type>(nRows, nColumns, Base_t::xi);
-        vector_t data_vec(raw_data[0], raw_data[0]+ nRows*nColumns);
+        vector_t data_vec(raw_data[0], raw_data[0] + nRows*nColumns);
         matrix_t test_data(data_vec, nRows, nColumns);
         bool retStat(Base_t::testAccess(nRows, nColumns,
                                         raw_data, test_data));
@@ -532,6 +569,11 @@ void test_dMatrix(RandomDataSrc& xi)
 
 int test_main(int argc, char* argv[])
 {
+#if 0
+    // N.B.:  Boilerplate:  my cmdline-processing for simple standalone C++
+    //        programs.  Not used at present, but left in for illustrative
+    //        purposes.
+
     // Split off the name of the executable from its path.
     string myName(argv[0]);
     string::size_type last_pathsep = myName.find_last_of('/');
@@ -548,7 +590,7 @@ int test_main(int argc, char* argv[])
     for(int i=1; i < argc; ++i) {
         argVec.push_back(string(argv[i]));
     }
-
+#endif
 
     //
     // The Tests Proper
