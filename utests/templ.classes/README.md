@@ -8,7 +8,8 @@ This kind of class lends itself well to unit-testing via
 typelist-iteration.
 
 Since this *is* a unit-test for class `Matrix`, you should have a look
-at `src/libs/utils/README.md` for where to find its source-code.
+at `src/libs/utils/README.md` for where to find its source-code and an
+overview of why I decided to "roll my own" class.
 
 `RandomDataSrc.h` comes from a separate C++ library of mine (the file
 `libjpwTools.a`).
