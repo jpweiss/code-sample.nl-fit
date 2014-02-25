@@ -442,9 +442,6 @@ template<typename T>
 struct testSuite_POD : public testSuite_base< typename Matrix<T>::vector_type,
                                               Matrix<T> >
 {
-    // FIXME:
-    // This class and testSuite_V
-
     typedef T value_type;
     typedef Matrix<T> matrix_t;
     typedef typename Matrix<T>::vector_type vector_t;
