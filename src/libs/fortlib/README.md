@@ -1,10 +1,22 @@
-fortlib
-==========
+C++ Facades for BLAS and LMDER
+==============================
 
- 
+Â 
+
+This directory contains C++ code that acts as a Facade to parts of the
+BLAS and LMDER libraries.
+
+All of the `*.f` files here come from those two libraries *and are NOT
+MY code!*
+
+
+> BLAS and LMDER are two FORTRAN libraries widely-used by the
+> scientific community (hence why they're written in FORTRAN).
+> Only the parts of BLAS and LMDER that I required for my research are
+> here.  The actual libraries are far more extensive.
+
 
 Placeholder file.  More to come...
-FIXME:  Give this file a better title.
 
 --
 
@@ -23,9 +35,6 @@ complete.
 FIXME:  Describe the non-LMDER stuff here, including why it's here and
 why I'm not using something else (along with future plans for pruning
 'em).  Include:
-
-> BLAS and LMDER are two FORTRAN libraries widely-used by the
-> scientific community (hence why they're written in FORTRAN).
 
 ---
 
