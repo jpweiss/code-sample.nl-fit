@@ -34,12 +34,21 @@ The libraries, each of which resides in its own subdirectory, are:
   + An important part of my doctoral research was a form of
     autocorrelation dubbed a “Persistence Map”.  This library contains
     the source code for generating them.
-  + It's present in this code-sample solely because it's a dependency
-    of the `measure` library.
+  + It's present in this code-sample **solely** because it's a
+    dependency of the `measure` library.  You don't really need to pay
+    any attention to it, unless your curious.
 
 - measure
   + Depends on `utils`, `fortlib` and `persistence`.
   + Fits a “Persistence Map” to a theoretical model used to measure
     certain features.
-  + The important thing to pay attention to are the classes in
-    `BarrierModels.h`, which show how `FitLM_Adapter` is used.
+  + For the purposes of this code-sample, it demonstrates how
+    `FitLM_Adapter` is used.  Specifically, the classes in the
+    file `BarrierModels.h` define functor-types used by the first
+    template-parameter of `FitLM_Adapter`.  The file
+    `FitLM_BarrierAdapter.h` binds together those functor-types with
+    `FitLM_Adapter`, creating the class whose instances will perform
+    the actual optimization.
+
+(Each of these subdirectories, of course, contains its own `README.md`
+file.)

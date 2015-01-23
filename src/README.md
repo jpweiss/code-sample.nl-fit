@@ -5,7 +5,7 @@ The Source
 
 As noted in the top-level `README.md`, this repository contains a
 subset of the code from my doctoral-research.  My research involved
-modelling nonlinear physical systems (think “Chaos Theory”).  I've
+modeling nonlinear physical systems (think “Chaos Theory”).  I've
 been porting the parts written in C to modern C++, to try out some of
 the more advanced modern C++ programming techniques.  Note that I
 started this project before C++11.  Once the compilers catch up, I'll
