@@ -1,0 +1,31 @@
+\form#0:\[ f_{i}\left(x_{1},\, x_{2},\,\cdots,\, x_{N}\right) = \epsilon_{i}\qquad\forall\; i\in\left[1,\, M\right] \]
+\form#1:$ x_{j} $
+\form#2:$ n\in\left[1,\,N\right] $
+\form#3:$ f_{i} $
+\form#4:\[ f_{i}\left(x_{1},\, \cdots,\, x_{N}\right) = c_{i}\qquad\forall\; i\in\left[1,\, M\right] \]
+\form#5:\[ f_{i}\left(x_{1},\, \cdots,\, x_{N}\right) - c_{i} = \varepsilon_{i} \]
+\form#6:$ \varepsilon_{i} $
+\form#7:\[ J_{i,j}\left(x_{1},\,\cdots,\, x_{N}\right) = \left.\frac{\partial f_{i}}{\partial x_{j}} \right|_{\left(x_{1},\cdots,x_{N}\right)} \;\forall\; i\in\left[1,\, M\right]\quad j\in\left[1,\, N\right] \]
+\form#8:$ J_{i,j} $
+\form#9:$ H\left(u\right) $
+\form#10:\[ H\left(u_{j}\right) = d_{u_{j}} \qquad\forall\; j\in\left[1,\, N\right] \]
+\form#11:$ d_{u_{j}} $
+\form#12:$ u $
+\form#13:$ u_{j} $
+\form#14:$ H $
+\form#15:$ p_{i} $
+\form#16:\[ H\left(p_{1},\,\cdots,\, p_{M}\,;\; u_{j}\right)-d_{u_{j}} = \varepsilon_{j}\qquad\forall\; j\in\left[1,\, N\right] \]
+\form#17:$ p_i $
+\form#18:\[ J_{i}\left(u_{j}\right) = \left.\frac{\partial H}{\partial p_{i}}\right|_{u_{j}} \qquad\forall\; i\in\left[1,\, M\right]\quad j\in\left[1,\, N\right] \]
+\form#19:$ J\left(u\right) $
+\form#20:$ J_{i}\left(u_{j}\right) $
+\form#21:$\chi^2$
+\form#22:$\Delta$
+\form#23:$``\Delta$
+\form#24:$ \left{p\right} $
+\form#25:\[ f_{\left\{ p\right\} }\left(x_{j}\right) = D\left(x_{j}\right)\qquad\forall\; j\in\left[0,\, nData\right) \]
+\form#26:$ D\left(x_{j}\right) $
+\form#27:$ x $
+\form#28:\[ f\left(x_{j};\; p_{0},\,\cdots,\, p_{\left(nParams-1\right)}\right) - D\left(x_{j}\right) = \Delta_{j}\qquad\forall\; j\in\left[0,\, nData\right) \]
+\form#29:\[ J_{i} = \frac{\partial f}{\partial p_{i}} \qquad\forall\; i\in\left[0,\, nParams\right) \]
+\form#30:\[ J_{i}\left(x_{j}\right) = \frac{\partial f}{\partial p_{i}}\left(x_{j}\right) \qquad\forall\; i\in\left[0,\, nParams\right) \quad j\in\left[0,\, nData\right) \]

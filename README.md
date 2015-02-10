@@ -1,4 +1,4 @@
-code-sample..nl-fit
+code-sample.nl-fit
 ===================
 
 Sample C++ Code:  Nonlinear Optimization Library
@@ -37,6 +37,6 @@ For those in a hurry:
 
 
 Motivation
-----------
+-----------
 
 TBA:  Description of the problem being solved with this code.

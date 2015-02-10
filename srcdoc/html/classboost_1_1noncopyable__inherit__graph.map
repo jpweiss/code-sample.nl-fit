@@ -1,10 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$classjpw__nld_1_1measure_1_1BarrierModel.html" title="BarrierModel\&lt; F_POL_T \&gt;" alt="" coords="1060,39,1241,70"/>
-<area shape="rect" id="node5" href="$classjpw__math_1_1details_1_1MatrixRef__Writer.html" title="Provides a means for optimized write&#45;access to the underlying block of memory containing the elements..." alt="" coords="463,124,615,155"/>
-<area shape="rect" id="node7" href="$classjpw__nld_1_1fortlib_1_1FitLM.html" title="Wrapper around the FORTRAN function, lmder_." alt="" coords="512,178,565,208"/>
-<area shape="rect" id="node16" href="$classjpw__nld_1_1measure_1_1BarrierModel.html" title="Core class for all of the variants of the barrier model." alt="" coords="427,71,651,102"/>
-<area shape="rect" id="node19" href="$classjpw__nld_1_1optimize_1_1FitGA.html" title="Optimize a function via Genetic Algorithms." alt="" coords="155,231,923,262"/>
-<area shape="rect" id="node9" href="$classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html" title="FitLM_Adapter\&lt; BarrierModel\&lt; F_POL_T \&gt;, PersistenceMap \&gt;" alt="" coords="1585,183,1980,214"/>
-<area shape="rect" id="node13" href="$classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html" title="The fit&#45;functor, F, must have the following members." alt="" coords="1072,212,1229,243"/>
-<area shape="rect" id="node11" href="$classjpw__nld_1_1measure_1_1FitLM__BarrierAdapter.html" title="Child class of the FitLM_Adapter, using the BarrierModel and PersistenceMap classes." alt="" coords="2033,183,2263,214"/>
+<area shape="rect" id="node3" href="$classjpw__nld_1_1measure_1_1BarrierModel.html" title="BarrierModel\&lt; F_POL_T \&gt;" alt="" coords="1040,37,1213,65"/>
+<area shape="rect" id="node5" href="$classjpw__math_1_1details_1_1MatrixRef__Writer.html" title="Provides a means for optimized write&#45;access to the underlying block of memory containing the elements..." alt="" coords="456,120,605,148"/>
+<area shape="rect" id="node7" href="$classjpw__nld_1_1fortlib_1_1FitLM.html" title="Wrapper around the FORTRAN function, lmder_()." alt="" coords="504,170,557,198"/>
+<area shape="rect" id="node16" href="$classjpw__nld_1_1measure_1_1BarrierModel.html" title="Core class for all of the variants of the barrier model." alt="" coords="423,69,639,97"/>
+<area shape="rect" id="node19" href="$classjpw__nld_1_1optimize_1_1FitGA.html" title="Optimize a function via Genetic Algorithms." alt="" coords="153,221,908,249"/>
+<area shape="rect" id="node9" href="$classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html" title="FitLM_Adapter\&lt; BarrierModel\&lt; F_POL_T \&gt;, PersistenceMap \&gt;" alt="" coords="1539,174,1917,202"/>
+<area shape="rect" id="node13" href="$classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html" title="Perform a nonlinear least&#45;squares fit by passing a functor to the Levenberg&#45;Marquardt algorithm..." alt="" coords="1051,204,1203,232"/>
+<area shape="rect" id="node11" href="$classjpw__nld_1_1measure_1_1FitLM__BarrierAdapter.html" title="Child class of the FitLM_Adapter, using the BarrierModel and PersistenceMap classes." alt="" coords="1969,174,2191,202"/>
 </map>

@@ -1,7 +1,7 @@
 // -*- C++ -*-
 // Implementation of class FitLM
 //
-// Copyright (C) 2007-2008 by John Weiss
+// Copyright (C) 2007-2008, 2015 by John Weiss
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the Artistic License, included as the file
 // "LICENSE" in the source code archive.
@@ -82,6 +82,7 @@ FitLM::FitLM(fit_function_ptr_t ffp, index_t ndata, index_t nparm)
     : m__ffp(ffp)
     , m__ndata(ndata)
     , m__nparams(nparm)
+    , m__jac_requiresUpdate(false)
     , m__wrksz(m__ndata + 5*m__nparams)
     , m__ipvt(new int[m__nparams])
     , m__workbuf(new double[m__wrksz])
@@ -141,6 +142,8 @@ FitLM::operator()(int mm, dvector_t& xv, double errtol, double ptol,
            &m__ndata, &errtol, &ptol, &gtol, &maxiter, m__diag,
            &mode, &factor, &nprint, &inf, &nfev, &njev, m__ipvt, m__qtf,
            m__wa1, m__wa2, m__wa3, m__wa4);
+
+    m__jac_requiresUpdate = true;
 
     if(inf == MachinePrec_LMAlg) {
         return MachinePrec;

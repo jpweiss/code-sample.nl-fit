@@ -108,7 +108,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <!-- doxytag: class="jpw_nld::fortlib::FitLM" --><!-- doxytag: inherits="boost::noncopyable" -->
-<p>Wrapper around the FORTRAN function, <code>lmder_</code>.  
+<p>Wrapper around the FORTRAN function, <code>lmder_()</code>.  
  <a href="classjpw__nld_1_1fortlib_1_1FitLM.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="FitLM_8h_source.html">FitLM.h</a>&gt;</code></p>
@@ -119,7 +119,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classjpw__nld_1_1fortlib_1_1FitLM__inherit__graph.png" border="0" usemap="#FitLM_inherit__map" alt="Inheritance graph"/></div>
 <map name="FitLM_inherit__map" id="FitLM_inherit__map">
-<area shape="rect" id="node5" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html" title="FitLM_Adapter\&lt; BarrierModel\&lt; F_POL_T \&gt;, PersistenceMap \&gt;" alt="" coords="5,270,400,301"/><area shape="rect" id="node9" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html" title="The fit&#45;functor, F, must have the following members." alt="" coords="200,171,357,202"/><area shape="rect" id="node2" href="classboost_1_1noncopyable.html" title="noncopyable" alt="" coords="129,6,228,37"/><area shape="rect" id="node7" href="classjpw__nld_1_1measure_1_1FitLM__BarrierAdapter.html" title="Child class of the FitLM_Adapter, using the BarrierModel and PersistenceMap classes." alt="" coords="88,353,317,383"/></map>
+<area shape="rect" id="node5" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html" title="FitLM_Adapter\&lt; BarrierModel\&lt; F_POL_T \&gt;, PersistenceMap \&gt;" alt="" coords="5,259,384,287"/><area shape="rect" id="node9" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html" title="Perform a nonlinear least&#45;squares fit by passing a functor to the Levenberg&#45;Marquardt algorithm..." alt="" coords="193,166,345,194"/><area shape="rect" id="node2" href="classboost_1_1noncopyable.html" title="noncopyable" alt="" coords="125,6,219,34"/><area shape="rect" id="node7" href="classjpw__nld_1_1measure_1_1FitLM__BarrierAdapter.html" title="Child class of the FitLM_Adapter, using the BarrierModel and PersistenceMap classes." alt="" coords="84,339,305,367"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Collaboration diagram for FitLM:</div>
@@ -157,11 +157,11 @@ Public Types</h2>
 Public Member Functions</h2>
 <ul>
 <li><a class="el" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a10381fd4d6bfa4d94d21126f7db705ac">FitLM</a> (<a class="el" href="classjpw__nld_1_1fortlib_1_1FitLM.html#ade489b47682b536317ea832337debf1b">fit_function_ptr_t</a> ffp, <a class="el" href="namespacejpw__nld.html#aab1410d3f3644ff465752cab5b56e420">index_t</a> ndata, <a class="el" href="namespacejpw__nld.html#aab1410d3f3644ff465752cab5b56e420">index_t</a> nparm)
-<dl class="el"><dd class="mdescRight">Default Constructor.  <a href="#a10381fd4d6bfa4d94d21126f7db705ac"></a><br/></dl><li><a class="el" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a8c4a5e1d40f3c6a735acd2ae01e9aa4b">~FitLM</a> ()
+<dl class="el"><dd class="mdescRight">Main Constructor.  <a href="#a10381fd4d6bfa4d94d21126f7db705ac"></a><br/></dl><li><a class="el" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a8c4a5e1d40f3c6a735acd2ae01e9aa4b">~FitLM</a> ()
 <dl class="el"><dd class="mdescRight">Destructor.  <a href="#a8c4a5e1d40f3c6a735acd2ae01e9aa4b"></a><br/></dl><li><a class="el" href="classjpw__nld_1_1fortlib_1_1FitLM.html#abd17c321c84757dfc2c360f442c84b69">FitStatus_t</a> <a class="el" href="classjpw__nld_1_1fortlib_1_1FitLM.html#ab9ec7f9ce599a844513a1cc8d940df03">operator()</a> (int mm, dvector_t &amp;xv, double errtol, double ptol, int maxiter, double factor)
 <dl class="el"><dd class="mdescRight">Perform a nonlinear least-squares fit.  <a href="#ab9ec7f9ce599a844513a1cc8d940df03"></a><br/></dl><li>double <a class="el" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a40f646ca74381f91bf851ce166469a5e">chiSquared</a> () const 
-<dl class="el"><dd class="mdescRight">Compute ^2 for the last run of <code>operator()</code>.  <a href="#a40f646ca74381f91bf851ce166469a5e"></a><br/></dl><li>const dvector_t &amp; <a class="el" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a7409bc7c7fe43e31ad5b8a143358bc68">f_vec</a> () const 
-<dl class="el"><dd class="mdescRight">Accessor function for the f_vec.  <a href="#a7409bc7c7fe43e31ad5b8a143358bc68"></a><br/></dl><li>const dmatrix_t &amp; <a class="el" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a8ba51868d28fcabdb4fbf278e0aa86dd">f_jac</a> ()
+<dl class="el"><dd class="mdescRight">Compute <img class="formulaInl" alt="$\chi^2$" src="form_21.png"/> for the last run of <code>operator()</code>.  <a href="#a40f646ca74381f91bf851ce166469a5e"></a><br/></dl><li>const dvector_t &amp; <a class="el" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a7409bc7c7fe43e31ad5b8a143358bc68">f_vec</a> () const 
+<dl class="el"><dd class="mdescRight">Accessor function for the final value of f_vec.  <a href="#a7409bc7c7fe43e31ad5b8a143358bc68"></a><br/></dl><li>const dmatrix_t &amp; <a class="el" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a8ba51868d28fcabdb4fbf278e0aa86dd">f_jac</a> ()
 <dl class="el"><dd class="mdescRight">Accessor function for the f_jac.  <a href="#a8ba51868d28fcabdb4fbf278e0aa86dd"></a><br/></dl></ul>
 <h2><a name="pro-attribs"></a>
 Protected Attributes</h2>
@@ -173,10 +173,62 @@ Protected Attributes</h2>
 <li>dmatrix_t <a class="el" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a4ea0f66308fe53795e9ced7c7c0d55a3">m__f_jac_out</a>
 </ul>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Wrapper around the FORTRAN function, <code>lmder_</code>. </p>
-<p>Performs a nonlinear least-squares fit using the Levenberg-Marquardt algorithm. </p>
+<div class="textblock"><p>Wrapper around the FORTRAN function, <code>lmder_()</code>. </p>
+<p>Performs a nonlinear least-squares minimization using the Levenberg-Marquardt algorithm.</p>
+<h2><a class="anchor" id="LMNLLSqF"></a>
+Nonlinear Least-Squares Minimization</h2>
+<p>There are two uses of the Levenberg-Marquardt algorithm:</p>
+<ol type="1">
+<li>Solving <em><code>M</code></em> nonlinear functions in <em><code>N</code></em> variables. <br/>
+ Specifically, it solves for the <em>zeros</em> of the functions.</li>
+<li>Nonlinear fitting of a function with <em><code>M</code></em> parameters to a dataset with <em><code>N</code></em> elements.<ul>
+<li>The fitting-function has one or more independent variables, in addition to the <em><code>M</code></em> parameters.</li>
+<li>Each element in the dataset corresponds to a specific value of the independent variable(s).</li>
+<li>The fitting-function is nonlinear <em>in the parameters</em>. It may or may not be a nonlinear function of its independent variables().</li>
+</ul>
+</li>
+</ol>
+<p>The FORTRAN library is actually trying to solve the following: </p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[ f_{i}\left(x_{1},\, x_{2},\,\cdots,\, x_{N}\right) = \epsilon_{i}\qquad\forall\; i\in\left[1,\, M\right] \]" src="form_0.png"/>
+</p>
+<p> by finding the values of <img class="formulaInl" alt="$ x_{j} $" src="form_1.png"/> (where <img class="formulaInl" alt="$ n\in\left[1,\,N\right] $" src="form_2.png"/> ) that minimize the <em><code>M</code></em> different functions <img class="formulaInl" alt="$ f_{i} $" src="form_3.png"/> to zero. <br/>
+ Now, if your <em><code>M</code></em> equations look like this: </p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[ f_{i}\left(x_{1},\, \cdots,\, x_{N}\right) = c_{i}\qquad\forall\; i\in\left[1,\, M\right] \]" src="form_4.png"/>
+</p>
+<p> then you simply recast the equation: </p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[ f_{i}\left(x_{1},\, \cdots,\, x_{N}\right) - c_{i} = \varepsilon_{i} \]" src="form_5.png"/>
+</p>
+<p> so that the algorithm finds the <img class="formulaInl" alt="$ x_{j} $" src="form_1.png"/> that minimize all of the <img class="formulaInl" alt="$ \varepsilon_{i} $" src="form_6.png"/> to zero.</p>
+<p>You will also need to compute the Jacobian matrix: </p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[ J_{i,j}\left(x_{1},\,\cdots,\, x_{N}\right) = \left.\frac{\partial f_{i}}{\partial x_{j}} \right|_{\left(x_{1},\cdots,x_{N}\right)} \;\forall\; i\in\left[1,\, M\right]\quad j\in\left[1,\, N\right] \]" src="form_7.png"/>
+</p>
+<p> You'll start by computing the partial derivatives of the functions on paper. You'll then, inside of your fitting-function, compute the value of each <img class="formulaInl" alt="$ J_{i,j} $" src="form_8.png"/> at the <img class="formulaInl" alt="$ x_{j} $" src="form_1.png"/> passed to you by the minimization algorithm.</p>
+<p><br/>
+<br/>
+</p>
+<p>Nonlinear least-squares fitting is a variation of the equation-solving problem. This time, however, you have a function, <img class="formulaInl" alt="$ H\left(u\right) $" src="form_9.png"/>, that you want to fit to <em><code>N</code></em> dataset: </p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[ H\left(u_{j}\right) = d_{u_{j}} \qquad\forall\; j\in\left[1,\, N\right] \]" src="form_10.png"/>
+</p>
+<p> Each <img class="formulaInl" alt="$ d_{u_{j}} $" src="form_11.png"/> is the element in the dataset that corresponds to the specific value of <img class="formulaInl" alt="$ u $" src="form_12.png"/> which we've called <img class="formulaInl" alt="$ u_{j} $" src="form_13.png"/>. To fit the model to the data, <img class="formulaInl" alt="$ H $" src="form_14.png"/> must have tunable parameters: <img class="formulaInl" alt="$ p_{i} $" src="form_15.png"/>. We want to find values of the <em><code>M</code></em> tunable parameters that make the preceding equation valid for all of the <img class="formulaInl" alt="$ d_{u_{j}} $" src="form_11.png"/>.</p>
+<p>You can re-express the problem as follows: </p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[ H\left(p_{1},\,\cdots,\, p_{M}\,;\; u_{j}\right)-d_{u_{j}} = \varepsilon_{j}\qquad\forall\; j\in\left[1,\, N\right] \]" src="form_16.png"/>
+</p>
+<p> This is now the problem that the FORTRAN function, <code>lmder_()</code>, is designed to solve.</p>
+<p>The Levenberg-Marquardt algorithm requires a Jacobian matrix. However, we only have one equation, the model <img class="formulaInl" alt="$ H\left(u\right) $" src="form_9.png"/>, and we're not solving the problem by changing <img class="formulaInl" alt="$ u $" src="form_12.png"/>, we're tuning the parameters, <img class="formulaInl" alt="$ p_i $" src="form_17.png"/>. So the "Jacobian" matrix changes into: </p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[ J_{i}\left(u_{j}\right) = \left.\frac{\partial H}{\partial p_{i}}\right|_{u_{j}} \qquad\forall\; i\in\left[1,\, M\right]\quad j\in\left[1,\, N\right] \]" src="form_18.png"/>
+</p>
+<p> Now, instead of a matrix that is a function of <em><code>N</code></em> values, we have <em><code>M</code></em> functions, <img class="formulaInl" alt="$ J\left(u\right) $" src="form_19.png"/>, that we are evaluating at <em><code>N</code></em> specific values of <img class="formulaInl" alt="$ u $" src="form_12.png"/>. Each of those specific values, <img class="formulaInl" alt="$ u_{j} $" src="form_13.png"/> corresponds to one of the <em><code>N</code></em> data points.</p>
+<p>Notice, too, that we take the partial derivative of the model <em>with respect to each parameter</em>, <img class="formulaInl" alt="$ p_{i} $" src="form_15.png"/>. Again, we are computing <img class="formulaInl" alt="$ H\left(u\right) $" src="form_9.png"/> at the <em>fixed values</em> <img class="formulaInl" alt="$ u_{j} $" src="form_13.png"/>. For the purposes of fitting the model to the data, the model's independent variable, <img class="formulaInl" alt="$ u $" src="form_12.png"/>, is effectively constant.</p>
+<p>One final point about <img class="formulaInl" alt="$ J_{i}\left(u_{j}\right) $" src="form_20.png"/>: it doesn't depend on the data <em>directly</em>. Instead, it depends on the data indirectly through the fixed values, <img class="formulaInl" alt="$ u_{j} $" src="form_13.png"/>. </p>
 
-<p>Definition at line <a class="el" href="FitLM_8h_source.html#l00041">41</a> of file <a class="el" href="FitLM_8h_source.html">FitLM.h</a>.</p>
+<p>Definition at line <a class="el" href="FitLM_8h_source.html#l00132">132</a> of file <a class="el" href="FitLM_8h_source.html">FitLM.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="ade489b47682b536317ea832337debf1b"></a><!-- doxytag: member="jpw_nld::fortlib::FitLM::fit_function_ptr_t" ref="ade489b47682b536317ea832337debf1b" args=")(fort_ivar_t, fort_ivar_t, fort_dvec_t, fort_dvec_t, fort_dmat_t, fort_ivar_t, fort_ivar_t)" -->
 <div class="memitem">
@@ -190,23 +242,35 @@ Protected Attributes</h2>
 <div class="memdoc">
 
 <p>Function pointer type for the fit function. </p>
-<p>This is the function to minimize. It should produce a vector of  values, the magnitude of which will be minimized.</p>
+<p>This is the function to minimize. It should produce a vector of </p>
+<ul>
+<li>mm floating-point values.</li>
+</ul>
 <p>Since the Levenberg-Marquardt algorithm minimizes this function, if you wish to instead fit a model to data, you must somehow build the data into the fit function. Unfortunate, but we're stuck with the design of the underlying FORTRAN code.</p>
 <p>The parameters are, in order:</p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">mm</td><td>integer. The number of equations, i.e. the number of data points to fit to.</td></tr>
-    <tr><td class="paramname">nParams</td><td>integer. The number of parameters in the model being fit.</td></tr>
-    <tr><td class="paramname">x</td><td>double. An <em>nParams</em> element vector of the most recent parameter values.</td></tr>
-    <tr><td class="paramname">f_vec</td><td>double. An <em>mm</em> element vector. Should be filled with the value of the <em>mm</em> equations, computed at <em>x</em>.</td></tr>
-    <tr><td class="paramname">f_jac</td><td>double. An <em>nParams</em> by <em>ldfjac</em> matrix. Should be filled with the jacobian computed at <em>x</em>.</td></tr>
-    <tr><td class="paramname">ldfjac</td><td>integer. The long-dimension of <em>f_jac</em>. Usually identical to <em>mm</em>, but the FORTRAN algorithm provides it for special cases needing a larger jacobian matrix.</td></tr>
-    <tr><td class="paramname">iflag</td><td>integer. Control flag. When set to <code>1</code>, the function should compute <em>f_vec</em> and leave <em>f_jac</em> unaltered. When set to <code>2</code>, the function should leave <em>f_vec</em> alone and compute <em>f_jac</em>. The function can set this to a negative number to terminate minimization, but shouldn't modify it otherwise. </td></tr>
+    <tr><td class="paramname">mm</td><td><code>integer</code> <br/>
+ The number of equations (or the number of data points to fit to).</td></tr>
+    <tr><td class="paramname">nn</td><td><code>integer</code> <br/>
+ The number of variables in the equations (or parameters in the model being fit).</td></tr>
+    <tr><td class="paramname">x</td><td><code>double</code> <br/>
+ An <em>nn</em> element vector of the variables (or for fitting to a model, the values of the parameters), to use to compute <em>f_vec</em> or <em>f_jac</em>.</td></tr>
+    <tr><td class="paramname">f_vec</td><td><code>double</code> <br/>
+ An <em>mm</em> element vector. Should be filled with the value of the <em>mm</em> equations (or the model minus the data), computed using <em>x</em>. <br/>
+ (Each <em>f_vec</em>[j] must obviously be computed with <em>x</em>[j].)</td></tr>
+    <tr><td class="paramname">f_jac</td><td><code>double</code> <br/>
+ An <em>nn</em> by <em>ldfjac</em> matrix, flattened into an array. Should be filled with the Jacobian of the <em>mm</em> equations, computed using <em>x</em>. <br/>
+ The matrix has been flattened into <code>f_jac[j + mm*i]</code>, where <code>i</code> is the index representing a specific equation and <code>j</code> represents the index used with the array, <em>x</em>. Be sure to compute each of the <em>mm</em> elements of <em>f_jac</em> with the correct corresponding element of <em>x</em> !</td></tr>
+    <tr><td class="paramname">ldfjac</td><td><code>integer</code> <br/>
+ The long-dimension of <em>f_jac</em>. Usually identical to <em>mm</em>, but the FORTRAN algorithm provides it for special cases needing a larger Jacobian matrix.</td></tr>
+    <tr><td class="paramname">iflag</td><td><code>integer</code> <br/>
+ Control flag. When set to <code>1</code>, the function should compute <em>f_vec</em> and leave <em>f_jac</em> unaltered. When set to <code>2</code>, the function should leave <em>f_vec</em> alone and compute <em>f_jac</em>. The function can set this to a negative number to terminate minimization, but shouldn't modify it otherwise. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="FitLM_8h_source.html#l00171">171</a> of file <a class="el" href="FitLM_8h_source.html">FitLM.h</a>.</p>
+<p>Definition at line <a class="el" href="FitLM_8h_source.html#l00287">287</a> of file <a class="el" href="FitLM_8h_source.html">FitLM.h</a>.</p>
 
 </div>
 </div>
@@ -239,7 +303,7 @@ Protected Attributes</h2>
 </td></tr>
 <tr><td valign="top"><em><a class="anchor" id="abd17c321c84757dfc2c360f442c84b69ac0fe107bb27e85a83a34a602fbeca15e"></a><!-- doxytag: member="Success_dParam" ref="abd17c321c84757dfc2c360f442c84b69ac0fe107bb27e85a83a34a602fbeca15e" args="" -->Success_dParam</em>&nbsp;</td><td>
 <p>The LM algorithm stopped due to fit parameter convergence. </p>
-<p>The estimated relative error in the  parameter vector is below the error tolerance passed to the LM fitter. Either that, or the  parameter vector itself has changed by less that the error tolerance. "\Delta parameter" refers here to the change in the vector of tunable parameters in the model being fit (or independent variables in the equations being minimized). </p>
+<p>The estimated relative error in the <img class="formulaInl" alt="$\Delta$" src="form_22.png"/>-parameter vector is below the error tolerance passed to the LM fitter. Either that, or the <img class="formulaInl" alt="$\Delta$" src="form_22.png"/>-parameter vector itself has changed by less that the error tolerance. <img class="formulaInl" alt="$``\Delta$" src="form_23.png"/>-parameter" refers here to the change in the vector of tunable parameters in the model being fit (or independent variables in the equations being minimized). </p>
 </td></tr>
 <tr><td valign="top"><em><a class="anchor" id="abd17c321c84757dfc2c360f442c84b69a877c47c9556ab02e216c28d5132c5356"></a><!-- doxytag: member="Success_Both" ref="abd17c321c84757dfc2c360f442c84b69a877c47c9556ab02e216c28d5132c5356" args="" -->Success_Both</em>&nbsp;</td><td>
 <p>Both <code>Success_SumSq</code> and <code>Success_dParam</code> are true. </p>
@@ -247,7 +311,7 @@ Protected Attributes</h2>
 <tr><td valign="top"><em><a class="anchor" id="abd17c321c84757dfc2c360f442c84b69aa91d6d0db90a6e75830e8b58ceca7794"></a><!-- doxytag: member="MachinePrec" ref="abd17c321c84757dfc2c360f442c84b69aa91d6d0db90a6e75830e8b58ceca7794" args="" -->MachinePrec</em>&nbsp;</td><td>
 <p>The LM algorithm has hit machine precision. </p>
 <p>Specifically, the vector of values from the minimized function (or the vector of errors in a fit to data) is orthogonal, to within machine precision, to any column of the Jacobian.</p>
-<dl class="note"><dt><b>Note:</b></dt><dd>The underlying FORTRAN routine returns this code when the vector of values (or fit errors) is orthogonal to any column of the Jacobian to within a specified tolerance. <a class="el" href="classjpw__nld_1_1fortlib_1_1FitLM.html" title="Wrapper around the FORTRAN function, lmder_.">FitLM</a> sets that tolerance to "0", however. So, this status code becomes equivalent to <code>MachinePrec_LM</code>. </dd></dl>
+<dl class="note"><dt><b>Note:</b></dt><dd>The underlying FORTRAN routine returns this code when the vector of values (or fit errors) is orthogonal to any column of the Jacobian to within a specified tolerance. <a class="el" href="classjpw__nld_1_1fortlib_1_1FitLM.html" title="Wrapper around the FORTRAN function, lmder_().">FitLM</a> sets that tolerance to "0", however. So, this status code becomes equivalent to <code>MachinePrec_LM</code>. </dd></dl>
 </td></tr>
 <tr><td valign="top"><em><a class="anchor" id="abd17c321c84757dfc2c360f442c84b69adaae0c0c74b0d195ce585ab9a7e76c15"></a><!-- doxytag: member="IterationOverflow" ref="abd17c321c84757dfc2c360f442c84b69adaae0c0c74b0d195ce585ab9a7e76c15" args="" -->IterationOverflow</em>&nbsp;</td><td>
 <p>The LM algorithm aborted due to too many iterations. </p>
@@ -261,13 +325,13 @@ Protected Attributes</h2>
 </td></tr>
 <tr><td valign="top"><em><a class="anchor" id="abd17c321c84757dfc2c360f442c84b69afac40821ed5fa0992b863a393b66bb4b"></a><!-- doxytag: member="UnderflowError_dParam" ref="abd17c321c84757dfc2c360f442c84b69afac40821ed5fa0992b863a393b66bb4b" args="" -->UnderflowError_dParam</em>&nbsp;</td><td>
 <p>Can't reduce the relative parameter error any further. </p>
-<p>Specifically, the LM Algorithm has reduced the relative error in the "\Delta parameter" vector as far as it can, yet it still isn't below the error tolerance passed by the caller. Indicates either a poor fit, too small of a desired parameter error, or a combination of the two.</p>
+<p>Specifically, the LM Algorithm has reduced the relative error in the <img class="formulaInl" alt="$``\Delta$" src="form_23.png"/>-parameter" vector as far as it can, yet it still isn't below the error tolerance passed by the caller. Indicates either a poor fit, too small of a desired parameter error, or a combination of the two.</p>
 <p>This underflow error corresponds to success status, <code>Success_dParam</code>. </p>
 </td></tr>
 <tr><td valign="top"><em><a class="anchor" id="abd17c321c84757dfc2c360f442c84b69a8eed89dfd22ed6c9a50f4187f2e86212"></a><!-- doxytag: member="MachinePrec_LMAlg" ref="abd17c321c84757dfc2c360f442c84b69a8eed89dfd22ed6c9a50f4187f2e86212" args="" -->MachinePrec_LMAlg</em>&nbsp;</td><td>
 <p>The LM algorithm has hit machine precision. </p>
 <p>Specifically, the vector of values from the minimized function (or the vector of errors in a fit to data) is orthogonal, to within machine precision, to any column of the Jacobian.</p>
-<dl class="note"><dt><b>Note:</b></dt><dd>Because <code><a class="el" href="classjpw__nld_1_1fortlib_1_1FitLM.html" title="Wrapper around the FORTRAN function, lmder_.">FitLM</a></code> uses an orgthogonality tolerance of "0", this status code and <code>MachinePrec</code> mean the same thing. So we convert this code to the former on return. </dd></dl>
+<dl class="note"><dt><b>Note:</b></dt><dd>Because <code><a class="el" href="classjpw__nld_1_1fortlib_1_1FitLM.html" title="Wrapper around the FORTRAN function, lmder_().">FitLM</a></code> uses an orgthogonality tolerance of "0", this status code and <code>MachinePrec</code> mean the same thing. So we convert this code to the former on return. </dd></dl>
 </td></tr>
 </table>
 </dd>
@@ -275,7 +339,7 @@ Protected Attributes</h2>
 
 <p>Reimplemented in <a class="el" href="classjpw__nld_1_1measure_1_1FitLM__BarrierAdapter.html#ae22725ffc696de099e24932d1f1a23e7">FitLM_BarrierAdapter&lt; F_POL_T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="FitLM_8h_source.html#l00045">45</a> of file <a class="el" href="FitLM_8h_source.html">FitLM.h</a>.</p>
+<p>Definition at line <a class="el" href="FitLM_8h_source.html#l00136">136</a> of file <a class="el" href="FitLM_8h_source.html">FitLM.h</a>.</p>
 
 </div>
 </div>
@@ -305,18 +369,18 @@ Protected Attributes</h2>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td><code> [explicit]</code></td>
+          <td></td><td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Default Constructor. </p>
+<p>Main Constructor. </p>
 <p>Technically, this object doesn't <em>really</em> perform a fit, but a minimization. Specifically, it minimizes <em>mm</em> "equations" in <em>nparm</em> variables (where <em>nparm</em> is the argument passed to the c'tor). The fit function can be nonlinear in one or more of the variables.</p>
 <p>As a result, the fit function, <em>ffp</em>, must somehow "contain" the data as well as the model.</p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">ffp</td><td>A function pointer to the fit function. The fit function computes the model and its jacobians. See <code>fit_function_ptr_t</code> for details.</td></tr>
+    <tr><td class="paramname">ffp</td><td>A function pointer to the fit function. The fit function computes the model and its Jacobians. [See <a class="el" href="classjpw__nld_1_1fortlib_1_1FitLM.html#ade489b47682b536317ea832337debf1b">fit_function_ptr_t</a> for details.]</td></tr>
     <tr><td class="paramname">ndata</td><td>The maximum number of data points you intend to fit to using this object.</td></tr>
     <tr><td class="paramname">nparm</td><td>The number of parameters in <em>ffp</em> that you're fitting to. This number also defines the minimum number of data points you intend to fit to. </td></tr>
   </table>
@@ -358,12 +422,12 @@ Protected Attributes</h2>
 </div>
 <div class="memdoc">
 
-<p>Compute ^2 for the last run of <code>operator()</code>. </p>
-<p>Equivalent to running <code><a class="el" href="namespacejpw__math.html#a152e2773ecb5ffe95d340b4ce92a8eaf" title="Compute ^2 from fvec.">jpw_math::chiSquared()</a></code> on <code><a class="el" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a7409bc7c7fe43e31ad5b8a143358bc68" title="Accessor function for the f_vec.">f_vec()</a></code>. </p>
+<p>Compute <img class="formulaInl" alt="$\chi^2$" src="form_21.png"/> for the last run of <code>operator()</code>. </p>
+<p>Equivalent to running <code><a class="el" href="namespacejpw__math.html#a152e2773ecb5ffe95d340b4ce92a8eaf" title="Compute ^2 from fvec.">jpw_math::chiSquared()</a></code> on <code><a class="el" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a7409bc7c7fe43e31ad5b8a143358bc68" title="Accessor function for the final value of f_vec.">f_vec()</a></code>. </p>
 
-<p>Definition at line <a class="el" href="FitLM_8h_source.html#l00249">249</a> of file <a class="el" href="FitLM_8h_source.html">FitLM.h</a>.</p>
+<p>Definition at line <a class="el" href="FitLM_8h_source.html#l00368">368</a> of file <a class="el" href="FitLM_8h_source.html">FitLM.h</a>.</p>
 
-<p>References <a class="el" href="FitLM_8h_source.html#l00286">FitLM::m__f_vec</a>.</p>
+<p>References <a class="el" href="FitLM_8h_source.html#l00415">FitLM::m__f_vec</a>.</p>
 
 </div>
 </div>
@@ -383,11 +447,12 @@ Protected Attributes</h2>
 
 <p>Accessor function for the f_jac. </p>
 <p>Note that it doesn't return the actual Jacobian (which is fed to the FORTRAN routine as a flat vector), but calls <code>Matrix::swap()</code> on an internal member. So, it's a tad slower than a simple "return a
- member" accessor. </p>
+ member" accessor.</p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classjpw__nld_1_1fortlib_1_1FitLM.html#ade489b47682b536317ea832337debf1b" title="Function pointer type for the fit function.">fit_function_ptr_t</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="FitLM_8h_source.html#l00264">264</a> of file <a class="el" href="FitLM_8h_source.html">FitLM.h</a>.</p>
+<p>Definition at line <a class="el" href="FitLM_8h_source.html#l00388">388</a> of file <a class="el" href="FitLM_8h_source.html">FitLM.h</a>.</p>
 
-<p>References <a class="el" href="FitLM_8h_source.html#l00285">FitLM::m__f_jac_flat</a>, and <a class="el" href="FitLM_8h_source.html#l00287">FitLM::m__f_jac_out</a>.</p>
+<p>References <a class="el" href="FitLM_8h_source.html#l00414">FitLM::m__f_jac_flat</a>, and <a class="el" href="FitLM_8h_source.html#l00416">FitLM::m__f_jac_out</a>.</p>
 
 </div>
 </div>
@@ -405,11 +470,12 @@ Protected Attributes</h2>
 </div>
 <div class="memdoc">
 
-<p>Accessor function for the f_vec. </p>
+<p>Accessor function for the final value of f_vec. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classjpw__nld_1_1fortlib_1_1FitLM.html#ade489b47682b536317ea832337debf1b" title="Function pointer type for the fit function.">fit_function_ptr_t</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="FitLM_8h_source.html#l00254">254</a> of file <a class="el" href="FitLM_8h_source.html">FitLM.h</a>.</p>
+<p>Definition at line <a class="el" href="FitLM_8h_source.html#l00376">376</a> of file <a class="el" href="FitLM_8h_source.html">FitLM.h</a>.</p>
 
-<p>References <a class="el" href="FitLM_8h_source.html#l00286">FitLM::m__f_vec</a>.</p>
+<p>References <a class="el" href="FitLM_8h_source.html#l00415">FitLM::m__f_vec</a>.</p>
 
 </div>
 </div>
@@ -468,14 +534,14 @@ Protected Attributes</h2>
   <table class="params">
     <tr><td class="paramname">mm</td><td>The number of data points used in the fit. It must be in the range <code>[</code><em>nparm<code></em>, </code><em>ndata<code></em>]</code>, inclusive, where <em>ndata</em> and <em>nparm</em> are two of the parameters you passed to the c'tor.</td></tr>
     <tr><td class="paramname">xv</td><td>A vector of initial parameter values. On return, it will contain the best-fit values of the parameters.</td></tr>
-    <tr><td class="paramname">errtol</td><td>The tolerance for ^2. If the change in ^2 from one iteration to the next is less than errtol, the algorithm stops.</td></tr>
+    <tr><td class="paramname">errtol</td><td>The tolerance for <img class="formulaInl" alt="$\chi^2$" src="form_21.png"/>. If the change in <img class="formulaInl" alt="$\chi^2$" src="form_21.png"/> from one iteration to the next is less than errtol, the algorithm stops.</td></tr>
     <tr><td class="paramname">ptol</td><td>The tolerance for the set of parameters. If the magnitude of the parameter vector changes by less than ptol, the algorithm stops.</td></tr>
     <tr><td class="paramname">factor</td><td>The initial maximum step size. A typical value is in the range [0.1,100.0]. If factor==0, a value of factor=100.0 is used instead.</td></tr>
-    <tr><td class="paramname">maxiter</td><td>The maximum number of times the routine recalculates fv[] before stopping. Not really the number of iteration, but close enough. If the initial value of maxiter==0, a value of maxiter=100*(nn+1) is used.</td></tr>
+    <tr><td class="paramname">maxiter</td><td>The maximum number of times that the algorithm recalculates <code>f_vec</code> [see <code>fit_function_ptr_t</code>] before stopping. Not really the number of iteration, but close enough. If the initial value of <code>maxiter==0</code>, a value of <code>maxiter=100*</code>(m__ndata+1) is used.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>The error codes, which are the same that the FORTRAN routine, lmder(), returns in its <code>info</code> parameter. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The error codes, which are the same that the FORTRAN routine, <code>lmder_()</code>, returns in its <code>info</code> parameter. </dd></dl>
 
 </div>
 </div>
@@ -491,9 +557,9 @@ Protected Attributes</h2>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="FitLM_8h_source.html#l00285">285</a> of file <a class="el" href="FitLM_8h_source.html">FitLM.h</a>.</p>
+<p>Definition at line <a class="el" href="FitLM_8h_source.html#l00414">414</a> of file <a class="el" href="FitLM_8h_source.html">FitLM.h</a>.</p>
 
-<p>Referenced by <a class="el" href="FitLM_8h_source.html#l00264">FitLM::f_jac()</a>.</p>
+<p>Referenced by <a class="el" href="FitLM_8h_source.html#l00388">FitLM::f_jac()</a>.</p>
 
 </div>
 </div>
@@ -508,9 +574,9 @@ Protected Attributes</h2>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="FitLM_8h_source.html#l00287">287</a> of file <a class="el" href="FitLM_8h_source.html">FitLM.h</a>.</p>
+<p>Definition at line <a class="el" href="FitLM_8h_source.html#l00416">416</a> of file <a class="el" href="FitLM_8h_source.html">FitLM.h</a>.</p>
 
-<p>Referenced by <a class="el" href="FitLM_8h_source.html#l00264">FitLM::f_jac()</a>.</p>
+<p>Referenced by <a class="el" href="FitLM_8h_source.html#l00388">FitLM::f_jac()</a>.</p>
 
 </div>
 </div>
@@ -525,9 +591,9 @@ Protected Attributes</h2>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="FitLM_8h_source.html#l00286">286</a> of file <a class="el" href="FitLM_8h_source.html">FitLM.h</a>.</p>
+<p>Definition at line <a class="el" href="FitLM_8h_source.html#l00415">415</a> of file <a class="el" href="FitLM_8h_source.html">FitLM.h</a>.</p>
 
-<p>Referenced by <a class="el" href="FitLM_8h_source.html#l00249">FitLM::chiSquared()</a>, and <a class="el" href="FitLM_8h_source.html#l00254">FitLM::f_vec()</a>.</p>
+<p>Referenced by <a class="el" href="FitLM_8h_source.html#l00368">FitLM::chiSquared()</a>, and <a class="el" href="FitLM_8h_source.html#l00376">FitLM::f_vec()</a>.</p>
 
 </div>
 </div>
@@ -542,7 +608,7 @@ Protected Attributes</h2>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="FitLM_8h_source.html#l00272">272</a> of file <a class="el" href="FitLM_8h_source.html">FitLM.h</a>.</p>
+<p>Definition at line <a class="el" href="FitLM_8h_source.html#l00400">400</a> of file <a class="el" href="FitLM_8h_source.html">FitLM.h</a>.</p>
 
 </div>
 </div>
@@ -557,7 +623,7 @@ Protected Attributes</h2>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="FitLM_8h_source.html#l00273">273</a> of file <a class="el" href="FitLM_8h_source.html">FitLM.h</a>.</p>
+<p>Definition at line <a class="el" href="FitLM_8h_source.html#l00401">401</a> of file <a class="el" href="FitLM_8h_source.html">FitLM.h</a>.</p>
 
 </div>
 </div>
@@ -586,7 +652,7 @@ Protected Attributes</h2>
       <li class="navelem"><a class="el" href="namespacejpw__nld_1_1fortlib.html">fortlib</a>      </li>
       <li class="navelem"><a class="el" href="classjpw__nld_1_1fortlib_1_1FitLM.html">FitLM</a>      </li>
 
-    <li class="footer">Generated on Sun Aug 4 2013 23:37:56 for research-nld by
+    <li class="footer">Generated on Tue Feb 10 2015 13:42:39 for research-nld by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

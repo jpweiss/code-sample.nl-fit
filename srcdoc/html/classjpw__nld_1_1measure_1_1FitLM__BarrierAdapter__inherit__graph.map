@@ -1,6 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node2" href="$classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html" title="FitLM_Adapter\&lt; BarrierModel\&lt; F_POL_T \&gt;, PersistenceMap \&gt;" alt="" coords="5,270,400,301"/>
-<area shape="rect" id="node4" href="$classjpw__nld_1_1fortlib_1_1FitLM.html" title="Wrapper around the FORTRAN function, lmder_." alt="" coords="152,89,205,119"/>
-<area shape="rect" id="node8" href="$classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html" title="The fit&#45;functor, F, must have the following members." alt="" coords="200,171,357,202"/>
-<area shape="rect" id="node6" href="$classboost_1_1noncopyable.html" title="noncopyable" alt="" coords="129,6,228,37"/>
+<area shape="rect" id="node2" href="$classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html" title="FitLM_Adapter\&lt; BarrierModel\&lt; F_POL_T \&gt;, PersistenceMap \&gt;" alt="" coords="5,259,384,287"/>
+<area shape="rect" id="node4" href="$classjpw__nld_1_1fortlib_1_1FitLM.html" title="Wrapper around the FORTRAN function, lmder_()." alt="" coords="145,86,199,114"/>
+<area shape="rect" id="node8" href="$classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html" title="Perform a nonlinear least&#45;squares fit by passing a functor to the Levenberg&#45;Marquardt algorithm..." alt="" coords="193,166,345,194"/>
+<area shape="rect" id="node6" href="$classboost_1_1noncopyable.html" title="noncopyable" alt="" coords="125,6,219,34"/>
 </map>

@@ -2,7 +2,7 @@
 <tagfile>
   <compound kind="file">
     <name>BarrierModels.h</name>
-    <path>/home/candide/src/wrk/research-nld-subset/src/libs/measure/</path>
+    <path>/home/candide/src/github/code-sample.nl-fit/src/libs/measure/</path>
     <filename>BarrierModels_8h</filename>
     <class kind="struct">jpw_nld::measure::policy::MarkovOnly</class>
     <class kind="struct">jpw_nld::measure::policy::BarrierOnly</class>
@@ -35,7 +35,7 @@
   </compound>
   <compound kind="file">
     <name>ContainerType.h</name>
-    <path>/home/candide/src/wrk/research-nld-subset/src/libs/utils/details/</path>
+    <path>/home/candide/src/github/code-sample.nl-fit/src/libs/utils/details/</path>
     <filename>ContainerType_8h</filename>
     <class kind="struct">jpw_math::traits::ContainerType</class>
     <class kind="struct">jpw_math::traits::ContainerType&lt; S * &gt;</class>
@@ -44,7 +44,7 @@
   </compound>
   <compound kind="file">
     <name>CustomManips.h</name>
-    <path>/home/candide/src/wrk/research-nld-subset/src/libs/utils/details/</path>
+    <path>/home/candide/src/github/code-sample.nl-fit/src/libs/utils/details/</path>
     <filename>CustomManips_8h</filename>
     <class kind="class">CustomManips::iosManip</class>
     <class kind="class">CustomManips::iosManipObj</class>
@@ -80,7 +80,7 @@
   </compound>
   <compound kind="file">
     <name>FitGA.h</name>
-    <path>/home/candide/src/wrk/research-nld-subset/src/libs/measure/</path>
+    <path>/home/candide/src/github/code-sample.nl-fit/src/libs/measure/</path>
     <filename>FitGA_8h</filename>
     <class kind="class">jpw_nld::optimize::FitGA</class>
     <class kind="struct">jpw_nld::optimize::FitGA::PopVecFiller</class>
@@ -90,7 +90,7 @@
   </compound>
   <compound kind="file">
     <name>FitLM.h</name>
-    <path>/home/candide/src/wrk/research-nld-subset/src/libs/fortlib/</path>
+    <path>/home/candide/src/github/code-sample.nl-fit/src/libs/fortlib/</path>
     <filename>FitLM_8h</filename>
     <class kind="class">jpw_nld::fortlib::FitLM</class>
     <namespace>jpw_nld</namespace>
@@ -105,7 +105,7 @@
   </compound>
   <compound kind="file">
     <name>FitLM_Adapter.h</name>
-    <path>/home/candide/src/wrk/research-nld-subset/src/libs/fortlib/</path>
+    <path>/home/candide/src/github/code-sample.nl-fit/src/libs/fortlib/</path>
     <filename>FitLM__Adapter_8h</filename>
     <class kind="class">jpw_nld::fortlib::FitLM_Adapter</class>
     <namespace>jpw_nld</namespace>
@@ -113,7 +113,7 @@
   </compound>
   <compound kind="file">
     <name>FitLM_BarrierAdapter.h</name>
-    <path>/home/candide/src/wrk/research-nld-subset/src/libs/measure/</path>
+    <path>/home/candide/src/github/code-sample.nl-fit/src/libs/measure/</path>
     <filename>FitLM__BarrierAdapter_8h</filename>
     <class kind="class">jpw_nld::measure::FitLM_BarrierAdapter</class>
     <namespace>jpw_nld</namespace>
@@ -135,7 +135,7 @@
   </compound>
   <compound kind="file">
     <name>FORTLib.h</name>
-    <path>/home/candide/src/wrk/research-nld-subset/src/libs/fortlib/</path>
+    <path>/home/candide/src/github/code-sample.nl-fit/src/libs/fortlib/</path>
     <filename>FORTLib_8h</filename>
     <class kind="struct">jpw_nld::fortlib::sort::SortError</class>
     <namespace>jpw_nld</namespace>
@@ -173,7 +173,7 @@
   </compound>
   <compound kind="file">
     <name>FORTTypes.h</name>
-    <path>/home/candide/src/wrk/research-nld-subset/src/libs/fortlib/</path>
+    <path>/home/candide/src/github/code-sample.nl-fit/src/libs/fortlib/</path>
     <filename>FORTTypes_8h</filename>
     <namespace>jpw_nld</namespace>
     <namespace>jpw_nld::fortlib</namespace>
@@ -215,7 +215,7 @@
   </compound>
   <compound kind="file">
     <name>jpw_nld.h</name>
-    <path>/home/candide/src/wrk/research-nld-subset/src/libs/utils/</path>
+    <path>/home/candide/src/github/code-sample.nl-fit/src/libs/utils/</path>
     <filename>jpw__nld_8h</filename>
     <namespace>jpw_nld</namespace>
     <member kind="typedef">
@@ -249,7 +249,7 @@
   </compound>
   <compound kind="file">
     <name>Manips.h</name>
-    <path>/home/candide/src/wrk/research-nld-subset/src/libs/utils/</path>
+    <path>/home/candide/src/github/code-sample.nl-fit/src/libs/utils/</path>
     <filename>Manips_8h</filename>
     <namespace>inManips</namespace>
     <namespace>outManips</namespace>
@@ -314,7 +314,7 @@
   </compound>
   <compound kind="file">
     <name>MathTools.h</name>
-    <path>/home/candide/src/wrk/research-nld-subset/src/libs/utils/</path>
+    <path>/home/candide/src/github/code-sample.nl-fit/src/libs/utils/</path>
     <filename>MathTools_8h</filename>
     <namespace>jpw_math</namespace>
     <member kind="function" static="yes">
@@ -460,7 +460,7 @@
   </compound>
   <compound kind="file">
     <name>Matrix.h</name>
-    <path>/home/candide/src/wrk/research-nld-subset/src/libs/utils/</path>
+    <path>/home/candide/src/github/code-sample.nl-fit/src/libs/utils/</path>
     <filename>Matrix_8h</filename>
     <class kind="class">jpw_math::Matrix</class>
     <namespace>jpw_math</namespace>
@@ -482,13 +482,13 @@
   </compound>
   <compound kind="file">
     <name>Matrix_fwd.h</name>
-    <path>/home/candide/src/wrk/research-nld-subset/src/libs/utils/</path>
+    <path>/home/candide/src/github/code-sample.nl-fit/src/libs/utils/</path>
     <filename>Matrix__fwd_8h</filename>
     <namespace>jpw_math</namespace>
   </compound>
   <compound kind="file">
     <name>MatrixAdapter.h</name>
-    <path>/home/candide/src/wrk/research-nld-subset/src/libs/utils/</path>
+    <path>/home/candide/src/github/code-sample.nl-fit/src/libs/utils/</path>
     <filename>MatrixAdapter_8h</filename>
     <class kind="class">jpw_math::MatrixAdapter</class>
     <class kind="struct">jpw_math::MatrixAdapter::RowProxy</class>
@@ -504,7 +504,7 @@
   </compound>
   <compound kind="file">
     <name>MatrixRef_Writer.h</name>
-    <path>/home/candide/src/wrk/research-nld-subset/src/libs/utils/details/</path>
+    <path>/home/candide/src/github/code-sample.nl-fit/src/libs/utils/details/</path>
     <filename>MatrixRef__Writer_8h</filename>
     <class kind="class">jpw_math::details::MatrixRef_Writer</class>
     <namespace>jpw_math</namespace>
@@ -512,7 +512,7 @@
   </compound>
   <compound kind="file">
     <name>nld_exceptions.h</name>
-    <path>/home/candide/src/wrk/research-nld-subset/src/libs/utils/</path>
+    <path>/home/candide/src/github/code-sample.nl-fit/src/libs/utils/</path>
     <filename>nld__exceptions_8h</filename>
     <class kind="struct">jpw_nld::FileNotFound</class>
     <class kind="struct">jpw_nld::InvalidArgError</class>
@@ -522,7 +522,7 @@
   </compound>
   <compound kind="file">
     <name>PersistenceMap.h</name>
-    <path>/home/candide/src/wrk/research-nld-subset/src/libs/persistence/</path>
+    <path>/home/candide/src/github/code-sample.nl-fit/src/libs/persistence/</path>
     <filename>PersistenceMap_8h</filename>
     <class kind="class">jpw_nld::measure::PersistenceMap</class>
     <namespace>jpw_nld</namespace>
@@ -530,7 +530,7 @@
   </compound>
   <compound kind="file">
     <name>SequenceStorage.h</name>
-    <path>/home/candide/src/wrk/research-nld-subset/src/libs/utils/details/</path>
+    <path>/home/candide/src/github/code-sample.nl-fit/src/libs/utils/details/</path>
     <filename>SequenceStorage_8h</filename>
     <class kind="struct">jpw_math::policy::SequenceStorage</class>
     <class kind="struct">jpw_math::policy::SequenceStorage&lt; S * &gt;</class>
@@ -539,7 +539,7 @@
   </compound>
   <compound kind="file">
     <name>statistics.h</name>
-    <path>/home/candide/src/wrk/research-nld-subset/src/libs/utils/</path>
+    <path>/home/candide/src/github/code-sample.nl-fit/src/libs/utils/</path>
     <filename>statistics_8h</filename>
     <namespace>jpw_math</namespace>
     <namespace>jpw_math::statistics</namespace>
@@ -644,7 +644,7 @@
   </compound>
   <compound kind="file">
     <name>Vector_fwd.h</name>
-    <path>/home/candide/src/wrk/research-nld-subset/src/libs/utils/</path>
+    <path>/home/candide/src/github/code-sample.nl-fit/src/libs/utils/</path>
     <filename>Vector__fwd_8h</filename>
     <namespace>jpw_math</namespace>
   </compound>
@@ -2011,6 +2011,7 @@
       <anchor>a4ea0f66308fe53795e9ced7c7c0d55a3</anchor>
       <arglist></arglist>
     </member>
+    <docanchor file="classjpw__nld_1_1fortlib_1_1FitLM">LMNLLSqF</docanchor>
   </compound>
   <compound kind="class">
     <name>jpw_nld::fortlib::FitLM_Adapter</name>
@@ -2036,8 +2037,8 @@
       <type>FitStatus_t</type>
       <name>operator()</name>
       <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html</anchorfile>
-      <anchor>a6afd60dbf65e7f2e80a86f59a063233a</anchor>
-      <arglist>(FitFunctor_t &amp;theModel, const Data_t &amp;theData, dvector_t &amp;xv, double errtol, double ptol, int maxiter, double factor)</arglist>
+      <anchor>a83bf861b479eb8ba70c3430a5f58049e</anchor>
+      <arglist>(FitFunctor_t &amp;theModel, const Data_t &amp;theData, dvector_t &amp;params, double errtol, double ptol, int maxiter, double factor)</arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>F</type>
@@ -2209,6 +2210,7 @@
       <anchor>a4ea0f66308fe53795e9ced7c7c0d55a3</anchor>
       <arglist></arglist>
     </member>
+    <docanchor file="classjpw__nld_1_1fortlib_1_1FitLM__Adapter">FitFunctor</docanchor>
   </compound>
   <compound kind="namespace">
     <name>jpw_nld::fortlib::sort</name>
@@ -2533,8 +2535,8 @@
       <type>FitStatus_t</type>
       <name>operator()</name>
       <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html</anchorfile>
-      <anchor>a6afd60dbf65e7f2e80a86f59a063233a</anchor>
-      <arglist>(FitFunctor_t &amp;theModel, const Data_t &amp;theData, dvector_t &amp;xv, double errtol, double ptol, int maxiter, double factor)</arglist>
+      <anchor>a83bf861b479eb8ba70c3430a5f58049e</anchor>
+      <arglist>(FitFunctor_t &amp;theModel, const Data_t &amp;theData, dvector_t &amp;params, double errtol, double ptol, int maxiter, double factor)</arglist>
     </member>
     <member kind="function">
       <type>FitStatus_t</type>
@@ -3045,8 +3047,8 @@
   </compound>
   <compound kind="dir">
     <name>src/libs/utils/details/</name>
-    <path>/home/candide/src/wrk/research-nld-subset/src/libs/utils/details/</path>
-    <filename>dir_1a28e55f811c88486fe962c5151cbdcc.html</filename>
+    <path>/home/candide/src/github/code-sample.nl-fit/src/libs/utils/details/</path>
+    <filename>dir_4a99c70c9c6d0991c67d8baec1b0c546.html</filename>
     <file>ContainerType.h</file>
     <file>CustomManips.h</file>
     <file>MatrixRef_Writer.h</file>
@@ -3054,8 +3056,8 @@
   </compound>
   <compound kind="dir">
     <name>src/libs/fortlib/</name>
-    <path>/home/candide/src/wrk/research-nld-subset/src/libs/fortlib/</path>
-    <filename>dir_cd5a3a472cc8266f937082f506f5a5b7.html</filename>
+    <path>/home/candide/src/github/code-sample.nl-fit/src/libs/fortlib/</path>
+    <filename>dir_faed00c07e8306d24d60f577b1ca6c42.html</filename>
     <file>FitLM.h</file>
     <file>FitLM_Adapter.h</file>
     <file>FORTLib.h</file>
@@ -3063,8 +3065,8 @@
   </compound>
   <compound kind="dir">
     <name>src/libs/</name>
-    <path>/home/candide/src/wrk/research-nld-subset/src/libs/</path>
-    <filename>dir_1de7c81b5cd45cc051d3770777a78bda.html</filename>
+    <path>/home/candide/src/github/code-sample.nl-fit/src/libs/</path>
+    <filename>dir_d33897ef7e5a36929b14b0c196609b33.html</filename>
     <dir>src/libs/fortlib/</dir>
     <dir>src/libs/measure/</dir>
     <dir>src/libs/persistence/</dir>
@@ -3072,28 +3074,28 @@
   </compound>
   <compound kind="dir">
     <name>src/libs/measure/</name>
-    <path>/home/candide/src/wrk/research-nld-subset/src/libs/measure/</path>
-    <filename>dir_5f8f5621b2252f60c714b0de5bc36c90.html</filename>
+    <path>/home/candide/src/github/code-sample.nl-fit/src/libs/measure/</path>
+    <filename>dir_bb793f59adb748adf1f1648e718ed5d1.html</filename>
     <file>BarrierModels.h</file>
     <file>FitGA.h</file>
     <file>FitLM_BarrierAdapter.h</file>
   </compound>
   <compound kind="dir">
     <name>src/libs/persistence/</name>
-    <path>/home/candide/src/wrk/research-nld-subset/src/libs/persistence/</path>
-    <filename>dir_1a5204fba9e81a2ef3257c379394d6d3.html</filename>
+    <path>/home/candide/src/github/code-sample.nl-fit/src/libs/persistence/</path>
+    <filename>dir_ad918ced31222ffd49f592b8e3ef10b1.html</filename>
     <file>PersistenceMap.h</file>
   </compound>
   <compound kind="dir">
     <name>src/</name>
-    <path>/home/candide/src/wrk/research-nld-subset/src/</path>
-    <filename>dir_d354036b3fb873d42dacfa3c2434b79c.html</filename>
+    <path>/home/candide/src/github/code-sample.nl-fit/src/</path>
+    <filename>dir_553869d52b2eef9f934739787281f421.html</filename>
     <dir>src/libs/</dir>
   </compound>
   <compound kind="dir">
     <name>src/libs/utils/</name>
-    <path>/home/candide/src/wrk/research-nld-subset/src/libs/utils/</path>
-    <filename>dir_ff251d737b575398ab169e81933c8ba4.html</filename>
+    <path>/home/candide/src/github/code-sample.nl-fit/src/libs/utils/</path>
+    <filename>dir_d5ab9964af0a6c8ea6dcd877d7ac1e63.html</filename>
     <dir>src/libs/utils/details/</dir>
     <file>jpw_nld.h</file>
     <file>Manips.h</file>
