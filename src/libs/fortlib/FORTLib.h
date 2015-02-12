@@ -45,8 +45,8 @@ namespace jpw_nld {
     *
     * \param dm_inv
     * The resulting inverse matrix.
-    */
    int sqmInvert_GJE(const dmatrix_t& dm, dmatrix_t& dm_inv);
+    */
 
    /// Invert a square matrix using Singular-Value Decomposition.
    /**
@@ -55,8 +55,8 @@ namespace jpw_nld {
     *
     * \param dm_inv
     * The resulting inverse matrix.
-    */
    int sqmInvert_SVD(const dmatrix_t& dm, dmatrix_t& dm_inv);
+    */
   };
 
   /// Numeric sorting functions.

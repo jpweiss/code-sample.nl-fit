@@ -13,7 +13,7 @@
 // You should have received a copy of the file "LICENSE", containing
 // the License John Weiss originally placed this program under.
 //
-// RCS $Id: FitLM.h 2221 2011-07-09 01:56:38Z candide $
+// RCS $Id: FitLM.h 2850 2013-10-17 00:52:45Z candide $
 //
 #ifndef _FitLM_H_
 #define _FitLM_H_
@@ -55,7 +55,8 @@ namespace jpw_nld {
    *      may or may not be a nonlinear function of its independent
    *      variables().
    *
-   * The FORTRAN library is actually trying to solve the following: \f[
+   * The FORTRAN library is actually trying to solve the following:
+   * \f[
    * f_{i}\left(x_{1},\, x_{2},\,\cdots,\, x_{N}\right) =
    * \epsilon_{i}\qquad\forall\; i\in\left[1,\, M\right]
    * \f]
@@ -63,17 +64,20 @@ namespace jpw_nld {
    * \f$ ) that minimize the \a <tt>M</tt> different functions \f$ f_{i} \f$
    * to zero.
    * \n
-   * Now, if your \a <tt>M</tt> equations look like this: \f[
+   * Now, if your \a <tt>M</tt> equations look like this:
+   * \f[
    * f_{i}\left(x_{1},\, \cdots,\, x_{N}\right) =
    * c_{i}\qquad\forall\; i\in\left[1,\, M\right]
    * \f]
-   * then you simply recast the equation: \f[
+   * then you simply recast the equation:
+   * \f[
    * f_{i}\left(x_{1},\, \cdots,\, x_{N}\right) - c_{i} = \varepsilon_{i}
    * \f]
    * so that the algorithm finds the \f$ x_{j} \f$ that minimize all of the
    * \f$ \varepsilon_{i} \f$ to zero.
    *
-   * You will also need to compute the Jacobian matrix: \f[
+   * You will also need to compute the Jacobian matrix:
+   * \f[
    * J_{i,j}\left(x_{1},\,\cdots,\, x_{N}\right) =
    * \left.\frac{\partial f_{i}}{\partial x_{j}}
    * \right|_{\left(x_{1},\cdots,x_{N}\right)}
@@ -88,26 +92,31 @@ namespace jpw_nld {
    *
    * Nonlinear least-squares fitting is a variation of the equation-solving
    * problem.  This time, however, you have a function, \f$ H\left(u\right)
-   * \f$, that you want to fit to \a <tt>N</tt> dataset:\f[
+   * \f$, that you want to fit to a \a <tt>N</tt> element dataset:
+   * \f[
    * H\left(u_{j}\right) = d_{u_{j}} \qquad\forall\; j\in\left[1,\, N\right]
    * \f]
    * Each \f$ d_{u_{j}} \f$ is the element in the dataset that corresponds to
-   * the specific value of \f$ u \f$ which we've called \f$ u_{j} \f$.  To fit
-   * the model to the data, \f$ H \f$ must have tunable parameters: \f$ p_{i}
-   * \f$.  We want to find values of the \a <tt>M</tt> tunable parameters that
-   * make the preceding equation valid for all of the \f$ d_{u_{j}} \f$.
+   * the specific value of \f$ u \f$ which we've called \f$ u_{j} \f$.
+   * Alternatively,\f$ u_{j} \f$ is the value of \f$ u \f$ that will make the
+   * model equal the data point \f$ d_{u_{j}} \f$ &hellip; once the model fits
+   * the data, that is.  To fit the model to the data, \f$ H \f$ must have
+   * tunable parameters:  \f$p_{i}\f$.  We want to find the values of these \a
+   * <tt>M</tt> tunable parameters that make the preceding equation valid for
+   * all of the \f$d_{u_{j}}\f$.
    *
-   * You can re-express the problem as follows: \f[
+   * You can re-express the problem as follows:
+   * \f[
    * H\left(p_{1},\,\cdots,\, p_{M}\,;\; u_{j}\right)-d_{u_{j}} =
    * \varepsilon_{j}\qquad\forall\; j\in\left[1,\, N\right]
    * \f]
-   * This is now the problem that the FORTRAN function, \c lmder_(), is
+   * This is now in the form that the FORTRAN function, \c lmder_(), is
    * designed to solve.
    *
    * The Levenberg-Marquardt algorithm requires a Jacobian matrix.  However,
    * we only have one equation, the model \f$ H\left(u\right) \f$, and we're
    * not solving the problem by changing \f$ u \f$, we're tuning the
-   * parameters, \f$ p_i \f$.  So the "Jacobian" matrix changes into:
+   * parameters, \f$ p_i \f$.  So the "Jacobian matrix" changes into:
    * \f[
    * J_{i}\left(u_{j}\right) =
    * \left.\frac{\partial H}{\partial p_{i}}\right|_{u_{j}}

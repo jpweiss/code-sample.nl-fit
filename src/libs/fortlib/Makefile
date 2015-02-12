@@ -1,5 +1,5 @@
 # -*- Makefile -*-
-# Copyright (C) 2004-2014 by John P. Weiss
+# Copyright (C) 2004-2015 by John P. Weiss
 #
 # This package is free software; you can redistribute it and/or modify
 # it under the terms of the Artistic License, included as the file
@@ -45,8 +45,8 @@ TARG_LIB:=libfortlib
 TARG_LIB_TYPES:=$(TARG_LIB).a # $(TARG_LIB).so
 
 # FORTRAN files
-FSRC:=lmder1.f chkder.f gaussj.f dpsort.f svdcmp.f pythag.f \
-		ludcmp.f lubksb.f dgetrf.f dgetri.f blas.f
+FSRC:=lmder1.f dpsort.f
+#FSRC:=lmder1.f dpsort.f gaussj.f svdcmp.f pythag.f
 
 # C files
 CSRC:=
@@ -62,7 +62,8 @@ HEADER_DETAILS:=
 # C++ files
 CXX_SRC:=FitLM.cc
 # Headerless C++ files.
-CXX_SRC_NO_H:=MatrixInverters.cc Sorters.cc
+##CXX_SRC_NO_H:=MatrixInverters.cc Sorters.cc
+CXX_SRC_NO_H:=Sorters.cc
 
 #
 # Auto-generated variables for objects and headers.  Must be included here,

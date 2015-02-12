@@ -3,7 +3,7 @@ A Unit Test Using the Boost-MPL and Template-Typelists
 
  
 
-This is a Boost::Test-based unit-test for my `Matrix` template-class.
+This is a `Boost::Test`-based unit-test for my `Matrix` template-class.
 This kind of class lends itself well to unit-testing via
 typelist-iteration.
 
