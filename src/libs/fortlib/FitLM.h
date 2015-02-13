@@ -99,7 +99,7 @@ namespace jpw_nld {
    * Each \f$ d_{u_{j}} \f$ is the element in the dataset that corresponds to
    * the specific value of \f$ u \f$ which we've called \f$ u_{j} \f$.
    * Alternatively,\f$ u_{j} \f$ is the value of \f$ u \f$ that will make the
-   * model equal the data point \f$ d_{u_{j}} \f$ &hellip; once the model fits
+   * model equal the data point \f$ d_{u_{j}} \f$ ... once the model fits
    * the data, that is.  To fit the model to the data, \f$ H \f$ must have
    * tunable parameters:  \f$p_{i}\f$.  We want to find the values of these \a
    * <tt>M</tt> tunable parameters that make the preceding equation valid for
@@ -160,10 +160,10 @@ namespace jpw_nld {
            * The estimated relative error in the \f$\Delta\f$-parameter vector
            * is below the error tolerance passed to the LM fitter.  Either
            * that, or the \f$\Delta\f$-parameter vector itself has changed by
-           * less that the error tolerance.  \f$``\Delta\f$-parameter\" refers
-           * here to the change in the vector of tunable parameters in the
-           * model being fit (or independent variables in the equations being
-           * minimized).
+           * less that the error tolerance.
+           * &quot;\f$\Delta\f$-parameter&quot; refers here to the change in
+           * the vector of tunable parameters in the model being fit (or
+           * independent variables in the equations being minimized).
            */
           Success_dParam=2,
           /// Both \c Success_SumSq and \c Success_dParam are true.
@@ -204,10 +204,10 @@ namespace jpw_nld {
           /// Can't reduce the relative parameter error any further.
           /**
            * Specifically, the LM Algorithm has reduced the relative error in
-           * the \f$``\Delta\f$-parameter\" vector as far as it can, yet it
-           * still isn't below the error tolerance passed by the caller.
-           * Indicates either a poor fit, too small of a desired parameter
-           * error, or a combination of the two.
+           * the &quot;\f$\Delta\f$-parameter&quot; vector as far as it can,
+           * yet it still isn't below the error tolerance passed by the
+           * caller.  Indicates either a poor fit, too small of a desired
+           * parameter error, or a combination of the two.
            *
            * This underflow error corresponds to success status, \c
            * Success_dParam.
@@ -229,7 +229,7 @@ namespace jpw_nld {
       /// Function pointer type for the fit function.
       /**
        * This is the function to minimize.  It should produce a vector of
-       * \arg mm floating-point values.
+       * \p mm floating-point values.
        *
        * Since the Levenberg-Marquardt algorithm minimizes this function, if
        * you wish to instead fit a model to data, you must somehow build the
@@ -242,6 +242,8 @@ namespace jpw_nld {
        * \c integer
        * \n
        * The number of equations (or the number of data points to fit to).
+       * Will be the same as the value passed to the first argument of
+       * operator()(int, dvector_t&, double, double, int, double).
        *
        * \param nn
        * \c integer
@@ -280,9 +282,9 @@ namespace jpw_nld {
        * \param ldfjac
        * \c integer
        * \n
-       * The long-dimension of \a f_jac.  Usually identical to \a mm, but the
-       * FORTRAN algorithm provides it for special cases needing a larger
-       * Jacobian matrix.
+       * The long-dimension of \a f_jac.  Will be identical to the value
+       * passed to the constructor argument, \a ndata_max.  Should therefore
+       * be identical to \a mm (unless you're doing something weird).
        *
        * \param iflag
        * \c integer
@@ -314,7 +316,7 @@ namespace jpw_nld {
        * [See \ref FitLM::fit_function_ptr_t "fit_function_ptr_t" for
        * details.]
        *
-       * \param ndata
+       * \param ndata_max
        * The maximum number of data points you intend to fit to using this
        * object.
        *
@@ -323,7 +325,7 @@ namespace jpw_nld {
        * number also defines the minimum number of data points you intend to
        * fit to.
        */
-      FitLM(fit_function_ptr_t ffp, index_t ndata, index_t nparm);
+      FitLM(fit_function_ptr_t ffp, index_t ndata_max, index_t nparm);
 
       /// Destructor
       ~FitLM();
@@ -335,9 +337,12 @@ namespace jpw_nld {
        *
        * \param mm
        * The number of data points used in the fit.  It must be in the range
-       * <tt>[</tt>\a nparm<tt>, </tt>\a ndata<tt>]</tt>, inclusive, where \a
-       * ndata and \a nparm are two of the parameters you passed to the
+       * <tt>[</tt>\a nparm<tt>, </tt>\a ndata_max<tt>]</tt>, inclusive, where
+       * \a ndata_max and \a nparm are two of the parameters you passed to the
        * c'tor.
+       * \n
+       * You will almost always use the same value here as you did for \a
+       * ndata_max in the c'tor.
        *
        * \param xv
        * A vector of initial parameter values.  On return, it
@@ -360,7 +365,8 @@ namespace jpw_nld {
        * The maximum number of times that the algorithm recalculates
        * \c f_vec [see \c fit_function_ptr_t] before stopping.  Not really
        * the number of iteration, but close enough.  If the initial value of
-       * \c maxiter==0, a value of \c maxiter=100*(m__ndata+1) is used.
+       * \c maxiter==0, a value of <tt>maxiter=100*(<em>ndata_max</em>+1)</tt>
+       * is used.
        *
        * \returns The error codes, which are the same that the FORTRAN
        * routine, \c lmder_(), returns in its \c info parameter.
@@ -406,7 +412,7 @@ namespace jpw_nld {
   private:
       fit_function_ptr_t m__ffp;
   protected:
-      int m__ndata;
+      int m__ndataMax;
       int m__nparams;
   private:
       bool m__jac_requiresUpdate;

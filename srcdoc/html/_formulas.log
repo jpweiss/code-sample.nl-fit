@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2013.1.3)  10 FEB 2015 13:42
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2013.1.3)  13 FEB 2015 12:10
 entering extended mode
  %&-line parsing enabled.
 **_formulas.tex
@@ -102,55 +102,9 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 8.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 8.
-! Missing delimiter (. inserted).
-<to be read again> 
-                   {
-l.8 $ \left{
-            p\right} $
-I was expecting to see something like `(' or `\{' or
-`\}' here. If you typed, e.g., `{' instead of `\{', you
-should probably delete the `{' by typing `1' now, so that
-braces don't get unbalanced. Otherwise just proceed.
-Acceptable delimiters are characters whose \delcode is
-nonnegative, or you can use `\delimiter <delimiter code>'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.8 $ \left{p\right
-                   } $
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing delimiter (. inserted).
-<to be read again> 
-                   }
-l.8 $ \left{p\right}
-                     $
-I was expecting to see something like `(' or `\{' or
-`\}' here. If you typed, e.g., `{' instead of `\{', you
-should probably delete the `{' by typing `1' now, so that
-braces don't get unbalanced. Otherwise just proceed.
-Acceptable delimiters are characters whose \delcode is
-nonnegative, or you can use `\delimiter <delimiter code>'.
-
-! Extra }, or forgotten $.
-<recently read> }
-                 
-l.8 $ \left{p\right}
-                     $
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
 [1
 
-] [2] [3] [4] [5] [6] [7] (./_formulas.aux
+] [2] (./_formulas.aux
 
 ! Package babel Error: You haven't loaded the option english yet.
 
@@ -172,4 +126,4 @@ Here is how much of TeX's memory you used:
  28 hyphenation exceptions out of 8191
  32i,4n,21p,219b,100s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on _formulas.dvi (7 pages, 1728 bytes).
+Output written on _formulas.dvi (2 pages, 492 bytes).

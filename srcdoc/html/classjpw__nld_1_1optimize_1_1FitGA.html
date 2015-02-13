@@ -175,20 +175,20 @@ class jpw_nld::optimize::FitGA&lt; FIT_FN, DATA_T, POPULATION_SIZE, N_GENERATION
 <p>Optimize a function via Genetic Algorithms. </p>
 <p>The template parameter <em>FIT_FN</em> must provide the following public member constants and functions:</p>
 <ul>
-<li><code>static const index_t N_PARAMETERS<br/>
- The number of tunable parameters in the fit function. This is the vector whose value you're trying to find by minimization.</code></li>
-<li><code><code>double chiSquared(const DATA_T&amp; data, const dvector_t&amp; params)</code><br/>
- Compute and return the ^2 error between the data and your function, evaluated at the parameters <em>params</em>.</code></li>
-<li><code><code>static void randomParams(dvector_t&amp; params)</code><br/>
- Fill the <code>dvector_t</code> with "constrained" random values, based on the model. The "constrained" random values should be uniformly distributed over a range sensible for each parameter. (E.g. if parameter #2 can't be smaller than -3, don't use an aribtrary random number.)</code></li>
-<li><code><code>static void limitParams(dvector_t&amp; params)</code><br/>
- Make sure that the parameters in the <code>dvector_t</code> aren't out of range. Adjust appropriately if any are.<br/>
- If the parameters in your function have no bounds, just define this with an empty body.</code></li>
+<li><code>static const index_t N_PARAMETERS</code> <br/>
+ The number of tunable parameters in the fit function. This is the vector whose value you're trying to find by minimization.</li>
+<li><code>double chiSquared(const DATA_T&amp; data, const dvector_t&amp; params)</code> <br/>
+ Compute and return the <img class="formulaInl" alt="$\chi^2$" src="form_21.png"/> error between the data and your function, evaluated at the parameters <em>params</em>.</li>
+<li><code>static void randomParams(dvector_t&amp; params)</code> <br/>
+ Fill the <code>dvector_t</code> with "constrained" random values, based on the model. The "constrained" random values should be uniformly distributed over a range sensible for each parameter. (E.g. if parameter #2 can't be smaller than -3, don't use an aribtrary random number.)</li>
+<li><code>static void limitParams(dvector_t&amp; params)</code> <br/>
+ Make sure that the parameters in the <code>dvector_t</code> aren't out of range. Adjust appropriately if any are. <br/>
+ If the parameters in your function have no bounds, just define this with an empty body.</li>
 </ul>
-<p><code> You'll notice that the <em>FIT_FN</em> class doesn't need to provide the function itself. This is by design, permitting <em>FIT_FN</em> to be compatible with the FORTRAN-based Levenberg-Marquardt minimizer, <code>FitLM</code>.</code></p>
-<p><code> This class makes use of the <code><a class="el" href="statistics_8h.html#a0556ac4bd80375e8a98d85ae0f1b4486">drand48()</a></code> pRNG. Call <a class="el" href="namespacejpw__math_1_1statistics.html#ac668f99b683f19d30435765f6fdcf5e0" title="Seeds the *rand48() pRNG functions with the current time.">jpw_math::statistics::init_rand()</a> before using this class. </code></p>
+<p>You'll notice that the <em>FIT_FN</em> class doesn't need to provide the function itself. This is by design, permitting <em>FIT_FN</em> to be compatible with the FORTRAN-based Levenberg-Marquardt minimizer, <code>FitLM</code>.</p>
+<p>This class makes use of the <code><a class="el" href="statistics_8h.html#a0556ac4bd80375e8a98d85ae0f1b4486">drand48()</a></code> pRNG. Call <a class="el" href="namespacejpw__math_1_1statistics.html#ac668f99b683f19d30435765f6fdcf5e0" title="Seeds the *rand48() pRNG functions with the current time.">jpw_math::statistics::init_rand()</a> before using this class. </p>
 
-<p>Definition at line <a class="el" href="FitGA_8h_source.html#l00095">95</a> of file <a class="el" href="FitGA_8h_source.html">FitGA.h</a>.</p>
+<p>Definition at line <a class="el" href="FitGA_8h_source.html#l00100">100</a> of file <a class="el" href="FitGA_8h_source.html">FitGA.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="ae489fe97bf9b2eb52c69a49f199cf322"></a><!-- doxytag: member="jpw_nld::optimize::FitGA::FitData_t" ref="ae489fe97bf9b2eb52c69a49f199cf322" args="" -->
 <div class="memitem">
@@ -201,7 +201,7 @@ class jpw_nld::optimize::FitGA&lt; FIT_FN, DATA_T, POPULATION_SIZE, N_GENERATION
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="FitGA_8h_source.html#l00102">102</a> of file <a class="el" href="FitGA_8h_source.html">FitGA.h</a>.</p>
+<p>Definition at line <a class="el" href="FitGA_8h_source.html#l00107">107</a> of file <a class="el" href="FitGA_8h_source.html">FitGA.h</a>.</p>
 
 </div>
 </div>
@@ -216,7 +216,7 @@ class jpw_nld::optimize::FitGA&lt; FIT_FN, DATA_T, POPULATION_SIZE, N_GENERATION
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="FitGA_8h_source.html#l00098">98</a> of file <a class="el" href="FitGA_8h_source.html">FitGA.h</a>.</p>
+<p>Definition at line <a class="el" href="FitGA_8h_source.html#l00103">103</a> of file <a class="el" href="FitGA_8h_source.html">FitGA.h</a>.</p>
 
 </div>
 </div>
@@ -231,7 +231,7 @@ class jpw_nld::optimize::FitGA&lt; FIT_FN, DATA_T, POPULATION_SIZE, N_GENERATION
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="FitGA_8h_source.html#l00103">103</a> of file <a class="el" href="FitGA_8h_source.html">FitGA.h</a>.</p>
+<p>Definition at line <a class="el" href="FitGA_8h_source.html#l00108">108</a> of file <a class="el" href="FitGA_8h_source.html">FitGA.h</a>.</p>
 
 </div>
 </div>
@@ -252,7 +252,7 @@ class jpw_nld::optimize::FitGA&lt; FIT_FN, DATA_T, POPULATION_SIZE, N_GENERATION
 
 <p>Default Constructor. </p>
 
-<p>Definition at line <a class="el" href="FitGA_8h_source.html#l00124">124</a> of file <a class="el" href="FitGA_8h_source.html">FitGA.h</a>.</p>
+<p>Definition at line <a class="el" href="FitGA_8h_source.html#l00129">129</a> of file <a class="el" href="FitGA_8h_source.html">FitGA.h</a>.</p>
 
 </div>
 </div>
@@ -272,7 +272,7 @@ class jpw_nld::optimize::FitGA&lt; FIT_FN, DATA_T, POPULATION_SIZE, N_GENERATION
 
 <p>Destructor. </p>
 
-<p>Definition at line <a class="el" href="FitGA_8h_source.html#l00139">139</a> of file <a class="el" href="FitGA_8h_source.html">FitGA.h</a>.</p>
+<p>Definition at line <a class="el" href="FitGA_8h_source.html#l00144">144</a> of file <a class="el" href="FitGA_8h_source.html">FitGA.h</a>.</p>
 
 </div>
 </div>
@@ -310,8 +310,10 @@ class jpw_nld::optimize::FitGA&lt; FIT_FN, DATA_T, POPULATION_SIZE, N_GENERATION
 
 <p>Performs the reproduction, crossover, and mutation stages. </p>
 <p>For this Genetic Algorithm, the "genes" are not bits but floating-point numbers. So the crossover stage, in this GA, is not an exchange of bits, but a randomly-weighted sum: </p>
-<dl class="user"><dt><b></b></dt><dd><em>A</em>*<em>x</em><sub>1</sub> + (1-<em>A</em>)*<em>x</em><sub>2</sub> </dd></dl>
-
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[ A \cdot x_1 + \left( 1 - A \cdot x_2 \right) \]" src="form_34.png"/>
+</p>
+ 
 </div>
 </div>
 <a class="anchor" id="a618a4bdc56602cfd692910d3284516ef"></a><!-- doxytag: member="jpw_nld::optimize::FitGA::initializePopulation" ref="a618a4bdc56602cfd692910d3284516ef" args="(popVec_t &amp;ppop, const FitData_t &amp;theData, Model_t &amp;theModel)" -->
@@ -383,7 +385,7 @@ class jpw_nld::optimize::FitGA&lt; FIT_FN, DATA_T, POPULATION_SIZE, N_GENERATION
 <div class="memdoc">
 
 <p>Performs the minimization. </p>
-<p>Returns the value of Chi^2 for the minimized parameters. </p>
+<p>Returns the value of <img class="formulaInl" alt="$\chi^2$" src="form_21.png"/> for the minimized parameters. </p>
 
 </div>
 </div>
@@ -402,7 +404,7 @@ class jpw_nld::optimize::FitGA&lt; FIT_FN, DATA_T, POPULATION_SIZE, N_GENERATION
 <p>The size of the initial population. </p>
 <p>It's larger than our working size to give us a good group from which to select some highly-fit initial members. </p>
 
-<p>Definition at line <a class="el" href="FitGA_8h_source.html#l00110">110</a> of file <a class="el" href="FitGA_8h_source.html">FitGA.h</a>.</p>
+<p>Definition at line <a class="el" href="FitGA_8h_source.html#l00115">115</a> of file <a class="el" href="FitGA_8h_source.html">FitGA.h</a>.</p>
 
 </div>
 </div>
@@ -420,7 +422,7 @@ class jpw_nld::optimize::FitGA&lt; FIT_FN, DATA_T, POPULATION_SIZE, N_GENERATION
 <p>This used to be tunable, but changing it didn't have much effect. </p>
 <p>So, it's now fixed at 50% of the population. </p>
 
-<p>Definition at line <a class="el" href="FitGA_8h_source.html#l00114">114</a> of file <a class="el" href="FitGA_8h_source.html">FitGA.h</a>.</p>
+<p>Definition at line <a class="el" href="FitGA_8h_source.html#l00119">119</a> of file <a class="el" href="FitGA_8h_source.html">FitGA.h</a>.</p>
 
 </div>
 </div>
@@ -435,7 +437,7 @@ class jpw_nld::optimize::FitGA&lt; FIT_FN, DATA_T, POPULATION_SIZE, N_GENERATION
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="FitGA_8h_source.html#l00111">111</a> of file <a class="el" href="FitGA_8h_source.html">FitGA.h</a>.</p>
+<p>Definition at line <a class="el" href="FitGA_8h_source.html#l00116">116</a> of file <a class="el" href="FitGA_8h_source.html">FitGA.h</a>.</p>
 
 </div>
 </div>
@@ -450,7 +452,7 @@ class jpw_nld::optimize::FitGA&lt; FIT_FN, DATA_T, POPULATION_SIZE, N_GENERATION
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="FitGA_8h_source.html#l00105">105</a> of file <a class="el" href="FitGA_8h_source.html">FitGA.h</a>.</p>
+<p>Definition at line <a class="el" href="FitGA_8h_source.html#l00110">110</a> of file <a class="el" href="FitGA_8h_source.html">FitGA.h</a>.</p>
 
 </div>
 </div>
@@ -468,7 +470,7 @@ class jpw_nld::optimize::FitGA&lt; FIT_FN, DATA_T, POPULATION_SIZE, N_GENERATION
 <p>Widened crossover weight. </p>
 <p>After about 10 generations, we start to get convergence &lt;==&gt; inbreeeding. To prevent this, we use a wider random weight in crossover, a weight which should be in the interval [1.0,1.5]. </p>
 
-<p>Definition at line <a class="el" href="FitGA_8h_source.html#l00121">121</a> of file <a class="el" href="FitGA_8h_source.html">FitGA.h</a>.</p>
+<p>Definition at line <a class="el" href="FitGA_8h_source.html#l00126">126</a> of file <a class="el" href="FitGA_8h_source.html">FitGA.h</a>.</p>
 
 </div>
 </div>
@@ -497,7 +499,7 @@ class jpw_nld::optimize::FitGA&lt; FIT_FN, DATA_T, POPULATION_SIZE, N_GENERATION
       <li class="navelem"><a class="el" href="namespacejpw__nld_1_1optimize.html">optimize</a>      </li>
       <li class="navelem"><a class="el" href="classjpw__nld_1_1optimize_1_1FitGA.html">FitGA</a>      </li>
 
-    <li class="footer">Generated on Tue Feb 10 2015 13:42:39 for research-nld by
+    <li class="footer">Generated on Fri Feb 13 2015 12:10:47 for research-nld by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

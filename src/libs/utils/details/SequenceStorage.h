@@ -201,7 +201,7 @@ namespace jpw_math {
           return true;
       }
 
-      /// Swaps \a and \b
+      /// Swaps \a a and \a b.
       /**
        * Performs a manual swap using \c S::operator=() (which must exist for
        * this policy to work correctly.

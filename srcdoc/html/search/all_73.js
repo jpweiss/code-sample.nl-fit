@@ -15,8 +15,6 @@ var searchData=
   ['sizemismatcherror',['SizeMismatchError',['../structjpw__nld_1_1SizeMismatchError.html#a2f5b2ff5211ebeb542bde2cf98a35f16',1,'jpw_nld::SizeMismatchError']]],
   ['sorterror',['SortError',['../structjpw__nld_1_1fortlib_1_1sort_1_1SortError.html',1,'jpw_nld::fortlib::sort']]],
   ['sorterror',['SortError',['../structjpw__nld_1_1fortlib_1_1sort_1_1SortError.html#a7ff43469730b58587c5aedaaa495f232',1,'jpw_nld::fortlib::sort::SortError']]],
-  ['sqminvert_5fgje',['sqmInvert_GJE',['../namespacejpw__nld_1_1fortlib_1_1square__matrix__inversion.html#a6fcb885f2e8cc3711e83f5561e3453bd',1,'jpw_nld::fortlib::square_matrix_inversion']]],
-  ['sqminvert_5fsvd',['sqmInvert_SVD',['../namespacejpw__nld_1_1fortlib_1_1square__matrix__inversion.html#a32922f48e1cde73d7e17e22cbb1777b3',1,'jpw_nld::fortlib::square_matrix_inversion']]],
   ['sqr',['SQR',['../namespacejpw__math.html#ab7d397f0373bf04cd4c87836b3c56239',1,'jpw_math']]],
   ['statistics_2eh',['statistics.h',['../statistics_8h.html',1,'']]],
   ['std_5fdev',['std_dev',['../namespacejpw__math_1_1statistics.html#a331072eefe09b0beea8f2b876ef5e0b8',1,'jpw_math::statistics::std_dev(const dvector_t &amp;values)'],['../namespacejpw__math_1_1statistics.html#a1a813447b792fe2bab532c96278b3382',1,'jpw_math::statistics::std_dev(const dmatrix_t &amp;values)']]],

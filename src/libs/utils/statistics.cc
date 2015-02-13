@@ -151,7 +151,7 @@ l__remap_seed__<4>(time_t rawSeedVal, seed48v_t& elSeed)
 //
 
 
-// REFACTOR:  Use template functions & inline-functors to define the PRNG
+// REFACTOR:  Use template functions & inline-functors to define the pRNG
 // functions.
 // Hmmm... use classes.  Design so that we can refactor the implementation at
 // a later stage (like, say, the very last!)
@@ -171,11 +171,10 @@ void jpw_math::statistics::parseSeed(std::string& seedStr,
     }
 
     // Make sure there's a leading "0x" prefix, or you'll get parsing errors.
-    if( (seedStr[0] == 'x') || (seedStr[0] == 'X') ) {
+    if( (seedStr[0] & 0x5F) == 'X' ) {
         seedStr.insert(0, 1, '0');
     } else if( (seedStr.size() > 1) &&
-               !( (seedStr[0] == '0') &&
-                  ((seedStr[1] == 'x') || (seedStr[1] == 'X')) )
+               !( (seedStr[0] == '0') && ((seedStr[1] & 0x5F) == 'X') )
                ) {
         seedStr.insert(0, "0x");
     }
@@ -222,8 +221,8 @@ void jpw_math::statistics::init_rand_firstTimeOnly(bool verbose)
 
 void jpw_math::statistics::init_rand(unsigned s1, unsigned s2, bool verbose)
 {
-
     seed48v_t elseed;
+
     elseed[2] = static_cast<unsigned short>(s1 & 0xFFFF);
     elseed[1] = static_cast<unsigned short>((s2 & 0xFFFF0000) >> 16);
     elseed[0] = static_cast<unsigned short>(s2 & 0xFFFF);

@@ -150,20 +150,6 @@
       <arglist></arglist>
     </member>
     <member kind="function">
-      <type>int</type>
-      <name>sqmInvert_GJE</name>
-      <anchorfile>namespacejpw__nld_1_1fortlib_1_1square__matrix__inversion.html</anchorfile>
-      <anchor>a6fcb885f2e8cc3711e83f5561e3453bd</anchor>
-      <arglist>(const dmatrix_t &amp;dm, dmatrix_t &amp;dm_inv)</arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>sqmInvert_SVD</name>
-      <anchorfile>namespacejpw__nld_1_1fortlib_1_1square__matrix__inversion.html</anchorfile>
-      <anchor>a32922f48e1cde73d7e17e22cbb1777b3</anchor>
-      <arglist>(const dmatrix_t &amp;dm, dmatrix_t &amp;dm_inv)</arglist>
-    </member>
-    <member kind="function">
       <type>void</type>
       <name>byIndex</name>
       <anchorfile>namespacejpw__nld_1_1fortlib_1_1sort.html</anchorfile>
@@ -1938,8 +1924,8 @@
       <type></type>
       <name>FitLM</name>
       <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
-      <anchor>a10381fd4d6bfa4d94d21126f7db705ac</anchor>
-      <arglist>(fit_function_ptr_t ffp, index_t ndata, index_t nparm)</arglist>
+      <anchor>ad86dc3d99a47d9dfaf001d611ff950bf</anchor>
+      <arglist>(fit_function_ptr_t ffp, index_t ndata_max, index_t nparm)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -1978,9 +1964,9 @@
     </member>
     <member kind="variable" protection="protected">
       <type>int</type>
-      <name>m__ndata</name>
+      <name>m__ndataMax</name>
       <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
-      <anchor>a483e3b8aa9eb204b3d8530cab461de63</anchor>
+      <anchor>a320f379d53266d0cbaf79a34edacc270</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -2023,8 +2009,8 @@
       <type></type>
       <name>FitLM_Adapter</name>
       <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html</anchorfile>
-      <anchor>a59822aa80bfe505e814fdda142c7acae</anchor>
-      <arglist>(index_t ndata)</arglist>
+      <anchor>a7413e55be230adb8c97ac530cb29014d</anchor>
+      <arglist>(index_t ndata_max)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -2177,9 +2163,9 @@
     </member>
     <member kind="variable" protection="protected">
       <type>int</type>
-      <name>m__ndata</name>
+      <name>m__ndataMax</name>
       <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
-      <anchor>a483e3b8aa9eb204b3d8530cab461de63</anchor>
+      <anchor>a320f379d53266d0cbaf79a34edacc270</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -2238,20 +2224,6 @@
   <compound kind="namespace">
     <name>jpw_nld::fortlib::square_matrix_inversion</name>
     <filename>namespacejpw__nld_1_1fortlib_1_1square__matrix__inversion.html</filename>
-    <member kind="function">
-      <type>int</type>
-      <name>sqmInvert_GJE</name>
-      <anchorfile>namespacejpw__nld_1_1fortlib_1_1square__matrix__inversion.html</anchorfile>
-      <anchor>a6fcb885f2e8cc3711e83f5561e3453bd</anchor>
-      <arglist>(const dmatrix_t &amp;dm, dmatrix_t &amp;dm_inv)</arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>sqmInvert_SVD</name>
-      <anchorfile>namespacejpw__nld_1_1fortlib_1_1square__matrix__inversion.html</anchorfile>
-      <anchor>a32922f48e1cde73d7e17e22cbb1777b3</anchor>
-      <arglist>(const dmatrix_t &amp;dm, dmatrix_t &amp;dm_inv)</arglist>
-    </member>
   </compound>
   <compound kind="namespace">
     <name>jpw_nld::measure</name>
@@ -2610,9 +2582,9 @@
     </member>
     <member kind="variable" protection="protected">
       <type>int</type>
-      <name>m__ndata</name>
+      <name>m__ndataMax</name>
       <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
-      <anchor>a483e3b8aa9eb204b3d8530cab461de63</anchor>
+      <anchor>a320f379d53266d0cbaf79a34edacc270</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">

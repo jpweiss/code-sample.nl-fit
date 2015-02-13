@@ -235,7 +235,8 @@ Functions</h2>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">s1</td><td>The upper 16 bits of the seed, stored in the first 2 bytes of <em>s1</em>. In other words, treat this parameter as if it's an <code>unsigned</code> <code>short</code>.</td></tr>
-    <tr><td class="paramname">s2</td><td>The lower 32 bits of the seed. </td></tr>
+    <tr><td class="paramname">s2</td><td>The lower 32 bits of the seed.</td></tr>
+    <tr><td class="paramname">verbose</td><td>If <code>true</code>, print out information about the seed to <code>stdout</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -349,7 +350,7 @@ Functions</h2>
 
 <p>Returns a random index from 0 to nn-1. </p>
 
-<p>Definition at line <a class="el" href="statistics_8h_source.html#l00075">75</a> of file <a class="el" href="statistics_8h_source.html">statistics.h</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8h_source.html#l00078">78</a> of file <a class="el" href="statistics_8h_source.html">statistics.h</a>.</p>
 
 <p>References <a class="el" href="statistics_8h.html#a0556ac4bd80375e8a98d85ae0f1b4486">drand48()</a>.</p>
 
@@ -383,7 +384,7 @@ Functions</h2>
 
 <p>Returns a uniform random number in the range [-del,del]. </p>
 
-<p>Definition at line <a class="el" href="statistics_8h_source.html#l00081">81</a> of file <a class="el" href="statistics_8h_source.html">statistics.h</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8h_source.html#l00084">84</a> of file <a class="el" href="statistics_8h_source.html">statistics.h</a>.</p>
 
 <p>References <a class="el" href="statistics_8h.html#a0556ac4bd80375e8a98d85ae0f1b4486">drand48()</a>.</p>
 
@@ -436,7 +437,7 @@ Functions</h2>
 
 <p>Computes the standard deviation of the vector. </p>
 
-<p>Referenced by <a class="el" href="statistics_8h_source.html#l00094">std_dev()</a>.</p>
+<p>Referenced by <a class="el" href="statistics_8h_source.html#l00097">std_dev()</a>.</p>
 
 <p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -468,7 +469,7 @@ Functions</h2>
 
 <p>Computes the standard deviation of the cells in a <a class="el" href="classjpw__math_1_1Matrix.html" title="Class Matrix.">Matrix</a>. </p>
 
-<p>Definition at line <a class="el" href="statistics_8h_source.html#l00094">94</a> of file <a class="el" href="statistics_8h_source.html">statistics.h</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8h_source.html#l00097">97</a> of file <a class="el" href="statistics_8h_source.html">statistics.h</a>.</p>
 
 <p>References <a class="el" href="MatrixAdapter_8h_source.html#l00239">MatrixAdapter&lt; S, STOR_POL &gt;::as_1D()</a>, and <a class="el" href="namespacejpw__math_1_1statistics.html#a331072eefe09b0beea8f2b876ef5e0b8">std_dev()</a>.</p>
 
@@ -506,7 +507,7 @@ Functions</h2>
       <li class="navelem"><a class="el" href="namespacejpw__math.html">jpw_math</a>      </li>
       <li class="navelem"><a class="el" href="namespacejpw__math_1_1statistics.html">statistics</a>      </li>
 
-    <li class="footer">Generated on Tue Feb 10 2015 13:42:39 for research-nld by
+    <li class="footer">Generated on Fri Feb 13 2015 12:10:47 for research-nld by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

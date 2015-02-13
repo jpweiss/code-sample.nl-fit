@@ -449,12 +449,12 @@ class jpw_math::MatrixAdapter&lt; S, STOR_POL &gt;</h3>
 
 <p>Returns the underlying 1-D data. </p>
 <p>This <a class="el" href="classjpw__math_1_1MatrixAdapter.html" title="Class MatrixAdapter.">MatrixAdapter</a> class organizes its elements in "typical C
- fashion". That is, the indices are 0-based, and the last index (the columns) vary the fastest. Element access of the form  m[i][j] is, therefore, equivalent to indexing  v_m[i*m.<a class="el" href="classjpw__math_1_1MatrixAdapter.html#a478db41c986e36a2c8608f14df103f0a" title="Returns the number of columns in this MatrixAdapter.">nColumns()</a>+j] on the underlying 1-D container,  v_m .</p>
+ fashion". That is, the indices are 0-based, and the last index (the columns) vary the fastest. Element access of the form <code>m</code>[i][j] is, therefore, equivalent to indexing <code>v_m</code>[i*m.<a class="el" href="classjpw__math_1_1MatrixAdapter.html#a478db41c986e36a2c8608f14df103f0a" title="Returns the number of columns in this MatrixAdapter.">nColumns()</a>+j] on the underlying 1-D container, <code>v_m</code> .</p>
 <p>There are several instances where you will wish to or even need to access the underlying 1-D container object. You can do so here ... but only for non-modifying operations. </p>
 
 <p>Definition at line <a class="el" href="MatrixAdapter_8h_source.html#l00239">239</a> of file <a class="el" href="MatrixAdapter_8h_source.html">MatrixAdapter.h</a>.</p>
 
-<p>Referenced by <a class="el" href="statistics_8h_source.html#l00094">jpw_math::statistics::std_dev()</a>.</p>
+<p>Referenced by <a class="el" href="statistics_8h_source.html#l00097">jpw_math::statistics::std_dev()</a>.</p>
 
 <p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -824,7 +824,7 @@ class jpw_math::MatrixAdapter&lt; S, STOR_POL &gt;</h3>
       <li class="navelem"><a class="el" href="namespacejpw__math.html">jpw_math</a>      </li>
       <li class="navelem"><a class="el" href="classjpw__math_1_1MatrixAdapter.html">MatrixAdapter</a>      </li>
 
-    <li class="footer">Generated on Tue Feb 10 2015 13:42:39 for research-nld by
+    <li class="footer">Generated on Fri Feb 13 2015 12:10:47 for research-nld by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

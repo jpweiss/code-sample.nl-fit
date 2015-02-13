@@ -116,7 +116,7 @@ namespace jpw_math {
  INQUAD4(T a) { return ((3*M_PI_2 <= a) && (a <= TWOPI)); }
 
 
- /// Compute \Chi^2 from \a fvec
+ /// Compute \f$\chi^2\f$ from \a fvec
  /**
   * The template parameter, \c C, must have minimal STL-container semantics.
   *

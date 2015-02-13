@@ -228,9 +228,9 @@ namespace jpw_math {
      /**
       * This MatrixAdapter class organizes its elements in "typical C
       * fashion".  That is, the indices are 0-based, and the last index (the
-      * columns) vary the fastest.  Element access of the form \tt m[i][j] is,
-      * therefore, equivalent to indexing \tt v_m[i*m.nColumns()+j] on the
-      * underlying 1-D container, \tt v_m .
+      * columns) vary the fastest.  Element access of the form \c m[i][j] is,
+      * therefore, equivalent to indexing \c v_m[i*m.nColumns()+j] on the
+      * underlying 1-D container, \c v_m .
       *
       * There are several instances where you will wish to or even need to
       * access the underlying 1-D container object.  You can do so here

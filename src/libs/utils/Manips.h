@@ -44,9 +44,9 @@ namespace inManips {
  istream& newln(istream& ist, bool skipSpace);
  /// Eat all newline characters.
  /**
-  * Consumes all consecutive \c '\n' and \c '\r' characters in a stream.
+  * Consumes all consecutive \c '\\n' and \c '\\r' characters in a stream.
   * If \a skipSpace \c == \c true, applies the \c ws manipulator to the
-  * stream before stripping the \c '\n' and \c '\r' characters.
+  * stream before stripping the \c '\\n' and \c '\\r' characters.
   */
  inline iosManip<bool, istream>
  newln(bool skipSpace=false) {

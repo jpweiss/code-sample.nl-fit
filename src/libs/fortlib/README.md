@@ -59,9 +59,7 @@ library.
 
 
 `FitLM_Adapter` is, as the name implies, an application of the Adapter
-pattern to the class `FitLM`.  Let's start with a description of
-`FitLM` (which also has Doxygen-generated source-code documentation).
-
+pattern to the class `FitLM`.
 
 `FitLM` is a lightweight functor-style wrapper-class around calls to
 the FORTRAN library, LMDER, which performs nonlinear least-squares
@@ -75,7 +73,10 @@ this mess down to 8 arguments (spread between the constructor and the
 functor call) and converts the return status to an enum with
 self-explanatory tag names.
 
-Nevertheless, `FitLM` still has some unsatisfying requirements:
+`FitLM` has Doxygen-generated source-code documentation containing a
+more mathematical explanation of its use.
+
+However, `FitLM` still has some unsatisfying requirements:
 
 * It still requires a C function-pointer ... not a C++
   function-pointer ... that will be called from a FORTRAN library.
@@ -110,6 +111,13 @@ had a class that did the following:
 ### `FitLM_Adapter` ###
 
 
+`FitLM_Adapter` is a template class that inherits `FitLM`.  It has two
+template parameters:  one for a functor-class, and another for a
+data-container.  Through its `operator()`, the functor-type provides
+the model to fit the data to.  Both the data and the model's
+"fit-functor" are passed to the overloaded `FitLM_Adapter::operator()`.
+
+
 (Notes:
 
  This Adapter's main purpose is to separate the model and the dataset.
@@ -121,6 +129,14 @@ had a class that did the following:
 
  The 'ndata' is in the c'tor so that we can pre-allocate a bunch of
  internal arrays.
+
+ This class cannot be made re-entrant, as it uses a static member
+ fn. as a wrapper for the Functor.  I'm not interested in changing
+ this at the moment.
+
+ The wrapper calls the functor object, passing the data in.
+
+ I have additional ideas [noted in the FIXME comments.
 )
 
 

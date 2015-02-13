@@ -78,16 +78,16 @@ namespace jpw_math {
      typedef typename Base_t::reference reference;
      typedef typename Base_t::const_reference const_reference;
 
-     /// Destructor
-     /**
+     // Destructor
+     /* == doxycomment disabled ==
       * \fn ~Matrix()
       *
       * Implicitly declared and defined.  No need to do anything beyond what
       * the default implementation would.
       */
 
-     /// Copy Constructor
-     /**
+     // Copy Constructor
+     /* == doxycomment disabled ==
       * \fn Matrix(const Matrix\& other)
       *
       * Implicitly declared and defined.  No need to do anything beyond what
@@ -140,7 +140,7 @@ namespace jpw_math {
 
      /// Access an element, checking indices.
      /**
-      * Equivalent to \tt as_1D().data()[row_idx*m.nColumns()+column_idx].
+      * Equivalent to \c as_1D().data()[row_idx*m.nColumns()+column_idx].
       * Note that the indices are all 0-based.
       *
       * (The implementation of this function is only valid for STL Sequences.)

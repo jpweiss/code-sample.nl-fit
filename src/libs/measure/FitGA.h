@@ -59,28 +59,33 @@ namespace jpw_nld {
    *
    * The template parameter \a FIT_FN must provide the following public
    * member constants and functions:
-   * - <tt>static const index_t N_PARAMETERS<br/>
-   * The number of tunable parameters in the fit function.  This is the vector
-   * whose value you're trying to find by minimization.
+   * - <tt>static const index_t N_PARAMETERS</tt>
+   *   \n
+   *   The number of tunable parameters in the fit function.  This is the
+   *   vector whose value you're trying to find by minimization.
    * - <tt>double chiSquared(const DATA_T\& data,
-   * const dvector_t\& params)</tt><br/>
-   * Compute and return the \chi^2 error between the data and your function,
-   * evaluated at the parameters \a params.
-   * - <tt>static void randomParams(dvector_t\& params)</tt><br/>
-   * Fill the \c dvector_t with "constrained" random values, based on the
-   * model.  The "constrained" random values should be uniformly
-   * distributed over a range sensible for each parameter.  (E.g. if parameter
-   * \#2 can't be smaller than -3, don't use an aribtrary random number.)
-   * - <tt>static void limitParams(dvector_t\& params)</tt><br/>
-   * Make sure that the parameters in the \c dvector_t aren't out of range.
-   * Adjust appropriately if any are.<br/>
-   * If the parameters in your function have no bounds, just define this with
-   * an empty body.
+   *                         const dvector_t\& params)</tt>
+   *   \n
+   *   Compute and return the \f$\chi^2\f$ error between the data and your
+   *   function, evaluated at the parameters \a params.
+   * - <tt>static void randomParams(dvector_t\& params)</tt>
+   *   \n
+   *   Fill the \c dvector_t with "constrained" random values, based on the
+   *   model.  The "constrained" random values should be uniformly distributed
+   *   over a range sensible for each parameter.  (E.g. if parameter \#2 can't
+   *   be smaller than -3, don't use an aribtrary random number.)
+   * - <tt>static void limitParams(dvector_t\& params)</tt>
+   *   \n
+   *   Make sure that the parameters in the \c dvector_t aren't out of range.
+   *   Adjust appropriately if any are.
+   *   \n
+   *   If the parameters in your function have no bounds, just define this
+   *   with an empty body.
    *
    * You'll notice that the \a FIT_FN class doesn't need to provide the
    * function itself.  This is by design, permitting \a FIT_FN to be
-   * compatible with the FORTRAN-based Levenberg-Marquardt minimizer, \c
-   * FitLM.
+   * compatible with the FORTRAN-based Levenberg-Marquardt minimizer,
+   * \c FitLM.
    *
    * This class makes use of the \c drand48() pRNG.  Call
    * jpw_math::statistics::init_rand() before using this class.
@@ -140,7 +145,7 @@ namespace jpw_nld {
 
       /// Performs the minimization.
       /**
-       * Returns the value of Chi^2 for the minimized parameters.
+       * Returns the value of \f$\chi^2\f$ for the minimized parameters.
        */
       double operator()(dvector_t& param_min, const FitData_t& theData,
                         Model_t& theModel);
@@ -163,9 +168,9 @@ namespace jpw_nld {
        * For this Genetic Algorithm, the "genes" are not bits but
        * floating-point numbers.  So the crossover stage, in this GA, is not
        * an exchange of bits, but a randomly-weighted sum:
-       * \par
-       * <em>A</em>*<em>x</em><sub>1</sub> +
-       * (1-<em>A</em>)*<em>x</em><sub>2</sub>
+       * \f[
+       * A \cdot x_1 + \left( 1 - A \cdot x_2 \right)
+       * \f]
        */
       void breedAndMutate(popVec_t& newpop,
                           const popVec_t& oldpop,

@@ -78,12 +78,12 @@ extern "C" {
 //
 
 
-FitLM::FitLM(fit_function_ptr_t ffp, index_t ndata, index_t nparm)
+FitLM::FitLM(fit_function_ptr_t ffp, index_t ndata_max, index_t nparm)
     : m__ffp(ffp)
-    , m__ndata(ndata)
+    , m__ndataMax(ndata_max)
     , m__nparams(nparm)
     , m__jac_requiresUpdate(false)
-    , m__wrksz(m__ndata + 5*m__nparams)
+    , m__wrksz(m__ndataMax + 5*m__nparams)
     , m__ipvt(new int[m__nparams])
     , m__workbuf(new double[m__wrksz])
     , m__diag(new double[m__nparams])
@@ -92,9 +92,9 @@ FitLM::FitLM(fit_function_ptr_t ffp, index_t ndata, index_t nparm)
     , m__wa2(new double[m__nparams])
     , m__wa3(new double[m__nparams])
     , m__wa4(new double[ndata])
-    , m__f_jac_flat(m__nparams*m__ndata)
-    , m__f_vec(m__ndata)
-    , m__f_jac_out(m__nparams, m__ndata)
+    , m__f_jac_flat(m__nparams*m__ndataMax)
+    , m__f_vec(m__ndataMax)
+    , m__f_jac_out(m__nparams, m__ndataMax)
 { }
 
 
@@ -123,7 +123,7 @@ FitLM::operator()(int mm, dvector_t& xv, double errtol, double ptol,
     // Check to see if the parameters are correct.
     if( xv.empty() ||
         (xv.size() < static_cast<unsigned>(m__nparams)) ||
-        (mm < m__nparams) || (m__ndata < mm) ||
+        (mm < m__nparams) || (m__ndataMax < mm) ||
         (errtol < 0.0) || (ptol < 0.0) || (maxiter < 0) ||
         (m__wrksz < (mm+5*m__nparams)) || (factor < 0.0) )
     {
@@ -139,7 +139,7 @@ FitLM::operator()(int mm, dvector_t& xv, double errtol, double ptol,
     }
 
     lmder_(m__ffp, &mm, &m__nparams, &xv[0], &m__f_vec[0], &m__f_jac_flat[0],
-           &m__ndata, &errtol, &ptol, &gtol, &maxiter, m__diag,
+           &m__ndataMax, &errtol, &ptol, &gtol, &maxiter, m__diag,
            &mode, &factor, &nprint, &inf, &nfev, &njev, m__ipvt, m__qtf,
            m__wa1, m__wa2, m__wa3, m__wa4);
 

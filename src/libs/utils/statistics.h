@@ -68,6 +68,9 @@ namespace jpw_math {
    *
    * \param s2
    * The lower 32 bits of the seed.
+   *
+   * \param verbose
+   * If \c true, print out information about the seed to \c stdout.
    */
   void init_rand(unsigned s1, unsigned s2, bool verbose=true);
 

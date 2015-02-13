@@ -10,7 +10,7 @@ var namespaces =
     [ "jpw_nld", "namespacejpw__nld.html", "namespacejpw__nld" ],
     [ "jpw_nld::fortlib", "namespacejpw__nld_1_1fortlib.html", "namespacejpw__nld_1_1fortlib" ],
     [ "jpw_nld::fortlib::sort", "namespacejpw__nld_1_1fortlib_1_1sort.html", "namespacejpw__nld_1_1fortlib_1_1sort" ],
-    [ "jpw_nld::fortlib::square_matrix_inversion", "namespacejpw__nld_1_1fortlib_1_1square__matrix__inversion.html", "namespacejpw__nld_1_1fortlib_1_1square__matrix__inversion" ],
+    [ "jpw_nld::fortlib::square_matrix_inversion", "namespacejpw__nld_1_1fortlib_1_1square__matrix__inversion.html", null ],
     [ "jpw_nld::measure", "namespacejpw__nld_1_1measure.html", "namespacejpw__nld_1_1measure" ],
     [ "jpw_nld::measure::policy", "namespacejpw__nld_1_1measure_1_1policy.html", "namespacejpw__nld_1_1measure_1_1policy" ],
     [ "jpw_nld::optimize", "namespacejpw__nld_1_1optimize.html", "namespacejpw__nld_1_1optimize" ],

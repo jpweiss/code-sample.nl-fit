@@ -21,7 +21,7 @@ var classjpw__nld_1_1measure_1_1FitLM__BarrierAdapter =
     [ "m__f_jac_flat", "classjpw__nld_1_1fortlib_1_1FitLM.html#a29af2a58b2580b0cef809166b4f86bc6", null ],
     [ "m__f_jac_out", "classjpw__nld_1_1fortlib_1_1FitLM.html#a4ea0f66308fe53795e9ced7c7c0d55a3", null ],
     [ "m__f_vec", "classjpw__nld_1_1fortlib_1_1FitLM.html#aa5ce76a1989ef857b2e8c0b4eba9957b", null ],
-    [ "m__ndata", "classjpw__nld_1_1fortlib_1_1FitLM.html#a483e3b8aa9eb204b3d8530cab461de63", null ],
+    [ "m__ndataMax", "classjpw__nld_1_1fortlib_1_1FitLM.html#a320f379d53266d0cbaf79a34edacc270", null ],
     [ "m__nparams", "classjpw__nld_1_1fortlib_1_1FitLM.html#af83c4f38cedef0c6c2601f4943b66a08", null ],
     [ "MAX_ITERS", "classjpw__nld_1_1measure_1_1FitLM__BarrierAdapter.html#a70a965e4ada328d6890cb605abd046e5", null ],
     [ "PARAM_CONVERGESPEC", "classjpw__nld_1_1measure_1_1FitLM__BarrierAdapter.html#a955e62a7718e69ed0996ae5d412d014c", null ]

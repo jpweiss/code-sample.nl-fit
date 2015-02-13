@@ -29,3 +29,7 @@
 \form#28:\[ f\left(x_{j};\; p_{0},\,\cdots,\, p_{\left(nParams-1\right)}\right) - D\left(x_{j}\right) = \Delta_{j}\qquad\forall\; j\in\left[0,\, nData\right) \]
 \form#29:\[ J_{i} = \frac{\partial f}{\partial p_{i}} \qquad\forall\; i\in\left[0,\, nParams\right) \]
 \form#30:\[ J_{i}\left(x_{j}\right) = \frac{\partial f}{\partial p_{i}}\left(x_{j}\right) \qquad\forall\; i\in\left[0,\, nParams\right) \quad j\in\left[0,\, nData\right) \]
+\form#31:$p_{i}$
+\form#32:$d_{u_{j}}$
+\form#33:$ \left\{ p\right\} $
+\form#34:\[ A \cdot x_1 + \left( 1 - A \cdot x_2 \right) \]

@@ -45,31 +45,27 @@ namespace jpw_nld {
   * A sequence data-container. (i.e. a 1-dimensional data structure).
   * \n
   * It must contain the following members:
-  * - \c public \em INT_TYPE <tt>size() const</tt>
+  * - <tt>public <em>INT_TYPE</em> size() const</tt>
   *   \n
   *   Should return the size of the current dataset.  Will be passed as the
-  *   first arg to FitLM::operator().
+  *   first arg to \c FitLM::operator()().
   *   \n
   *
   * \par F
   * The fit-functor.  Computes the function that you are fitting the data to.
   * \n
   * Must have the following members:
-  * - <tt>public static const</tt> \em INT_TYPE <tt>N_PARAMETERS</tt>
+  * - <tt>public static const <em>INT_TYPE</em> N_PARAMETERS</tt>
   *   \n
   *   Will be \c static_cast to an unsigned integer type.
   *   \n
   *   \n
-  * - <tt>void operator()(int nData, const D\& fitData,
-  *   <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  *   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  *                       int nParams, fort_dvec_t curParams,
-  *   <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  *   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  *                       fort_dvec_t deltas, fort_dmat_t fnJacob,
-  *   <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  *   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  *                       int ld_fnJac, int actionCode)</tt>
+  * - \code
+  *   void operator()(int nData, const D& fitData,
+  *                   int nParams, fort_dvec_t curParams,
+  *                   fort_dvec_t deltas, fort_dmat_t fnJacob,
+  *                   int ld_fnJac, int actionCode)
+  *   \endcode
   *   \n
   *   This is the fit-functor itself, which computes the model.
   *   \n
@@ -81,8 +77,9 @@ namespace jpw_nld {
   *       fitData.size().
   *     - \a <tt>fitData</tt>
   *       \n
-  *       This is the instance of \c D that was passed to \c
-  *       FitLM_Adapter::operator().  The contents will remain \b unaltered.
+  *       This is the instance of \c D that was passed to
+  *       \c FitLM_Adapter::operator()().  The contents will remain
+  *       \b unaltered.
   *     - \a <tt>nParams</tt>
   *       \n
   *       The number of tunable parameters in the model.
@@ -166,7 +163,7 @@ namespace jpw_nld {
   *
   * Your model will likely be a univariate function with one or more
   * constants, the model's "tunable parameters."  Mathematically, you're
-  * trying to find the set of parameters, \f$ \left{p\right} \f$ that make
+  * trying to find the set of parameters, \f$ \left\{ p\right\} \f$ that make
   * this equation true: \f[
   * f_{\left\{ p\right\} }\left(x_{j}\right) =
   * D\left(x_{j}\right)\qquad\forall\; j\in\left[0,\, nData\right)
@@ -259,7 +256,7 @@ namespace jpw_nld {
   *     parameter whose derivative you're about to evaluate.
   *   - Compute the value
   *     '<tt>df_dpi_x_j&nbsp;=&nbsp;df_dpi(x[j],&nbsp;curParams)</tt>'
-  *     - Remember:  you need to pick the correct '<tt>df_dpi(&hellip;)</tt>',
+  *     - Remember:  you need to pick the correct '<tt>df_dpi(...)</tt>',
   *       the one that is the partial-derivative with respect to the
   *       <tt>i_param<sup>th</sup></tt> parameter.
   *     - You will compute the <tt>i_param<sup>th</sup></tt>
@@ -295,9 +292,49 @@ namespace jpw_nld {
       typedef D Data_t;
       typedef FitLM_Adapter<F,D> Self_t;
 
+      /**
+       * Wrapper Function, passed to \c FitLM::operator()().
+       *
+       * This \c static member function calls the FitFunctor_t and Data_t
+       * objects that were passed to the last FitLM_Adapter::operator()()
+       * call.  Unfortunately, it works by using a \c static member field,
+       * making FitLM_Adapter and \b all of its subclasses inherently
+       * non-re-entrant.
+       *
+       * The details are a bit more complex, due to the template parameters.
+       * Every instantiated template class has its own copies of the
+       * template's \c static member fields.  They also have their own,
+       * separate implementations of each \c static member function.  So, each
+       * time you template-instantiate FitLM_Adapter with a different functor
+       * type (or data container type), you've created a completely separate
+       * version of the \c fit_function_adapter.  That means you can use
+       * object-instances of these two different template-instantiations
+       * simultaneously.  For example:
+       * \code
+       * class TrigModel;
+       * class LogarithmicModel;
+       *
+       * class FitLM_Adapter<TrigModel, std::vector> SpecialTrigFit
+       * {
+       *     // Declaration/Definition Omitted for Clarity
+       *     // :
+       *     // :
+       * };
+       *
+       * FitLM_Adapter<LogarithmicModel, std::vector> logfit;
+       * FitLM_Adapter<TrigModel, std::vector> trigfit;
+       * SpecialTrigFit child_trigfit;
+       * \endcode
+       * You could use \c logfit and \c trigfit at the same time (well, \em if
+       * the FORTRAN function, \c lmder_, is re-entrant).  In contrast, you
+       * \em cannot use \c trigfit and \c child_trigfit simultaneously.
+       *
+       * These are the issues that make \em \b this class potentially
+       * non-re-entrant.
+       */
       static void fit_function_adapter(fort_ivar_t neq, fort_ivar_t nvar,
-                                       fort_dvec_t xvec, fort_dvec_t fvec,
-                                       fort_dmat_t fjac,
+                                       fort_dvec_t xvec,
+                                       fort_dvec_t fvec, fort_dmat_t fjac,
                                        fort_ivar_t ldfjac, fort_ivar_t iflag)
       {
           // FIXME:  Look into removing '*neq'.  Let the functor do any
@@ -316,9 +353,9 @@ namespace jpw_nld {
 
   public:
       /// Default Constructor
-      explicit FitLM_Adapter(index_t ndata)
+      explicit FitLM_Adapter(index_t ndata_max)
           : FitLM(Self_t::fit_function_adapter,
-                  ndata,
+                  ndata_max,
                   static_cast<index_t>(FitFunctor_t::N_PARAMETERS))
           , m__fitter(0)
           , m__fitData(0)
@@ -336,8 +373,8 @@ namespace jpw_nld {
        * Perform a nonlinear least-squares fit using the Levenberg-Marquardt
        * algorithm.
        *
-       * Most of the arguments are identical to those in \c FitLM::operator(),
-       * as is the return value.
+       * Most of the arguments are identical to those in
+       * \c FitLM::operator()() as is the return value.
        *
        * \param theModel
        * Functor object of type \c F.  A pointer to it is held for the
