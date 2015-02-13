@@ -326,6 +326,11 @@ namespace jpw_nld {
        * fit to.
        */
       FitLM(fit_function_ptr_t ffp, index_t ndata_max, index_t nparm);
+      // FIXME:
+      // Determine what happens if 'ndata_max' is larger than the size of your
+      // dataset (the value of the 'mm' parameter to the "op()").
+      // Check the 'lmder_' code.
+      // Also, check if 'lmder_' is re-entrant or not.
 
       /// Destructor
       ~FitLM();

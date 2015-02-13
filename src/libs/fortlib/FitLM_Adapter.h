@@ -365,8 +365,8 @@ namespace jpw_nld {
       ~FitLM_Adapter() {}
 
       using FitLM::chiSquared;
-      using FitLM::f_vec;
-      using FitLM::f_jac;
+      using FitLM::f_vec;  // FIXME: To be renamed...
+      using FitLM::f_jac;  // FIXME: To be renamed...
 
       /// Perform a nonlinear least-squares fit.
       /**

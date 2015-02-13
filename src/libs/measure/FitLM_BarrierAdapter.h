@@ -37,9 +37,9 @@ namespace jpw_nld {
   * PersistenceMap classes.  The \a F_POL_T class is the same policy type
   * taken by the \c BarrierModel class.
   *
-  * Note:  Because this header uses "BarrierModel.h", translation units
+  * Note:  Because this header uses "BarrierModels.h", translation units
   * \#including this header should also
-  * <tt>\#include&nbsp;"details/BarrierModel.tcc"</tt>.
+  * <tt>\#include&nbsp;"details/BarrierModels.tcc"</tt>.
   */
   template<class F_POL_T=policy::Full>
   class FitLM_BarrierAdapter

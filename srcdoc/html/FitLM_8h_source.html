@@ -169,66 +169,71 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00302"></a>00302 
 <a name="l00304"></a>00304 
 <a name="l00328"></a>00328       <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#ad86dc3d99a47d9dfaf001d611ff950bf" title="Main Constructor.">FitLM</a>(<a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#ade489b47682b536317ea832337debf1b" title="Function pointer type for the fit function.">fit_function_ptr_t</a> ffp, <a class="code" href="namespacejpw__nld.html#aab1410d3f3644ff465752cab5b56e420" title="Integer type for array indices, lengths of dimensions in a Sushi-file, and similar.">index_t</a> ndata_max, <a class="code" href="namespacejpw__nld.html#aab1410d3f3644ff465752cab5b56e420" title="Integer type for array indices, lengths of dimensions in a Sushi-file, and similar.">index_t</a> nparm);
-<a name="l00329"></a>00329 
-<a name="l00331"></a>00331       <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a8c4a5e1d40f3c6a735acd2ae01e9aa4b" title="Destructor.">~FitLM</a>();
-<a name="l00332"></a>00332 
+<a name="l00329"></a>00329       <span class="comment">// FIXME:</span>
+<a name="l00330"></a>00330       <span class="comment">// Determine what happens if &#39;ndata_max&#39; is larger than the size of your</span>
+<a name="l00331"></a>00331       <span class="comment">// dataset (the value of the &#39;mm&#39; parameter to the &quot;op()&quot;).</span>
+<a name="l00332"></a>00332       <span class="comment">// Check the &#39;lmder_&#39; code.</span>
+<a name="l00333"></a>00333       <span class="comment">// Also, check if &#39;lmder_&#39; is re-entrant or not.</span>
 <a name="l00334"></a>00334 
-<a name="l00374"></a>00374       <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#abd17c321c84757dfc2c360f442c84b69" title="The return status of the Levenberg-Marquardt algorithm.">FitStatus_t</a> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#ab9ec7f9ce599a844513a1cc8d940df03" title="Perform a nonlinear least-squares fit.">operator()</a>(<span class="keywordtype">int</span> mm, <a class="code" href="namespacejpw__math.html#ad2abb92a16fb262b3d36c651bd1c1d6f">dvector_t</a>&amp; xv,
-<a name="l00375"></a>00375                              <span class="keywordtype">double</span> errtol, <span class="keywordtype">double</span> ptol,
-<a name="l00376"></a>00376                              <span class="keywordtype">int</span> maxiter, <span class="keywordtype">double</span> factor);
-<a name="l00377"></a>00377 
-<a name="l00379"></a>00379 
-<a name="l00383"></a><a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a40f646ca74381f91bf851ce166469a5e">00383</a>       <span class="keywordtype">double</span> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a40f646ca74381f91bf851ce166469a5e" title="Compute  for the last run of operator().">chiSquared</a>()<span class="keyword"> const </span>{
-<a name="l00384"></a>00384           <span class="keywordflow">return</span> jpw_math::chiSquared&lt;dvector_t&gt;(<a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#aa5ce76a1989ef857b2e8c0b4eba9957b">m__f_vec</a>);
-<a name="l00385"></a>00385       }
-<a name="l00386"></a>00386 
-<a name="l00388"></a>00388 
-<a name="l00391"></a><a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a7409bc7c7fe43e31ad5b8a143358bc68">00391</a>       <span class="keyword">const</span> <a class="code" href="namespacejpw__math.html#ad2abb92a16fb262b3d36c651bd1c1d6f">dvector_t</a>&amp; <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a7409bc7c7fe43e31ad5b8a143358bc68" title="Accessor function for the final value of f_vec.">f_vec</a>()<span class="keyword"> const</span>
-<a name="l00392"></a>00392 <span class="keyword">      </span>{ <span class="keywordflow">return</span> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#aa5ce76a1989ef857b2e8c0b4eba9957b">m__f_vec</a>; }  <span class="comment">// FIXME::Rename this fn.</span>
+<a name="l00336"></a>00336       <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a8c4a5e1d40f3c6a735acd2ae01e9aa4b" title="Destructor.">~FitLM</a>();
+<a name="l00337"></a>00337 
+<a name="l00339"></a>00339 
+<a name="l00379"></a>00379       <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#abd17c321c84757dfc2c360f442c84b69" title="The return status of the Levenberg-Marquardt algorithm.">FitStatus_t</a> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#ab9ec7f9ce599a844513a1cc8d940df03" title="Perform a nonlinear least-squares fit.">operator()</a>(<span class="keywordtype">int</span> mm, <a class="code" href="namespacejpw__math.html#ad2abb92a16fb262b3d36c651bd1c1d6f">dvector_t</a>&amp; xv,
+<a name="l00380"></a>00380                              <span class="keywordtype">double</span> errtol, <span class="keywordtype">double</span> ptol,
+<a name="l00381"></a>00381                              <span class="keywordtype">int</span> maxiter, <span class="keywordtype">double</span> factor);
+<a name="l00382"></a>00382 
+<a name="l00384"></a>00384 
+<a name="l00388"></a><a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a40f646ca74381f91bf851ce166469a5e">00388</a>       <span class="keywordtype">double</span> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a40f646ca74381f91bf851ce166469a5e" title="Compute  for the last run of operator().">chiSquared</a>()<span class="keyword"> const </span>{
+<a name="l00389"></a>00389           <span class="keywordflow">return</span> jpw_math::chiSquared&lt;dvector_t&gt;(<a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#aa5ce76a1989ef857b2e8c0b4eba9957b">m__f_vec</a>);
+<a name="l00390"></a>00390       }
+<a name="l00391"></a>00391 
 <a name="l00393"></a>00393 
-<a name="l00395"></a>00395 
-<a name="l00403"></a><a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a8ba51868d28fcabdb4fbf278e0aa86dd">00403</a>       <span class="keyword">const</span> <a class="code" href="namespacejpw__math.html#ade8de6f9aed7a3f420600d5c68d9adcb">dmatrix_t</a>&amp; <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a8ba51868d28fcabdb4fbf278e0aa86dd" title="Accessor function for the f_jac.">f_jac</a>() {  <span class="comment">// FIXME::Rename this fn.</span>
-<a name="l00404"></a>00404           <span class="comment">// Only call &#39;swap()&#39; if we&#39;ve run the LM-algorithm since the last</span>
-<a name="l00405"></a>00405           <span class="comment">// call to this fn.</span>
-<a name="l00406"></a>00406           <span class="keywordflow">if</span>(m__jac_requiresUpdate) {
-<a name="l00407"></a>00407               <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a4ea0f66308fe53795e9ced7c7c0d55a3">m__f_jac_out</a>.swap(<a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a29af2a58b2580b0cef809166b4f86bc6">m__f_jac_flat</a>);
-<a name="l00408"></a>00408           }
-<a name="l00409"></a>00409           <span class="keywordflow">return</span> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a4ea0f66308fe53795e9ced7c7c0d55a3">m__f_jac_out</a>;
-<a name="l00410"></a>00410       }
-<a name="l00411"></a>00411 
-<a name="l00412"></a>00412   <span class="keyword">private</span>:
-<a name="l00413"></a>00413       <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#ade489b47682b536317ea832337debf1b" title="Function pointer type for the fit function.">fit_function_ptr_t</a> m__ffp;
-<a name="l00414"></a>00414   <span class="keyword">protected</span>:
-<a name="l00415"></a><a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a320f379d53266d0cbaf79a34edacc270">00415</a>       <span class="keywordtype">int</span> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a320f379d53266d0cbaf79a34edacc270">m__ndataMax</a>;
-<a name="l00416"></a><a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#af83c4f38cedef0c6c2601f4943b66a08">00416</a>       <span class="keywordtype">int</span> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#af83c4f38cedef0c6c2601f4943b66a08">m__nparams</a>;
+<a name="l00396"></a><a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a7409bc7c7fe43e31ad5b8a143358bc68">00396</a>       <span class="keyword">const</span> <a class="code" href="namespacejpw__math.html#ad2abb92a16fb262b3d36c651bd1c1d6f">dvector_t</a>&amp; <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a7409bc7c7fe43e31ad5b8a143358bc68" title="Accessor function for the final value of f_vec.">f_vec</a>()<span class="keyword"> const</span>
+<a name="l00397"></a>00397 <span class="keyword">      </span>{ <span class="keywordflow">return</span> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#aa5ce76a1989ef857b2e8c0b4eba9957b">m__f_vec</a>; }  <span class="comment">// FIXME::Rename this fn.</span>
+<a name="l00398"></a>00398 
+<a name="l00400"></a>00400 
+<a name="l00408"></a><a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a8ba51868d28fcabdb4fbf278e0aa86dd">00408</a>       <span class="keyword">const</span> <a class="code" href="namespacejpw__math.html#ade8de6f9aed7a3f420600d5c68d9adcb">dmatrix_t</a>&amp; <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a8ba51868d28fcabdb4fbf278e0aa86dd" title="Accessor function for the f_jac.">f_jac</a>() {  <span class="comment">// FIXME::Rename this fn.</span>
+<a name="l00409"></a>00409           <span class="comment">// Only call &#39;swap()&#39; if we&#39;ve run the LM-algorithm since the last</span>
+<a name="l00410"></a>00410           <span class="comment">// call to this fn.</span>
+<a name="l00411"></a>00411           <span class="keywordflow">if</span>(m__jac_requiresUpdate) {
+<a name="l00412"></a>00412               <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a4ea0f66308fe53795e9ced7c7c0d55a3">m__f_jac_out</a>.swap(<a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a29af2a58b2580b0cef809166b4f86bc6">m__f_jac_flat</a>);
+<a name="l00413"></a>00413           }
+<a name="l00414"></a>00414           <span class="keywordflow">return</span> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a4ea0f66308fe53795e9ced7c7c0d55a3">m__f_jac_out</a>;
+<a name="l00415"></a>00415       }
+<a name="l00416"></a>00416 
 <a name="l00417"></a>00417   <span class="keyword">private</span>:
-<a name="l00418"></a>00418       <span class="keywordtype">bool</span> m__jac_requiresUpdate;
-<a name="l00419"></a>00419       <span class="keywordtype">int</span> m__wrksz;
-<a name="l00420"></a>00420       <a class="code" href="namespacejpw__nld_1_1fortlib.html#a12769afd90f833159895dfc94b39dc88" title="FORTRAN integer-array type.">fort_ivec_t</a> m__ipvt;
-<a name="l00421"></a>00421       <a class="code" href="namespacejpw__nld_1_1fortlib.html#ab548b8671e5358ea35e5131e23dfb479" title="FORTRAN double-array type.">fort_dvec_t</a> m__workbuf;
-<a name="l00422"></a>00422       <a class="code" href="namespacejpw__nld_1_1fortlib.html#ab548b8671e5358ea35e5131e23dfb479" title="FORTRAN double-array type.">fort_dvec_t</a> m__diag;
-<a name="l00423"></a>00423       <a class="code" href="namespacejpw__nld_1_1fortlib.html#ab548b8671e5358ea35e5131e23dfb479" title="FORTRAN double-array type.">fort_dvec_t</a> m__qtf;
-<a name="l00424"></a>00424       <a class="code" href="namespacejpw__nld_1_1fortlib.html#ab548b8671e5358ea35e5131e23dfb479" title="FORTRAN double-array type.">fort_dvec_t</a> m__wa1;
-<a name="l00425"></a>00425       <a class="code" href="namespacejpw__nld_1_1fortlib.html#ab548b8671e5358ea35e5131e23dfb479" title="FORTRAN double-array type.">fort_dvec_t</a> m__wa2;
-<a name="l00426"></a>00426       <a class="code" href="namespacejpw__nld_1_1fortlib.html#ab548b8671e5358ea35e5131e23dfb479" title="FORTRAN double-array type.">fort_dvec_t</a> m__wa3;
-<a name="l00427"></a>00427       <a class="code" href="namespacejpw__nld_1_1fortlib.html#ab548b8671e5358ea35e5131e23dfb479" title="FORTRAN double-array type.">fort_dvec_t</a> m__wa4;
-<a name="l00428"></a>00428   <span class="keyword">protected</span>:
-<a name="l00429"></a><a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a29af2a58b2580b0cef809166b4f86bc6">00429</a>       <a class="code" href="namespacejpw__math.html#ad2abb92a16fb262b3d36c651bd1c1d6f">dvector_t</a> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a29af2a58b2580b0cef809166b4f86bc6">m__f_jac_flat</a>;
-<a name="l00430"></a><a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#aa5ce76a1989ef857b2e8c0b4eba9957b">00430</a>       <a class="code" href="namespacejpw__math.html#ad2abb92a16fb262b3d36c651bd1c1d6f">dvector_t</a> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#aa5ce76a1989ef857b2e8c0b4eba9957b">m__f_vec</a>;
-<a name="l00431"></a><a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a4ea0f66308fe53795e9ced7c7c0d55a3">00431</a>       <a class="code" href="namespacejpw__math.html#ade8de6f9aed7a3f420600d5c68d9adcb">dmatrix_t</a> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a4ea0f66308fe53795e9ced7c7c0d55a3">m__f_jac_out</a>;
-<a name="l00432"></a>00432   };
-<a name="l00433"></a>00433 
-<a name="l00434"></a>00434 
-<a name="l00436"></a><a class="code" href="namespacejpw__nld_1_1fortlib.html#a3d92aaae3ca4d3e49488f9418918125f">00436</a>   <span class="keyword">typedef</span> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#abd17c321c84757dfc2c360f442c84b69" title="The return status of the Levenberg-Marquardt algorithm.">FitLM::FitStatus_t</a> <a class="code" href="namespacejpw__nld_1_1fortlib.html#a3d92aaae3ca4d3e49488f9418918125f" title="Convenience typedef for FitLM::FitStatus_t.">FitLMStatus_t</a>;
-<a name="l00437"></a>00437 
-<a name="l00438"></a>00438  }; <span class="comment">//end namespace</span>
-<a name="l00439"></a>00439 }; <span class="comment">//end namespace</span>
-<a name="l00440"></a>00440 
-<a name="l00441"></a>00441 
-<a name="l00442"></a>00442 <span class="preprocessor">#endif //_FitLM_H_</span>
-<a name="l00443"></a>00443 <span class="preprocessor"></span>
-<a name="l00444"></a>00444 <span class="comment">//</span>
-<a name="l00445"></a>00445 <span class="comment">// End</span>
+<a name="l00418"></a>00418       <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#ade489b47682b536317ea832337debf1b" title="Function pointer type for the fit function.">fit_function_ptr_t</a> m__ffp;
+<a name="l00419"></a>00419   <span class="keyword">protected</span>:
+<a name="l00420"></a><a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a320f379d53266d0cbaf79a34edacc270">00420</a>       <span class="keywordtype">int</span> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a320f379d53266d0cbaf79a34edacc270">m__ndataMax</a>;
+<a name="l00421"></a><a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#af83c4f38cedef0c6c2601f4943b66a08">00421</a>       <span class="keywordtype">int</span> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#af83c4f38cedef0c6c2601f4943b66a08">m__nparams</a>;
+<a name="l00422"></a>00422   <span class="keyword">private</span>:
+<a name="l00423"></a>00423       <span class="keywordtype">bool</span> m__jac_requiresUpdate;
+<a name="l00424"></a>00424       <span class="keywordtype">int</span> m__wrksz;
+<a name="l00425"></a>00425       <a class="code" href="namespacejpw__nld_1_1fortlib.html#a12769afd90f833159895dfc94b39dc88" title="FORTRAN integer-array type.">fort_ivec_t</a> m__ipvt;
+<a name="l00426"></a>00426       <a class="code" href="namespacejpw__nld_1_1fortlib.html#ab548b8671e5358ea35e5131e23dfb479" title="FORTRAN double-array type.">fort_dvec_t</a> m__workbuf;
+<a name="l00427"></a>00427       <a class="code" href="namespacejpw__nld_1_1fortlib.html#ab548b8671e5358ea35e5131e23dfb479" title="FORTRAN double-array type.">fort_dvec_t</a> m__diag;
+<a name="l00428"></a>00428       <a class="code" href="namespacejpw__nld_1_1fortlib.html#ab548b8671e5358ea35e5131e23dfb479" title="FORTRAN double-array type.">fort_dvec_t</a> m__qtf;
+<a name="l00429"></a>00429       <a class="code" href="namespacejpw__nld_1_1fortlib.html#ab548b8671e5358ea35e5131e23dfb479" title="FORTRAN double-array type.">fort_dvec_t</a> m__wa1;
+<a name="l00430"></a>00430       <a class="code" href="namespacejpw__nld_1_1fortlib.html#ab548b8671e5358ea35e5131e23dfb479" title="FORTRAN double-array type.">fort_dvec_t</a> m__wa2;
+<a name="l00431"></a>00431       <a class="code" href="namespacejpw__nld_1_1fortlib.html#ab548b8671e5358ea35e5131e23dfb479" title="FORTRAN double-array type.">fort_dvec_t</a> m__wa3;
+<a name="l00432"></a>00432       <a class="code" href="namespacejpw__nld_1_1fortlib.html#ab548b8671e5358ea35e5131e23dfb479" title="FORTRAN double-array type.">fort_dvec_t</a> m__wa4;
+<a name="l00433"></a>00433   <span class="keyword">protected</span>:
+<a name="l00434"></a><a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a29af2a58b2580b0cef809166b4f86bc6">00434</a>       <a class="code" href="namespacejpw__math.html#ad2abb92a16fb262b3d36c651bd1c1d6f">dvector_t</a> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a29af2a58b2580b0cef809166b4f86bc6">m__f_jac_flat</a>;
+<a name="l00435"></a><a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#aa5ce76a1989ef857b2e8c0b4eba9957b">00435</a>       <a class="code" href="namespacejpw__math.html#ad2abb92a16fb262b3d36c651bd1c1d6f">dvector_t</a> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#aa5ce76a1989ef857b2e8c0b4eba9957b">m__f_vec</a>;
+<a name="l00436"></a><a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a4ea0f66308fe53795e9ced7c7c0d55a3">00436</a>       <a class="code" href="namespacejpw__math.html#ade8de6f9aed7a3f420600d5c68d9adcb">dmatrix_t</a> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a4ea0f66308fe53795e9ced7c7c0d55a3">m__f_jac_out</a>;
+<a name="l00437"></a>00437   };
+<a name="l00438"></a>00438 
+<a name="l00439"></a>00439 
+<a name="l00441"></a><a class="code" href="namespacejpw__nld_1_1fortlib.html#a3d92aaae3ca4d3e49488f9418918125f">00441</a>   <span class="keyword">typedef</span> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#abd17c321c84757dfc2c360f442c84b69" title="The return status of the Levenberg-Marquardt algorithm.">FitLM::FitStatus_t</a> <a class="code" href="namespacejpw__nld_1_1fortlib.html#a3d92aaae3ca4d3e49488f9418918125f" title="Convenience typedef for FitLM::FitStatus_t.">FitLMStatus_t</a>;
+<a name="l00442"></a>00442 
+<a name="l00443"></a>00443  }; <span class="comment">//end namespace</span>
+<a name="l00444"></a>00444 }; <span class="comment">//end namespace</span>
+<a name="l00445"></a>00445 
+<a name="l00446"></a>00446 
+<a name="l00447"></a>00447 <span class="preprocessor">#endif //_FitLM_H_</span>
+<a name="l00448"></a>00448 <span class="preprocessor"></span>
+<a name="l00449"></a>00449 <span class="comment">//</span>
+<a name="l00450"></a>00450 <span class="comment">// End</span>
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -249,7 +254,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="FitLM_8h.html">FitLM.h</a>      </li>
 
-    <li class="footer">Generated on Fri Feb 13 2015 12:10:46 for research-nld by
+    <li class="footer">Generated on Fri Feb 13 2015 16:23:54 for research-nld by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

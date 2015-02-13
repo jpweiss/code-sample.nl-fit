@@ -111,37 +111,51 @@ had a class that did the following:
 ### `FitLM_Adapter` ###
 
 
-`FitLM_Adapter` is a template class that inherits `FitLM`.  It has two
-template parameters:  one for a functor-class, and another for a
-data-container.  Through its `operator()`, the functor-type provides
-the model to fit the data to.  Both the data and the model's
-"fit-functor" are passed to the overloaded `FitLM_Adapter::operator()`.
+`FitLM_Adapter`, a template class that inherits `FitLM`, separates the
+the dataset from the model that it's being fit to.  The two template
+parameters specify the data-container's type, and a functor-class that
+implements the model.  Both the data and the model's "fit-functor" are
+passed to an overloaded `FitLM_Adapter::operator()()`.
+
+It accomplishes the separation of fit-functor and data by using a
+static member "wrapper-function" that calls the fit-functor, passing
+it the data along with the other arguments.  Sadly, there's no good
+way around this.  The wrapper-function is ultimately passed to the
+FORTRAN function, `lmder_`, which dictates the call-signature.
+Naturally, this prevents `FitLM_Adapter` itself from being re-entrant.
+(Well, partially prevents it.  See the source-code documentation of
+the `FitLM_Adapter::fit_function_adapter` member for the details of
+the actual limits on re-entrancy.)  At present, I have no need to make
+this thread-safe, so I've chosen to live with these limitations.
+
+Also, the wrapper-function still passes pointer-based arrays to the
+fit-functor.  This, again, is a limitation inherited from the external
+call from the FORTRAN function, `lmder_`.  I have plans to eventually
+create and use adapter-classes to present a more STL-like container to
+the fit-functor, thereby eliminating both the pointer-based arrays and
+the integer size-arguments, all without copying data.  That will be
+coming at a later date.
 
 
-(Notes:
-
- This Adapter's main purpose is to separate the model and the dataset.
-
- It does not completely eliminate pointer-based arrays, due to the
- constraints imposed by the external call to the FORTRAN fn.,
- `lmder_`.
-
-
- The 'ndata' is in the c'tor so that we can pre-allocate a bunch of
- internal arrays.
-
- This class cannot be made re-entrant, as it uses a static member
- fn. as a wrapper for the Functor.  I'm not interested in changing
- this at the moment.
-
- The wrapper calls the functor object, passing the data in.
-
- I have additional ideas [noted in the FIXME comments.
-)
-
-
-Placeholder file.  More to come...
+When you examine the source-documentation for `FitLM_Adapter`, you'll
+notice that the constructor still requires an argument specifying the
+size of the (potential) dataset.  This is intentional.  `FitLM`, must
+allocates several internal buffers required by the FORTRAN `lmder_`
+algorithm.  My research code is repeatedly fitting different datasets,
+all with the same size, from within a loop.  Clearly, moving all
+internal allocations into the constructor is the way to go.  Memory
+allocation & deallocation in every `FitLM::operator()()`-call would
+obviously incur a large performance-hit.
 
 
 ---
 
+
+### Next:  `FitLM_BarrierAdapter` and the `measure`-Library ###
+
+
+The next thing you'll want to read is `src/lib/measure/README.md`.
+The `measure`-library uses the `FitLM_Adapter` with a model.
+
+It's not only a good example of how one uses `FitLM_Adapter`, but also
+of using policy-classes to tweak a model at compile-time.
