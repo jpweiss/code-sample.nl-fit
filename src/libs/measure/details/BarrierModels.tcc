@@ -24,12 +24,16 @@
 
 #include <cstdlib>
 #include "statistics.h"
+#include "FitLM.h"
 #include "PersistenceMap.h"
 
 
 // Wrapper for parent namespace
 namespace jpw_nld {
 namespace measure {
+
+ // To save on typing and make things more readable.
+ using jpw_nld::fortlib::FitLM;
 
 
 /////////////////////////
@@ -84,8 +88,9 @@ BarrierModel<policy::Full>::limitParams(dvector_t& params)
 template<>
 template<typename VT> void
 BarrierModel<policy::Full>::calculate(const PersistenceMap& theMap,
-                                      VT& fitParams, VT& fvec, VT& fjac,
-                                      int iflag)
+                                      VT& fitParams,
+                                      VT& deltas, VT& fnJacob,
+                                      int actionCode)
 {
     typedef PersistenceMap::size_type data_size_t;
     typedef PersistenceMap::const_vector_type const_vector_t;
@@ -120,8 +125,8 @@ BarrierModel<policy::Full>::calculate(const PersistenceMap& theMap,
     double pmb, pmlmb, pmb_j, pmlmb_j, sumh, sumdhde, sumdhdb, dhdx1, dhdx2;
     double e_lrho;
 
-    // iflag == "evaluate model"
-    if(iflag == 1)
+    // actionCode == "evaluate model"
+    if(actionCode == FitLM::ComputeFunction)
     {
         for(data_size_t i=0; i<nData; ++i)
         {
@@ -140,13 +145,13 @@ BarrierModel<policy::Full>::calculate(const PersistenceMap& theMap,
                 sumh += shape_h(pmlmb_j*width) - shape_h(pmb_j*width);
             }
 
-            fvec[i] = ( (alph*sumh + onema*exp(-lrho*theMapV_lags[i]))
+            deltas[i] = ( (alph*sumh + onema*exp(-lrho*theMapV_lags[i]))
                         - theMapV_data[i] );
         } // end i
     } // end "evaluate model"
 
-    // iflag == "compute model deriv"
-    if(iflag == 2)
+    // actionCode == "compute model deriv"
+    if(actionCode == FitLM::ComputeJacobian)
     {
         data_size_t offset1 = nData;
         data_size_t offset2 = offset1 + nData;
@@ -177,10 +182,10 @@ BarrierModel<policy::Full>::calculate(const PersistenceMap& theMap,
                 sumdhde += dhdx1*pmlmb_j - dhdx2*pmb_j;
             }
 
-            fjac[i] = -alph*sumdhdb*width;
-            fjac[i+offset1] = dalph*(sumh - e_lrho);
-            fjac[i+offset2] = alph*dwidth*sumdhde;
-            fjac[i+offset3] = -dlrho*theMapV_lags[i]*onema*e_lrho;
+            fnJacob[i] = -alph*sumdhdb*width;
+            fnJacob[i+offset1] = dalph*(sumh - e_lrho);
+            fnJacob[i+offset2] = alph*dwidth*sumdhde;
+            fnJacob[i+offset3] = -dlrho*theMapV_lags[i]*onema*e_lrho;
         } // end i
     } // end "compute model deriv"
 
@@ -219,8 +224,9 @@ BarrierModel<policy::MarkovOnly>::limitParams(dvector_t&)
 template<>
 template<typename VT> void
 BarrierModel<policy::MarkovOnly>::calculate(const PersistenceMap& theMap,
-                                            VT& fitParams, VT& fvec, VT& fjac,
-                                            int iflag)
+                                            VT& fitParams,
+                                            VT& deltas, VT& fnJacob,
+                                            int actionCode)
 {
     typedef PersistenceMap::size_type data_size_t;
     typedef PersistenceMap::const_vector_type const_vector_t;
@@ -234,17 +240,17 @@ BarrierModel<policy::MarkovOnly>::calculate(const PersistenceMap& theMap,
     double dlrho = 2*fitParams[0];
     data_size_t nData = theMap.size();
 
-    // iflag == "evaluate model"
-    if(iflag == 1) {
+    // actionCode == "evaluate model"
+    if(actionCode == FitLM::ComputeFunction) {
         for(data_size_t i=0; i<nData; ++i) {
-            fvec[i] = exp(-lrho*theMapV_lags[i]) - theMapV_data[i];
+            deltas[i] = exp(-lrho*theMapV_lags[i]) - theMapV_data[i];
         }
     }
 
-    // iflag == "compute model deriv"
-    if(iflag == 2) {
+    // actionCode == "compute model deriv"
+    if(actionCode == FitLM::ComputeJacobian) {
         for(data_size_t i=0; i<nData; ++i) {
-            fjac[i] = -dlrho*theMapV_lags[i]*exp(-lrho*theMapV_lags[i]);
+            fnJacob[i] = -dlrho*theMapV_lags[i]*exp(-lrho*theMapV_lags[i]);
         }
     }
 
@@ -293,8 +299,8 @@ template<>
 template<typename VT> void
 BarrierModel<policy::BarrierOnly>::calculate(const PersistenceMap& theMap,
                                              VT& fitParams,
-                                             VT& fvec, VT& fjac,
-                                             int iflag)
+                                             VT& deltas, VT& fnJacob,
+                                             int actionCode)
 {
     typedef PersistenceMap::size_type data_size_t;
     typedef PersistenceMap::const_vector_type const_vector_t;
@@ -324,8 +330,8 @@ BarrierModel<policy::BarrierOnly>::calculate(const PersistenceMap& theMap,
     // Storage vars, set inside of for-loops.
     double pmb, pmlmb, pmb_j, pmlmb_j, sumh, sumdhde, sumdhdb, dhdx1, dhdx2;
 
-    // iflag == "evaluate model"
-    if(iflag == 1)
+    // actionCode == "evaluate model"
+    if(actionCode == FitLM::ComputeFunction)
     {
         for(data_size_t i=0; i<nData; ++i)
         {
@@ -344,12 +350,12 @@ BarrierModel<policy::BarrierOnly>::calculate(const PersistenceMap& theMap,
                 sumh += shape_h(pmlmb_j*width) - shape_h(pmb_j*width);
             }
 
-            fvec[i] = ( sumh - theMapV_data[i] );
+            deltas[i] = ( sumh - theMapV_data[i] );
         } // end i
     } // end "evaluate model"
 
-    // iflag == "compute model deriv"
-    if(iflag == 2)
+    // actionCode == "compute model deriv"
+    if(actionCode == FitLM::ComputeJacobian)
     {
         data_size_t offset1 = nData;
 
@@ -377,8 +383,8 @@ BarrierModel<policy::BarrierOnly>::calculate(const PersistenceMap& theMap,
                 sumdhde += dhdx1*pmlmb_j - dhdx2*pmb_j;
             }
 
-            fjac[i] = -sumdhdb*width;
-            fjac[i+offset1] = dwidth*sumdhde;
+            fnJacob[i] = -sumdhdb*width;
+            fnJacob[i+offset1] = dwidth*sumdhde;
         } // end i
     } // end "compute model deriv"
 

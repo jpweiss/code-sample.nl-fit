@@ -126,16 +126,16 @@ namespace jpw_nld {
 
       /// The model, C++-style.
       void operator()(const PersistenceMap& theMap,
-                      dvector_t& fitParams, dvector_t& fvec)
+                      dvector_t& fitParams, dvector_t& deltas)
       {
-          calculate<dvector_t>(theMap, fitParams, fvec, m__wrkJac, 1);
+          calculate<dvector_t>(theMap, fitParams, deltas, m__wrkJac, 1);
       }
 
       /// Compute \c Chi^2 using \a theMap and evaluating the model at \a
       /// fitParams.
       /**
        * Equivalent to running \c jpw_math::chiSquared() on the \c
-       * fvec you passed to a call to \c operator().
+       * deltas you passed to a call to \c operator().
        */
       double chiSquared(const PersistenceMap& theMap, dvector_t& fitParams)
       {
@@ -149,11 +149,12 @@ namespace jpw_nld {
        */
       void operator()(int /*neq*/, const PersistenceMap& theMap,
                       int /*nvar*/, fortlib::fort_dvec_t fitParams,
-                      fortlib::fort_dvec_t fvec, fortlib::fort_dmat_t fjac,
-                      int /*ldfjac*/, int iflag)
+                      fortlib::fort_dvec_t deltas,
+                      fortlib::fort_dmat_t fnJacob,
+                      int /*ld_fnJac*/, int actionCode)
       {
           calculate<fortlib::fort_dvec_t>(theMap, fitParams,
-                                          fvec, fjac, iflag);
+                                          deltas, fnJacob, actionCode);
       }
 
       /// Fill \a params with "constrained" random values.
@@ -236,7 +237,7 @@ namespace jpw_nld {
        */
       template<typename VT>
       void calculate(const PersistenceMap& theMap,
-                     VT& fitParams, VT& fvec, VT& fjac, int iflag);
+                     VT& fitParams, VT& deltas, VT& fnJacob, int actionCode);
   };
 
 

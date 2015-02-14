@@ -1,7 +1,7 @@
 // -*- C++ -*-
 // Header file for class FitLM_BarrierAdapter
 //
-// Copyright (C) 2007-2010 by John Weiss
+// Copyright (C) 2007-2010, 2015 by John Weiss
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the Artistic License, included as the file
 // "LICENSE" in the source code archive.
@@ -71,8 +71,8 @@ namespace jpw_nld {
       ~FitLM_BarrierAdapter() {}
 
       using Base_t::chiSquared;
-      using Base_t::f_vec;
-      using Base_t::f_jac;
+      using Base_t::deltas;
+      using Base_t::jacobian;
 
       /// Perform a nonlinear least-squares fit.
       /**

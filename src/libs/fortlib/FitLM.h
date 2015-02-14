@@ -24,7 +24,7 @@
 #include "jpw_nld.h"
 #include "FORTTypes.h"
 #include "MathTools.h"
-// Alas, we need to include this directly.  The members "m__f_vec" and
+// Alas, we need to include this directly.  The members "m__deltas" and
 // "m__f_jac" require a complete type.
 #include "Matrix.h"
 
@@ -226,6 +226,25 @@ namespace jpw_nld {
           MachinePrec_LMAlg=8,
       };
 
+      /// Action-codes passed by the Levenberg-Marquardt code to the
+      /// fit-function.
+      enum FitFnAction_t {
+          /**
+           * Tells the fit-function to compute the model being fit (or
+           * function being solved).
+           *
+           * The \a deltas argument to the fit-function should be filled in,
+           * while the \a fnJacob argument should be left unaltered.
+           */
+          ComputeFunction=1,
+          /// Tells the fit-function to compute the Jacobian matrix.
+          /**
+           * In this case, the \a deltas argument to the fit-function must be
+           * left unaltered, while the \a fnJacob argument will be filled in.
+           */
+          ComputeJacobian=2,
+      };
+
       /// Function pointer type for the fit function.
       /**
        * This is the function to minimize.  It should produce a vector of
@@ -255,45 +274,48 @@ namespace jpw_nld {
        * \c double
        * \n
        * An \a nn element vector of the variables (or for fitting to a model,
-       * the values of the parameters), to use to compute \a f_vec or \a
-       * f_jac.
+       * the values of the parameters), to use to compute \a deltas or \a
+       * fnJacob.
        *
-       * \param f_vec
+       * \param deltas
        * \c double
        * \n
        * An \a mm element vector.  Should be filled with the value of the \a
        * mm equations (or the model minus the data), computed using \a x.
        * \n
-       * (Each \a f_vec[j] must obviously be computed with \a x[j].)
+       * (Each \a deltas[j] must obviously be computed with \a x[j].)
        *
-       * \param f_jac
+       * \param fnJacob
        * \c double
        * \n
-       * An \a nn by \a ldfjac matrix, flattened into an array.  Should be
+       * An \a nn by \a ld_fnJac matrix, flattened into an array.  Should be
        * filled with the Jacobian of the \a mm equations, computed using \a
        * x.
        * \n
-       * The matrix has been flattened into <tt>f_jac[j + mm*i]</tt>, where
+       * The matrix has been flattened into <tt>fnJacob[j + mm*i]</tt>, where
        * <tt>i</tt> is the index representing a specific equation and
        * <tt>j</tt> represents the index used with the array, \a x.  Be sure
-       * to compute each of the \a mm elements of \a f_jac with the correct
+       * to compute each of the \a mm elements of \a fnJacob with the correct
        * corresponding element of \a x !
        *
-       * \param ldfjac
+       * \param ld_fnJac
        * \c integer
        * \n
-       * The long-dimension of \a f_jac.  Will be identical to the value
+       * The long-dimension of \a fnJacob.  Will be identical to the value
        * passed to the constructor argument, \a ndata_max.  Should therefore
        * be identical to \a mm (unless you're doing something weird).
        *
-       * \param iflag
+       * \param actionCode
        * \c integer
        * \n
-       * Control flag.  When set to \c 1, the function should compute \a f_vec
-       * and leave \a f_jac unaltered.  When set to \c 2, the function should
-       * leave \a f_vec alone and compute \a f_jac.  The function can set this
-       * to a negative number to terminate minimization, but shouldn't modify
-       * it otherwise.
+       * Control flag.  When set to \c 1, the function should compute \a
+       * deltas and leave \a fnJacob unaltered.  When set to \c 2, the
+       * function should leave \a deltas alone and compute \a fnJacob.  The
+       * function can set this to a negative number to terminate minimization,
+       * but shouldn't modify it otherwise.
+       * \n
+       * Consider using the FitFnAction_t \c enum to check the value of this
+       * argument, rather than the nondescript integer values.
        */
       typedef void (*fit_function_ptr_t)(fort_ivar_t, fort_ivar_t,
                                          fort_dvec_t, fort_dvec_t,
@@ -312,7 +334,7 @@ namespace jpw_nld {
        *
        * \param ffp
        * A function pointer to the fit function.  The fit function computes
-       * the model and its Jacobians.
+       * the model and its Jacobian.
        * [See \ref FitLM::fit_function_ptr_t "fit_function_ptr_t" for
        * details.]
        *
@@ -354,24 +376,26 @@ namespace jpw_nld {
        * will contain the best-fit values of the parameters.
        *
        * \param errtol
-       * The tolerance for \f$\chi^2\f$.  If the change in \f$\chi^2\f$
-       * from one iteration to the next is less than errtol, the algorithm
+       * The tolerance for \f$\chi^2\f$.  If the change in \f$\chi^2\f$ from
+       * one iteration to the next is less than this value, the algorithm
        * stops.
        *
        * \param ptol
        * The tolerance for the set of parameters.  If the magnitude of the
-       * parameter vector changes by less than ptol, the algorithm stops.
+       * parameter vector changes by less than this value, the algorithm
+       * stops.
        *
        * \param factor
        * The initial maximum step size.  A typical value is in the range
-       * [0.1,100.0].  If factor==0, a value of factor=100.0 is used instead.
+       * [0.1,&nbsp;100.0].  If factor==0, a value of factor=100.0 is used
+       * instead.
        *
        * \param maxiter
-       * The maximum number of times that the algorithm recalculates
-       * \c f_vec [see \c fit_function_ptr_t] before stopping.  Not really
-       * the number of iteration, but close enough.  If the initial value of
-       * \c maxiter==0, a value of <tt>maxiter=100*(<em>ndata_max</em>+1)</tt>
-       * is used.
+       * The maximum number of times that the algorithm recalculates \c deltas
+       * [see \c fit_function_ptr_t] before stopping.  Not really the number
+       * of iteration, but close enough.  If the initial value of \c
+       * maxiter==0, a value of <tt>maxiter=100*(<em>ndata_max</em>+1)</tt> is
+       * used.
        *
        * \returns The error codes, which are the same that the FORTRAN
        * routine, \c lmder_(), returns in its \c info parameter.
@@ -382,21 +406,20 @@ namespace jpw_nld {
 
       /// Compute \f$\chi^2\f$ for the last run of \c operator().
       /**
-       * Equivalent to running \c jpw_math::chiSquared() on \c
-       * f_vec().
+       * Equivalent to running \c jpw_math::chiSquared() on \c deltas().
        */
       double chiSquared() const {
-          return jpw_math::chiSquared<dvector_t>(m__f_vec);
+          return jpw_math::chiSquared<dvector_t>(m__deltas);
       }
 
-      /// Accessor function for the final value of f_vec.
+      /// Accessor function for the final value of \c deltas.
       /**
        * \see fit_function_ptr_t
        */
-      const dvector_t& f_vec() const
-      { return m__f_vec; }  // FIXME::Rename this fn.
+      const dvector_t& deltas() const
+      { return m__deltas; }
 
-      /// Accessor function for the f_jac.
+      /// Accessor function for the Jacobian.
       /**
        * Note that it doesn't return the actual Jacobian (which is fed to the
        * FORTRAN routine as a flat vector), but calls \c Matrix::swap() on an
@@ -405,13 +428,13 @@ namespace jpw_nld {
        *
        * \see fit_function_ptr_t
        */
-      const dmatrix_t& f_jac() {  // FIXME::Rename this fn.
+      const dmatrix_t& jacobian() {
           // Only call 'swap()' if we've run the LM-algorithm since the last
           // call to this fn.
-          if(m__jac_requiresUpdate) {
-              m__f_jac_out.swap(m__f_jac_flat);
+          if(m__jacobOut_requiresUpdate) {
+              m__jacobOut.swap(m__jacobFlat);
           }
-          return m__f_jac_out;
+          return m__jacobOut;
       }
 
   private:
@@ -420,7 +443,7 @@ namespace jpw_nld {
       int m__ndataMax;
       int m__nparams;
   private:
-      bool m__jac_requiresUpdate;
+      bool m__jacobOut_requiresUpdate;
       int m__wrksz;
       fort_ivec_t m__ipvt;
       fort_dvec_t m__workbuf;
@@ -431,9 +454,9 @@ namespace jpw_nld {
       fort_dvec_t m__wa3;
       fort_dvec_t m__wa4;
   protected:
-      dvector_t m__f_jac_flat;
-      dvector_t m__f_vec;
-      dmatrix_t m__f_jac_out;
+      dvector_t m__jacobFlat;
+      dvector_t m__deltas;
+      dmatrix_t m__jacobOut;
   };
 
 

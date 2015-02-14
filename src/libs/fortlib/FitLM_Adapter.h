@@ -225,8 +225,7 @@ namespace jpw_nld {
   * \qquad\forall\; i\in\left[0,\, nParams\right)
   * \quad j\in\left[0,\, nData\right)
   * \f]
-  * This gives you a <em><tt>nParams</tt></em>-by-<em><tt>nData</tt></em>
-  * matrix.
+  * This gives you a \a nParams by \a nData matrix.
   *
   * The fit-functor will also be computing the Jacobian.  Here are the steps
   * that it should perform:
@@ -267,10 +266,12 @@ namespace jpw_nld {
   *       - In fact, you may have differentiated away the
   *         <tt>i_param<sup>th</sup></tt> parameter.
   *   - Set:\code
-  *       fnJacob[j + nData*i_param] = df_dpi_x_j
+  *       fnJacob[j + ld_fnJac*i_param] = df_dpi_x_j
   *     \endcode
-  *     Note the indexing used.  Remember that \c fnJacob has been
-  *     \em flattened from a 2-D matrix into a 1-D sequence.
+  *     Note the indexing used.  Remember that \c fnJacob has been \em
+  *     flattened from a \a nParams by \a ld_fnJac 2-D matrix into a 1-D
+  *     array.  (While \a ld_fnJac might equal \a nData, you shouldn't count
+  *     on that.)
   *     \n
   * - Repeat for all '<tt>j</tt>'.
   *
@@ -293,7 +294,8 @@ namespace jpw_nld {
       typedef FitLM_Adapter<F,D> Self_t;
 
       /**
-       * Wrapper Function, passed to \c FitLM::operator()().
+       * Wrapper Function, passed to \c FitLM::operator()().  You will never
+       * call this function directly.
        *
        * This \c static member function calls the FitFunctor_t and Data_t
        * objects that were passed to the last FitLM_Adapter::operator()()
@@ -333,9 +335,9 @@ namespace jpw_nld {
        * non-re-entrant.
        */
       static void fit_function_adapter(fort_ivar_t neq, fort_ivar_t nvar,
-                                       fort_dvec_t xvec,
-                                       fort_dvec_t fvec, fort_dmat_t fjac,
-                                       fort_ivar_t ldfjac, fort_ivar_t iflag)
+                                       fort_dvec_t xvec, fort_dvec_t fvec,
+                                       fort_dmat_t fjac, fort_ivar_t ldfjac,
+                                       fort_ivar_t iflag)
       {
           // FIXME:  Look into removing '*neq'.  Let the functor do any
           // optimizing away of calls to m__fitData.size()
@@ -365,8 +367,8 @@ namespace jpw_nld {
       ~FitLM_Adapter() {}
 
       using FitLM::chiSquared;
-      using FitLM::f_vec;  // FIXME: To be renamed...
-      using FitLM::f_jac;  // FIXME: To be renamed...
+      using FitLM::deltas;
+      using FitLM::jacobian;
 
       /// Perform a nonlinear least-squares fit.
       /**
@@ -385,23 +387,33 @@ namespace jpw_nld {
        * duration of this function call.  Will be passed to \a theModel
        * by the LM algorithm.
        *
-       * \param params
-       * The vector of tunable parameters.  Element order is never changed.
-       * I.e. - \a theModel will receive it in the same order that you pass it
-       * here.
+       * \param params0
+       * The vector of initial values of the tunable parameters.  Element
+       * order is never changed.
+       * (I.e. - \a theModel will receive it in the same order that you pass
+       * it here.)
        *
        * \param errtol
+       * The tolerance for \f$\chi^2\f$, the sum of the least-squares.  If the
+       * change in \f$\chi^2\f$ from one iteration to the next is less than \a
+       * errtol, the algorithm stops.
        *
        * \param ptol
+       * The tolerance for the set of parameters.  Once the (magnitude of the)
+       * parameter vector changes by less than this quantity, the algorithm
+       * stops.
        *
        * \param factor
+       * The initial maximum step size.  A typical value is in the range
+       * [0.1,&nbsp;100.0].  If factor==0, a value of factor=100.0 is used
+       * instead.
        *
        * \param maxiter
        * The maximum number of times that the algorithm calls \a theModel to
        * recompute the error-vector
        */
       FitStatus_t operator()(FitFunctor_t& theModel,
-                             const Data_t& theData, dvector_t& params,
+                             const Data_t& theData, dvector_t& params0,
                              double errtol, double ptol,
                              int maxiter, double factor)
       {
@@ -409,7 +421,7 @@ namespace jpw_nld {
           m__fitData = &theData;
           m__activeThis = this;
           FitStatus_t retval
-              = this->FitLM::operator()(theData.size(), params, errtol,
+              = this->FitLM::operator()(theData.size(), params0, errtol,
                                         ptol, maxiter, factor);
           m__activeThis = 0;
           m__fitData = 0;
