@@ -146,10 +146,10 @@ Public Member Functions</h2>
 <li><a class="el" href="classjpw__nld_1_1measure_1_1BarrierModel.html#a92bb7f7a64a219c478741c809924734d">BarrierModel</a> (<a class="el" href="namespacejpw__nld.html#afd02b1952a0403b0ef53ae24eed8353f">tslen_t</a> nData)
 <dl class="el"><dd class="mdescRight">Default Constructor.  <a href="#a92bb7f7a64a219c478741c809924734d"></a><br/></dl><li><a class="el" href="namespacejpw__nld.html#afd02b1952a0403b0ef53ae24eed8353f">tslen_t</a> <a class="el" href="classjpw__nld_1_1measure_1_1BarrierModel.html#a9f50818d9d9cd8bb1bf246702d1a0e64">callcount</a> () const 
 <dl class="el"><dd class="mdescRight">Accessor fn. for the # of times the model was called.  <a href="#a9f50818d9d9cd8bb1bf246702d1a0e64"></a><br/></dl><li>void <a class="el" href="classjpw__nld_1_1measure_1_1BarrierModel.html#ac8c5a6d25e917f52dac2ee5481ddb55f">clearCallcount</a> ()
-<dl class="el"><dd class="mdescRight">Resets to zero the counter that tracks the # of times the model was called.  <a href="#ac8c5a6d25e917f52dac2ee5481ddb55f"></a><br/></dl><li>void <a class="el" href="classjpw__nld_1_1measure_1_1BarrierModel.html#a0aa4e13408a7063585bc558edcb8d77e">operator()</a> (const <a class="el" href="classjpw__nld_1_1measure_1_1PersistenceMap.html">PersistenceMap</a> &amp;theMap, dvector_t &amp;fitParams, dvector_t &amp;fvec)
-<dl class="el"><dd class="mdescRight">The model, C++-style.  <a href="#a0aa4e13408a7063585bc558edcb8d77e"></a><br/></dl><li>double <a class="el" href="classjpw__nld_1_1measure_1_1BarrierModel.html#a886594eded13a4463b539dcb941f5fda">chiSquared</a> (const <a class="el" href="classjpw__nld_1_1measure_1_1PersistenceMap.html">PersistenceMap</a> &amp;theMap, dvector_t &amp;fitParams)
-<dl class="el"><dd class="mdescRight">Compute <code>Chi^2</code> using <em>theMap</em> and evaluating the model at <em>fitParams</em>.  <a href="#a886594eded13a4463b539dcb941f5fda"></a><br/></dl><li>void <a class="el" href="classjpw__nld_1_1measure_1_1BarrierModel.html#a084f1b55f411db042af223e0e80a9b93">operator()</a> (int, const <a class="el" href="classjpw__nld_1_1measure_1_1PersistenceMap.html">PersistenceMap</a> &amp;theMap, int, <a class="el" href="namespacejpw__nld_1_1fortlib.html#ab548b8671e5358ea35e5131e23dfb479">fortlib::fort_dvec_t</a> fitParams, <a class="el" href="namespacejpw__nld_1_1fortlib.html#ab548b8671e5358ea35e5131e23dfb479">fortlib::fort_dvec_t</a> fvec, <a class="el" href="namespacejpw__nld_1_1fortlib.html#a71e1364077d954bc37620f7f5732525b">fortlib::fort_dmat_t</a> fjac, int, int iflag)
-<dl class="el"><dd class="mdescRight">The model, in the form required by <code>FitLM_Adapter</code>.  <a href="#a084f1b55f411db042af223e0e80a9b93"></a><br/></dl></ul>
+<dl class="el"><dd class="mdescRight">Resets to zero the counter that tracks the # of times the model was called.  <a href="#ac8c5a6d25e917f52dac2ee5481ddb55f"></a><br/></dl><li>void <a class="el" href="classjpw__nld_1_1measure_1_1BarrierModel.html#a7386b5483fed0f24d2d2e034d76407bc">operator()</a> (const <a class="el" href="classjpw__nld_1_1measure_1_1PersistenceMap.html">PersistenceMap</a> &amp;theMap, dvector_t &amp;fitParams, dvector_t &amp;deltas)
+<dl class="el"><dd class="mdescRight">The model, C++-style.  <a href="#a7386b5483fed0f24d2d2e034d76407bc"></a><br/></dl><li>double <a class="el" href="classjpw__nld_1_1measure_1_1BarrierModel.html#a886594eded13a4463b539dcb941f5fda">chiSquared</a> (const <a class="el" href="classjpw__nld_1_1measure_1_1PersistenceMap.html">PersistenceMap</a> &amp;theMap, dvector_t &amp;fitParams)
+<dl class="el"><dd class="mdescRight">Compute <code>Chi^2</code> using <em>theMap</em> and evaluating the model at <em>fitParams</em>.  <a href="#a886594eded13a4463b539dcb941f5fda"></a><br/></dl><li>void <a class="el" href="classjpw__nld_1_1measure_1_1BarrierModel.html#af828bc699cede19026334ec9e9aee88d">operator()</a> (int, const <a class="el" href="classjpw__nld_1_1measure_1_1PersistenceMap.html">PersistenceMap</a> &amp;theMap, int, <a class="el" href="namespacejpw__nld_1_1fortlib.html#ab548b8671e5358ea35e5131e23dfb479">fortlib::fort_dvec_t</a> fitParams, <a class="el" href="namespacejpw__nld_1_1fortlib.html#ab548b8671e5358ea35e5131e23dfb479">fortlib::fort_dvec_t</a> deltas, <a class="el" href="namespacejpw__nld_1_1fortlib.html#a71e1364077d954bc37620f7f5732525b">fortlib::fort_dmat_t</a> fnJacob, int, int actionCode)
+<dl class="el"><dd class="mdescRight">The model, in the form required by <code>FitLM_Adapter</code>.  <a href="#af828bc699cede19026334ec9e9aee88d"></a><br/></dl></ul>
 <h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2>
 <ul>
@@ -173,8 +173,8 @@ Static Public Attributes</h2>
 <h2><a name="pro-methods"></a>
 Protected Member Functions</h2>
 <ul>
-<li>template&lt;typename VT &gt; void <a class="el" href="classjpw__nld_1_1measure_1_1BarrierModel.html#a65a6375d210752e6c68747943fdc0790">calculate</a> (const <a class="el" href="classjpw__nld_1_1measure_1_1PersistenceMap.html">PersistenceMap</a> &amp;theMap, VT &amp;fitParams, VT &amp;fvec, VT &amp;fjac, int iflag)
-<dl class="el"><dd class="mdescRight">The function that actually implements the model.  <a href="#a65a6375d210752e6c68747943fdc0790"></a><br/></dl></ul>
+<li>template&lt;typename VT &gt; void <a class="el" href="classjpw__nld_1_1measure_1_1BarrierModel.html#acdb16742d2fdf0ecc23bd1d2efc4e338">calculate</a> (const <a class="el" href="classjpw__nld_1_1measure_1_1PersistenceMap.html">PersistenceMap</a> &amp;theMap, VT &amp;fitParams, VT &amp;deltas, VT &amp;fnJacob, int actionCode)
+<dl class="el"><dd class="mdescRight">The function that actually implements the model.  <a href="#acdb16742d2fdf0ecc23bd1d2efc4e338"></a><br/></dl></ul>
 <h2><a name="pro-attribs"></a>
 Protected Attributes</h2>
 <ul>
@@ -188,8 +188,8 @@ class jpw_nld::measure::BarrierModel&lt; MODEL_POLICY &gt;</h3>
 
 <p>Core class for all of the variants of the barrier model. </p>
 <p>Each of the 3 valid variants is "activated" using the template parameter, <code>MODEL_POLICY</code>, which <em>MUST</em> be one of the 3 classes defined in the <code><a class="el" href="namespacejpw__nld_1_1measure_1_1policy.html" title="Policy classes for use with the BarrierModel template class.">measure::policy</a></code> namespace.</p>
-<p>From a C++ standpoint, the member function <a class="el" href="classjpw__nld_1_1measure_1_1BarrierModel.html#a65a6375d210752e6c68747943fdc0790" title="The function that actually implements the model.">BarrierModel::calculate()</a> has 3 different implementations, one for each of the valid policy classes. Furthermore, to allow <code>FitLM</code> to use this class without resorting to nasty, nonportable tricks mucking about with pointers, <a class="el" href="classjpw__nld_1_1measure_1_1BarrierModel.html#a65a6375d210752e6c68747943fdc0790" title="The function that actually implements the model.">BarrierModel::calculate()</a> is, itself, a template function. See its documentation for more details.</p>
-<p>Most of the member functions are explicitly instantiated within the library, so using <code>-lmeasure</code> when linking is sufficient. The member functions <code><a class="el" href="classjpw__nld_1_1measure_1_1BarrierModel.html#ad881762e37c63c17e55a5344cd280885" title="Fill params with &quot;constrained&quot; random values.">randomParams()</a></code> and <code><a class="el" href="classjpw__nld_1_1measure_1_1BarrierModel.html#a6912cc1ea4ffe002d822bd62ee030fb3" title="Restrict params according to their natural ranges.">limitParams()</a></code>, however, do not have static linkage. There is also a private template function, <code><a class="el" href="classjpw__nld_1_1measure_1_1BarrierModel.html#a65a6375d210752e6c68747943fdc0790" title="The function that actually implements the model.">calculate()</a></code>, used by many of the other member functions. Because of this, if you intend to call <em>any</em> functions in this class, you must add <code>#include&#160;"details/BarrierModels.tcc"</code> to your source code. </p>
+<p>From a C++ standpoint, the member function <a class="el" href="classjpw__nld_1_1measure_1_1BarrierModel.html#acdb16742d2fdf0ecc23bd1d2efc4e338" title="The function that actually implements the model.">BarrierModel::calculate()</a> has 3 different implementations, one for each of the valid policy classes. Furthermore, to allow <code>FitLM</code> to use this class without resorting to nasty, nonportable tricks mucking about with pointers, <a class="el" href="classjpw__nld_1_1measure_1_1BarrierModel.html#acdb16742d2fdf0ecc23bd1d2efc4e338" title="The function that actually implements the model.">BarrierModel::calculate()</a> is, itself, a template function. See its documentation for more details.</p>
+<p>Most of the member functions are explicitly instantiated within the library, so using <code>-lmeasure</code> when linking is sufficient. The member functions <code><a class="el" href="classjpw__nld_1_1measure_1_1BarrierModel.html#ad881762e37c63c17e55a5344cd280885" title="Fill params with &quot;constrained&quot; random values.">randomParams()</a></code> and <code><a class="el" href="classjpw__nld_1_1measure_1_1BarrierModel.html#a6912cc1ea4ffe002d822bd62ee030fb3" title="Restrict params according to their natural ranges.">limitParams()</a></code>, however, do not have static linkage. There is also a private template function, <code><a class="el" href="classjpw__nld_1_1measure_1_1BarrierModel.html#acdb16742d2fdf0ecc23bd1d2efc4e338" title="The function that actually implements the model.">calculate()</a></code>, used by many of the other member functions. Because of this, if you intend to call <em>any</em> functions in this class, you must add <code>#include&#160;"details/BarrierModels.tcc"</code> to your source code. </p>
 
 <p>Definition at line <a class="el" href="BarrierModels_8h_source.html#l00102">102</a> of file <a class="el" href="BarrierModels_8h_source.html">BarrierModels.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
@@ -231,12 +231,12 @@ class jpw_nld::measure::BarrierModel&lt; MODEL_POLICY &gt;</h3>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a65a6375d210752e6c68747943fdc0790"></a><!-- doxytag: member="jpw_nld::measure::BarrierModel::calculate" ref="a65a6375d210752e6c68747943fdc0790" args="(const PersistenceMap &amp;theMap, VT &amp;fitParams, VT &amp;fvec, VT &amp;fjac, int iflag)" -->
+<a class="anchor" id="acdb16742d2fdf0ecc23bd1d2efc4e338"></a><!-- doxytag: member="jpw_nld::measure::BarrierModel::calculate" ref="acdb16742d2fdf0ecc23bd1d2efc4e338" args="(const PersistenceMap &amp;theMap, VT &amp;fitParams, VT &amp;deltas, VT &amp;fnJacob, int actionCode)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classjpw__nld_1_1measure_1_1BarrierModel.html#a65a6375d210752e6c68747943fdc0790">calculate</a> </td>
+          <td class="memname">void <a class="el" href="classjpw__nld_1_1measure_1_1BarrierModel.html#acdb16742d2fdf0ecc23bd1d2efc4e338">calculate</a> </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classjpw__nld_1_1measure_1_1PersistenceMap.html">PersistenceMap</a> &amp;&#160;</td>
           <td class="paramname"><em>theMap</em>, </td>
@@ -251,19 +251,19 @@ class jpw_nld::measure::BarrierModel&lt; MODEL_POLICY &gt;</h3>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">VT &amp;&#160;</td>
-          <td class="paramname"><em>fvec</em>, </td>
+          <td class="paramname"><em>deltas</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">VT &amp;&#160;</td>
-          <td class="paramname"><em>fjac</em>, </td>
+          <td class="paramname"><em>fnJacob</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>iflag</em>&#160;</td>
+          <td class="paramname"><em>actionCode</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -326,7 +326,7 @@ class jpw_nld::measure::BarrierModel&lt; MODEL_POLICY &gt;</h3>
 <div class="memdoc">
 
 <p>Compute <code>Chi^2</code> using <em>theMap</em> and evaluating the model at <em>fitParams</em>. </p>
-<p>Equivalent to running <code><a class="el" href="namespacejpw__math.html#a152e2773ecb5ffe95d340b4ce92a8eaf" title="Compute  from fvec.">jpw_math::chiSquared()</a></code> on the <code>fvec</code> you passed to a call to <code>operator()</code>. </p>
+<p>Equivalent to running <code><a class="el" href="namespacejpw__math.html#a152e2773ecb5ffe95d340b4ce92a8eaf" title="Compute  from fvec.">jpw_math::chiSquared()</a></code> on the <code>deltas</code> you passed to a call to <code>operator()</code>. </p>
 
 <p>Definition at line <a class="el" href="BarrierModels_8h_source.html#l00140">140</a> of file <a class="el" href="BarrierModels_8h_source.html">BarrierModels.h</a>.</p>
 
@@ -369,7 +369,7 @@ class jpw_nld::measure::BarrierModel&lt; MODEL_POLICY &gt;</h3>
 
 <p>The first derivative of <a class="el" href="classjpw__nld_1_1measure_1_1BarrierModel.html#aab49319e2753dacf69a489704b2973e5" title="The shape.">shape_h()</a> </p>
 
-<p>Definition at line <a class="el" href="BarrierModels_8h_source.html#l00188">188</a> of file <a class="el" href="BarrierModels_8h_source.html">BarrierModels.h</a>.</p>
+<p>Definition at line <a class="el" href="BarrierModels_8h_source.html#l00189">189</a> of file <a class="el" href="BarrierModels_8h_source.html">BarrierModels.h</a>.</p>
 
 </div>
 </div>
@@ -390,7 +390,7 @@ class jpw_nld::measure::BarrierModel&lt; MODEL_POLICY &gt;</h3>
 
 <p>Inverse operation to <code><a class="el" href="classjpw__nld_1_1measure_1_1BarrierModel.html#aff93e357fc5539cacb49ab43f02234b4" title="Given the unscaled barrier amplitude, returns its scaled equivalent.">scale_ampl()</a></code>. </p>
 
-<p>Definition at line <a class="el" href="BarrierModels_8h_source.html#l00200">200</a> of file <a class="el" href="BarrierModels_8h_source.html">BarrierModels.h</a>.</p>
+<p>Definition at line <a class="el" href="BarrierModels_8h_source.html#l00201">201</a> of file <a class="el" href="BarrierModels_8h_source.html">BarrierModels.h</a>.</p>
 
 </div>
 </div>
@@ -411,7 +411,7 @@ class jpw_nld::measure::BarrierModel&lt; MODEL_POLICY &gt;</h3>
 
 <p>Inverse operation to <code><a class="el" href="classjpw__nld_1_1measure_1_1BarrierModel.html#a4681aeaee0a2748ad75bc5b4d7a01c0d" title="Given the unscaled decay time, returns its scaled equivalent.">scale_tau()</a></code>. </p>
 
-<p>Definition at line <a class="el" href="BarrierModels_8h_source.html#l00220">220</a> of file <a class="el" href="BarrierModels_8h_source.html">BarrierModels.h</a>.</p>
+<p>Definition at line <a class="el" href="BarrierModels_8h_source.html#l00221">221</a> of file <a class="el" href="BarrierModels_8h_source.html">BarrierModels.h</a>.</p>
 
 </div>
 </div>
@@ -432,7 +432,7 @@ class jpw_nld::measure::BarrierModel&lt; MODEL_POLICY &gt;</h3>
 
 <p>Inverse operation to <code><a class="el" href="classjpw__nld_1_1measure_1_1BarrierModel.html#a5e2e23b3a1827b4cfee501ac923480a9" title="Given the unscaled barrier width, returns its scaled equivalent.">scale_width()</a></code>. </p>
 
-<p>Definition at line <a class="el" href="BarrierModels_8h_source.html#l00210">210</a> of file <a class="el" href="BarrierModels_8h_source.html">BarrierModels.h</a>.</p>
+<p>Definition at line <a class="el" href="BarrierModels_8h_source.html#l00211">211</a> of file <a class="el" href="BarrierModels_8h_source.html">BarrierModels.h</a>.</p>
 
 </div>
 </div>
@@ -457,7 +457,7 @@ class jpw_nld::measure::BarrierModel&lt; MODEL_POLICY &gt;</h3>
 
 </div>
 </div>
-<a class="anchor" id="a0aa4e13408a7063585bc558edcb8d77e"></a><!-- doxytag: member="jpw_nld::measure::BarrierModel::operator()" ref="a0aa4e13408a7063585bc558edcb8d77e" args="(const PersistenceMap &amp;theMap, dvector_t &amp;fitParams, dvector_t &amp;fvec)" -->
+<a class="anchor" id="a7386b5483fed0f24d2d2e034d76407bc"></a><!-- doxytag: member="jpw_nld::measure::BarrierModel::operator()" ref="a7386b5483fed0f24d2d2e034d76407bc" args="(const PersistenceMap &amp;theMap, dvector_t &amp;fitParams, dvector_t &amp;deltas)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -477,7 +477,7 @@ class jpw_nld::measure::BarrierModel&lt; MODEL_POLICY &gt;</h3>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">dvector_t &amp;&#160;</td>
-          <td class="paramname"><em>fvec</em>&#160;</td>
+          <td class="paramname"><em>deltas</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -494,7 +494,7 @@ class jpw_nld::measure::BarrierModel&lt; MODEL_POLICY &gt;</h3>
 
 </div>
 </div>
-<a class="anchor" id="a084f1b55f411db042af223e0e80a9b93"></a><!-- doxytag: member="jpw_nld::measure::BarrierModel::operator()" ref="a084f1b55f411db042af223e0e80a9b93" args="(int, const PersistenceMap &amp;theMap, int, fortlib::fort_dvec_t fitParams, fortlib::fort_dvec_t fvec, fortlib::fort_dmat_t fjac, int, int iflag)" -->
+<a class="anchor" id="af828bc699cede19026334ec9e9aee88d"></a><!-- doxytag: member="jpw_nld::measure::BarrierModel::operator()" ref="af828bc699cede19026334ec9e9aee88d" args="(int, const PersistenceMap &amp;theMap, int, fortlib::fort_dvec_t fitParams, fortlib::fort_dvec_t deltas, fortlib::fort_dmat_t fnJacob, int, int actionCode)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -526,13 +526,13 @@ class jpw_nld::measure::BarrierModel&lt; MODEL_POLICY &gt;</h3>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="namespacejpw__nld_1_1fortlib.html#ab548b8671e5358ea35e5131e23dfb479">fortlib::fort_dvec_t</a>&#160;</td>
-          <td class="paramname"><em>fvec</em>, </td>
+          <td class="paramname"><em>deltas</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="namespacejpw__nld_1_1fortlib.html#a71e1364077d954bc37620f7f5732525b">fortlib::fort_dmat_t</a>&#160;</td>
-          <td class="paramname"><em>fjac</em>, </td>
+          <td class="paramname"><em>fnJacob</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -544,7 +544,7 @@ class jpw_nld::measure::BarrierModel&lt; MODEL_POLICY &gt;</h3>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>iflag</em>&#160;</td>
+          <td class="paramname"><em>actionCode</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -600,7 +600,7 @@ class jpw_nld::measure::BarrierModel&lt; MODEL_POLICY &gt;</h3>
 
 <p>Given the unscaled barrier amplitude, returns its scaled equivalent. </p>
 
-<p>Definition at line <a class="el" href="BarrierModels_8h_source.html#l00195">195</a> of file <a class="el" href="BarrierModels_8h_source.html">BarrierModels.h</a>.</p>
+<p>Definition at line <a class="el" href="BarrierModels_8h_source.html#l00196">196</a> of file <a class="el" href="BarrierModels_8h_source.html">BarrierModels.h</a>.</p>
 
 </div>
 </div>
@@ -621,7 +621,7 @@ class jpw_nld::measure::BarrierModel&lt; MODEL_POLICY &gt;</h3>
 
 <p>Given the unscaled decay time, returns its scaled equivalent. </p>
 
-<p>Definition at line <a class="el" href="BarrierModels_8h_source.html#l00215">215</a> of file <a class="el" href="BarrierModels_8h_source.html">BarrierModels.h</a>.</p>
+<p>Definition at line <a class="el" href="BarrierModels_8h_source.html#l00216">216</a> of file <a class="el" href="BarrierModels_8h_source.html">BarrierModels.h</a>.</p>
 
 </div>
 </div>
@@ -642,7 +642,7 @@ class jpw_nld::measure::BarrierModel&lt; MODEL_POLICY &gt;</h3>
 
 <p>Given the unscaled barrier width, returns its scaled equivalent. </p>
 
-<p>Definition at line <a class="el" href="BarrierModels_8h_source.html#l00205">205</a> of file <a class="el" href="BarrierModels_8h_source.html">BarrierModels.h</a>.</p>
+<p>Definition at line <a class="el" href="BarrierModels_8h_source.html#l00206">206</a> of file <a class="el" href="BarrierModels_8h_source.html">BarrierModels.h</a>.</p>
 
 </div>
 </div>
@@ -663,7 +663,7 @@ class jpw_nld::measure::BarrierModel&lt; MODEL_POLICY &gt;</h3>
 
 <p>The shape. </p>
 
-<p>Definition at line <a class="el" href="BarrierModels_8h_source.html#l00183">183</a> of file <a class="el" href="BarrierModels_8h_source.html">BarrierModels.h</a>.</p>
+<p>Definition at line <a class="el" href="BarrierModels_8h_source.html#l00184">184</a> of file <a class="el" href="BarrierModels_8h_source.html">BarrierModels.h</a>.</p>
 
 </div>
 </div>
@@ -694,7 +694,7 @@ class jpw_nld::measure::BarrierModel&lt; MODEL_POLICY &gt;</h3>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="BarrierModels_8h_source.html#l00225">225</a> of file <a class="el" href="BarrierModels_8h_source.html">BarrierModels.h</a>.</p>
+<p>Definition at line <a class="el" href="BarrierModels_8h_source.html#l00226">226</a> of file <a class="el" href="BarrierModels_8h_source.html">BarrierModels.h</a>.</p>
 
 <p>Referenced by <a class="el" href="BarrierModels_8h_source.html#l00117">BarrierModel&lt; F_POL_T &gt;::callcount()</a>, and <a class="el" href="BarrierModels_8h_source.html#l00123">BarrierModel&lt; F_POL_T &gt;::clearCallcount()</a>.</p>
 
@@ -711,7 +711,7 @@ class jpw_nld::measure::BarrierModel&lt; MODEL_POLICY &gt;</h3>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="BarrierModels_8h_source.html#l00227">227</a> of file <a class="el" href="BarrierModels_8h_source.html">BarrierModels.h</a>.</p>
+<p>Definition at line <a class="el" href="BarrierModels_8h_source.html#l00228">228</a> of file <a class="el" href="BarrierModels_8h_source.html">BarrierModels.h</a>.</p>
 
 <p>Referenced by <a class="el" href="BarrierModels_8h_source.html#l00140">BarrierModel&lt; F_POL_T &gt;::chiSquared()</a>.</p>
 
@@ -728,7 +728,7 @@ class jpw_nld::measure::BarrierModel&lt; MODEL_POLICY &gt;</h3>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="BarrierModels_8h_source.html#l00226">226</a> of file <a class="el" href="BarrierModels_8h_source.html">BarrierModels.h</a>.</p>
+<p>Definition at line <a class="el" href="BarrierModels_8h_source.html#l00227">227</a> of file <a class="el" href="BarrierModels_8h_source.html">BarrierModels.h</a>.</p>
 
 <p>Referenced by <a class="el" href="BarrierModels_8h_source.html#l00140">BarrierModel&lt; F_POL_T &gt;::chiSquared()</a>, and <a class="el" href="BarrierModels_8h_source.html#l00128">BarrierModel&lt; F_POL_T &gt;::operator()()</a>.</p>
 
@@ -774,7 +774,7 @@ class jpw_nld::measure::BarrierModel&lt; MODEL_POLICY &gt;</h3>
       <li class="navelem"><a class="el" href="namespacejpw__nld_1_1measure.html">measure</a>      </li>
       <li class="navelem"><a class="el" href="classjpw__nld_1_1measure_1_1BarrierModel.html">BarrierModel</a>      </li>
 
-    <li class="footer">Generated on Fri Feb 13 2015 16:23:54 for research-nld by
+    <li class="footer">Generated on Fri Feb 13 2015 21:02:28 for research-nld by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

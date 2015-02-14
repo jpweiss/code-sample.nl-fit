@@ -3,6 +3,7 @@ var searchData=
   ['data',['data',['../classjpw__nld_1_1measure_1_1PersistenceMap.html#a608add04b3094986977f72e50f443534',1,'jpw_nld::measure::PersistenceMap']]],
   ['data_5ft',['Data_t',['../classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#a132750551a38da2b73a2c03653dbf47d',1,'jpw_nld::fortlib::FitLM_Adapter::Data_t()'],['../classjpw__nld_1_1measure_1_1FitLM__BarrierAdapter.html#a1ac0482c508b11e73f466740ee5e0a49',1,'jpw_nld::measure::FitLM_BarrierAdapter::Data_t()']]],
   ['dbl_5fprec',['DBL_PREC',['../namespacejpw__math.html#a17d46bd81d15584bebaac89772bb753f',1,'jpw_math']]],
+  ['deltas',['deltas',['../classjpw__nld_1_1fortlib_1_1FitLM.html#ab4816cce298e223c2908239c838323ba',1,'jpw_nld::fortlib::FitLM']]],
   ['deriv_5fh',['deriv_h',['../classjpw__nld_1_1measure_1_1BarrierModel.html#a7a845c2c7c000fa7104c11320270efd0',1,'jpw_nld::measure::BarrierModel']]],
   ['descale_5fampl',['descale_ampl',['../classjpw__nld_1_1measure_1_1BarrierModel.html#a9a461c17b9c58d8498c0d9c1f3dc7137',1,'jpw_nld::measure::BarrierModel']]],
   ['descale_5ftau',['descale_tau',['../classjpw__nld_1_1measure_1_1BarrierModel.html#a576740a8aeb7c2958379af2f76c615cd',1,'jpw_nld::measure::BarrierModel']]],

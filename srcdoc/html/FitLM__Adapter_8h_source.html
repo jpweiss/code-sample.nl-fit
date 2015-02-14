@@ -133,86 +133,86 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00030"></a>00030 
 <a name="l00031"></a>00031 
 <a name="l00032"></a>00032  <span class="comment">// Class FitLM_Adapter</span>
-<a name="l00287"></a>00287 <span class="comment"></span>  <span class="keyword">template</span>&lt;<span class="keyword">class</span> F, <span class="keyword">class</span> D&gt;
-<a name="l00288"></a><a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html">00288</a>   <span class="keyword">class </span><a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html" title="Perform a nonlinear least-squares fit by passing a functor to the Levenberg-Marquardt algorithm...">FitLM_Adapter</a> : <span class="keyword">protected</span> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html" title="Wrapper around the FORTRAN function, lmder_().">FitLM</a>
-<a name="l00289"></a>00289   {
-<a name="l00290"></a>00290   <span class="keyword">protected</span>:
-<a name="l00291"></a><a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#a3e7bc787aa51c03c4c7ad93d9114e788">00291</a>       <span class="keyword">typedef</span> F <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#a3e7bc787aa51c03c4c7ad93d9114e788">FitFunctor_t</a>;
-<a name="l00292"></a><a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#a132750551a38da2b73a2c03653dbf47d">00292</a>       <span class="keyword">typedef</span> D <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#a132750551a38da2b73a2c03653dbf47d">Data_t</a>;
-<a name="l00293"></a><a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#aebbff9bf8df23637be17d96a7cfd46e4">00293</a>       <span class="keyword">typedef</span> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html" title="Perform a nonlinear least-squares fit by passing a functor to the Levenberg-Marquardt algorithm...">FitLM_Adapter&lt;F,D&gt;</a> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#aebbff9bf8df23637be17d96a7cfd46e4">Self_t</a>;
-<a name="l00294"></a>00294 
-<a name="l00335"></a><a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#af19b48bb14dd26cf8c40c5710ab9117d">00335</a>       <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#af19b48bb14dd26cf8c40c5710ab9117d" title="Wrapper Function, passed to FitLM::operator()().">fit_function_adapter</a>(<a class="code" href="namespacejpw__nld_1_1fortlib.html#a56901cc4dbebf83731bcfb5d58b8cf7e" title="FORTRAN integer scalar type.">fort_ivar_t</a> neq, <a class="code" href="namespacejpw__nld_1_1fortlib.html#a56901cc4dbebf83731bcfb5d58b8cf7e" title="FORTRAN integer scalar type.">fort_ivar_t</a> nvar,
-<a name="l00336"></a>00336                                        <a class="code" href="namespacejpw__nld_1_1fortlib.html#ab548b8671e5358ea35e5131e23dfb479" title="FORTRAN double-array type.">fort_dvec_t</a> xvec,
-<a name="l00337"></a>00337                                        <a class="code" href="namespacejpw__nld_1_1fortlib.html#ab548b8671e5358ea35e5131e23dfb479" title="FORTRAN double-array type.">fort_dvec_t</a> fvec, <a class="code" href="namespacejpw__nld_1_1fortlib.html#a71e1364077d954bc37620f7f5732525b" title="FORTRAN double-matrix type.">fort_dmat_t</a> fjac,
-<a name="l00338"></a>00338                                        <a class="code" href="namespacejpw__nld_1_1fortlib.html#a56901cc4dbebf83731bcfb5d58b8cf7e" title="FORTRAN integer scalar type.">fort_ivar_t</a> ldfjac, <a class="code" href="namespacejpw__nld_1_1fortlib.html#a56901cc4dbebf83731bcfb5d58b8cf7e" title="FORTRAN integer scalar type.">fort_ivar_t</a> iflag)
-<a name="l00339"></a>00339       {
-<a name="l00340"></a>00340           <span class="comment">// FIXME:  Look into removing &#39;*neq&#39;.  Let the functor do any</span>
-<a name="l00341"></a>00341           <span class="comment">// optimizing away of calls to m__fitData.size()</span>
-<a name="l00342"></a>00342 
-<a name="l00343"></a>00343           <span class="comment">// FIXME: What about &quot;wrapping&quot; xvec, fvec, (and possibly fjac) into</span>
-<a name="l00344"></a>00344           <span class="comment">// a lightweight array-like class?  &#39;std::array&#39; won&#39;t work, since</span>
-<a name="l00345"></a>00345           <span class="comment">// its size is compile-time.  And std::vector copies its elements</span>
-<a name="l00346"></a>00346           <span class="comment">// in&amp;out, so it&#39;s not suitable.</span>
-<a name="l00347"></a>00347           <span class="comment">// Hmmm...</span>
-<a name="l00348"></a>00348           <span class="comment">// ...perhaps a custom, STL-like adapter-class?</span>
-<a name="l00349"></a>00349           (*(m__activeThis-&gt;m__fitter))(*neq, *(m__activeThis-&gt;m__fitData),
-<a name="l00350"></a>00350                                         *nvar, xvec, fvec, fjac,
-<a name="l00351"></a>00351                                         *ldfjac, *iflag);
-<a name="l00352"></a>00352       }
-<a name="l00353"></a>00353 
-<a name="l00354"></a>00354   <span class="keyword">public</span>:
-<a name="l00356"></a><a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#a7413e55be230adb8c97ac530cb29014d">00356</a>       <span class="keyword">explicit</span> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#a7413e55be230adb8c97ac530cb29014d" title="Default Constructor.">FitLM_Adapter</a>(<a class="code" href="namespacejpw__nld.html#aab1410d3f3644ff465752cab5b56e420" title="Integer type for array indices, lengths of dimensions in a Sushi-file, and similar.">index_t</a> ndata_max)
-<a name="l00357"></a>00357           : <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html" title="Wrapper around the FORTRAN function, lmder_().">FitLM</a>(<a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html">Self_t</a>::<a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#af19b48bb14dd26cf8c40c5710ab9117d" title="Wrapper Function, passed to FitLM::operator()().">fit_function_adapter</a>,
-<a name="l00358"></a>00358                   ndata_max,
-<a name="l00359"></a>00359                   static_cast&lt;<a class="code" href="namespacejpw__nld.html#aab1410d3f3644ff465752cab5b56e420" title="Integer type for array indices, lengths of dimensions in a Sushi-file, and similar.">index_t</a>&gt;(<a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#a3e7bc787aa51c03c4c7ad93d9114e788">FitFunctor_t</a>::N_PARAMETERS))
-<a name="l00360"></a>00360           , m__fitter(0)
-<a name="l00361"></a>00361           , m__fitData(0)
-<a name="l00362"></a>00362       {}
-<a name="l00363"></a>00363 
-<a name="l00365"></a><a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#ad4014cb990aecb549293239401b02e67">00365</a>       <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#ad4014cb990aecb549293239401b02e67" title="Destructor.">~FitLM_Adapter</a>() {}
-<a name="l00366"></a>00366 
-<a name="l00367"></a>00367       <span class="keyword">using</span> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a40f646ca74381f91bf851ce166469a5e" title="Compute  for the last run of operator().">FitLM::chiSquared</a>;
-<a name="l00368"></a>00368       <span class="keyword">using</span> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a7409bc7c7fe43e31ad5b8a143358bc68" title="Accessor function for the final value of f_vec.">FitLM::f_vec</a>;  <span class="comment">// FIXME: To be renamed...</span>
-<a name="l00369"></a>00369       <span class="keyword">using</span> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a8ba51868d28fcabdb4fbf278e0aa86dd" title="Accessor function for the f_jac.">FitLM::f_jac</a>;  <span class="comment">// FIXME: To be renamed...</span>
-<a name="l00370"></a>00370 
+<a name="l00288"></a>00288 <span class="comment"></span>  <span class="keyword">template</span>&lt;<span class="keyword">class</span> F, <span class="keyword">class</span> D&gt;
+<a name="l00289"></a><a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html">00289</a>   <span class="keyword">class </span><a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html" title="Perform a nonlinear least-squares fit by passing a functor to the Levenberg-Marquardt algorithm...">FitLM_Adapter</a> : <span class="keyword">protected</span> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html" title="Wrapper around the FORTRAN function, lmder_().">FitLM</a>
+<a name="l00290"></a>00290   {
+<a name="l00291"></a>00291   <span class="keyword">protected</span>:
+<a name="l00292"></a><a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#a3e7bc787aa51c03c4c7ad93d9114e788">00292</a>       <span class="keyword">typedef</span> F <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#a3e7bc787aa51c03c4c7ad93d9114e788">FitFunctor_t</a>;
+<a name="l00293"></a><a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#a132750551a38da2b73a2c03653dbf47d">00293</a>       <span class="keyword">typedef</span> D <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#a132750551a38da2b73a2c03653dbf47d">Data_t</a>;
+<a name="l00294"></a><a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#aebbff9bf8df23637be17d96a7cfd46e4">00294</a>       <span class="keyword">typedef</span> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html" title="Perform a nonlinear least-squares fit by passing a functor to the Levenberg-Marquardt algorithm...">FitLM_Adapter&lt;F,D&gt;</a> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#aebbff9bf8df23637be17d96a7cfd46e4">Self_t</a>;
+<a name="l00295"></a>00295 
+<a name="l00337"></a><a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#af19b48bb14dd26cf8c40c5710ab9117d">00337</a>       <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#af19b48bb14dd26cf8c40c5710ab9117d" title="Wrapper Function, passed to FitLM::operator()().">fit_function_adapter</a>(<a class="code" href="namespacejpw__nld_1_1fortlib.html#a56901cc4dbebf83731bcfb5d58b8cf7e" title="FORTRAN integer scalar type.">fort_ivar_t</a> neq, <a class="code" href="namespacejpw__nld_1_1fortlib.html#a56901cc4dbebf83731bcfb5d58b8cf7e" title="FORTRAN integer scalar type.">fort_ivar_t</a> nvar,
+<a name="l00338"></a>00338                                        <a class="code" href="namespacejpw__nld_1_1fortlib.html#ab548b8671e5358ea35e5131e23dfb479" title="FORTRAN double-array type.">fort_dvec_t</a> xvec, <a class="code" href="namespacejpw__nld_1_1fortlib.html#ab548b8671e5358ea35e5131e23dfb479" title="FORTRAN double-array type.">fort_dvec_t</a> fvec,
+<a name="l00339"></a>00339                                        <a class="code" href="namespacejpw__nld_1_1fortlib.html#a71e1364077d954bc37620f7f5732525b" title="FORTRAN double-matrix type.">fort_dmat_t</a> fjac, <a class="code" href="namespacejpw__nld_1_1fortlib.html#a56901cc4dbebf83731bcfb5d58b8cf7e" title="FORTRAN integer scalar type.">fort_ivar_t</a> ldfjac,
+<a name="l00340"></a>00340                                        <a class="code" href="namespacejpw__nld_1_1fortlib.html#a56901cc4dbebf83731bcfb5d58b8cf7e" title="FORTRAN integer scalar type.">fort_ivar_t</a> iflag)
+<a name="l00341"></a>00341       {
+<a name="l00342"></a>00342           <span class="comment">// FIXME:  Look into removing &#39;*neq&#39;.  Let the functor do any</span>
+<a name="l00343"></a>00343           <span class="comment">// optimizing away of calls to m__fitData.size()</span>
+<a name="l00344"></a>00344 
+<a name="l00345"></a>00345           <span class="comment">// FIXME: What about &quot;wrapping&quot; xvec, fvec, (and possibly fjac) into</span>
+<a name="l00346"></a>00346           <span class="comment">// a lightweight array-like class?  &#39;std::array&#39; won&#39;t work, since</span>
+<a name="l00347"></a>00347           <span class="comment">// its size is compile-time.  And std::vector copies its elements</span>
+<a name="l00348"></a>00348           <span class="comment">// in&amp;out, so it&#39;s not suitable.</span>
+<a name="l00349"></a>00349           <span class="comment">// Hmmm...</span>
+<a name="l00350"></a>00350           <span class="comment">// ...perhaps a custom, STL-like adapter-class?</span>
+<a name="l00351"></a>00351           (*(m__activeThis-&gt;m__fitter))(*neq, *(m__activeThis-&gt;m__fitData),
+<a name="l00352"></a>00352                                         *nvar, xvec, fvec, fjac,
+<a name="l00353"></a>00353                                         *ldfjac, *iflag);
+<a name="l00354"></a>00354       }
+<a name="l00355"></a>00355 
+<a name="l00356"></a>00356   <span class="keyword">public</span>:
+<a name="l00358"></a><a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#a7413e55be230adb8c97ac530cb29014d">00358</a>       <span class="keyword">explicit</span> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#a7413e55be230adb8c97ac530cb29014d" title="Default Constructor.">FitLM_Adapter</a>(<a class="code" href="namespacejpw__nld.html#aab1410d3f3644ff465752cab5b56e420" title="Integer type for array indices, lengths of dimensions in a Sushi-file, and similar.">index_t</a> ndata_max)
+<a name="l00359"></a>00359           : <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html" title="Wrapper around the FORTRAN function, lmder_().">FitLM</a>(<a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html">Self_t</a>::<a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#af19b48bb14dd26cf8c40c5710ab9117d" title="Wrapper Function, passed to FitLM::operator()().">fit_function_adapter</a>,
+<a name="l00360"></a>00360                   ndata_max,
+<a name="l00361"></a>00361                   static_cast&lt;<a class="code" href="namespacejpw__nld.html#aab1410d3f3644ff465752cab5b56e420" title="Integer type for array indices, lengths of dimensions in a Sushi-file, and similar.">index_t</a>&gt;(<a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#a3e7bc787aa51c03c4c7ad93d9114e788">FitFunctor_t</a>::N_PARAMETERS))
+<a name="l00362"></a>00362           , m__fitter(0)
+<a name="l00363"></a>00363           , m__fitData(0)
+<a name="l00364"></a>00364       {}
+<a name="l00365"></a>00365 
+<a name="l00367"></a><a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#ad4014cb990aecb549293239401b02e67">00367</a>       <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#ad4014cb990aecb549293239401b02e67" title="Destructor.">~FitLM_Adapter</a>() {}
+<a name="l00368"></a>00368 
+<a name="l00369"></a>00369       <span class="keyword">using</span> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#a40f646ca74381f91bf851ce166469a5e" title="Compute  for the last run of operator().">FitLM::chiSquared</a>;
+<a name="l00370"></a>00370       <span class="keyword">using</span> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#ab4816cce298e223c2908239c838323ba" title="Accessor function for the final value of deltas.">FitLM::deltas</a>;
+<a name="l00371"></a>00371       <span class="keyword">using</span> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#ac4fed9697283c2ffeac39613f5bd2c1e" title="Accessor function for the Jacobian.">FitLM::jacobian</a>;
 <a name="l00372"></a>00372 
-<a name="l00403"></a><a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#a83bf861b479eb8ba70c3430a5f58049e">00403</a>       <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#abd17c321c84757dfc2c360f442c84b69" title="The return status of the Levenberg-Marquardt algorithm.">FitStatus_t</a> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#a83bf861b479eb8ba70c3430a5f58049e" title="Perform a nonlinear least-squares fit.">operator()</a>(<a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#a3e7bc787aa51c03c4c7ad93d9114e788">FitFunctor_t</a>&amp; theModel,
-<a name="l00404"></a>00404                              <span class="keyword">const</span> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#a132750551a38da2b73a2c03653dbf47d">Data_t</a>&amp; theData, <a class="code" href="namespacejpw__math.html#ad2abb92a16fb262b3d36c651bd1c1d6f">dvector_t</a>&amp; params,
-<a name="l00405"></a>00405                              <span class="keywordtype">double</span> errtol, <span class="keywordtype">double</span> ptol,
-<a name="l00406"></a>00406                              <span class="keywordtype">int</span> maxiter, <span class="keywordtype">double</span> factor)
-<a name="l00407"></a>00407       {
-<a name="l00408"></a>00408           m__fitter = &amp;theModel;
-<a name="l00409"></a>00409           m__fitData = &amp;theData;
-<a name="l00410"></a>00410           m__activeThis = <span class="keyword">this</span>;
-<a name="l00411"></a>00411           <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#abd17c321c84757dfc2c360f442c84b69" title="The return status of the Levenberg-Marquardt algorithm.">FitStatus_t</a> retval
-<a name="l00412"></a>00412               = this-&gt;<a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#a83bf861b479eb8ba70c3430a5f58049e" title="Perform a nonlinear least-squares fit.">FitLM::operator()</a>(theData.size(), params, errtol,
-<a name="l00413"></a>00413                                         ptol, maxiter, factor);
-<a name="l00414"></a>00414           m__activeThis = 0;
-<a name="l00415"></a>00415           m__fitData = 0;
-<a name="l00416"></a>00416           m__fitter = 0;
-<a name="l00417"></a>00417           <span class="keywordflow">return</span> retval;
-<a name="l00418"></a>00418       }
-<a name="l00419"></a>00419 
-<a name="l00420"></a>00420   <span class="keyword">private</span>:
-<a name="l00421"></a>00421       <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#aebbff9bf8df23637be17d96a7cfd46e4">Self_t</a>* m__activeThis;
-<a name="l00422"></a>00422       <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#a3e7bc787aa51c03c4c7ad93d9114e788">FitFunctor_t</a>* m__fitter;
-<a name="l00423"></a>00423       <span class="keyword">const</span> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#a132750551a38da2b73a2c03653dbf47d">Data_t</a>* m__fitData;
-<a name="l00424"></a>00424 
-<a name="l00425"></a>00425       <span class="comment">// Assignment Operator</span>
-<a name="l00426"></a>00426       <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html" title="Perform a nonlinear least-squares fit by passing a functor to the Levenberg-Marquardt algorithm...">FitLM_Adapter</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html" title="Perform a nonlinear least-squares fit by passing a functor to the Levenberg-Marquardt algorithm...">FitLM_Adapter</a>&amp; other);
-<a name="l00427"></a>00427   };
-<a name="l00428"></a>00428   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> F, <span class="keyword">typename</span> D&gt;
-<a name="l00429"></a>00429   <span class="keyword">const</span> FitLM_Adapter&lt;F,D&gt;*
-<a name="l00430"></a>00430   FitLM_Adapter&lt;F,D&gt;::m__activeThis=0;
+<a name="l00374"></a>00374 
+<a name="l00415"></a><a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#ab7b0bb8d5b50ce746c06a7bed7034201">00415</a>       <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#abd17c321c84757dfc2c360f442c84b69" title="The return status of the Levenberg-Marquardt algorithm.">FitStatus_t</a> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#ab7b0bb8d5b50ce746c06a7bed7034201" title="Perform a nonlinear least-squares fit.">operator()</a>(<a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#a3e7bc787aa51c03c4c7ad93d9114e788">FitFunctor_t</a>&amp; theModel,
+<a name="l00416"></a>00416                              <span class="keyword">const</span> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#a132750551a38da2b73a2c03653dbf47d">Data_t</a>&amp; theData, <a class="code" href="namespacejpw__math.html#ad2abb92a16fb262b3d36c651bd1c1d6f">dvector_t</a>&amp; params0,
+<a name="l00417"></a>00417                              <span class="keywordtype">double</span> errtol, <span class="keywordtype">double</span> ptol,
+<a name="l00418"></a>00418                              <span class="keywordtype">int</span> maxiter, <span class="keywordtype">double</span> factor)
+<a name="l00419"></a>00419       {
+<a name="l00420"></a>00420           m__fitter = &amp;theModel;
+<a name="l00421"></a>00421           m__fitData = &amp;theData;
+<a name="l00422"></a>00422           m__activeThis = <span class="keyword">this</span>;
+<a name="l00423"></a>00423           <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM.html#abd17c321c84757dfc2c360f442c84b69" title="The return status of the Levenberg-Marquardt algorithm.">FitStatus_t</a> retval
+<a name="l00424"></a>00424               = this-&gt;<a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#ab7b0bb8d5b50ce746c06a7bed7034201" title="Perform a nonlinear least-squares fit.">FitLM::operator()</a>(theData.size(), params0, errtol,
+<a name="l00425"></a>00425                                         ptol, maxiter, factor);
+<a name="l00426"></a>00426           m__activeThis = 0;
+<a name="l00427"></a>00427           m__fitData = 0;
+<a name="l00428"></a>00428           m__fitter = 0;
+<a name="l00429"></a>00429           <span class="keywordflow">return</span> retval;
+<a name="l00430"></a>00430       }
 <a name="l00431"></a>00431 
-<a name="l00432"></a>00432  }; <span class="comment">//end namespace</span>
-<a name="l00433"></a>00433 }; <span class="comment">//end namespace</span>
-<a name="l00434"></a>00434 
-<a name="l00435"></a>00435 
-<a name="l00436"></a>00436 <span class="preprocessor">#endif //_FitLM_Adapter_H_</span>
-<a name="l00437"></a>00437 <span class="preprocessor"></span>
-<a name="l00438"></a>00438 <span class="comment">//</span>
-<a name="l00439"></a>00439 <span class="comment">// End</span>
+<a name="l00432"></a>00432   <span class="keyword">private</span>:
+<a name="l00433"></a>00433       <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#aebbff9bf8df23637be17d96a7cfd46e4">Self_t</a>* m__activeThis;
+<a name="l00434"></a>00434       <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#a3e7bc787aa51c03c4c7ad93d9114e788">FitFunctor_t</a>* m__fitter;
+<a name="l00435"></a>00435       <span class="keyword">const</span> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html#a132750551a38da2b73a2c03653dbf47d">Data_t</a>* m__fitData;
+<a name="l00436"></a>00436 
+<a name="l00437"></a>00437       <span class="comment">// Assignment Operator</span>
+<a name="l00438"></a>00438       <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html" title="Perform a nonlinear least-squares fit by passing a functor to the Levenberg-Marquardt algorithm...">FitLM_Adapter</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html" title="Perform a nonlinear least-squares fit by passing a functor to the Levenberg-Marquardt algorithm...">FitLM_Adapter</a>&amp; other);
+<a name="l00439"></a>00439   };
+<a name="l00440"></a>00440   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> F, <span class="keyword">typename</span> D&gt;
+<a name="l00441"></a>00441   <span class="keyword">const</span> FitLM_Adapter&lt;F,D&gt;*
+<a name="l00442"></a>00442   FitLM_Adapter&lt;F,D&gt;::m__activeThis=0;
+<a name="l00443"></a>00443 
+<a name="l00444"></a>00444  }; <span class="comment">//end namespace</span>
+<a name="l00445"></a>00445 }; <span class="comment">//end namespace</span>
+<a name="l00446"></a>00446 
+<a name="l00447"></a>00447 
+<a name="l00448"></a>00448 <span class="preprocessor">#endif //_FitLM_Adapter_H_</span>
+<a name="l00449"></a>00449 <span class="preprocessor"></span>
+<a name="l00450"></a>00450 <span class="comment">//</span>
+<a name="l00451"></a>00451 <span class="comment">// End</span>
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -233,7 +233,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="FitLM__Adapter_8h.html">FitLM_Adapter.h</a>      </li>
 
-    <li class="footer">Generated on Fri Feb 13 2015 16:23:54 for research-nld by
+    <li class="footer">Generated on Fri Feb 13 2015 21:02:28 for research-nld by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

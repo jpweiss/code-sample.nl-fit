@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['f_5fjac',['f_jac',['../classjpw__nld_1_1fortlib_1_1FitLM.html#a8ba51868d28fcabdb4fbf278e0aa86dd',1,'jpw_nld::fortlib::FitLM']]],
-  ['f_5fvec',['f_vec',['../classjpw__nld_1_1fortlib_1_1FitLM.html#a7409bc7c7fe43e31ad5b8a143358bc68',1,'jpw_nld::fortlib::FitLM']]],
   ['filenotfound',['FileNotFound',['../structjpw__nld_1_1FileNotFound.html#a5a6f8367734ec7a0ef40bce78db2e3b8',1,'jpw_nld::FileNotFound']]],
   ['fill',['fill',['../classjpw__math_1_1Matrix.html#a770131a7be6800c9d50de59b16c6cb6b',1,'jpw_math::Matrix']]],
   ['fillaxes',['fillAxes',['../classjpw__nld_1_1measure_1_1PersistenceMap.html#ad88c6bdfbd450e32bed29dea63908c34',1,'jpw_nld::measure::PersistenceMap']]],

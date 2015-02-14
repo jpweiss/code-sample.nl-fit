@@ -1,13 +1,15 @@
 var searchData=
 [
   ['c_5fdata',['c_data',['../classjpw__math_1_1details_1_1MatrixRef__Writer.html#a6a17ca20a9f7e139aacee6b20327c85b',1,'jpw_math::details::MatrixRef_Writer']]],
-  ['calculate',['calculate',['../classjpw__nld_1_1measure_1_1BarrierModel.html#a65a6375d210752e6c68747943fdc0790',1,'jpw_nld::measure::BarrierModel']]],
+  ['calculate',['calculate',['../classjpw__nld_1_1measure_1_1BarrierModel.html#acdb16742d2fdf0ecc23bd1d2efc4e338',1,'jpw_nld::measure::BarrierModel']]],
   ['callcount',['callcount',['../classjpw__nld_1_1measure_1_1BarrierModel.html#a9f50818d9d9cd8bb1bf246702d1a0e64',1,'jpw_nld::measure::BarrierModel']]],
   ['chisquared',['chiSquared',['../classjpw__nld_1_1fortlib_1_1FitLM.html#a40f646ca74381f91bf851ce166469a5e',1,'jpw_nld::fortlib::FitLM::chiSquared()'],['../classjpw__nld_1_1measure_1_1BarrierModel.html#a886594eded13a4463b539dcb941f5fda',1,'jpw_nld::measure::BarrierModel::chiSquared()'],['../namespacejpw__math.html#a152e2773ecb5ffe95d340b4ce92a8eaf',1,'jpw_math::chiSquared()']]],
   ['chk_5fabsmax',['CHK_ABSMAX',['../namespacejpw__math.html#a52e3f3d79a95359ea9b2dc8bcbbbeee5',1,'jpw_math']]],
   ['clear',['clear',['../classjpw__nld_1_1measure_1_1PersistenceMap.html#affe56badad21009fe7994889b52802e0',1,'jpw_nld::measure::PersistenceMap::clear()'],['../classjpw__math_1_1Matrix.html#a6f31ae5873e63201131df88ea94d8a4a',1,'jpw_math::Matrix::clear()']]],
   ['clearcallcount',['clearCallcount',['../classjpw__nld_1_1measure_1_1BarrierModel.html#ac8c5a6d25e917f52dac2ee5481ddb55f',1,'jpw_nld::measure::BarrierModel']]],
   ['computecsstddev',['computeCSStdDev',['../classjpw__nld_1_1measure_1_1PersistenceMap.html#afcd4c51a907f445500a7c0a98114ff85',1,'jpw_nld::measure::PersistenceMap']]],
+  ['computefunction',['ComputeFunction',['../classjpw__nld_1_1fortlib_1_1FitLM.html#aeb1c07c7088bc8cef09486a38b0c774eab916d1cab1620c0cbf011369f98e2921',1,'jpw_nld::fortlib::FitLM']]],
+  ['computejacobian',['ComputeJacobian',['../classjpw__nld_1_1fortlib_1_1FitLM.html#aeb1c07c7088bc8cef09486a38b0c774eab6dfa62d5c5086215ed4d1d8cb5689bf',1,'jpw_nld::fortlib::FitLM']]],
   ['computepersistence',['computePersistence',['../classjpw__nld_1_1measure_1_1PersistenceMap.html#acbcf5a1de7a78a54a32b60a63577f5d8',1,'jpw_nld::measure::PersistenceMap']]],
   ['confidence_5ftg',['confidence_tg',['../namespacejpw__math_1_1statistics.html#ade1d5d0d8f6732c551895003bca85e8d',1,'jpw_math::statistics']]],
   ['const_5fiterator',['const_iterator',['../classjpw__math_1_1Matrix.html#ac0b7f0f6f4197f6b8403481f3667a011',1,'jpw_math::Matrix']]],

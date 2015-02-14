@@ -1913,6 +1913,24 @@
       <anchor>abd17c321c84757dfc2c360f442c84b69a8eed89dfd22ed6c9a50f4187f2e86212</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumeration">
+      <name>FitFnAction_t</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>aeb1c07c7088bc8cef09486a38b0c774e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ComputeFunction</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>aeb1c07c7088bc8cef09486a38b0c774eab916d1cab1620c0cbf011369f98e2921</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ComputeJacobian</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>aeb1c07c7088bc8cef09486a38b0c774eab6dfa62d5c5086215ed4d1d8cb5689bf</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>void(*</type>
       <name>fit_function_ptr_t</name>
@@ -1950,16 +1968,16 @@
     </member>
     <member kind="function">
       <type>const dvector_t &amp;</type>
-      <name>f_vec</name>
+      <name>deltas</name>
       <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
-      <anchor>a7409bc7c7fe43e31ad5b8a143358bc68</anchor>
+      <anchor>ab4816cce298e223c2908239c838323ba</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>const dmatrix_t &amp;</type>
-      <name>f_jac</name>
+      <name>jacobian</name>
       <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
-      <anchor>a8ba51868d28fcabdb4fbf278e0aa86dd</anchor>
+      <anchor>ac4fed9697283c2ffeac39613f5bd2c1e</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -1978,23 +1996,23 @@
     </member>
     <member kind="variable" protection="protected">
       <type>dvector_t</type>
-      <name>m__f_jac_flat</name>
+      <name>m__jacobFlat</name>
       <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
-      <anchor>a29af2a58b2580b0cef809166b4f86bc6</anchor>
+      <anchor>a024505bb09f0e234c997b760e972ae18</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>dvector_t</type>
-      <name>m__f_vec</name>
+      <name>m__deltas</name>
       <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
-      <anchor>aa5ce76a1989ef857b2e8c0b4eba9957b</anchor>
+      <anchor>a974c709ed21cca2e26cc5461320ec4f4</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>dmatrix_t</type>
-      <name>m__f_jac_out</name>
+      <name>m__jacobOut</name>
       <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
-      <anchor>a4ea0f66308fe53795e9ced7c7c0d55a3</anchor>
+      <anchor>a22f454324066e187bb753a0d39f80f7e</anchor>
       <arglist></arglist>
     </member>
     <docanchor file="classjpw__nld_1_1fortlib_1_1FitLM">LMNLLSqF</docanchor>
@@ -2023,8 +2041,8 @@
       <type>FitStatus_t</type>
       <name>operator()</name>
       <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html</anchorfile>
-      <anchor>a83bf861b479eb8ba70c3430a5f58049e</anchor>
-      <arglist>(FitFunctor_t &amp;theModel, const Data_t &amp;theData, dvector_t &amp;params, double errtol, double ptol, int maxiter, double factor)</arglist>
+      <anchor>ab7b0bb8d5b50ce746c06a7bed7034201</anchor>
+      <arglist>(FitFunctor_t &amp;theModel, const Data_t &amp;theData, dvector_t &amp;params0, double errtol, double ptol, int maxiter, double factor)</arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>F</type>
@@ -2119,6 +2137,24 @@
       <anchor>abd17c321c84757dfc2c360f442c84b69a8eed89dfd22ed6c9a50f4187f2e86212</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumeration">
+      <name>FitFnAction_t</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>aeb1c07c7088bc8cef09486a38b0c774e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ComputeFunction</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>aeb1c07c7088bc8cef09486a38b0c774eab916d1cab1620c0cbf011369f98e2921</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ComputeJacobian</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>aeb1c07c7088bc8cef09486a38b0c774eab6dfa62d5c5086215ed4d1d8cb5689bf</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>void(*</type>
       <name>fit_function_ptr_t</name>
@@ -2142,16 +2178,16 @@
     </member>
     <member kind="function">
       <type>const dvector_t &amp;</type>
-      <name>f_vec</name>
+      <name>deltas</name>
       <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
-      <anchor>a7409bc7c7fe43e31ad5b8a143358bc68</anchor>
+      <anchor>ab4816cce298e223c2908239c838323ba</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>const dmatrix_t &amp;</type>
-      <name>f_jac</name>
+      <name>jacobian</name>
       <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
-      <anchor>a8ba51868d28fcabdb4fbf278e0aa86dd</anchor>
+      <anchor>ac4fed9697283c2ffeac39613f5bd2c1e</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" static="yes">
@@ -2177,23 +2213,23 @@
     </member>
     <member kind="variable" protection="protected">
       <type>dvector_t</type>
-      <name>m__f_jac_flat</name>
+      <name>m__jacobFlat</name>
       <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
-      <anchor>a29af2a58b2580b0cef809166b4f86bc6</anchor>
+      <anchor>a024505bb09f0e234c997b760e972ae18</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>dvector_t</type>
-      <name>m__f_vec</name>
+      <name>m__deltas</name>
       <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
-      <anchor>aa5ce76a1989ef857b2e8c0b4eba9957b</anchor>
+      <anchor>a974c709ed21cca2e26cc5461320ec4f4</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>dmatrix_t</type>
-      <name>m__f_jac_out</name>
+      <name>m__jacobOut</name>
       <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
-      <anchor>a4ea0f66308fe53795e9ced7c7c0d55a3</anchor>
+      <anchor>a22f454324066e187bb753a0d39f80f7e</anchor>
       <arglist></arglist>
     </member>
     <docanchor file="classjpw__nld_1_1fortlib_1_1FitLM__Adapter">FitFunctor</docanchor>
@@ -2305,8 +2341,8 @@
       <type>void</type>
       <name>operator()</name>
       <anchorfile>classjpw__nld_1_1measure_1_1BarrierModel.html</anchorfile>
-      <anchor>a0aa4e13408a7063585bc558edcb8d77e</anchor>
-      <arglist>(const PersistenceMap &amp;theMap, dvector_t &amp;fitParams, dvector_t &amp;fvec)</arglist>
+      <anchor>a7386b5483fed0f24d2d2e034d76407bc</anchor>
+      <arglist>(const PersistenceMap &amp;theMap, dvector_t &amp;fitParams, dvector_t &amp;deltas)</arglist>
     </member>
     <member kind="function">
       <type>double</type>
@@ -2319,8 +2355,8 @@
       <type>void</type>
       <name>operator()</name>
       <anchorfile>classjpw__nld_1_1measure_1_1BarrierModel.html</anchorfile>
-      <anchor>a084f1b55f411db042af223e0e80a9b93</anchor>
-      <arglist>(int, const PersistenceMap &amp;theMap, int, fortlib::fort_dvec_t fitParams, fortlib::fort_dvec_t fvec, fortlib::fort_dmat_t fjac, int, int iflag)</arglist>
+      <anchor>af828bc699cede19026334ec9e9aee88d</anchor>
+      <arglist>(int, const PersistenceMap &amp;theMap, int, fortlib::fort_dvec_t fitParams, fortlib::fort_dvec_t deltas, fortlib::fort_dmat_t fnJacob, int, int actionCode)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static void</type>
@@ -2410,8 +2446,8 @@
       <type>void</type>
       <name>calculate</name>
       <anchorfile>classjpw__nld_1_1measure_1_1BarrierModel.html</anchorfile>
-      <anchor>a65a6375d210752e6c68747943fdc0790</anchor>
-      <arglist>(const PersistenceMap &amp;theMap, VT &amp;fitParams, VT &amp;fvec, VT &amp;fjac, int iflag)</arglist>
+      <anchor>acdb16742d2fdf0ecc23bd1d2efc4e338</anchor>
+      <arglist>(const PersistenceMap &amp;theMap, VT &amp;fitParams, VT &amp;deltas, VT &amp;fnJacob, int actionCode)</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>tslen_t</type>
@@ -2507,8 +2543,8 @@
       <type>FitStatus_t</type>
       <name>operator()</name>
       <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html</anchorfile>
-      <anchor>a83bf861b479eb8ba70c3430a5f58049e</anchor>
-      <arglist>(FitFunctor_t &amp;theModel, const Data_t &amp;theData, dvector_t &amp;params, double errtol, double ptol, int maxiter, double factor)</arglist>
+      <anchor>ab7b0bb8d5b50ce746c06a7bed7034201</anchor>
+      <arglist>(FitFunctor_t &amp;theModel, const Data_t &amp;theData, dvector_t &amp;params0, double errtol, double ptol, int maxiter, double factor)</arglist>
     </member>
     <member kind="function">
       <type>FitStatus_t</type>
@@ -2545,6 +2581,24 @@
       <anchor>aebbff9bf8df23637be17d96a7cfd46e4</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumeration">
+      <name>FitFnAction_t</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>aeb1c07c7088bc8cef09486a38b0c774e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ComputeFunction</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>aeb1c07c7088bc8cef09486a38b0c774eab916d1cab1620c0cbf011369f98e2921</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ComputeJacobian</name>
+      <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
+      <anchor>aeb1c07c7088bc8cef09486a38b0c774eab6dfa62d5c5086215ed4d1d8cb5689bf</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>void(*</type>
       <name>fit_function_ptr_t</name>
@@ -2561,16 +2615,16 @@
     </member>
     <member kind="function">
       <type>const dvector_t &amp;</type>
-      <name>f_vec</name>
+      <name>deltas</name>
       <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
-      <anchor>a7409bc7c7fe43e31ad5b8a143358bc68</anchor>
+      <anchor>ab4816cce298e223c2908239c838323ba</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>const dmatrix_t &amp;</type>
-      <name>f_jac</name>
+      <name>jacobian</name>
       <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
-      <anchor>a8ba51868d28fcabdb4fbf278e0aa86dd</anchor>
+      <anchor>ac4fed9697283c2ffeac39613f5bd2c1e</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" static="yes">
@@ -2596,23 +2650,23 @@
     </member>
     <member kind="variable" protection="protected">
       <type>dvector_t</type>
-      <name>m__f_jac_flat</name>
+      <name>m__jacobFlat</name>
       <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
-      <anchor>a29af2a58b2580b0cef809166b4f86bc6</anchor>
+      <anchor>a024505bb09f0e234c997b760e972ae18</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>dvector_t</type>
-      <name>m__f_vec</name>
+      <name>m__deltas</name>
       <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
-      <anchor>aa5ce76a1989ef857b2e8c0b4eba9957b</anchor>
+      <anchor>a974c709ed21cca2e26cc5461320ec4f4</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>dmatrix_t</type>
-      <name>m__f_jac_out</name>
+      <name>m__jacobOut</name>
       <anchorfile>classjpw__nld_1_1fortlib_1_1FitLM.html</anchorfile>
-      <anchor>a4ea0f66308fe53795e9ced7c7c0d55a3</anchor>
+      <anchor>a22f454324066e187bb753a0d39f80f7e</anchor>
       <arglist></arglist>
     </member>
   </compound>

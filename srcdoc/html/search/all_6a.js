@@ -2,6 +2,7 @@ var searchData=
 [
   ['details',['details',['../namespacejpw__math_1_1details.html',1,'jpw_math']]],
   ['fortlib',['fortlib',['../namespacejpw__nld_1_1fortlib.html',1,'jpw_nld']]],
+  ['jacobian',['jacobian',['../classjpw__nld_1_1fortlib_1_1FitLM.html#ac4fed9697283c2ffeac39613f5bd2c1e',1,'jpw_nld::fortlib::FitLM']]],
   ['jpw_5fmath',['jpw_math',['../namespacejpw__math.html',1,'']]],
   ['jpw_5fnld',['jpw_nld',['../namespacejpw__nld.html',1,'']]],
   ['jpw_5fnld_2eh',['jpw_nld.h',['../jpw__nld_8h.html',1,'']]],

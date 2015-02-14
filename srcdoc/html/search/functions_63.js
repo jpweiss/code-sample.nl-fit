@@ -1,7 +1,7 @@
 var searchData=
 [
   ['c_5fdata',['c_data',['../classjpw__math_1_1details_1_1MatrixRef__Writer.html#a6a17ca20a9f7e139aacee6b20327c85b',1,'jpw_math::details::MatrixRef_Writer']]],
-  ['calculate',['calculate',['../classjpw__nld_1_1measure_1_1BarrierModel.html#a65a6375d210752e6c68747943fdc0790',1,'jpw_nld::measure::BarrierModel']]],
+  ['calculate',['calculate',['../classjpw__nld_1_1measure_1_1BarrierModel.html#acdb16742d2fdf0ecc23bd1d2efc4e338',1,'jpw_nld::measure::BarrierModel']]],
   ['callcount',['callcount',['../classjpw__nld_1_1measure_1_1BarrierModel.html#a9f50818d9d9cd8bb1bf246702d1a0e64',1,'jpw_nld::measure::BarrierModel']]],
   ['chisquared',['chiSquared',['../classjpw__nld_1_1fortlib_1_1FitLM.html#a40f646ca74381f91bf851ce166469a5e',1,'jpw_nld::fortlib::FitLM::chiSquared()'],['../classjpw__nld_1_1measure_1_1BarrierModel.html#a886594eded13a4463b539dcb941f5fda',1,'jpw_nld::measure::BarrierModel::chiSquared()'],['../namespacejpw__math.html#a152e2773ecb5ffe95d340b4ce92a8eaf',1,'jpw_math::chiSquared()']]],
   ['chk_5fabsmax',['CHK_ABSMAX',['../namespacejpw__math.html#a52e3f3d79a95359ea9b2dc8bcbbbeee5',1,'jpw_math']]],
