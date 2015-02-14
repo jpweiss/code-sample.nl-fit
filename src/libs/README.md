@@ -4,8 +4,8 @@ The Libraries
  
 
 As mentioned in both the top-level `README.md` and in `src/README.md`,
-A good starting point is the class `FitLM_Adapter`, in the directory
-`src/lib/fortlib`.  If you're in a hurry, start by reading the file
+a good starting point is the class `FitLM_Adapter`, in the directory
+`src/lib/fortlib`.  Be sure to start by reading the file
 `src/lib/fortlib/README.md` before looking at the source code.
 
 The remainder of this file describes what this directory contains.
