@@ -58,11 +58,13 @@ based on a POD-array.  I compared all of them to the performance of a
 C-style 2-D array.
 
 The results were interesting.
+
 1. Boost's matrix class didn't perform as well, most likely because it
    tries to be highly flexible and is designed for efficient
    matrix-mathematics.
 
    I didn't need that.  I required efficient repeated access.
+
 2. The MatrixAdapter performed best, but using a POD-array for the
    storage had nearly the same performance as using a `std::vector`.
 
