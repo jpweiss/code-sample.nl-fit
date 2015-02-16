@@ -50,8 +50,5 @@ The libraries, each of which resides in its own subdirectory, are:
     `FitLM_Adapter`, creating the class whose instances will perform
     the actual optimization.
 
-Except for `src/lib/persistence`, each of these subdirectories
-contains its own `README.md` file.
-
-(The source-code documentation in `persistence` is sufficient to
-explain how it works, for the purposes of this code-sample.)
+(Each of these subdirectories, of course, contains its own `README.md`
+file.)
