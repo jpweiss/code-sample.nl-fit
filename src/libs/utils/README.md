@@ -68,3 +68,8 @@ The results were interesting.
 2. The MatrixAdapter performed best, but using a POD-array for the
    storage had nearly the same performance as using a `std::vector`.
 
+I chose to keep the `MatrixAdapter` template-classes and its
+`SequenceStorage` policy-class after the performance testing.
+Specializing it to create the `Matrix` class was the least effort, of
+course.  However, it's also a good example of modern C++ design (a la
+Andrei Alexandrescu).

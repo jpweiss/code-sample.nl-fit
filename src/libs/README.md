@@ -36,7 +36,7 @@ The libraries, each of which resides in its own subdirectory, are:
     the source code for generating them.
   + It's present in this code-sample **solely** because it's a
     dependency of the `measure` library.  You don't really need to pay
-    any attention to it, unless your curious.
+    any attention to it, unless your particularly curious.
 
 - measure
   + Depends on `utils`, `fortlib` and `persistence`.
@@ -50,5 +50,8 @@ The libraries, each of which resides in its own subdirectory, are:
     `FitLM_Adapter`, creating the class whose instances will perform
     the actual optimization.
 
-(Each of these subdirectories, of course, contains its own `README.md`
-file.)
+Except for `src/lib/persistence`, each of these subdirectories
+contains its own `README.md` file.
+
+(The source-code documentation in `persistence` is sufficient to
+explain how it works, for the purposes of this code-sample.)
