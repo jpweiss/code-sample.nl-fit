@@ -75,17 +75,15 @@ The procedure for computing a Cyclostationary Mean is:
    "December 25" in `hitemp[357][j]`, etc., you will average over the
    index `j`.  Here's a sketch in pseudocode:
 
-       foreach(dayIndex) {
+        foreach(dayIndex) {
+            csAvg[dayIndex] = 0.0;
 
-           csAvg[dayIndex] = 0.0;
+            foreach(j) {
+                csAvg[dayIndex] += hitemp[dayIndex][j];
+            }
 
-           foreach(j) {
-               csAvg[dayIndex] += hitemp[dayIndex][j];
-           }
-
-           csAvg[dayIndex] /= nYears;
-
-       }
+            csAvg[dayIndex] /= nYears;
+        }
 
    You would compute the cyclostationary variance, standard deviation,
    and so on in the same fashion.
