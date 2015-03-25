@@ -1,4 +1,4 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$classjpw__math_1_1MatrixAdapter.html" title="MatrixAdapter\&lt; std::vector\&lt; C \&gt;, policy::SequenceStorage \&gt;" alt="" coords="5,105,392,135"/>
-<area shape="rect" id="node5" href="$classjpw__math_1_1Matrix.html" title="Class Matrix." alt="" coords="153,187,244,218"/>
+<map id="MatrixAdapter&lt; S, STOR_POL &gt;" name="MatrixAdapter&lt; S, STOR_POL &gt;">
+<area shape="rect" id="node2" href="$classjpw__math_1_1MatrixAdapter.html" title="MatrixAdapter\&lt; std\l::vector\&lt; C \&gt;, policy\l::SequenceStorage \&gt;" alt="" coords="15,125,157,181"/>
+<area shape="rect" id="node3" href="$classjpw__math_1_1Matrix.html" title="Class Matrix. " alt="" coords="43,232,131,259"/>
 </map>

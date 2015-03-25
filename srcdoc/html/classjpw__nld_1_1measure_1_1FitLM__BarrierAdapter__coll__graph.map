@@ -1,6 +1,5 @@
-<map id="G" name="G">
-<area shape="rect" id="node2" href="$classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html" title="FitLM_Adapter\&lt; BarrierModel\&lt; F_POL_T \&gt;, PersistenceMap \&gt;" alt="" coords="5,289,384,317"/>
-<area shape="rect" id="node4" href="$classjpw__nld_1_1fortlib_1_1FitLM.html" title="Wrapper around the FORTRAN function, lmder_()." alt="" coords="145,115,199,143"/>
-<area shape="rect" id="node12" href="$classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html" title="Perform a nonlinear least&#45;squares fit by passing a functor to the Levenberg&#45;Marquardt algorithm..." alt="" coords="193,195,345,223"/>
-<area shape="rect" id="node6" href="$classboost_1_1noncopyable.html" title="noncopyable" alt="" coords="17,6,111,34"/>
+<map id="FitLM_BarrierAdapter&lt; F_POL_T &gt;" name="FitLM_BarrierAdapter&lt; F_POL_T &gt;">
+<area shape="rect" id="node2" href="$classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html" title="FitLM_Adapter\&lt; BarrierModel\l\&lt; F_POL_T \&gt;, PersistenceMap \&gt;" alt="" coords="77,291,291,333"/>
+<area shape="rect" id="node3" href="$classjpw__nld_1_1fortlib_1_1FitLM.html" title="Wrapper around the FORTRAN function, lmder_(). " alt="" coords="133,109,188,136"/>
+<area shape="rect" id="node7" href="$classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html" title="Perform a nonlinear least&#45;squares fit by passing a functor to the Levenberg&#45;Marquardt algorithm..." alt="" coords="183,187,336,213"/>
 </map>

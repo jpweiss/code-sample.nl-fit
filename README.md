@@ -2,7 +2,6 @@ code-sample.nl-fit
 ===================
 
 Sample C++ Code:  Nonlinear Optimization Library
-(includes 3rd-Party FORTRAN library)
 
 ---
 
@@ -14,9 +13,9 @@ of C++ & FORTRAN, using modern C++ programming techniques (prior to
 the C++11 standard) and best-practices.  (The FORTRAN comes from a
 standard scientific library; the C/C++ code is mine.)
 
-> Note:  The presence of the external FORTRAN library is why GitHub
-> misidentifies the language of this repository as "FORTRAN".  The
-> language of this repository is really C++.
+> Note:  GitHub misidentifies the language of this repository as
+> "HTML", due to the source-code documentation.  The language of this
+> repository should really be "C++".
 
 
 ---
@@ -43,3 +42,9 @@ Motivation
 -----------
 
 TBA:  Description of the problem being solved with this code.
+
+Notes:
+
+* Want the calls to the FORTRAN code to be as C++-like as possible.
+* Want the C++ wrapper to have no performance hit.  Inlining should
+  reduce the entire C++-to-FORTRAN adapter down to the FORTRAN call.

@@ -1,7 +1,7 @@
 // -*- C++ -*-
 // Implementation of class BarrierModels
 //
-// Copyright (C) 2009-2010 by John Weiss
+// Copyright (C) 2009-2010, 2015 by John Weiss
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the Artistic License, included as the file
 // "LICENSE" in the source code archive.
@@ -24,16 +24,12 @@
 
 #include <cstdlib>
 #include "statistics.h"
-#include "FitLM.h"
 #include "PersistenceMap.h"
 
 
 // Wrapper for parent namespace
 namespace jpw_nld {
 namespace measure {
-
- // To save on typing and make things more readable.
- using jpw_nld::fortlib::FitLM;
 
 
 /////////////////////////
@@ -135,14 +131,14 @@ BarrierModel<policy::Full>::calculate(const PersistenceMap& theMap,
 
             // Do the "dangling term" in the sum
             pmlmb_j = (pmlmb + ne_p1);
-            sumh = shape_h(pmlmb_j*width);
+            sumh = tanh(pmlmb_j*width);
 
             for(int j=-ne; j<ne_p1; ++j)
             {
                 pmb_j = (pmb + j);
                 pmlmb_j = (pmlmb + j);
 
-                sumh += shape_h(pmlmb_j*width) - shape_h(pmb_j*width);
+                sumh += tanh(pmlmb_j*width) - tanh(pmb_j*width);
             }
 
             deltas[i] = ( (alph*sumh + onema*exp(-lrho*theMapV_lags[i]))
@@ -165,8 +161,8 @@ BarrierModel<policy::Full>::calculate(const PersistenceMap& theMap,
 
             // Do the "dangling term" in the sums
             pmlmb_j = (pmlmb + ne_p1);
-            dhdx1 = deriv_h(pmlmb_j*width);
-            sumh = shape_h(pmlmb_j*width);
+            dhdx1 = jpw_math::SQR(1.0/cosh(pmlmb_j*width));
+            sumh = tanh(pmlmb_j*width);
             sumdhdb = dhdx1;
             sumdhde = dhdx1*pmlmb_j;
 
@@ -174,10 +170,10 @@ BarrierModel<policy::Full>::calculate(const PersistenceMap& theMap,
             {
                 pmb_j = (pmb + j);
                 pmlmb_j = (pmlmb + j);
-                dhdx1 = deriv_h(pmlmb_j*width);
-                dhdx2 = deriv_h(pmb_j*width);
+                dhdx1 = jpw_math::SQR(1.0/cosh(pmlmb_j*width));
+                dhdx2 = jpw_math::SQR(1.0/cosh(pmb_j*width));
 
-                sumh += shape_h(pmlmb_j*width) - shape_h(pmb_j*width);
+                sumh += tanh(pmlmb_j*width) - tanh(pmb_j*width);
                 sumdhdb += dhdx1 - dhdx2;
                 sumdhde += dhdx1*pmlmb_j - dhdx2*pmb_j;
             }
@@ -340,14 +336,14 @@ BarrierModel<policy::BarrierOnly>::calculate(const PersistenceMap& theMap,
 
             // Do the "dangling term" in the sum
             pmlmb_j = (pmlmb + ne_p1);
-            sumh = shape_h(pmlmb_j*width);
+            sumh = tanh(pmlmb_j*width);
 
             for(int j=-ne; j<ne_p1; ++j)
             {
                 pmb_j = (pmb + j);
                 pmlmb_j = (pmlmb + j);
 
-                sumh += shape_h(pmlmb_j*width) - shape_h(pmb_j*width);
+                sumh += tanh(pmlmb_j*width) - tanh(pmb_j*width);
             }
 
             deltas[i] = ( sumh - theMapV_data[i] );
@@ -366,8 +362,8 @@ BarrierModel<policy::BarrierOnly>::calculate(const PersistenceMap& theMap,
 
             // Do the "dangling term" in the sums
             pmlmb_j = (pmlmb + ne_p1);
-            dhdx1 = deriv_h(pmlmb_j*width);
-            sumh = shape_h(pmlmb_j*width);
+            dhdx1 = jpw_math::SQR(1.0/cosh(pmlmb_j*width));
+            sumh = tanh(pmlmb_j*width);
             sumdhdb = dhdx1;
             sumdhde = dhdx1*pmlmb_j;
 
@@ -375,10 +371,10 @@ BarrierModel<policy::BarrierOnly>::calculate(const PersistenceMap& theMap,
             {
                 pmb_j = (pmb + j);
                 pmlmb_j = (pmlmb + j);
-                dhdx1 = deriv_h(pmlmb_j*width);
-                dhdx2 = deriv_h(pmb_j*width);
+                dhdx1 = jpw_math::SQR(1.0/cosh(pmlmb_j*width));
+                dhdx2 = jpw_math::SQR(1.0/cosh(pmb_j*width));
 
-                sumh += shape_h(pmlmb_j*width) - shape_h(pmb_j*width);
+                sumh += tanh(pmlmb_j*width) - tanh(pmb_j*width);
                 sumdhdb += dhdx1 - dhdx2;
                 sumdhde += dhdx1*pmlmb_j - dhdx2*pmb_j;
             }

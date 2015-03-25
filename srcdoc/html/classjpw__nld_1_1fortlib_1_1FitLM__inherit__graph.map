@@ -1,6 +1,5 @@
-<map id="G" name="G">
-<area shape="rect" id="node5" href="$classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html" title="FitLM_Adapter\&lt; BarrierModel\&lt; F_POL_T \&gt;, PersistenceMap \&gt;" alt="" coords="5,259,384,287"/>
-<area shape="rect" id="node9" href="$classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html" title="Perform a nonlinear least&#45;squares fit by passing a functor to the Levenberg&#45;Marquardt algorithm..." alt="" coords="193,166,345,194"/>
-<area shape="rect" id="node2" href="$classboost_1_1noncopyable.html" title="noncopyable" alt="" coords="125,6,219,34"/>
-<area shape="rect" id="node7" href="$classjpw__nld_1_1measure_1_1FitLM__BarrierAdapter.html" title="Child class of the FitLM_Adapter, using the BarrierModel and PersistenceMap classes." alt="" coords="84,339,305,367"/>
+<map id="FitLM" name="FitLM">
+<area shape="rect" id="node3" href="$classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html" title="FitLM_Adapter\&lt; BarrierModel\l\&lt; F_POL_T \&gt;, PersistenceMap \&gt;" alt="" coords="5,265,219,306"/>
+<area shape="rect" id="node5" href="$classjpw__nld_1_1fortlib_1_1FitLM__Adapter.html" title="Perform a nonlinear least&#45;squares fit by passing a functor to the Levenberg&#45;Marquardt algorithm..." alt="" coords="111,160,264,187"/>
+<area shape="rect" id="node4" href="$classjpw__nld_1_1measure_1_1FitLM__BarrierAdapter.html" title="Child class of the FitLM_Adapter, using the BarrierModel and PersistenceMap classes. " alt="" coords="39,358,185,399"/>
 </map>

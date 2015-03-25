@@ -1,4 +1,4 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$namespacejpw__math_1_1statistics.html#a5860bee400421cf8808a7eae4194bbc0" title="Returns a random index from 0 to nn&#45;1." alt="" coords="139,5,328,35"/>
-<area shape="rect" id="node5" href="$namespacejpw__math_1_1statistics.html#acf9ddef189d66624c10b85a5665959e7" title="Returns a uniform random number in the range [&#45;del,del]." alt="" coords="127,58,340,89"/>
+<map id="drand48" name="drand48">
+<area shape="rect" id="node2" href="$namespacejpw__math_1_1statistics.html#a5860bee400421cf8808a7eae4194bbc0" title="Returns a random index from 0 to nn&#45;1. " alt="" coords="123,5,261,46"/>
+<area shape="rect" id="node3" href="$namespacejpw__math_1_1statistics.html#acf9ddef189d66624c10b85a5665959e7" title="Returns a uniform random number in the range [&#45;del,del]. " alt="" coords="123,70,261,111"/>
 </map>

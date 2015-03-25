@@ -52,18 +52,24 @@ I wanted to replace that code with a C++ class that had close to the
 same performance as the C-style 2-D array.
 
 So, I performance-tested several different matrix classes, including
-the one from Boost and you see here.  I also wanted to see if a
-matrix-adapter based on a `std::vector` performed any worse than one
-based on a POD-array.  I compared all of them to the performance of a
-C-style 2-D array.
+the one from Boost (circa 2005) and the one you see here.  I also
+wanted to see if a matrix-adapter based on a `std::vector` performed
+any worse than one based on a POD-array.  I compared all of them to
+the performance of a C-style 2-D array.
 
 The results were interesting.
 
 1. Boost's matrix class didn't perform as well, most likely because it
-   tries to be highly flexible and is designed for efficient
+   tried to be highly flexible and was designed for
    matrix-mathematics.
 
    I didn't need that.  I required efficient repeated access.
+
+   (Note:  I did these tests in 2004-2005; Boost now has a uBLAS
+    implementation that might order better performance.  Or it might
+    not; I'd have to redo my performance tests to find out.  I have
+    other things to do in this project that are higher priority than
+    switching matrix-classes again.)
 
 2. The MatrixAdapter performed best, but using a POD-array for the
    storage had nearly the same performance as using a `std::vector`.

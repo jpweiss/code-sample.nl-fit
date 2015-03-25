@@ -13,7 +13,7 @@
 // You should have received a copy of the file "LICENSE", containing
 // the License John Weiss originally placed this program under.
 //
-// RCS $Id: FitLM.h 2850 2013-10-17 00:52:45Z candide $
+// RCS $Id: FitLM.h 3052 2015-03-06 20:55:33Z candide $
 //
 #ifndef _FitLM_H_
 #define _FitLM_H_
@@ -228,6 +228,10 @@ namespace jpw_nld {
 
       /// Action-codes passed by the Levenberg-Marquardt code to the
       /// fit-function.
+      /**
+       * The underlying FORTRAN code uses a bare-integer code.  This \c enum
+       * is provided for use by fit-functions to make them more readable.
+       */
       enum FitFnAction_t {
           /**
            * Tells the fit-function to compute the model being fit (or

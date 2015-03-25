@@ -1,5 +1,5 @@
-<map id="G" name="G">
-<area shape="rect" id="node2" href="$classjpw__math_1_1MatrixAdapter.html" title="MatrixAdapter\&lt; std::vector\&lt; C \&gt;, policy::SequenceStorage \&gt;" alt="" coords="5,326,392,357"/>
-<area shape="rect" id="node6" title="STL class." alt="" coords="57,105,151,135"/>
-<area shape="rect" id="node12" href="$classjpw__math_1_1MatrixAdapter.html" title="Class MatrixAdapter." alt="" coords="288,225,501,255"/>
+<map id="Matrix&lt; C &gt;" name="Matrix&lt; C &gt;">
+<area shape="rect" id="node2" href="$classjpw__math_1_1MatrixAdapter.html" title="MatrixAdapter\&lt; std\l::vector\&lt; C \&gt;, policy\l::SequenceStorage \&gt;" alt="" coords="71,320,213,376"/>
+<area shape="rect" id="node4" title="STL class. " alt="" coords="5,96,93,123"/>
+<area shape="rect" id="node7" href="$classjpw__math_1_1MatrixAdapter.html" title="Class MatrixAdapter. " alt="" coords="231,201,395,242"/>
 </map>

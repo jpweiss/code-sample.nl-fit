@@ -1,6 +1,5 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$namespacejpw__math.html#a152e2773ecb5ffe95d340b4ce92a8eaf" title="Compute &#160;from fvec." alt="" coords="244,5,329,33"/>
-<area shape="rect" id="node5" href="$classjpw__nld_1_1measure_1_1BarrierModel.html#a7a845c2c7c000fa7104c11320270efd0" title="The first derivative of shape_h()" alt="" coords="125,55,448,83"/>
-<area shape="rect" id="node7" href="$classjpw__nld_1_1measure_1_1BarrierModel.html#a576740a8aeb7c2958379af2f76c615cd" title="Inverse operation to scale_tau()." alt="" coords="111,106,463,134"/>
-<area shape="rect" id="node9" href="$classjpw__nld_1_1measure_1_1BarrierModel.html#a34e35289a65b1f9e8429e29167c9120f" title="Inverse operation to scale_width()." alt="" coords="105,157,468,185"/>
+<map id="SQR" name="SQR">
+<area shape="rect" id="node2" href="$namespacejpw__math.html#a152e2773ecb5ffe95d340b4ce92a8eaf" title="Compute &#160;from fvec. " alt="" coords="174,5,261,32"/>
+<area shape="rect" id="node3" href="$classjpw__nld_1_1measure_1_1BarrierModel.html#a576740a8aeb7c2958379af2f76c615cd" title="Inverse operation to scale_tau(). " alt="" coords="111,57,323,98"/>
+<area shape="rect" id="node4" href="$classjpw__nld_1_1measure_1_1BarrierModel.html#a34e35289a65b1f9e8429e29167c9120f" title="Inverse operation to scale_width(). " alt="" coords="105,122,330,163"/>
 </map>

@@ -13,7 +13,7 @@
 // You should have received a copy of the file "LICENSE", containing
 // the License John Weiss originally placed this program under.
 //
-// RCS $Id: FitLM_Adapter.h 2184 2011-06-03 03:34:13Z candide $
+// RCS $Id: FitLM_Adapter.h 3052 2015-03-06 20:55:33Z candide $
 //
 #ifndef _FitLM_Adapter_H_
 #define _FitLM_Adapter_H_
@@ -280,8 +280,8 @@ namespace jpw_nld {
   * array.
   * \n
   *
-  * <em>Remember</em>:  You only compute \a <tt>deltas</tt> when the argument
-  * <tt><em>actionCode</em>==1</tt>.  Otherwise, do not touch \a \c deltas at
+  * <em>Remember</em>:  You only compute \a <tt>fnJacob</tt> when the argument
+  * <tt><em>actionCode</em>==2</tt>.  Otherwise, do not touch \a \c fnJacob at
   * all.
   * \n
   */
@@ -347,7 +347,16 @@ namespace jpw_nld {
           // its size is compile-time.  And std::vector copies its elements
           // in&out, so it's not suitable.
           // Hmmm...
-          // ...perhaps a custom, STL-like adapter-class?
+          // ...perhaps a custom, STL-like adapter-class
+          //
+          // Hell, we're kind-of assuming something like this when accessing
+          // m__fitData.
+          //
+          // Hmmm... How about another policy template class?  Then 'Data_t'
+          // can be a C-style array, a std::array, a std::vector, or even a
+          // jpw_math::Matrix!  Oh Wait:  all we need to do is specialize
+          // 'fit_function_adapter' on the 'Data_t' template parameter, and
+          // put an assert [or static_assert] in the generic impl.
           (*(m__activeThis->m__fitter))(*neq, *(m__activeThis->m__fitData),
                                         *nvar, xvec, fvec, fjac,
                                         *ldfjac, *iflag);

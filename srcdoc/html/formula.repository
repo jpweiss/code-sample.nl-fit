@@ -13,23 +13,74 @@
 \form#12:$ u $
 \form#13:$ u_{j} $
 \form#14:$ H $
-\form#15:$ p_{i} $
-\form#16:\[ H\left(p_{1},\,\cdots,\, p_{M}\,;\; u_{j}\right)-d_{u_{j}} = \varepsilon_{j}\qquad\forall\; j\in\left[1,\, N\right] \]
-\form#17:$ p_i $
-\form#18:\[ J_{i}\left(u_{j}\right) = \left.\frac{\partial H}{\partial p_{i}}\right|_{u_{j}} \qquad\forall\; i\in\left[1,\, M\right]\quad j\in\left[1,\, N\right] \]
-\form#19:$ J\left(u\right) $
-\form#20:$ J_{i}\left(u_{j}\right) $
-\form#21:$\chi^2$
-\form#22:$\Delta$
-\form#23:$``\Delta$
-\form#24:$ \left{p\right} $
-\form#25:\[ f_{\left\{ p\right\} }\left(x_{j}\right) = D\left(x_{j}\right)\qquad\forall\; j\in\left[0,\, nData\right) \]
-\form#26:$ D\left(x_{j}\right) $
-\form#27:$ x $
-\form#28:\[ f\left(x_{j};\; p_{0},\,\cdots,\, p_{\left(nParams-1\right)}\right) - D\left(x_{j}\right) = \Delta_{j}\qquad\forall\; j\in\left[0,\, nData\right) \]
-\form#29:\[ J_{i} = \frac{\partial f}{\partial p_{i}} \qquad\forall\; i\in\left[0,\, nParams\right) \]
-\form#30:\[ J_{i}\left(x_{j}\right) = \frac{\partial f}{\partial p_{i}}\left(x_{j}\right) \qquad\forall\; i\in\left[0,\, nParams\right) \quad j\in\left[0,\, nData\right) \]
-\form#31:$p_{i}$
-\form#32:$d_{u_{j}}$
-\form#33:$ \left\{ p\right\} $
-\form#34:\[ A \cdot x_1 + \left( 1 - A \cdot x_2 \right) \]
+\form#15:$p_{i}$
+\form#16:$d_{u_{j}}$
+\form#17:\[ H\left(p_{1},\,\cdots,\, p_{M}\,;\; u_{j}\right)-d_{u_{j}} = \varepsilon_{j}\qquad\forall\; j\in\left[1,\, N\right] \]
+\form#18:$ p_i $
+\form#19:\[ J_{i}\left(u_{j}\right) = \left.\frac{\partial H}{\partial p_{i}}\right|_{u_{j}} \qquad\forall\; i\in\left[1,\, M\right]\quad j\in\left[1,\, N\right] \]
+\form#20:$ J\left(u\right) $
+\form#21:$ p_{i} $
+\form#22:$ J_{i}\left(u_{j}\right) $
+\form#23:$\chi^2$
+\form#24:$\Delta$
+\form#25:$ \left\{ p\right\} $
+\form#26:\[ f_{\left\{ p\right\} }\left(x_{j}\right) = D\left(x_{j}\right)\qquad\forall\; j\in\left[0,\, nData\right) \]
+\form#27:$ D\left(x_{j}\right) $
+\form#28:$ x $
+\form#29:\[ f\left(x_{j};\; p_{0},\,\cdots,\, p_{\left(nParams-1\right)}\right) - D\left(x_{j}\right) = \Delta_{j}\qquad\forall\; j\in\left[0,\, nData\right) \]
+\form#30:\[ J_{i} = \frac{\partial f}{\partial p_{i}} \qquad\forall\; i\in\left[0,\, nParams\right) \]
+\form#31:\[ J_{i}\left(x_{j}\right) = \frac{\partial f}{\partial p_{i}}\left(x_{j}\right) \qquad\forall\; i\in\left[0,\, nParams\right) \quad j\in\left[0,\, nData\right) \]
+\form#32:\[ A\; B(p,l\,;\, p_{b},\Delta p) + (1\,-\,A)\; e^{-\frac{l}{\left| \tau \right|}} \]
+\form#33:$ 0 \le A \le 1 \,, \quad 0 \le p_{b} \le 1 \,, \quad \left| \Delta p \right| \le 1 \,, $
+\form#34:\[ B(p,l\,;\, p_{b},\Delta p) \equiv \sum ^{\infty }_{n=-\infty } \left[ \tanh\left(\frac{p-p_{b}-l + n}{\left| \Delta p \right| } \right) - \tanh\left(\frac{p-p_{b} + n}{\left| \Delta p \right| } \right) \right] \]
+\form#35:$ A \,, \; p_{b} \,, \; \Delta p \,, $
+\form#36:$ \tau $
+\form#37:$ \pm \frac{20}{\Delta p} $
+\form#38:$ \Delta p $
+\form#39:$ \infty $
+\form#40:\[ \frac{1}{2}\left(1 + \cos \alpha \right)\: B(p,l\,;\: p_{b}, \nu) + \frac{1}{2}\left(1 - \cos \alpha \right)\: e^{-l\, \rho^{2}} \]
+\form#41:\begin{eqnarray*} B(p,l\,;\: p_{b},\nu) & \equiv & \sum ^{\kappa }_{n=-\kappa }\left[ \tanh\left(\nu^{2} \left[ p-p_{b}-l + n \right] \right) - \tanh\left(\nu^{2} \left[ p-p_{b} + n \right] \right) \right] \\ \kappa & \equiv & \textrm{int}\left\( \frac{20}{\Delta p} \right\) \\ A & = & \frac{1}{2}\left(1 + \cos \alpha \right) \\ \Delta p & = & \nu^{2} \\ \tau & = & \rho^{2} \end{eqnarray*}
+\form#42:$ \delta p $
+\form#43:\[ A \cdot x_1 + \left( 1 - A \cdot x_2 \right) \]
+\form#44:\begin{eqnarray*} B(p,l\,;\: p_{b},\nu) & \equiv & \sum ^{\kappa }_{n=-\kappa }\left[ \tanh\left(\nu^{2} \left[ p-p_{b}-l + n \right] \right) - \tanh\left(\nu^{2} \left[ p-p_{b} + n \right] \right) \right] \\ \kappa & \equiv & \textrm{int} \left\( \frac{20}{\Delta p} \right\) \\ A & = & \frac{1}{2}\left(1 + \cos \alpha \right) \\ \Delta p & = & \nu^{2} \\ \tau & = & \rho^{2} \end{eqnarray*}
+\form#45:\begin{eqnarray*} B(p,l\,;\: p_{b},\nu) & \equiv & \sum ^{\kappa }_{n=-\kappa }\left[ \tanh\left(\nu^{2} \left[ p-p_{b}-l + n \right] \right) - \tanh\left(\nu^{2} \left[ p-p_{b} + n \right] \right) \right] \\ \kappa & \equiv & \textrm{int} \left( \frac{20}{\Delta p} \right) \\ A & = & \frac{1}{2}\left(1 + \cos \alpha \right) \\ \Delta p & = & \nu^{2} \\ \tau & = & \rho^{2} \end{eqnarray*}
+\form#46:\begin{eqnarray*} B(p,l\,;\: p_{b},\nu) & \equiv & \sum ^{\kappa }_{n=-\kappa }\left[ \tanh\left(\nu^{2} \left[ p-p_{b}-l + n \right] \right) - \tanh\left(\nu^{2} \left[ p-p_{b} + n \right] \right) \right] \\ \ldots\textrm{and}\ldots & & \\ \kappa & \equiv & \textrm{int} \left( \frac{20}{\Delta p} \right) \\ A & = & \frac{1}{2}\left(1 + \cos \alpha \right) \\ \Delta p & = & \nu^{2} \\ \tau & = & \rho^{2} \end{eqnarray*}
+\form#47:\[ B(p,l\,;\: p_{b},\nu) & \equiv & \sum ^{\kappa }_{n=-\kappa }\left[ \tanh\left(\nu^{2} \left[ p-p_{b}-l + n \right] \right) - \tanh\left(\nu^{2} \left[ p-p_{b} + n \right] \right) \right] \]
+\form#48:\begin{eqnarray*} \kappa & \equiv & \textrm{int} \left( \frac{20}{\Delta p} \right) \\ A & = & \frac{1}{2}\left(1 + \cos \alpha \right) \\ \Delta p & = & \nu^{2} \\ \tau & = & \rho^{2} \end{eqnarray*}
+\form#49:\begin{eqnarray*} B(p,l\,;\: p_{b},\nu) & \equiv & \sum ^{\kappa }_{n=-\kappa }\left[ \tanh\left(\nu^{2} \left[ p-p_{b}-l + n \right] \right) - \tanh\left(\nu^{2} \left[ p-p_{b} + n \right] \right) \right] \\ \\ \kappa & \equiv & \textrm{int} \left( \frac{20}{\Delta p} \right) \\ A & = & \frac{1}{2}\left(1 + \cos \alpha \right) \\ \Delta p & = & \nu^{2} \\ \tau & = & \rho^{2} \end{eqnarray*}
+\form#50:\begin{eqnarray*} B(p,l\,;\: p_{b},\nu) & \equiv & \sum ^{\kappa }_{n=-\kappa }\left[ \tanh\left(\nu^{2} \left[ p-p_{b}-l + n \right] \right) - \tanh\left(\nu^{2} \left[ p-p_{b} + n \right] \right) \right] \\ & & \\ \kappa & \equiv & \textrm{int} \left( \frac{20}{\Delta p} \right) \\ A & = & \frac{1}{2}\left(1 + \cos \alpha \right) \\ \Delta p & = & \nu^{2} \\ \tau & = & \rho^{2} \end{eqnarray*}
+\form#51:\begin{eqnarray*} B(p,l\,;\: p_{b},\nu) & \equiv & \sum ^{\kappa }_{n=-\kappa }\left[ \tanh\left(\nu^{2} \left[ p-p_{b}-l + n \right] \right) - \tanh\left(\nu^{2} \left[ p-p_{b} + n \right] \right) \right] \\ \; & \; & \; \\ \kappa & \equiv & \textrm{int} \left( \frac{20}{\Delta p} \right) \\ A & = & \frac{1}{2}\left(1 + \cos \alpha \right) \\ \Delta p & = & \nu^{2} \\ \tau & = & \rho^{2} \end{eqnarray*}
+\form#52:\begin{eqnarray*} B(p,l\,;\: p_{b},\nu) & \equiv & \sum ^{\kappa }_{n=-\kappa }\left[ \tanh\left(\nu^{2} \left[ p-p_{b}-l + n \right] \right) - \tanh\left(\nu^{2} \left[ p-p_{b} + n \right] \right) \right] \\ \vphantom{} & \; & \; \\ \kappa & \equiv & \textrm{int} \left( \frac{20}{\Delta p} \right) \\ A & = & \frac{1}{2}\left(1 + \cos \alpha \right) \\ \Delta p & = & \nu^{2} \\ \tau & = & \rho^{2} \end{eqnarray*}
+\form#53:\begin{eqnarray*} B(p,l\,;\: p_{b},\nu) & \equiv & \sum ^{\kappa }_{n=-\kappa }\left[ \tanh\left(\nu^{2} \left[ p-p_{b}-l + n \right] \right) - \tanh\left(\nu^{2} \left[ p-p_{b} + n \right] \right) \right] \\ \vphantom{M} & \; & \; \\ \kappa & \equiv & \textrm{int} \left( \frac{20}{\Delta p} \right) \\ A & = & \frac{1}{2}\left(1 + \cos \alpha \right) \\ \Delta p & = & \nu^{2} \\ \tau & = & \rho^{2} \end{eqnarray*}
+\form#54:\begin{eqnarray*} B(p,l\,;\: p_{b},\nu) & \equiv & \sum ^{\kappa }_{n=-\kappa }\left[ \tanh\left(\nu^{2} \left[ p-p_{b}-l + n \right] \right) - \tanh\left(\nu^{2} \left[ p-p_{b} + n \right] \right) \right] \\ \vphantom{M} \\ \vphantom{M} \\ \kappa & \equiv & \textrm{int} \left( \frac{20}{\Delta p} \right) \\ A & = & \frac{1}{2}\left(1 + \cos \alpha \right) \\ \Delta p & = & \nu^{2} \\ \tau & = & \rho^{2} \end{eqnarray*}
+\form#55:\begin{eqnarray*} B(p,l\,;\: p_{b},\nu) & \equiv & \sum ^{\kappa }_{n=-\kappa }\left[ \tanh\left(\nu^{2} \left[ p-p_{b}-l + n \right] \right) - \tanh\left(\nu^{2} \left[ p-p_{b} + n \right] \right) \right] \vphantom{M} \\ \\ A & = & \frac{1}{2}\left(1 + \cos \alpha \right) \\ \Delta p & = & \nu^{2} \\ \tau & = & \rho^{2} \\ \kappa & \equiv & \textrm{int} \left( \frac{20}{\Delta p} \right) \end{eqnarray*}
+\form#56:\begin{eqnarray*} B(p,l\,;\: p_{b},\nu) & \equiv & \sum ^{\kappa }_{n=-\kappa }\left[ \tanh\left(\nu^{2} \left[ p-p_{b}-l + n \right] \right) - \tanh\left(\nu^{2} \left[ p-p_{b} + n \right] \right) \right] \\ \vphantom{M} \\ A & = & \frac{1}{2}\left(1 + \cos \alpha \right) \\ \Delta p & = & \nu^{2} \\ \tau & = & \rho^{2} \\ \kappa & \equiv & \textrm{int} \left( \frac{20}{\Delta p} \right) \end{eqnarray*}
+\form#57:\begin{eqnarray*} B(p,l\,;\: p_{b},\nu) & \equiv & \sum ^{\kappa }_{n=-\kappa }\left[ \tanh\left(\nu^{2} \left[ p-p_{b}-l + n \right] \right) - \tanh\left(\nu^{2} \left[ p-p_{b} + n \right] \right) \right] \\ & \vphantom{M} & \\ A & = & \frac{1}{2}\left(1 + \cos \alpha \right) \\ \Delta p & = & \nu^{2} \\ \tau & = & \rho^{2} \\ \kappa & \equiv & \textrm{int} \left( \frac{20}{\Delta p} \right) \end{eqnarray*}
+\form#58:$ 0 \le A \le 1 $
+\form#59:$ 0 \le p_{b} \le 1 $
+\form#60:$ \left| \Delta p \right| \le 1 $
+\form#61:$ A $
+\form#62:$ p_{b} $
+\form#63:$ \alpha $
+\form#64:$ \nu $
+\form#65:$ \rho $
+\form#66:\[ M(p,l\,;\, A, p_{b},\Delta p, \tau) \equiv A\; B(p,l\,;\, p_{b},\Delta p) + (1\,-\,A)\; e^{-\frac{l}{\left| \tau \right|}} \]
+\form#67:\[ M^{\prime} \left( p,l\,;\, A, p_{b},\Delta p, \tau \right) \equiv \frac{1}{2}\left(1 + \cos \alpha \right)\: B^{\prime}\left( p,l\,;\: p_{b}, \nu \right) + \frac{1}{2}\left(1 - \cos \alpha \right)\: e^{-l\, \rho^{2}} \]
+\form#68:\begin{eqnarray*} B^{\prime}\left( p,l\,;\: p_{b}, \nu \right) & \equiv & \sum ^{\kappa }_{n=-\kappa }\left[ \tanh\left(\nu^{2} \left[ p-p_{b}-l + n \right] \right) - \tanh\left(\nu^{2} \left[ p-p_{b} + n \right] \right) \right] \\ & \vphantom{B} & \\ A & = & \frac{1}{2}\left(1 + \cos \alpha \right) \\ \Delta p & = & \nu^{2} \\ \tau & = & \rho^{2} \\ \kappa & \equiv & \textrm{int} \left( \frac{20}{\Delta p} \right) \end{eqnarray*}
+\form#69:$ M^{\prime} \left( p,l\,;\, A, p_{b},\Delta p, \tau \right) $
+\form#70:$\Delta p $
+\form#71:$ \tau$
+\form#72:$ \! \Delta p $
+\form#73:$\!\!\Delta p$
+\form#74:$\tau$
+\form#75:$\Delta p$
+\form#76:\[ M^{\prime} \left( p,l\,;\, \alpha, p_{b},\nu, \rho \right) \equiv \frac{1}{2}\left(1 + \cos \alpha \right)\: B^{\prime}\left( p,l\,;\: p_{b}, \nu \right) + \frac{1}{2}\left(1 - \cos \alpha \right)\: e^{-l\, \rho^{2}} \]
+\form#77:$ A = 0 $
+\form#78:$ A = 1 $
+\form#79:\[ M^{\prime} \left( p,l\,;\, A == 1, \rho \right) \equiv * e^{-l\, \rho^{2}} \]
+\form#80:\[ M^{\prime} \left( p,l\,;\, A == 0, p_{b},\nu \right) \equiv \sum ^{\kappa }_{n=-\kappa }\left[ \tanh\left(\nu^{2} \left[ p-p_{b}-l + n \right] \right) - \tanh\left(\nu^{2} \left[ p-p_{b} + n \right] \right) \]
+\form#81:$ M^{\prime} \left( p,l\,;\, \alpha, p_{b},\nu, \rho \right) $
+\form#82:\[ M^{\prime} \left( p,l\,;\, A == 1, \rho \right) \equiv e^{-l\, \rho^{2}} \]
+\form#83:\[ M^{\prime} \left( p,l\,;\, \rho \right)_{A=1} \equiv e^{-l\, \rho^{2}} \]
+\form#84:\[ M^{\prime} \left( p,l\,;\, p_{b},\nu \right)_{A=0} \equiv \sum ^{\kappa }_{n=-\kappa }\left[ \tanh\left(\nu^{2} \left[ p-p_{b}-l + n \right] \right) - \tanh\left(\nu^{2} \left[ p-p_{b} + n \right] \right) \]
+\form#85:$ \chi^2 $

@@ -1,5 +1,5 @@
-<map id="G" name="G">
-<area shape="rect" id="node2" href="$structjpw__nld_1_1InvalidArgError.html" title="Exception class for function parameters with invalid values." alt="" coords="17,166,127,197"/>
-<area shape="rect" id="node4" title="STL class." alt="" coords="23,86,121,117"/>
-<area shape="rect" id="node6" title="STL class." alt="" coords="32,6,112,37"/>
+<map id="SizeMismatchError" name="SizeMismatchError">
+<area shape="rect" id="node2" href="$structjpw__nld_1_1InvalidArgError.html" title="Exception class for function parameters with invalid values. " alt="" coords="16,155,123,181"/>
+<area shape="rect" id="node3" title="STL class. " alt="" coords="20,80,119,107"/>
+<area shape="rect" id="node4" title="STL class. " alt="" coords="31,5,107,32"/>
 </map>
