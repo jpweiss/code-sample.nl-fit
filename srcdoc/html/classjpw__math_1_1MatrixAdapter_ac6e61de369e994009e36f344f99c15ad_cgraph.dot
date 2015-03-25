@@ -1,0 +1,9 @@
+digraph "empty"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="empty",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="jpw_math::MatrixAdapter\l::size",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classjpw__math_1_1MatrixAdapter.html#aac782da1f912bceb5d8ad00c8dc892ac",tooltip="Returns the total number of elements in the MatrixAdapter. "];
+}

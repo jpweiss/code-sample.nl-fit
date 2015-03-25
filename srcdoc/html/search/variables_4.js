@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['m_5f_5fcallcount',['m__callcount',['../classjpw__nld_1_1measure_1_1BarrierModel.html#a1cbc07c6dc50fd397ea1d6ec829cb298',1,'jpw_nld::measure::BarrierModel']]],
+  ['m_5f_5fcomputedcsstats',['m__computedCSStats',['../classjpw__nld_1_1measure_1_1PersistenceMap.html#a8bccc02d719211b804c52cfc0003b5f4',1,'jpw_nld::measure::PersistenceMap']]],
+  ['m_5f_5fcomputedpersistence',['m__computedPersistence',['../classjpw__nld_1_1measure_1_1PersistenceMap.html#a2af0c4860b14e087d8d055334b32f95c',1,'jpw_nld::measure::PersistenceMap']]],
+  ['m_5f_5fcs_5favg',['m__cs_avg',['../classjpw__nld_1_1measure_1_1PersistenceMap.html#a662bb77717e0d9f6e5f03dc75987ec2a',1,'jpw_nld::measure::PersistenceMap']]],
+  ['m_5f_5fcs_5fstddev',['m__cs_stddev',['../classjpw__nld_1_1measure_1_1PersistenceMap.html#aa8f2cd2a0a7c9d0fbd2d67b1fc7fa0c3',1,'jpw_nld::measure::PersistenceMap']]],
+  ['m_5f_5fdata',['m__data',['../classjpw__math_1_1MatrixAdapter.html#a9259d9244711b93c58024320cf0fc515',1,'jpw_math::MatrixAdapter']]],
+  ['m_5f_5fdeltas',['m__deltas',['../classjpw__nld_1_1fortlib_1_1FitLM.html#a974c709ed21cca2e26cc5461320ec4f4',1,'jpw_nld::fortlib::FitLM']]],
+  ['m_5f_5fjacobflat',['m__jacobFlat',['../classjpw__nld_1_1fortlib_1_1FitLM.html#a024505bb09f0e234c997b760e972ae18',1,'jpw_nld::fortlib::FitLM']]],
+  ['m_5f_5fjacobout',['m__jacobOut',['../classjpw__nld_1_1fortlib_1_1FitLM.html#a22f454324066e187bb753a0d39f80f7e',1,'jpw_nld::fortlib::FitLM']]],
+  ['m_5f_5flags',['m__lags',['../classjpw__nld_1_1measure_1_1PersistenceMap.html#a8b93dc0b6f28d5f791cb3651c2e71ec3',1,'jpw_nld::measure::PersistenceMap']]],
+  ['m_5f_5fmap',['m__map',['../classjpw__nld_1_1measure_1_1PersistenceMap.html#ad808916af0a6ed61609e3574ce2bdfc0',1,'jpw_nld::measure::PersistenceMap']]],
+  ['m_5f_5fncols',['m__ncols',['../classjpw__math_1_1MatrixAdapter.html#abd25cf00047f8416bc1564d75ef1eb92',1,'jpw_math::MatrixAdapter']]],
+  ['m_5f_5fndatamax',['m__ndataMax',['../classjpw__nld_1_1fortlib_1_1FitLM.html#a320f379d53266d0cbaf79a34edacc270',1,'jpw_nld::fortlib::FitLM']]],
+  ['m_5f_5fnparams',['m__nparams',['../classjpw__nld_1_1fortlib_1_1FitLM.html#af83c4f38cedef0c6c2601f4943b66a08',1,'jpw_nld::fortlib::FitLM']]],
+  ['m_5f_5fnrows',['m__nrows',['../classjpw__math_1_1MatrixAdapter.html#ae8f2ed252f2655cabf4141c4af0745cd',1,'jpw_math::MatrixAdapter']]],
+  ['m_5f_5fphases',['m__phases',['../classjpw__nld_1_1measure_1_1PersistenceMap.html#afbc1a157137991f81976bab5bb75b42d',1,'jpw_nld::measure::PersistenceMap']]],
+  ['m_5f_5fwrkerrs',['m__wrkErrs',['../classjpw__nld_1_1measure_1_1BarrierModel.html#a8152f7d621cada08a0ef5469766845fb',1,'jpw_nld::measure::BarrierModel']]],
+  ['m_5f_5fwrkjac',['m__wrkJac',['../classjpw__nld_1_1measure_1_1BarrierModel.html#aae70d50879980e2e9b45dece3340e6db',1,'jpw_nld::measure::BarrierModel']]],
+  ['max_5fiters',['MAX_ITERS',['../classjpw__nld_1_1measure_1_1FitLM__BarrierAdapter.html#a70a965e4ada328d6890cb605abd046e5',1,'jpw_nld::measure::FitLM_BarrierAdapter']]]
+];
